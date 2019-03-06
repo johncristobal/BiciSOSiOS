@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var mapview: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if self.revealViewController() != nil {
-        
+    
             menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
 
             //menuButton.target = self.revealViewController()

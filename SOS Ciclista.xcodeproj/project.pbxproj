@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB47256222F773300D5C51D /* ReportesViewController.swift */; };
+		8BB47259222F891000D5C51D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB47258222F891000D5C51D /* MapKit.framework */; };
 		8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB95C25222C8C4000ABA1F9 /* AppDelegate.swift */; };
 		8BB95C28222C8C4000ABA1F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB95C27222C8C4000ABA1F9 /* ViewController.swift */; };
 		8BB95C2B222C8C4000ABA1F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB95C29222C8C4000ABA1F9 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		2A9927F49D2B048CC70A133E /* Pods-SOS Ciclista.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS Ciclista.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista.release.xcconfig"; sourceTree = "<group>"; };
 		841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS_Ciclista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB47256222F773300D5C51D /* ReportesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesViewController.swift; sourceTree = "<group>"; };
+		8BB47258222F891000D5C51D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BB95C22222C8C4000ABA1F9 /* SOS Ciclista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOS Ciclista.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB95C25222C8C4000ABA1F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BB95C27222C8C4000ABA1F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB47259222F891000D5C51D /* MapKit.framework in Frameworks */,
 				BC29C3262CAFDDFE7755E8F4 /* Pods_SOS_Ciclista.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +122,7 @@
 		B72631D16E0A6A0117EBA627 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BB47258222F891000D5C51D /* MapKit.framework */,
 				841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */,
 			);
 			name = Frameworks;
@@ -168,6 +172,11 @@
 					8BB95C21222C8C4000ABA1F9 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
