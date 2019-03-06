@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB47256222F773300D5C51D /* ReportesViewController.swift */; };
+		8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB95C25222C8C4000ABA1F9 /* AppDelegate.swift */; };
+		8BB95C28222C8C4000ABA1F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB95C27222C8C4000ABA1F9 /* ViewController.swift */; };
+		8BB95C2B222C8C4000ABA1F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB95C29222C8C4000ABA1F9 /* Main.storyboard */; };
+		8BB95C2E222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BB95C2C222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld */; };
+		8BB95C30222C8C4300ABA1F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB95C2F222C8C4300ABA1F9 /* Assets.xcassets */; };
+		8BB95C33222C8C4300ABA1F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB95C31222C8C4300ABA1F9 /* LaunchScreen.storyboard */; };
+		8BB95C41222F6DBA00ABA1F9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB95C40222F6DBA00ABA1F9 /* SWRevealViewController.m */; };
+		BC29C3262CAFDDFE7755E8F4 /* Pods_SOS_Ciclista.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A9927F49D2B048CC70A133E /* Pods-SOS Ciclista.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS Ciclista.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista.release.xcconfig"; sourceTree = "<group>"; };
+		841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS_Ciclista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB47256222F773300D5C51D /* ReportesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesViewController.swift; sourceTree = "<group>"; };
+		8BB95C22222C8C4000ABA1F9 /* SOS Ciclista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOS Ciclista.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB95C25222C8C4000ABA1F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8BB95C27222C8C4000ABA1F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8BB95C2A222C8C4000ABA1F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BB95C2D222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SOS_Ciclista.xcdatamodel; sourceTree = "<group>"; };
+		8BB95C2F222C8C4300ABA1F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BB95C32222C8C4300ABA1F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8BB95C34222C8C4300ABA1F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB95C3E222F6DB800ABA1F9 /* SOS Ciclista-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SOS Ciclista-Bridging-Header.h"; sourceTree = "<group>"; };
+		8BB95C3F222F6DBA00ABA1F9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8BB95C40222F6DBA00ABA1F9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		E00C589167989D0F4B3E745B /* Pods-SOS Ciclista.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS Ciclista.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BB95C1F222C8C4000ABA1F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC29C3262CAFDDFE7755E8F4 /* Pods_SOS_Ciclista.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BB95C19222C8C4000ABA1F9 = {
+			isa = PBXGroup;
+			children = (
+				8BB95C24222C8C4000ABA1F9 /* SOS Ciclista */,
+				8BB95C23222C8C4000ABA1F9 /* Products */,
+				CC84117986F7EDD9A901B2B5 /* Pods */,
+				B72631D16E0A6A0117EBA627 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8BB95C23222C8C4000ABA1F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BB95C22222C8C4000ABA1F9 /* SOS Ciclista.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BB95C24222C8C4000ABA1F9 /* SOS Ciclista */ = {
+			isa = PBXGroup;
+			children = (
+				8BB95C3D222F6D9200ABA1F9 /* SWRevealViewController */,
+				8BB95C3A222C8D2F00ABA1F9 /* Models */,
+				8BB95C25222C8C4000ABA1F9 /* AppDelegate.swift */,
+				8BB95C3C222C8D6800ABA1F9 /* Controllers */,
+				8BB95C3B222C8D5A00ABA1F9 /* Views */,
+				8BB95C2F222C8C4300ABA1F9 /* Assets.xcassets */,
+				8BB95C31222C8C4300ABA1F9 /* LaunchScreen.storyboard */,
+				8BB95C34222C8C4300ABA1F9 /* Info.plist */,
+				8BB95C2C222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld */,
+			);
+			path = "SOS Ciclista";
+			sourceTree = "<group>";
+		};
+		8BB95C3A222C8D2F00ABA1F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8BB95C3B222C8D5A00ABA1F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BB95C29222C8C4000ABA1F9 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8BB95C3C222C8D6800ABA1F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8BB95C27222C8C4000ABA1F9 /* ViewController.swift */,
+				8BB47256222F773300D5C51D /* ReportesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8BB95C3D222F6D9200ABA1F9 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8BB95C3F222F6DBA00ABA1F9 /* SWRevealViewController.h */,
+				8BB95C40222F6DBA00ABA1F9 /* SWRevealViewController.m */,
+				8BB95C3E222F6DB800ABA1F9 /* SOS Ciclista-Bridging-Header.h */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		B72631D16E0A6A0117EBA627 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC84117986F7EDD9A901B2B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E00C589167989D0F4B3E745B /* Pods-SOS Ciclista.debug.xcconfig */,
+				2A9927F49D2B048CC70A133E /* Pods-SOS Ciclista.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BB95C21222C8C4000ABA1F9 /* SOS Ciclista */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB95C37222C8C4300ABA1F9 /* Build configuration list for PBXNativeTarget "SOS Ciclista" */;
+			buildPhases = (
+				3A02F54B4805299B01085C60 /* [CP] Check Pods Manifest.lock */,
+				8BB95C1E222C8C4000ABA1F9 /* Sources */,
+				8BB95C1F222C8C4000ABA1F9 /* Frameworks */,
+				8BB95C20222C8C4000ABA1F9 /* Resources */,
+				C3F3C9A44E5BE3FADA5E1583 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SOS Ciclista";
+			productName = "SOS Ciclista";
+			productReference = 8BB95C22222C8C4000ABA1F9 /* SOS Ciclista.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BB95C1A222C8C4000ABA1F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = i7;
+				TargetAttributes = {
+					8BB95C21222C8C4000ABA1F9 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+				};
+			};
+			buildConfigurationList = 8BB95C1D222C8C4000ABA1F9 /* Build configuration list for PBXProject "SOS Ciclista" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8BB95C19222C8C4000ABA1F9;
+			productRefGroup = 8BB95C23222C8C4000ABA1F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BB95C21222C8C4000ABA1F9 /* SOS Ciclista */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BB95C20222C8C4000ABA1F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB95C33222C8C4300ABA1F9 /* LaunchScreen.storyboard in Resources */,
+				8BB95C30222C8C4300ABA1F9 /* Assets.xcassets in Resources */,
+				8BB95C2B222C8C4000ABA1F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A02F54B4805299B01085C60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SOS Ciclista-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3F3C9A44E5BE3FADA5E1583 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BB95C1E222C8C4000ABA1F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB95C2E222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld in Sources */,
+				8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */,
+				8BB95C28222C8C4000ABA1F9 /* ViewController.swift in Sources */,
+				8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */,
+				8BB95C41222F6DBA00ABA1F9 /* SWRevealViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8BB95C29222C8C4000ABA1F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BB95C2A222C8C4000ABA1F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8BB95C31222C8C4300ABA1F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BB95C32222C8C4300ABA1F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BB95C35222C8C4300ABA1F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8BB95C36222C8C4300ABA1F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BB95C38222C8C4300ABA1F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E00C589167989D0F4B3E745B /* Pods-SOS Ciclista.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 954C95V3JL;
+				INFOPLIST_FILE = "SOS Ciclista/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sosciclista.com.SOS-Ciclista";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SOS Ciclista/SWRevealViewController/SOS Ciclista-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8BB95C39222C8C4300ABA1F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A9927F49D2B048CC70A133E /* Pods-SOS Ciclista.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 954C95V3JL;
+				INFOPLIST_FILE = "SOS Ciclista/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "sosciclista.com.SOS-Ciclista";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SOS Ciclista/SWRevealViewController/SOS Ciclista-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BB95C1D222C8C4000ABA1F9 /* Build configuration list for PBXProject "SOS Ciclista" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB95C35222C8C4300ABA1F9 /* Debug */,
+				8BB95C36222C8C4300ABA1F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BB95C37222C8C4300ABA1F9 /* Build configuration list for PBXNativeTarget "SOS Ciclista" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB95C38222C8C4300ABA1F9 /* Debug */,
+				8BB95C39222C8C4300ABA1F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8BB95C2C222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8BB95C2D222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodel */,
+			);
+			currentVersion = 8BB95C2D222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodel */;
+			path = SOS_Ciclista.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8BB95C1A222C8C4000ABA1F9 /* Project object */;
+}
