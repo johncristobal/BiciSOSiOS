@@ -57,6 +57,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D9F0B7E2232FBC10099808D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		8B3D5BBF22322E7C00727464 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,8 +94,8 @@
 		8BB95C24222C8C4000ABA1F9 /* SOS Ciclista */ = {
 			isa = PBXGroup;
 			children = (
+				7D9F0B7E2232FBC10099808D /* Model */,
 				8BB95C3D222F6D9200ABA1F9 /* SWRevealViewController */,
-				8BB95C3A222C8D2F00ABA1F9 /* Models */,
 				8BB95C25222C8C4000ABA1F9 /* AppDelegate.swift */,
 				8BB95C3C222C8D6800ABA1F9 /* Controllers */,
 				8BB95C3B222C8D5A00ABA1F9 /* Views */,
@@ -98,13 +105,6 @@
 				8BB95C2C222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld */,
 			);
 			path = "SOS Ciclista";
-			sourceTree = "<group>";
-		};
-		8BB95C3A222C8D2F00ABA1F9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		8BB95C3B222C8D5A00ABA1F9 /* Views */ = {

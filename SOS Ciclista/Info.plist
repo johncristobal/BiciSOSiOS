@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SOS Ciclista quiere conocer su ubicación para mejor uso de la app </string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
