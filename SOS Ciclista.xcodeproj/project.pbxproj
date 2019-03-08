@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC022322E9800727464 /* MenuViewController.swift */; };
+		8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC222322FEC00727464 /* SerieViewController.swift */; };
+		8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */; };
 		8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB47256222F773300D5C51D /* ReportesViewController.swift */; };
 		8BB47259222F891000D5C51D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB47258222F891000D5C51D /* MapKit.framework */; };
 		8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB95C25222C8C4000ABA1F9 /* AppDelegate.swift */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		2A9927F49D2B048CC70A133E /* Pods-SOS Ciclista.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS Ciclista.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista.release.xcconfig"; sourceTree = "<group>"; };
 		841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS_Ciclista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3D5BC022322E9800727464 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8B3D5BC222322FEC00727464 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
+		8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		8BB47256222F773300D5C51D /* ReportesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesViewController.swift; sourceTree = "<group>"; };
 		8BB47258222F891000D5C51D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BB95C22222C8C4000ABA1F9 /* SOS Ciclista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOS Ciclista.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B3D5BBF22322E7C00727464 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8B3D5BC022322E9800727464 /* MenuViewController.swift */,
+				8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		8BB95C19222C8C4000ABA1F9 = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +118,10 @@
 		8BB95C3C222C8D6800ABA1F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8B3D5BBF22322E7C00727464 /* Menu */,
 				8BB95C27222C8C4000ABA1F9 /* ViewController.swift */,
 				8BB47256222F773300D5C51D /* ReportesViewController.swift */,
+				8B3D5BC222322FEC00727464 /* SerieViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,7 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */,
 				8BB95C2E222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld in Sources */,
+				8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */,
+				8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */,
 				8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */,
 				8BB95C28222C8C4000ABA1F9 /* ViewController.swift in Sources */,
 				8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */,
