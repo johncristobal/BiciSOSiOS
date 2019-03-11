@@ -22,6 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 
         setMenu()
         setLocation()
+        getTalleres()
     }
     
     func setLocation(){
@@ -42,6 +43,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    
+    func getTalleres(){
+        DataManager.shared.getTalleres(api: "") { (datos) in
+            print(datos)
         }
     }
     

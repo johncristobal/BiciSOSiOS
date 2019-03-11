@@ -10,6 +10,7 @@
 		8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC022322E9800727464 /* MenuViewController.swift */; };
 		8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC222322FEC00727464 /* SerieViewController.swift */; };
 		8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */; };
+		8BA625A422358585008E9337 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA625A322358585008E9337 /* DataManager.swift */; };
 		8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB47256222F773300D5C51D /* ReportesViewController.swift */; };
 		8BB47259222F891000D5C51D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB47258222F891000D5C51D /* MapKit.framework */; };
 		8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB95C25222C8C4000ABA1F9 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		8B3D5BC022322E9800727464 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC222322FEC00727464 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		8BA625A322358585008E9337 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8BB47256222F773300D5C51D /* ReportesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesViewController.swift; sourceTree = "<group>"; };
 		8BB47258222F891000D5C51D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8BB95C22222C8C4000ABA1F9 /* SOS Ciclista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOS Ciclista.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,7 @@
 		7D9F0B7E2232FBC10099808D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BA625A322358585008E9337 /* DataManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */,
 				8BB95C28222C8C4000ABA1F9 /* ViewController.swift in Sources */,
 				8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */,
+				8BA625A422358585008E9337 /* DataManager.swift in Sources */,
 				8BB95C41222F6DBA00ABA1F9 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
