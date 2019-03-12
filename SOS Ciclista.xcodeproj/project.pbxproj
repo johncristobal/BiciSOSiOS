@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DD697732236E4A400810255 /* Taller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD697722236E4A400810255 /* Taller.swift */; };
+		7DD69775223720CA00810255 /* customPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD69774223720CA00810255 /* customPin.xib */; };
+		7DD69777223721F300810255 /* Custompin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD69776223721F300810255 /* Custompin.swift */; };
 		8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC022322E9800727464 /* MenuViewController.swift */; };
 		8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC222322FEC00727464 /* SerieViewController.swift */; };
 		8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		2A9927F49D2B048CC70A133E /* Pods-SOS Ciclista.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS Ciclista.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista.release.xcconfig"; sourceTree = "<group>"; };
+		7DD697722236E4A400810255 /* Taller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taller.swift; sourceTree = "<group>"; };
+		7DD69774223720CA00810255 /* customPin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customPin.xib; sourceTree = "<group>"; };
+		7DD69776223721F300810255 /* Custompin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custompin.swift; sourceTree = "<group>"; };
 		841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS_Ciclista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3D5BC022322E9800727464 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC222322FEC00727464 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				8BA625A322358585008E9337 /* DataManager.swift */,
+				7DD697722236E4A400810255 /* Taller.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -114,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				8BB95C29222C8C4000ABA1F9 /* Main.storyboard */,
+				7DD69774223720CA00810255 /* customPin.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 				8BB95C27222C8C4000ABA1F9 /* ViewController.swift */,
 				8BB47256222F773300D5C51D /* ReportesViewController.swift */,
 				8B3D5BC222322FEC00727464 /* SerieViewController.swift */,
+				7DD69776223721F300810255 /* Custompin.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD69775223720CA00810255 /* customPin.xib in Resources */,
 				8BB95C33222C8C4300ABA1F9 /* LaunchScreen.storyboard in Resources */,
 				8BB95C30222C8C4300ABA1F9 /* Assets.xcassets in Resources */,
 				8BB95C2B222C8C4000ABA1F9 /* Main.storyboard in Resources */,
@@ -290,12 +300,14 @@
 				8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */,
 				8BB95C2E222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld in Sources */,
 				8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */,
+				7DD69777223721F300810255 /* Custompin.swift in Sources */,
 				8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */,
 				8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */,
 				8BB95C28222C8C4000ABA1F9 /* ViewController.swift in Sources */,
 				8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */,
 				8BA625A422358585008E9337 /* DataManager.swift in Sources */,
 				8BB95C41222F6DBA00ABA1F9 /* SWRevealViewController.m in Sources */,
+				7DD697732236E4A400810255 /* Taller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

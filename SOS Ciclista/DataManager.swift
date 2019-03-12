@@ -13,9 +13,11 @@ import SwiftyJSON
 class DataManager{
     
     static let shared = DataManager()
+    var ip = "http://xatsaautopartes.xyz/soscilistaapi/"
     
-    func getTalleres(api: String, completion: @escaping (([String]) -> Void )) {
-        var ip = "http://xatsaautopartes.xyz/Api/Api/productos"
+    func getTalleres(api: String, completion: @escaping (([Taller]) -> Void )) {
+        let ip = "\(self.ip)api/talleres"
+        let jsonDecoder = JSONDecoder()
         
         Alamofire.request(
             ip,
@@ -23,10 +25,12 @@ class DataManager{
             parameters: nil,
             headers: nil).responseJSON(completionHandler: { (response) in
                 //print(response.result.value)
-                var datos = JSON(response.result.value)
-                print(datos)
+                //var datos = JSON(response.result.value)
+                //print(datos)
+                let tallers = try! jsonDecoder.decode([Taller].self, from: response.data!)
+
+                //print(tallers)
+                completion(tallers)
             })
-        
-        completion([])
     }
 }
