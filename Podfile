@@ -9,5 +9,6 @@ target 'SOS Ciclista' do
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'SideMenu'
+pod 'Firebase/Core'
 
 end

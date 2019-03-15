@@ -17,7 +17,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     let opciones : [String] = ["Reportes","Me robaron la bici...","# serie con reporte","Tips","Contáctanos","Acerca de","Ajustes","Iniciar sesión"]
     let iconos = [#imageLiteral(resourceName: "reportesiconsmall"),#imageLiteral(resourceName: "serieiconsmall"),#imageLiteral(resourceName: "buscaricon"),#imageLiteral(resourceName: "tipsicon"),#imageLiteral(resourceName: "contactoiconsmall"),#imageLiteral(resourceName: "acercaicon"),#imageLiteral(resourceName: "ajustesicon"),#imageLiteral(resourceName: "saliricon")]
 
-    let segues : [String] = ["reportes","serie"]
+    let segues : [String] = ["reportes","serie","reportes","serie","reportes","serie","reportes","login"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

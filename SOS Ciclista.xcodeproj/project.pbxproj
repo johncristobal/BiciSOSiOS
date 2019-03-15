@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */; };
+		7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */; };
+		7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */; };
 		7DD697732236E4A400810255 /* Taller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD697722236E4A400810255 /* Taller.swift */; };
 		7DD69775223720CA00810255 /* customPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD69774223720CA00810255 /* customPin.xib */; };
 		7DD69777223721F300810255 /* Custompin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD69776223721F300810255 /* Custompin.swift */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		2A9927F49D2B048CC70A133E /* Pods-SOS Ciclista.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS Ciclista.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista.release.xcconfig"; sourceTree = "<group>"; };
+		7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizaViewController.swift; sourceTree = "<group>"; };
+		7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaBiciCollectionViewCell.swift; sourceTree = "<group>"; };
+		7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7DD697722236E4A400810255 /* Taller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taller.swift; sourceTree = "<group>"; };
 		7DD69774223720CA00810255 /* customPin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customPin.xib; sourceTree = "<group>"; };
 		7DD69776223721F300810255 /* Custompin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custompin.swift; sourceTree = "<group>"; };
@@ -65,6 +71,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D1FD52D223B311E00B0A03B /* Usuario */ = {
+			isa = PBXGroup;
+			children = (
+				7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */,
+				7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */,
+			);
+			path = Usuario;
+			sourceTree = "<group>";
+		};
+		7D1FD52E223B313600B0A03B /* Reportes */ = {
+			isa = PBXGroup;
+			children = (
+				8BB47256222F773300D5C51D /* ReportesViewController.swift */,
+			);
+			path = Reportes;
+			sourceTree = "<group>";
+		};
+		7D1FD52F223B314200B0A03B /* numSerie */ = {
+			isa = PBXGroup;
+			children = (
+				8B3D5BC222322FEC00727464 /* SerieViewController.swift */,
+			);
+			path = numSerie;
+			sourceTree = "<group>";
+		};
 		7D9F0B7E2232FBC10099808D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +143,7 @@
 				8BB95C2F222C8C4300ABA1F9 /* Assets.xcassets */,
 				8BB95C31222C8C4300ABA1F9 /* LaunchScreen.storyboard */,
 				8BB95C34222C8C4300ABA1F9 /* Info.plist */,
+				7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */,
 				8BB95C2C222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld */,
 			);
 			path = "SOS Ciclista";
@@ -131,9 +163,10 @@
 			children = (
 				8B3D5BBF22322E7C00727464 /* Menu */,
 				8BB95C27222C8C4000ABA1F9 /* ViewController.swift */,
-				8BB47256222F773300D5C51D /* ReportesViewController.swift */,
-				8B3D5BC222322FEC00727464 /* SerieViewController.swift */,
+				7D1FD52E223B313600B0A03B /* Reportes */,
+				7D1FD52F223B314200B0A03B /* numSerie */,
 				7DD69776223721F300810255 /* Custompin.swift */,
+				7D1FD52D223B311E00B0A03B /* Usuario */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,6 +267,7 @@
 			files = (
 				7DD69775223720CA00810255 /* customPin.xib in Resources */,
 				8BB95C33222C8C4300ABA1F9 /* LaunchScreen.storyboard in Resources */,
+				7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */,
 				8BB95C30222C8C4300ABA1F9 /* Assets.xcassets in Resources */,
 				8BB95C2B222C8C4000ABA1F9 /* Main.storyboard in Resources */,
 			);
@@ -247,15 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SOS Ciclista-checkManifestLockResult.txt",
 			);
@@ -269,21 +299,21 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -303,9 +333,11 @@
 				7DD69777223721F300810255 /* Custompin.swift in Sources */,
 				8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */,
 				8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */,
+				7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */,
 				8BB95C28222C8C4000ABA1F9 /* ViewController.swift in Sources */,
 				8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */,
 				8BA625A422358585008E9337 /* DataManager.swift in Sources */,
+				7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */,
 				8BB95C41222F6DBA00ABA1F9 /* SWRevealViewController.m in Sources */,
 				7DD697732236E4A400810255 /* Taller.swift in Sources */,
 			);

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>896536123930-ihj80nlvqqjdrdpd2eil7dui2p6an1du.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.896536123930-ihj80nlvqqjdrdpd2eil7dui2p6an1du</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBJ_vwj9s5s2K5br87BHbeYfXXtTK49d4Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>896536123930</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>sosciclista.com.SOS-Ciclista</string>
+	<key>PROJECT_ID</key>
+	<string>rare-study-233221</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rare-study-233221.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:896536123930:ios:74b3c9f8187881c2</string>
+	<key>DATABASE_URL</key>
+	<string>https://rare-study-233221.firebaseio.com</string>
+</dict>
+</plist>
