@@ -10,5 +10,10 @@ pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'SideMenu'
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'FBSDKLoginKit'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
 
 end
