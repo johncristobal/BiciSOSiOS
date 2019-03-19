@@ -147,7 +147,7 @@
                         <outlet property="tableview" destination="7oc-2T-I5e" id="6oY-k3-4st"/>
                         <segue destination="2Lr-un-sLy" kind="show" identifier="reportes" id="z9v-CQ-g6Q"/>
                         <segue destination="pqe-ZY-8UC" kind="show" identifier="serie" id="Svm-7L-57T"/>
-                        <segue destination="hWB-jh-9Mf" kind="show" identifier="login" id="Qo3-qS-NRD"/>
+                        <segue destination="f8L-aS-QNg" kind="show" identifier="login" id="YXD-he-ZMI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5L4-3R-9vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -417,6 +417,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeA-C8-erR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3054" y="-1342"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="B3t-jN-RUN">
+            <objects>
+                <viewController id="f8L-aS-QNg" customClass="LoginViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wjH-Uz-5qd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAQ-L9-p09">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaq-Da-7ZW">
+                                        <rect key="frame" x="104" y="585" width="167" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.7843137255" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Continuar con Facebook">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeWindow:" destination="hWB-jh-9Mf" eventType="touchUpInside" id="5MA-WF-K64"/>
+                                            <action selector="faceAction:" destination="f8L-aS-QNg" eventType="touchUpInside" id="vOu-wm-L9c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vx8-sD-afR">
+                                        <rect key="frame" x="8" y="8" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="closeWindow:" destination="hWB-jh-9Mf" eventType="touchUpInside" id="Lru-Zb-aIW"/>
+                                            <action selector="closeWindow:" destination="f8L-aS-QNg" eventType="touchUpInside" id="dVN-8l-lAd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oaq-Da-7ZW" firstAttribute="centerX" secondItem="TAQ-L9-p09" secondAttribute="centerX" id="8As-0M-kEz"/>
+                                    <constraint firstAttribute="bottom" secondItem="oaq-Da-7ZW" secondAttribute="bottom" constant="32" id="EzJ-qd-zXU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TAQ-L9-p09" firstAttribute="trailing" secondItem="WR1-gW-2Dy" secondAttribute="trailing" id="F0c-8l-3aj"/>
+                            <constraint firstItem="TAQ-L9-p09" firstAttribute="bottom" secondItem="WR1-gW-2Dy" secondAttribute="bottom" id="GBE-r3-u7w"/>
+                            <constraint firstItem="TAQ-L9-p09" firstAttribute="leading" secondItem="WR1-gW-2Dy" secondAttribute="leading" id="MBW-LD-sUY"/>
+                            <constraint firstItem="TAQ-L9-p09" firstAttribute="top" secondItem="WR1-gW-2Dy" secondAttribute="top" id="yzN-YJ-FJV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WR1-gW-2Dy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLs-cM-tuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2936.8000000000002" y="-616.64167916041981"/>
         </scene>
         <!--Personaliza View Controller-->
         <scene sceneID="3EC-ny-cqv">
@@ -690,7 +743,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGE-UG-zJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3053.5999999999999" y="-637.33133433283365"/>
+            <point key="canvasLocation" x="3796" y="-637"/>
         </scene>
         <!--Serie View Controller-->
         <scene sceneID="UXc-LW-0fu">
@@ -732,14 +785,6 @@
                                 <rect key="frame" x="16" y="34" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8A-eV-55c">
-                                <rect key="frame" x="164" y="618" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="faceAction:" destination="ysL-zI-W7m" eventType="touchUpInside" id="uZZ-TH-XQJ"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
