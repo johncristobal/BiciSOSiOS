@@ -10,6 +10,8 @@
 		7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */; };
 		7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */; };
 		7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */; };
+		7D5AE3712242AED800E53FCC /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5AE3702242AED800E53FCC /* ReportTableViewCell.swift */; };
+		7D5AE3732242B48700E53FCC /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5AE3722242B48700E53FCC /* Report.swift */; };
 		7DB660922241A648007AA974 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB660912241A648007AA974 /* LoginViewController.swift */; };
 		7DD697732236E4A400810255 /* Taller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD697722236E4A400810255 /* Taller.swift */; };
 		7DD69775223720CA00810255 /* customPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD69774223720CA00810255 /* customPin.xib */; };
@@ -35,6 +37,8 @@
 		7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizaViewController.swift; sourceTree = "<group>"; };
 		7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaBiciCollectionViewCell.swift; sourceTree = "<group>"; };
 		7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D5AE3702242AED800E53FCC /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		7D5AE3722242B48700E53FCC /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		7DB660912241A648007AA974 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7DD697722236E4A400810255 /* Taller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taller.swift; sourceTree = "<group>"; };
 		7DD69774223720CA00810255 /* customPin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customPin.xib; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				8BB47256222F773300D5C51D /* ReportesViewController.swift */,
+				7D5AE3702242AED800E53FCC /* ReportTableViewCell.swift */,
 			);
 			path = Reportes;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 			children = (
 				8BA625A322358585008E9337 /* DataManager.swift */,
 				7DD697722236E4A400810255 /* Taller.swift */,
+				7D5AE3722242B48700E53FCC /* Report.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -349,6 +355,8 @@
 				7DB660922241A648007AA974 /* LoginViewController.swift in Sources */,
 				8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */,
 				8BB95C2E222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld in Sources */,
+				7D5AE3732242B48700E53FCC /* Report.swift in Sources */,
+				7D5AE3712242AED800E53FCC /* ReportTableViewCell.swift in Sources */,
 				8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */,
 				7DD69777223721F300810255 /* Custompin.swift in Sources */,
 				8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */,

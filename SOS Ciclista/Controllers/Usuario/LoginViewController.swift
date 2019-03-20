@@ -51,6 +51,9 @@ class LoginViewController: UIViewController {
                     // User is signed in
                     // ...
                     print("acces firebase with facebook")
+                    UserDefaults.standard.set("1", forKey: "sesion")
+                    
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
         }
