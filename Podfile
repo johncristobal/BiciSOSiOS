@@ -15,5 +15,7 @@ pod 'FBSDKLoginKit'
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+pod "TLPhotoPicker"
+pod "BSImagePicker"
 
 end

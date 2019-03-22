@@ -19,6 +19,14 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if AccessToken.current != nil{
+            self.performSegue(withIdentifier: "personaliza", sender: nil)
+        }else{
+            print("no")
+        }
+    }
+    
     @IBAction func closeWindow(_ sender: Any) {
         dismiss(animated: true, completion: nil)
         

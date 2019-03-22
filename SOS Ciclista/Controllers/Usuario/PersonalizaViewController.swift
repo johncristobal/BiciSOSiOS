@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import MobileCoreServices
+import BSImagePicker
+import BSImageView
+import Photos
 
-class PersonalizaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class PersonalizaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet var aceptarButton: UIButton!
     @IBOutlet var bicisCollection: UICollectionView!
@@ -16,7 +20,8 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet var addPhotosButton: UIButton!
     @IBOutlet var serieText: UITextField!
     @IBOutlet var detailsText: UITextField!
-    
+    let picker = UIImagePickerController()
+
     @IBOutlet var vistaAmarillo: UIView!
     let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic")]
     
@@ -39,7 +44,22 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     @IBAction func addPhotosAction(_ sender: Any) {
+        /*if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            
+            picker.delegate = self
+            picker.sourceType = .savedPhotosAlbum
+            present(picker, animated: true)
+        }*/
+        performSegue(withIdentifier: "fotos", sender: nil)
+
+        
     }
+    
+    /*func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let media = info[UIImagePickerController.InfoKey.mediaType] as! String
+        self.dismiss(animated:true, completion:nil)
+    }*/
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imagenes.count
@@ -65,9 +85,12 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "fotos"{
+            let vc = segue.destination as! PhotosBiciViewController
+            vc.assets = sender as? [PHAsset]
+        }
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
-
+    }*/
 }

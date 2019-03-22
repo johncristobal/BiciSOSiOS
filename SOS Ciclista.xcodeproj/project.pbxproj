@@ -10,6 +10,7 @@
 		7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */; };
 		7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */; };
 		7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */; };
+		7D50E3A72245513E006A815B /* PhotosBiciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50E3A62245513E006A815B /* PhotosBiciViewController.swift */; };
 		7D5AE3712242AED800E53FCC /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5AE3702242AED800E53FCC /* ReportTableViewCell.swift */; };
 		7D5AE3732242B48700E53FCC /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5AE3722242B48700E53FCC /* Report.swift */; };
 		7DB660922241A648007AA974 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB660912241A648007AA974 /* LoginViewController.swift */; };
@@ -37,6 +38,7 @@
 		7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizaViewController.swift; sourceTree = "<group>"; };
 		7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaBiciCollectionViewCell.swift; sourceTree = "<group>"; };
 		7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D50E3A62245513E006A815B /* PhotosBiciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosBiciViewController.swift; sourceTree = "<group>"; };
 		7D5AE3702242AED800E53FCC /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		7D5AE3722242B48700E53FCC /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		7DB660912241A648007AA974 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */,
 				7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */,
 				7DB660912241A648007AA974 /* LoginViewController.swift */,
+				7D50E3A62245513E006A815B /* PhotosBiciViewController.swift */,
 			);
 			path = Usuario;
 			sourceTree = "<group>";
@@ -311,6 +314,9 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BSGridCollectionViewLayout/BSGridCollectionViewLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/BSImagePicker/BSImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/BSImageView/BSImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -322,11 +328,15 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TLPhotoPicker/TLPhotoPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSGridCollectionViewLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -338,6 +348,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TLPhotoPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DB660922241A648007AA974 /* LoginViewController.swift in Sources */,
+				7D50E3A72245513E006A815B /* PhotosBiciViewController.swift in Sources */,
 				8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */,
 				8BB95C2E222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld in Sources */,
 				7D5AE3732242B48700E53FCC /* Report.swift in Sources */,

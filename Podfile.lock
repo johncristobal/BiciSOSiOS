@@ -6,6 +6,11 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - BSGridCollectionViewLayout (1.2.2)
+  - BSImagePicker (2.9.0):
+    - BSGridCollectionViewLayout (= 1.2.2)
+    - BSImageView (= 1.0.2)
+  - BSImageView (1.0.2)
   - FacebookCore (0.5.0):
     - Bolts (~> 1.9)
     - FBSDKCoreKit (~> 4.37)
@@ -86,9 +91,11 @@ PODS:
   - nanopb/encode (0.3.901)
   - SideMenu (5.0.1)
   - SwiftyJSON (4.2.0)
+  - TLPhotoPicker (0.1.0)
 
 DEPENDENCIES:
   - Alamofire
+  - BSImagePicker
   - FacebookCore
   - FacebookLogin
   - FacebookShare
@@ -97,11 +104,15 @@ DEPENDENCIES:
   - Firebase/Core
   - SideMenu
   - SwiftyJSON
+  - TLPhotoPicker
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Bolts
+    - BSGridCollectionViewLayout
+    - BSImagePicker
+    - BSImageView
     - FacebookCore
     - FacebookLogin
     - FacebookShare
@@ -120,10 +131,14 @@ SPEC REPOS:
     - nanopb
     - SideMenu
     - SwiftyJSON
+    - TLPhotoPicker
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  BSGridCollectionViewLayout: 3e6f23b3a2b4f0ca9afae09ca01389d1057f7b32
+  BSImagePicker: 553707de1adaad42eac252e0b84d20dbdba83fe9
+  BSImageView: ab22ff8cae61f1ae17a3c9efeeb216af3cf84a09
   FacebookCore: 74288d0add931d361b1596beae787ab72c438249
   FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
   FacebookShare: 963b4bb1124a64a395b1e428163d70b5774116e8
@@ -142,7 +157,8 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SideMenu: 87efd943737bb83aedf0358884d09fcf5576636d
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  TLPhotoPicker: 05463d0aea62633f4066acf219f3952ab8b1d488
 
-PODFILE CHECKSUM: 3f5fc77798e7519a6e628c3e18ac9de871bc0401
+PODFILE CHECKSUM: dac9dad7b05168a1bf30943331ae013e49fffd76
 
 COCOAPODS: 1.5.3
