@@ -53,7 +53,8 @@ class LoginViewController: UIViewController {
                     print("acces firebase with facebook")
                     UserDefaults.standard.set("1", forKey: "sesion")
                     
-                    self.dismiss(animated: true, completion: nil)
+                    //self.dismiss(animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "personaliza", sender: nil)
                 }
             }
         }

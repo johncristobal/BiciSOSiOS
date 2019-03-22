@@ -363,6 +363,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WR1-gW-2Dy"/>
                     </view>
+                    <connections>
+                        <segue destination="hWB-jh-9Mf" kind="show" identifier="personaliza" id="ZpG-WP-dvz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLs-cM-tuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -511,17 +514,31 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu5-M9-5F3">
-                                                        <rect key="frame" x="103.5" y="411.5" width="120" height="30"/>
+                                                        <rect key="frame" x="199" y="411.5" width="120" height="30"/>
                                                         <color key="backgroundColor" red="1" green="0.84705882352941175" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="OZD-xQ-To4"/>
+                                                            <constraint firstAttribute="width" constant="120" id="OZD-xQ-To4"/>
                                                             <constraint firstAttribute="height" constant="30" id="RgO-kI-nM7"/>
                                                         </constraints>
-                                                        <state key="normal" title="ACEPTAR">
+                                                        <state key="normal" title="GUARDAR">
                                                             <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="aceptarAction:" destination="hWB-jh-9Mf" eventType="touchUpInside" id="l33-zO-FHg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfx-3p-41s">
+                                                        <rect key="frame" x="71" y="411.5" width="120" height="30"/>
+                                                        <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="cuh-9a-204"/>
+                                                            <constraint firstAttribute="width" constant="120" id="cxi-yP-Ryi"/>
+                                                        </constraints>
+                                                        <state key="normal" title="MAS TARDE">
+                                                            <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="masTardeAction:" destination="hWB-jh-9Mf" eventType="touchUpInside" id="dUq-ks-MmJ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -537,6 +554,7 @@
                                                     <constraint firstItem="Qs1-i0-dGH" firstAttribute="leading" secondItem="2Kb-wx-BjB" secondAttribute="leading" id="JOo-yg-Fur"/>
                                                     <constraint firstItem="Og1-OR-qUz" firstAttribute="leading" secondItem="o17-D3-bnp" secondAttribute="leading" id="Lfo-pb-6EW"/>
                                                     <constraint firstItem="bu5-M9-5F3" firstAttribute="top" secondItem="Fze-P9-3gq" secondAttribute="bottom" constant="8" id="NgM-1f-rc9"/>
+                                                    <constraint firstItem="bu5-M9-5F3" firstAttribute="leading" secondItem="Jfx-3p-41s" secondAttribute="trailing" constant="8" id="OBr-CR-kLa"/>
                                                     <constraint firstItem="o17-D3-bnp" firstAttribute="leading" secondItem="0oW-tx-due" secondAttribute="trailing" constant="45" id="OaK-N2-Tso"/>
                                                     <constraint firstItem="o17-D3-bnp" firstAttribute="centerY" secondItem="0oW-tx-due" secondAttribute="centerY" id="Q9b-9d-TNo"/>
                                                     <constraint firstItem="0oW-tx-due" firstAttribute="top" secondItem="Qs1-i0-dGH" secondAttribute="bottom" constant="8" id="RQe-4o-jzM"/>
@@ -546,16 +564,17 @@
                                                     <constraint firstItem="z5q-YQ-GOR" firstAttribute="top" secondItem="mYC-fP-rn5" secondAttribute="bottom" constant="8" id="dLX-db-k07"/>
                                                     <constraint firstItem="mYC-fP-rn5" firstAttribute="top" secondItem="q1P-cu-CfN" secondAttribute="top" constant="8" id="eUM-Tt-jx7"/>
                                                     <constraint firstAttribute="trailing" secondItem="z5q-YQ-GOR" secondAttribute="trailing" id="h6W-h0-FBy"/>
-                                                    <constraint firstItem="bu5-M9-5F3" firstAttribute="centerX" secondItem="q1P-cu-CfN" secondAttribute="centerX" id="h8Q-Bf-thy"/>
                                                     <constraint firstItem="aud-gF-sjP" firstAttribute="leading" secondItem="0oW-tx-due" secondAttribute="leading" id="j47-tX-YGk"/>
                                                     <constraint firstAttribute="trailing" secondItem="Qs1-i0-dGH" secondAttribute="trailing" constant="8" id="kQw-Yl-Otw"/>
                                                     <constraint firstItem="fB3-zO-B6w" firstAttribute="top" secondItem="Og1-OR-qUz" secondAttribute="bottom" constant="8" id="pMz-2m-l9x"/>
                                                     <constraint firstItem="2Kb-wx-BjB" firstAttribute="top" secondItem="wvq-zM-mPq" secondAttribute="bottom" constant="8" id="ps3-Et-sId"/>
                                                     <constraint firstItem="Qs1-i0-dGH" firstAttribute="top" secondItem="2Kb-wx-BjB" secondAttribute="bottom" constant="8" id="tjn-iO-Xk9"/>
+                                                    <constraint firstItem="Jfx-3p-41s" firstAttribute="centerY" secondItem="bu5-M9-5F3" secondAttribute="centerY" id="vNa-Q4-Mpq"/>
                                                     <constraint firstItem="0oW-tx-due" firstAttribute="leading" secondItem="2Kb-wx-BjB" secondAttribute="leading" id="vyE-cc-U2W"/>
                                                     <constraint firstItem="Og1-OR-qUz" firstAttribute="centerY" secondItem="aud-gF-sjP" secondAttribute="centerY" id="xVe-ja-G9q"/>
                                                     <constraint firstItem="2Kb-wx-BjB" firstAttribute="leading" secondItem="z5q-YQ-GOR" secondAttribute="leading" id="xuH-if-7QX"/>
                                                     <constraint firstAttribute="height" constant="750" id="xvc-7V-FdD"/>
+                                                    <constraint firstItem="bu5-M9-5F3" firstAttribute="trailing" secondItem="Fze-P9-3gq" secondAttribute="trailing" id="y6v-cW-nSh"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -712,6 +731,6 @@
         <image name="reportar" width="604" height="410"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9Bx-r1-g3R"/>
+        <segue reference="YXD-he-ZMI"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -35,6 +35,7 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     @IBAction func aceptarAction(_ sender: Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func addPhotosAction(_ sender: Any) {
@@ -54,6 +55,9 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     
     @IBAction func closeWindow(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func masTardeAction(_ sender: Any) {
     }
     
     /*
