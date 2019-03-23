@@ -11,6 +11,26 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>BSGridCollectionViewLayout.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
+		<key>BSImagePicker-BSImagePicker.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
+		<key>BSImagePicker.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
+		<key>BSImageView.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>21</integer>
+		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -115,6 +135,11 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>16</integer>
+		</dict>
+		<key>TLPhotoPicker.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>22</integer>
 		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>

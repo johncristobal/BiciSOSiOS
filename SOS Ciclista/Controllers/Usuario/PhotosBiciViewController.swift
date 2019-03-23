@@ -38,6 +38,32 @@ class PhotosBiciViewController: UIViewController {
         vistaAmarilla.layer.borderColor = yellow.cgColor
         vistaAmarilla.layer.borderWidth = 3.0
         vistaAmarilla.layer.cornerRadius = 15.0
+
+        let gestureA = TapGesture(target: self,action: #selector(self.updatePhoto))
+        gestureA.title = 0
+        let gestureB = TapGesture(target: self,action: #selector(self.updatePhoto))
+        gestureB.title = 1
+        let gestureC = TapGesture(target: self,action: #selector(self.updatePhoto))
+        gestureC.title = 2
+        let gestureD = TapGesture(target: self,action: #selector(self.updatePhoto))
+        gestureD.title = 3
+        biciA.isUserInteractionEnabled = true
+        biciB.isUserInteractionEnabled = true
+        biciC.isUserInteractionEnabled = true
+        biciD.isUserInteractionEnabled = true
+        
+        biciA.addGestureRecognizer(gestureA)
+        biciB.addGestureRecognizer(gestureB)
+        biciC.addGestureRecognizer(gestureC)
+        biciD.addGestureRecognizer(gestureD)
+    }
+    
+    @objc func updatePhoto(sender: TapGesture){
+        print(sender.title)
+    }
+    
+    class TapGesture: UITapGestureRecognizer {
+        var title = Int()
     }
     
     override func viewDidAppear(_ animated: Bool) {
