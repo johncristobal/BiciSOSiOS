@@ -11,7 +11,7 @@ import Photos
 import BSImagePicker
 import BSImageView
 
-class PhotosBiciViewController: UIViewController {
+class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var biciA: UIImageView!
     @IBOutlet var biciB: UIImageView!
@@ -23,7 +23,9 @@ class PhotosBiciViewController: UIViewController {
     
     var ancho : CGFloat!
     var alto : CGFloat!
-    var selected : [PHAsset]!
+    var selected : [UIImage]! = []
+    var flags : [Bool] = [false,false,false,false]
+    var index = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,17 +58,52 @@ class PhotosBiciViewController: UIViewController {
         biciB.addGestureRecognizer(gestureB)
         biciC.addGestureRecognizer(gestureC)
         biciD.addGestureRecognizer(gestureD)
+        
+        showPhotos()
     }
     
     @objc func updatePhoto(sender: TapGesture){
         print(sender.title)
+        index = sender.title
+        
+        if flags[sender.title]{
+            //true => alert con opciones
+            
+        }else{
+            //abrismo galeria
+            if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .savedPhotosAlbum
+                imagePicker.allowsEditing = false
+                
+                present(imagePicker, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        self.dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            let dato = UIImage(data: image.jpeg(.low)!)!
+            self.selected[index] = dato
+            showPhotos()
+        }
+    }
+    
+    @objc func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+        self.dismiss(animated: true, completion: nil)
+        let dato = UIImage(data: image.jpeg(.low)!)!
+        self.selected[index] = dato
+        
+        showPhotos()
     }
     
     class TapGesture: UITapGestureRecognizer {
         var title = Int()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    /*override func viewDidAppear(_ animated: Bool) {
         if !flag{
             flag = true
             let vc = BSImagePickerViewController()
@@ -83,12 +120,16 @@ class PhotosBiciViewController: UIViewController {
             }, finish: { (assets: [PHAsset]) -> Void in
                 // User finished with these assets
                 //self.dismiss(animated: true, completion: nil)
-                self.selected = assets
+                assets.forEach { (asset) in
+                    var ii = 0
+                    self.selected.append(self.getAssetThumbnail(asset: asset))
+                    ii += 1
+                }
             }, completion: nil)
         }else{
             showPhotos()
         }
-    }
+    }*/
     
     @IBAction func savePhotos(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -98,22 +139,29 @@ class PhotosBiciViewController: UIViewController {
         var i = 0
         if selected != nil {
             selected.forEach { (asset) in
+                
+                if asset != UIImage(named: "bicia"){
+                
                 switch(i){
                 case 0:
-                    biciA.image = getAssetThumbnail(asset: asset)
+                    flags[0] = true
+                    biciA.image = asset
                     break
                 case 1:
-                    biciB.image = getAssetThumbnail(asset: asset)
+                    flags[1] = true
+                    biciB.image = asset
                     break
                 case 2:
-                    biciC.image = getAssetThumbnail(asset: asset)
+                    flags[2] = true
+                    biciC.image = asset
                     break
                 case 3:
-                    biciD.image = getAssetThumbnail(asset: asset)
+                    flags[3] = true
+                    biciD.image = asset
                     break
                 default: break
                 }
-                
+                }
                 i += 1
             }
         }
@@ -127,7 +175,7 @@ class PhotosBiciViewController: UIViewController {
         manager.requestImage(for: asset, targetSize: CGSize(width: ancho, height:  alto), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
             thumbnail = result!
         })
-        return thumbnail
+        return UIImage(data: thumbnail.jpeg(.low)!)!
     }
     /*
     // MARK: - Navigation
@@ -139,4 +187,21 @@ class PhotosBiciViewController: UIViewController {
     }
     */
 
+}
+
+extension UIImage {
+    enum JPEGQuality: CGFloat {
+        case lowest  = 0
+        case low     = 0.25
+        case medium  = 0.5
+        case high    = 0.75
+        case highest = 1
+    }
+    
+    /// Returns the data for the specified image in JPEG format.
+    /// If the image object’s underlying image data has been purged, calling this function forces that data to be reloaded into memory.
+    /// - returns: A data object containing the JPEG data, or nil if there was a problem generating the data. This function may return nil if the image has no data or if the underlying CGImageRef contains data in an unsupported bitmap format.
+    func jpeg(_ jpegQuality: JPEGQuality) -> Data? {
+        return jpegData(compressionQuality: jpegQuality.rawValue)
+    }
 }

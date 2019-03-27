@@ -24,7 +24,13 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
 
     @IBOutlet var vistaAmarillo: UIView!
     let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic")]
+    var selected : [UIImage]! = [UIImage(named: "bicia")!,UIImage(named: "bicia")!,UIImage(named: "bicia")!,UIImage(named: "bicia")!]
+
+    var ancho : CGFloat!
+    var alto : CGFloat!
     
+    var flag = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +45,14 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
         aceptarButton.layer.cornerRadius = 10.0
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if !flag{
+            flag = true
+        }else{
+            performSegue(withIdentifier: "fotos", sender: selected)
+        }
+    }
+    
     @IBAction func aceptarAction(_ sender: Any) {
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
@@ -50,8 +64,28 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
             picker.sourceType = .savedPhotosAlbum
             present(picker, animated: true)
         }*/
-        performSegue(withIdentifier: "fotos", sender: nil)
+        //performSegue(withIdentifier: "fotos", sender: nil)
 
+        let vc = BSImagePickerViewController()
+        vc.maxNumberOfSelections = 4
+        bs_presentImagePickerController(vc,animated: true,
+        select: { (asset: PHAsset) -> Void in
+                                            
+        }, deselect: { (asset: PHAsset) -> Void in
+            // User deselected an assets.
+            // Do something, cancel upload?
+        }, cancel: { (assets: [PHAsset]) -> Void in
+            // User cancelled. And this where the assets currently selected.
+            
+        }, finish: { (assets: [PHAsset]) -> Void in
+            // User finished with these assets
+            //self.dismiss(animated: true, completion: nil)
+            var ii = 0
+            assets.forEach { (asset) in
+                self.selected[ii]=(self.getAssetThumbnail(asset: asset))
+                ii += 1
+            }
+        }, completion: nil)
         
     }
     
@@ -80,17 +114,27 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     @IBAction func masTardeAction(_ sender: Any) {
     }
     
-    /*
+    func getAssetThumbnail(asset: PHAsset) -> UIImage {
+        let manager = PHImageManager.default()
+        let option = PHImageRequestOptions()
+        var thumbnail = UIImage()
+        option.isSynchronous = true
+        manager.requestImage(for: asset, targetSize: CGSize(width: 150, height:  150), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
+            thumbnail = result!
+        })
+        return UIImage(data: thumbnail.jpeg(.low)!)!
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fotos"{
             let vc = segue.destination as! PhotosBiciViewController
-            vc.assets = sender as? [PHAsset]
+            vc.selected = sender as? [UIImage]
         }
         
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }*/
+    }
 }
