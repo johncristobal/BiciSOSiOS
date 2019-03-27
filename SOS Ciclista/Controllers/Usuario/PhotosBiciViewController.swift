@@ -68,7 +68,63 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
         
         if flags[sender.title]{
             //true => alert con opciones
+            let alert = UIAlertController(title: "Tu bici", message: "", preferredStyle: .actionSheet)
             
+            let actionFoto = UIAlertAction(title: "Elegir otra foto", style: .default) { (action) in
+                if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
+                    imagePicker.sourceType = .savedPhotosAlbum
+                    imagePicker.allowsEditing = false
+                    
+                    self.present(imagePicker, animated: true, completion: nil)
+                }
+            }
+            let actionBorrar = UIAlertAction(title: "Borrar foto", style: .default) { (action) in
+                
+                let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].path
+                let complete = path.appending("/bici_\(self.index).png")
+                if FileManager.default.fileExists(atPath: complete){
+                    do{
+                        try FileManager.default.removeItem(atPath: complete)
+                    } catch {
+                        print("Error al elimiar foto")
+                    }
+                }
+
+                self.selected[self.index] = UIImage(named: "bicia")!
+                
+                switch(self.index){
+                case 0:
+                    self.flags[0] = false
+                    self.biciA.image = UIImage(named: "bicia")
+                    break
+                case 1:
+                    self.flags[1] = false
+                    self.biciB.image = UIImage(named: "bicia")
+                    break
+                case 2:
+                    self.flags[2] = false
+                    self.biciC.image = UIImage(named: "bicia")
+                    break
+                case 3:
+                    self.flags[3] = false
+                    self.biciD.image = UIImage(named: "bicia")
+                    break
+                default: break
+                }
+            }
+            let action = UIAlertAction(title: "Cancelar", style: .cancel) { (action) in
+                
+            }
+            
+            alert.addAction(action)
+            alert.addAction(actionFoto)
+            alert.addAction(actionBorrar)
+            
+            present(alert,animated: true)
+            
+
         }else{
             //abrismo galeria
             if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
@@ -103,35 +159,35 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
         var title = Int()
     }
     
-    /*override func viewDidAppear(_ animated: Bool) {
-        if !flag{
-            flag = true
-            let vc = BSImagePickerViewController()
-            vc.maxNumberOfSelections = 4
-            bs_presentImagePickerController(vc,animated: true,
-            select: { (asset: PHAsset) -> Void in
-                                                
-            }, deselect: { (asset: PHAsset) -> Void in
-                // User deselected an assets.
-                // Do something, cancel upload?
-            }, cancel: { (assets: [PHAsset]) -> Void in
-                // User cancelled. And this where the assets currently selected.
-                
-            }, finish: { (assets: [PHAsset]) -> Void in
-                // User finished with these assets
-                //self.dismiss(animated: true, completion: nil)
-                assets.forEach { (asset) in
-                    var ii = 0
-                    self.selected.append(self.getAssetThumbnail(asset: asset))
-                    ii += 1
-                }
-            }, completion: nil)
-        }else{
-            showPhotos()
-        }
-    }*/
-    
     @IBAction func savePhotos(_ sender: Any) {
+        
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].path
+
+        let name = "bici"
+        var i = 0
+        selected.forEach { (image) in
+            
+            if image != UIImage(named: "bicia"){
+                let data = image.jpegData(compressionQuality: 0.9)
+                let complete = path.appending("/\(name)_\(i).png")
+                if FileManager.default.fileExists(atPath: complete){
+                    do{
+                        try FileManager.default.removeItem(atPath: complete)
+                        
+                        FileManager.default.createFile(atPath: complete,contents:data, attributes: nil)
+                    } catch {
+                        print("Error al elimiar foto")
+                    }
+                    
+                }else{
+                    FileManager.default.createFile(atPath: complete,contents:data, attributes: nil)
+                }
+                
+                i += 1
+                UserDefaults.standard.set("1", forKey: "fotos")
+            }
+        }
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -141,30 +197,31 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
             selected.forEach { (asset) in
                 
                 if asset != UIImage(named: "bicia"){
-                
-                switch(i){
-                case 0:
-                    flags[0] = true
-                    biciA.image = asset
-                    break
-                case 1:
-                    flags[1] = true
-                    biciB.image = asset
-                    break
-                case 2:
-                    flags[2] = true
-                    biciC.image = asset
-                    break
-                case 3:
-                    flags[3] = true
-                    biciD.image = asset
-                    break
-                default: break
-                }
+                    switch(i){
+                    case 0:
+                        flags[0] = true
+                        biciA.image = asset
+                        break
+                    case 1:
+                        flags[1] = true
+                        biciB.image = asset
+                        break
+                    case 2:
+                        flags[2] = true
+                        biciC.image = asset
+                        break
+                    case 3:
+                        flags[3] = true
+                        biciD.image = asset
+                        break
+                    default: break
+                    }
                 }
                 i += 1
             }
         }
+        
+        view.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
     }
     
     func getAssetThumbnail(asset: PHAsset) -> UIImage {

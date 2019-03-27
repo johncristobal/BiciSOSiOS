@@ -46,9 +46,8 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if !flag{
-            flag = true
-        }else{
+        if flag{
+            flag = false
             performSegue(withIdentifier: "fotos", sender: selected)
         }
     }
@@ -58,42 +57,49 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     @IBAction func addPhotosAction(_ sender: Any) {
-        /*if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-            
-            picker.delegate = self
-            picker.sourceType = .savedPhotosAlbum
-            present(picker, animated: true)
-        }*/
-        //performSegue(withIdentifier: "fotos", sender: nil)
 
-        let vc = BSImagePickerViewController()
-        vc.maxNumberOfSelections = 4
-        bs_presentImagePickerController(vc,animated: true,
-        select: { (asset: PHAsset) -> Void in
-                                            
-        }, deselect: { (asset: PHAsset) -> Void in
-            // User deselected an assets.
-            // Do something, cancel upload?
-        }, cancel: { (assets: [PHAsset]) -> Void in
-            // User cancelled. And this where the assets currently selected.
+        let fotos = UserDefaults.standard.string(forKey: "fotos")
+        
+        if fotos == "1"{
+            //photos saved, launch same images
+            let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].path
             
-        }, finish: { (assets: [PHAsset]) -> Void in
-            // User finished with these assets
-            //self.dismiss(animated: true, completion: nil)
-            var ii = 0
-            assets.forEach { (asset) in
-                self.selected[ii]=(self.getAssetThumbnail(asset: asset))
-                ii += 1
+            let name = "bici"
+            for index in 0...3 {
+                let complete = path.appending("/\(name)_\(index).png")
+                if FileManager.default.fileExists(atPath: complete){
+                    selected[index] = UIImage(contentsOfFile: complete)!
+                }else{
+                    selected[index] = UIImage(named: "bicia")!
+                }
             }
-        }, completion: nil)
-        
+            
+            performSegue(withIdentifier: "fotos", sender: selected)
+        }else{
+            let vc = BSImagePickerViewController()
+            vc.maxNumberOfSelections = 4
+            bs_presentImagePickerController(vc,animated: true,
+            select: { (asset: PHAsset) -> Void in
+                
+            }, deselect: { (asset: PHAsset) -> Void in
+                // User deselected an assets.
+                // Do something, cancel upload?
+            }, cancel: { (assets: [PHAsset]) -> Void in
+                // User cancelled. And this where the assets currently selected.
+                
+            }, finish: { (assets: [PHAsset]) -> Void in
+                // User finished with these assets
+                //self.dismiss(animated: true, completion: nil)
+                var ii = 0
+                assets.forEach { (asset) in
+                    self.selected[ii]=(self.getAssetThumbnail(asset: asset))
+                    ii += 1
+                }
+                self.flag = true
+
+            }, completion: nil)
+        }
     }
-    
-    /*func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        let media = info[UIImagePickerController.InfoKey.mediaType] as! String
-        self.dismiss(animated:true, completion:nil)
-    }*/
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imagenes.count

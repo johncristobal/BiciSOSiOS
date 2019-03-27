@@ -31,7 +31,6 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
 
         tableview.reloadData()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,6 +52,7 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         print("reportar")
         if sesion == "1"{
             print(sesion)
+            
         }else{
             performSegue(withIdentifier: "sesion", sender: nil)
         }
