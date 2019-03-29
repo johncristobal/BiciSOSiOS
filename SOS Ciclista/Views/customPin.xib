@@ -13,19 +13,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="customPin" id="iN0-l3-epB" customClass="Custompin" customModule="SOS_Ciclista" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qg-1E-nZh">
-                    <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BUE-e9-XtU">
-                            <rect key="frame" x="0.0" y="0.0" width="45" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                         </imageView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="BUE-e9-XtU" firstAttribute="top" secondItem="1qg-1E-nZh" secondAttribute="top" id="1GW-3O-bYg"/>
-                        <constraint firstAttribute="bottom" secondItem="BUE-e9-XtU" secondAttribute="bottom" constant="5" id="4aE-Z7-WF4"/>
+                        <constraint firstAttribute="bottom" secondItem="BUE-e9-XtU" secondAttribute="bottom" id="4aE-Z7-WF4"/>
                         <constraint firstAttribute="trailing" secondItem="BUE-e9-XtU" secondAttribute="trailing" id="FEs-G3-pXr"/>
                         <constraint firstItem="BUE-e9-XtU" firstAttribute="leading" secondItem="1qg-1E-nZh" secondAttribute="leading" id="mHp-mG-yj5"/>
                     </constraints>

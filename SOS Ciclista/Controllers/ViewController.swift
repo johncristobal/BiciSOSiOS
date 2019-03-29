@@ -117,7 +117,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 // callout bubble
                 annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
                 
-                annotationView.frame = CGRect(x: 0, y: 0, width: 45, height: 45)
+                annotationView.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
                 
                 let customView = annotationView.subviews.first as! Custompin
                 customView.frame = annotationView.frame
@@ -144,7 +144,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             if flagLocation {
                 flagLocation = false
                 let point: CLLocationCoordinate2D = CLLocationCoordinate2DMake(loca.coordinate.latitude,loca.coordinate.longitude)
-                let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 15000.0/111000.0,longitudeDelta: 15000.0/110000)
+                let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 2000.0/111000.0,longitudeDelta: 2000.0/110000.0)
                 self.mapview.setRegion(MKCoordinateRegion(center: point,span: span),animated:true)
             }
         }

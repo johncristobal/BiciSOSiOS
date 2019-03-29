@@ -17,7 +17,7 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet var biciB: UIImageView!
     @IBOutlet var biciC: UIImageView!
     @IBOutlet var biciD: UIImageView!
-    
+    @IBOutlet weak var botonAceptar: UIButton!
     @IBOutlet var vistaAmarilla: UIView!
     var flag = false
     
@@ -33,13 +33,16 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
         ancho = biciA.frame.width
         alto = biciA.frame.height
         
-        view.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        //view.backgroundColor = UIColor(white: 0.0, alpha: 0.2)
 
         let yellow : UIColor = UIColor( red: 255.0/255.0, green: 216.0/255.0, blue:0, alpha: 1.0)
         vistaAmarilla.layer.masksToBounds = true
         vistaAmarilla.layer.borderColor = yellow.cgColor
         vistaAmarilla.layer.borderWidth = 3.0
         vistaAmarilla.layer.cornerRadius = 15.0
+
+        botonAceptar.layer.masksToBounds = true
+        botonAceptar.layer.cornerRadius = 10.0
 
         let gestureA = TapGesture(target: self,action: #selector(self.updatePhoto))
         gestureA.title = 0
@@ -60,6 +63,9 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
         biciD.addGestureRecognizer(gestureD)
         
         showPhotos()
+
+        view.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+
     }
     
     @objc func updatePhoto(sender: TapGesture){
@@ -220,8 +226,6 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
                 i += 1
             }
         }
-        
-        view.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
     }
     
     func getAssetThumbnail(asset: PHAsset) -> UIImage {
