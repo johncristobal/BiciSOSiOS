@@ -46,7 +46,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.revealViewController()?.revealToggle(animated: true)
+        self.revealViewController()?.revealToggle(animated: true)        
         performSegue(withIdentifier: segues[indexPath.row], sender: nil)
     }
     

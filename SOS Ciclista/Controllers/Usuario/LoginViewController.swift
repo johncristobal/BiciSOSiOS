@@ -20,11 +20,11 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if AccessToken.current != nil{
+        /*if AccessToken.current != nil{
             self.performSegue(withIdentifier: "personaliza", sender: nil)
         }else{
             print("no")
-        }
+        }*/
     }
     
     @IBAction func closeWindow(_ sender: Any) {
@@ -56,13 +56,15 @@ class LoginViewController: UIViewController {
                             print("erorr \(error)")
                             return
                         }
-                    // User is signed in
-                    // ...
-                    print("acces firebase with facebook")
-                    UserDefaults.standard.set("1", forKey: "sesion")
+                        // User is signed in
+                        // ...
+                        print("acces firebase with facebook")
+                        UserDefaults.standard.set("1", forKey: "sesion")
+                        print(authResult?.user.displayName!)
+                        UserDefaults.standard.set(authResult?.user.displayName!, forKey: "nombre")
                     
-                    //self.dismiss(animated: true, completion: nil)
-                    self.performSegue(withIdentifier: "personaliza", sender: nil)
+                        //self.dismiss(animated: true, completion: nil)
+                        self.performSegue(withIdentifier: "personaliza", sender: nil)
                 }
             }
         }

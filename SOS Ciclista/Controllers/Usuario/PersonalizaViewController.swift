@@ -43,6 +43,9 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
 
         aceptarButton.layer.masksToBounds = true
         aceptarButton.layer.cornerRadius = 10.0
+        
+        let name = UserDefaults.standard.string(forKey: "nombre")
+        print(name!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
