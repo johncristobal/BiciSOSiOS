@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ReportesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -24,13 +26,14 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         let gesture = UITapGestureRecognizer(target: self,action: #selector(self.reportarAction))
         imageReportar.addGestureRecognizer(gesture)
         
+        reportes.removeAll()
+        /*reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
         reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
         reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
         reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
-        reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
-        reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
+        reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))*/
 
-        tableview.reloadData()
+        getDataReportes()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,11 +55,40 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         print("reportar")
         if sesion == "1"{
             print(sesion)
-            
+            saveReporte()
         }else{
             performSegue(withIdentifier: "sesion", sender: nil)
         }
         return true
+    }
+
+    func saveReporte(){
+        let ref = Database.database().reference()
+        let uid = Auth.auth().currentUser?.uid
+        let thisUsersGamesRef = ref.child("reportes").childByAutoId()
+        thisUsersGamesRef.setValue(["id":thisUsersGamesRef.key,"imageUrl":"utlios","textTitle":"tituloisio"])
+    }
+    
+    func getDataReportes(){
+        var ref: DatabaseReference!
+        ref = Database.database().reference().child("reportes")
+        ref.observeSingleEvent(of: .value, with: { (data) in
+            let value = data.value as? NSDictionary
+            value?.forEach({ (arg0) in
+                let (key, value) = arg0
+                
+                let datos = value as! NSDictionary
+                let title = key as! String
+                let id = datos["textTitle"] as! String
+                self.reportes.append(Report(id: id, title: title, description: "...", estatus: "id"))
+            })
+            
+            self.tableview.reloadData()
+            
+            
+        }) { (error) in
+            print(error)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
