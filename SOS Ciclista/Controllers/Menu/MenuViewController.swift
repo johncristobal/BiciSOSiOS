@@ -8,23 +8,54 @@
 
 import UIKit
 
+var imagen = #imageLiteral(resourceName: "launcher")
+
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet var miniView: UIView!
-    
-    
+    @IBOutlet weak var biciUser: UIImageView!    
+    @IBOutlet weak var nameUser: UILabel!
+    let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic")]
+
     let opciones : [String] = ["Reportes","Me robaron la bici...","# serie con reporte","Tips","Contáctanos","Acerca de","Ajustes","Iniciar sesión"]
     let iconos = [#imageLiteral(resourceName: "reportesiconsmall"),#imageLiteral(resourceName: "serieiconsmall"),#imageLiteral(resourceName: "buscaricon"),#imageLiteral(resourceName: "tipsicon"),#imageLiteral(resourceName: "contactoiconsmall"),#imageLiteral(resourceName: "acercaicon"),#imageLiteral(resourceName: "ajustesicon"),#imageLiteral(resourceName: "saliricon")]
 
     let segues : [String] = ["reportes","serie","reportes","serie","reportes","serie","reportes","login"]
     
+    var sesion = "0"
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         miniView.layer.cornerRadius = 50;
         miniView.layer.masksToBounds = true;
+        
+        let name = UserDefaults.standard.string(forKey: "nombre")
+        if name != nil{
+            nameUser.text = name
+        }else{
+            nameUser.text = "SOS Ciclista"
+        }
+
+        let indexbici = UserDefaults.standard.integer(forKey: "bici")
+        if indexbici != -1{
+            biciUser.image = imagenes[indexbici]
+        }else{
+            biciUser.image = imagen
+        }
+        let ses = UserDefaults.standard.string(forKey: "sesion")
+        if ses != nil{
+            sesion = ses!
+            if sesion == "1"{
+                //let tapgesture = UITapGestureRecognizer(target: self, action: #Selector?)
+            }
+        }
+    }
+    
+    func abrirPersonaliza(){
+        performSegue(withIdentifier: "personaliza", sender: nil)
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,8 +69,18 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuTableViewCell
         
-        cell.nameText.text = opciones[indexPath.row]
-        cell.iconImage.image = iconos[indexPath.row]
+        if indexPath.row == 7{
+            if sesion == "1" {
+                cell.nameText.text = "Cerrar sesión"
+                cell.iconImage.image = iconos[indexPath.row]
+            }else{
+                cell.nameText.text = opciones[indexPath.row]
+                cell.iconImage.image = iconos[indexPath.row]
+            }
+        }else{
+            cell.nameText.text = opciones[indexPath.row]
+            cell.iconImage.image = iconos[indexPath.row]
+        }
         
         return cell
     }

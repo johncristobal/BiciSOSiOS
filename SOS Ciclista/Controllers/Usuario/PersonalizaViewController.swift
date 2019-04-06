@@ -28,7 +28,6 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
 
     var ancho : CGFloat!
     var alto : CGFloat!
-    
     var flag = false
 
     override func viewDidLoad() {
@@ -45,7 +44,20 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
         aceptarButton.layer.cornerRadius = 10.0
         
         let name = UserDefaults.standard.string(forKey: "nombre")
-        print(name!)
+        if name != nil{
+            nameText.text = name
+        }
+        let serie = UserDefaults.standard.string(forKey: "serie")
+        if serie != nil{
+            serieText.text = name
+        }
+        let desc = UserDefaults.standard.string(forKey: "desc")
+        if desc != nil{
+            detailsText.text = name
+        }
+        let indexbici = UserDefaults.standard.integer(forKey: "bici")
+        
+        //bicisCollection.selectItem(at: IndexPath(item: indexbici, section: 1), animated: true, scrollPosition: .centeredHorizontally)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,6 +68,10 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     @IBAction func aceptarAction(_ sender: Any) {
+        //antes de cerrar...guardo datos
+        UserDefaults.standard.set(detailsText.text!, forKey: "desc")
+        UserDefaults.standard.set(serieText.text!, forKey: "serie")
+        
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
@@ -111,9 +127,13 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bici", for: indexPath) as! celdaBiciCollectionViewCell
         
-        cell.biciImage.image = imagenes[indexPath.row]        
+        cell.biciImage.image = imagenes[indexPath.row]
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        UserDefaults.standard.set(indexPath.row, forKey: "bici")
     }
     
     @IBAction func closeWindow(_ sender: Any) {

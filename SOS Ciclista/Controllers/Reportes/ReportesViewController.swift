@@ -39,10 +39,12 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidAppear(_ animated: Bool) {
         print("sesion")
         let sesion = UserDefaults.standard.string(forKey: "sesion")
-        if sesion == "1"{
-            print(sesion!)
-        }else{
-            print(sesion!)
+        if sesion != nil{
+            if sesion == "1"{
+                print(sesion!)
+            }else{
+                print(sesion!)
+            }
         }
     }
     
@@ -53,20 +55,27 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     @objc func reportarAction() -> Bool {
         let sesion = UserDefaults.standard.string(forKey: "sesion")
         print("reportar")
-        if sesion == "1"{
-            print(sesion)
-            saveReporte()
-        }else{
-            performSegue(withIdentifier: "sesion", sender: nil)
+        if sesion != nil{
+            if sesion == "1"{
+                print(sesion)
+                saveReporte()
+            }else{
+                performSegue(withIdentifier: "sesion", sender: nil)
+            }
         }
         return true
     }
 
     func saveReporte(){
+        
+        performSegue(withIdentifier: "reporte", sender: nil)
+        /*
         let ref = Database.database().reference()
         let uid = Auth.auth().currentUser?.uid
         let thisUsersGamesRef = ref.child("reportes").childByAutoId()
         thisUsersGamesRef.setValue(["id":thisUsersGamesRef.key,"imageUrl":"utlios","textTitle":"tituloisio"])
+         */
+        //show view with data
     }
     
     func getDataReportes(){
