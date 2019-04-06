@@ -257,7 +257,7 @@
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headReportes" translatesAutoresizingMaskIntoConstraints="NO" id="Pso-kZ-Z0h">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="Tpr-rQ-C22"/>
                                         </constraints>
@@ -272,7 +272,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="oHr-G5-DLU">
-                                        <rect key="frame" x="16" y="511.99999999999994" width="343" height="135.00000000000017"/>
+                                        <rect key="frame" x="16" y="512" width="343" height="135"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="135" id="uqb-Iz-acc"/>
                                         </constraints>
@@ -826,7 +826,7 @@
                                         </constraints>
                                     </scrollView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headPersonaliza" translatesAutoresizingMaskIntoConstraints="NO" id="aZd-Sy-wBt">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="cWK-5y-aSq"/>
                                         </constraints>
@@ -848,7 +848,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="4li-hH-7X1">
-                                        <rect key="frame" x="16" y="511.99999999999994" width="343" height="135.00000000000017"/>
+                                        <rect key="frame" x="16" y="512" width="343" height="135"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="135" id="aGo-qQ-YMl"/>
                                         </constraints>

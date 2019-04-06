@@ -55,7 +55,6 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
         if desc != nil{
             detailsText.text = name
         }
-        let indexbici = UserDefaults.standard.integer(forKey: "bici")
         
         //bicisCollection.selectItem(at: IndexPath(item: indexbici, section: 1), animated: true, scrollPosition: .centeredHorizontally)
     }
@@ -65,13 +64,15 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
             flag = false
             performSegue(withIdentifier: "fotos", sender: selected)
         }
+        let indexbici = UserDefaults.standard.integer(forKey: "bici")
+
+        bicisCollection.selectItem(at: IndexPath(item: indexbici, section: 1), animated: true, scrollPosition: .centeredHorizontally)
     }
     
     @IBAction func aceptarAction(_ sender: Any) {
         //antes de cerrar...guardo datos
         UserDefaults.standard.set(detailsText.text!, forKey: "desc")
         UserDefaults.standard.set(serieText.text!, forKey: "serie")
-        
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
