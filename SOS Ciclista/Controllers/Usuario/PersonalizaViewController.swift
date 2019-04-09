@@ -49,14 +49,21 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
         }
         let serie = UserDefaults.standard.string(forKey: "serie")
         if serie != nil{
-            serieText.text = name
+            serieText.text = serie
         }
         let desc = UserDefaults.standard.string(forKey: "desc")
         if desc != nil{
-            detailsText.text = name
+            detailsText.text = desc
         }
         
+        addToolBar(textField: nameText)
+        addToolBar(textField: serieText)
+        addToolBar(textField: detailsText)
         //bicisCollection.selectItem(at: IndexPath(item: indexbici, section: 1), animated: true, scrollPosition: .centeredHorizontally)
+    }
+    
+    override func donePressed() {
+        view.endEditing(true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,7 +73,7 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
         }
         let indexbici = UserDefaults.standard.integer(forKey: "bici")
 
-        bicisCollection.selectItem(at: IndexPath(item: indexbici, section: 1), animated: true, scrollPosition: .centeredHorizontally)
+        //bicisCollection.selectItem(at: IndexPath(item: indexbici, section: 1), animated: true, scrollPosition: .centeredHorizontally)
     }
     
     @IBAction func aceptarAction(_ sender: Any) {

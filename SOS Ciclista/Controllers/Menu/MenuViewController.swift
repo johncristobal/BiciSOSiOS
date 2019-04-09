@@ -87,8 +87,16 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.revealViewController()?.revealToggle(animated: true)        
-        performSegue(withIdentifier: segues[indexPath.row], sender: nil)
+        self.revealViewController()?.revealToggle(animated: true)
+        if indexPath.row == 7{
+            if sesion == "1" {
+                print("cerrar sesion")
+            }else{
+                performSegue(withIdentifier: segues[indexPath.row], sender: nil)
+            }
+        }else{
+            performSegue(withIdentifier: segues[indexPath.row], sender: nil)
+        }
     }
     
 

@@ -10,6 +10,7 @@
 		7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */; };
 		7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */; };
 		7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */; };
+		7D503346225D436B00B5A0D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503345225D436B00B5A0D6 /* Utils.swift */; };
 		7D50E3A72245513E006A815B /* PhotosBiciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50E3A62245513E006A815B /* PhotosBiciViewController.swift */; };
 		7D5AE3712242AED800E53FCC /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5AE3702242AED800E53FCC /* ReportTableViewCell.swift */; };
 		7D5AE3732242B48700E53FCC /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5AE3722242B48700E53FCC /* Report.swift */; };
@@ -39,6 +40,7 @@
 		7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizaViewController.swift; sourceTree = "<group>"; };
 		7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaBiciCollectionViewCell.swift; sourceTree = "<group>"; };
 		7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D503345225D436B00B5A0D6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7D50E3A62245513E006A815B /* PhotosBiciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosBiciViewController.swift; sourceTree = "<group>"; };
 		7D5AE3702242AED800E53FCC /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		7D5AE3722242B48700E53FCC /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
@@ -110,6 +112,23 @@
 			path = numSerie;
 			sourceTree = "<group>";
 		};
+		7D503347225D44EF00B5A0D6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7D503345225D436B00B5A0D6 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7D503348225D450000B5A0D6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7DD69776223721F300810255 /* Custompin.swift */,
+				8BB95C27222C8C4000ABA1F9 /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		7D9F0B7E2232FBC10099808D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,11 +196,11 @@
 			isa = PBXGroup;
 			children = (
 				8B3D5BBF22322E7C00727464 /* Menu */,
-				8BB95C27222C8C4000ABA1F9 /* ViewController.swift */,
+				7D503348225D450000B5A0D6 /* Home */,
 				7D1FD52E223B313600B0A03B /* Reportes */,
 				7D1FD52F223B314200B0A03B /* numSerie */,
-				7DD69776223721F300810255 /* Custompin.swift */,
 				7D1FD52D223B311E00B0A03B /* Usuario */,
+				7D503347225D44EF00B5A0D6 /* Utils */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -385,6 +404,7 @@
 				7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */,
 				8BB95C41222F6DBA00ABA1F9 /* SWRevealViewController.m in Sources */,
 				8BA1B5B722591C0000C43529 /* ReportFragmentViewController.swift in Sources */,
+				7D503346225D436B00B5A0D6 /* Utils.swift in Sources */,
 				7DD697732236E4A400810255 /* Taller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
