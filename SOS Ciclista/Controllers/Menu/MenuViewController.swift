@@ -14,7 +14,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet var miniView: UIView!
-    @IBOutlet weak var biciUser: UIImageView!    
+    @IBOutlet weak var biciUser: UIImageView!
     @IBOutlet weak var nameUser: UILabel!
     let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic")]
 
@@ -24,6 +24,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     let segues : [String] = ["reportes","serie","reportes","serie","reportes","serie","reportes","login"]
     
     var sesion = "0"
+    
+    let nameNot = Notification.Name("biciIcon")
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,14 +51,34 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         if ses != nil{
             sesion = ses!
             if sesion == "1"{
-                //let tapgesture = UITapGestureRecognizer(target: self, action: #Selector?)
+                let tapgesture = UITapGestureRecognizer(target: self, action: #selector(abrirPersonaliza))
+                
+                miniView.isUserInteractionEnabled = true
+                miniView.addGestureRecognizer(tapgesture)
             }
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(cambiarIcono), name: nameNot, object: nil)        
     }
-    
-    func abrirPersonaliza(){
-        performSegue(withIdentifier: "personaliza", sender: nil)
 
+    @objc func cambiarIcono(){
+        let indexbici = UserDefaults.standard.integer(forKey: "bici")
+        if indexbici != -1{
+            biciUser.image = imagenes[indexbici]
+        }else{
+            biciUser.image = imagen
+        }
+        let name = UserDefaults.standard.string(forKey: "nombre")
+        if name != nil{
+            nameUser.text = name
+        }else{
+            nameUser.text = "SOS Ciclista"
+        }
+    }
+
+    @objc func abrirPersonaliza(){
+        self.revealViewController()?.revealToggle(animated: true)
+        performSegue(withIdentifier: "personaliza", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

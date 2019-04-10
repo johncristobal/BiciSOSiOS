@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import Alamofire
+import AlamofireImage
 
 class ReportesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -27,13 +29,9 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         imageReportar.addGestureRecognizer(gesture)
         
         reportes.removeAll()
-        /*reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
-        reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
-        reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
-        reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))
-        reportes.append(Report(id: "1", title: "reporte 1", description: "", estatus: "1"))*/
 
         getDataReportes()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,13 +67,6 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     func saveReporte(){
         
         performSegue(withIdentifier: "reporte", sender: nil)
-        /*
-        let ref = Database.database().reference()
-        let uid = Auth.auth().currentUser?.uid
-        let thisUsersGamesRef = ref.child("reportes").childByAutoId()
-        thisUsersGamesRef.setValue(["id":thisUsersGamesRef.key,"imageUrl":"utlios","textTitle":"tituloisio"])
-         */
-        //show view with data
     }
     
     func getDataReportes(){
@@ -87,13 +78,17 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
                 let (key, value) = arg0
                 
                 let datos = value as! NSDictionary
-                let title = key as! String
-                let id = datos["textTitle"] as! String
-                self.reportes.append(Report(id: id, title: title, description: "...", estatus: "id"))
+                let id = datos["id"] as! String
+                let date = datos["date"] as! String
+                let description = datos["description"] as! String
+                let estatus = datos["estatus"] as! Int
+                let name = datos["name"] as! String
+                let serie = datos["serie"] as! String
+
+                self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date))
             })
             
-            self.tableview.reloadData()
-            
+            self.tableview.reloadData()            
             
         }) { (error) in
             print(error)
@@ -107,7 +102,25 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reportCell") as! ReportTableViewCell
         
-        cell.titleLabel.text = reportes[indexPath.row].title
+        cell.titleLabel.text = reportes[indexPath.row].name
+        cell.descriptionLabel.text = reportes[indexPath.row].description
+        let idfolder = reportes[indexPath.row].id
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let reporteRef = storageRef.child("reportes").child(idfolder).child("bici_0.png")
+
+        reporteRef.downloadURL { (url, error) in
+            if error != nil {
+                cell.imageBici.image = imagen
+            }else {
+                Alamofire.request(url!).responseImage { response in
+                    if let image = response.result.value {
+                        cell.imageBici.image = image
+                    }
+                }
+            }
+        }
         
         return cell
     }

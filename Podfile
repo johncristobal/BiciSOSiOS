@@ -7,10 +7,12 @@ target 'SOS Ciclista' do
 
   # Pods for SOS Ciclista
 pod 'Alamofire'
+pod 'AlamofireImage'
 pod 'SwiftyJSON'
 pod 'SideMenu'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
 pod 'Firebase/Auth'
 pod 'FBSDKLoginKit'
 pod 'FacebookCore'

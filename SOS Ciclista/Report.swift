@@ -10,14 +10,18 @@ import Foundation
 
 struct Report: Codable{
     var id: String
-    var title: String
+    var name: String
+    var serie: String
     var description: String
-    var estatus: String
-    
-    init(id: String, title:String, description:String, estatus: String) {
+    var estatus: Int
+    var date: String
+
+    init(id: String, name:String, serie:String, description:String, estatus: Int, date: String) {
         self.id = id
-        self.title = title
+        self.name = name
+        self.serie = serie
         self.description = description
         self.estatus = estatus
+        self.date = date
     }
 }

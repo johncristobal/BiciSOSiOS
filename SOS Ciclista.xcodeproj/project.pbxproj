@@ -11,6 +11,7 @@
 		7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */; };
 		7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */; };
 		7D503346225D436B00B5A0D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503345225D436B00B5A0D6 /* Utils.swift */; };
+		7D50334A225E5A3100B5A0D6 /* FinalReporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503349225E5A3100B5A0D6 /* FinalReporteViewController.swift */; };
 		7D50E3A72245513E006A815B /* PhotosBiciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50E3A62245513E006A815B /* PhotosBiciViewController.swift */; };
 		7D5AE3712242AED800E53FCC /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5AE3702242AED800E53FCC /* ReportTableViewCell.swift */; };
 		7D5AE3732242B48700E53FCC /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5AE3722242B48700E53FCC /* Report.swift */; };
@@ -41,6 +42,7 @@
 		7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaBiciCollectionViewCell.swift; sourceTree = "<group>"; };
 		7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D503345225D436B00B5A0D6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		7D503349225E5A3100B5A0D6 /* FinalReporteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalReporteViewController.swift; sourceTree = "<group>"; };
 		7D50E3A62245513E006A815B /* PhotosBiciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosBiciViewController.swift; sourceTree = "<group>"; };
 		7D5AE3702242AED800E53FCC /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		7D5AE3722242B48700E53FCC /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				8BB47256222F773300D5C51D /* ReportesViewController.swift */,
 				7D5AE3702242AED800E53FCC /* ReportTableViewCell.swift */,
 				8BA1B5B622591C0000C43529 /* ReportFragmentViewController.swift */,
+				7D503349225E5A3100B5A0D6 /* FinalReporteViewController.swift */,
 			);
 			path = Reportes;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/BSGridCollectionViewLayout/BSGridCollectionViewLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/BSImagePicker/BSImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/BSImageView/BSImageView.framework",
@@ -357,6 +361,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSGridCollectionViewLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImageView.framework",
@@ -393,6 +398,7 @@
 				8BB95C2E222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld in Sources */,
 				7D5AE3732242B48700E53FCC /* Report.swift in Sources */,
 				7D5AE3712242AED800E53FCC /* ReportTableViewCell.swift in Sources */,
+				7D50334A225E5A3100B5A0D6 /* FinalReporteViewController.swift in Sources */,
 				8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */,
 				7DD69777223721F300810255 /* Custompin.swift in Sources */,
 				8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */,

@@ -60,6 +60,7 @@ class LoginViewController: UIViewController {
                         // ...
                         print("acces firebase with facebook")
                         UserDefaults.standard.set("1", forKey: "sesion")
+                        UserDefaults.standard.set("login", forKey: "from")
                         print(authResult?.user.displayName!)
                         UserDefaults.standard.set(authResult?.user.displayName!, forKey: "nombre")
                     

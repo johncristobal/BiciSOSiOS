@@ -30,6 +30,8 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     var alto : CGFloat!
     var flag = false
 
+    let name = Notification.Name("biciIcon")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,7 +61,6 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
         addToolBar(textField: nameText)
         addToolBar(textField: serieText)
         addToolBar(textField: detailsText)
-        //bicisCollection.selectItem(at: IndexPath(item: indexbici, section: 1), animated: true, scrollPosition: .centeredHorizontally)
     }
     
     override func donePressed() {
@@ -73,14 +74,27 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
         }
         let indexbici = UserDefaults.standard.integer(forKey: "bici")
 
-        //bicisCollection.selectItem(at: IndexPath(item: indexbici, section: 1), animated: true, scrollPosition: .centeredHorizontally)
+        bicisCollection.selectItem(at: IndexPath(item: indexbici, section: 0), animated: true, scrollPosition: .centeredHorizontally)
     }
     
     @IBAction func aceptarAction(_ sender: Any) {
         //antes de cerrar...guardo datos
         UserDefaults.standard.set(detailsText.text!, forKey: "desc")
         UserDefaults.standard.set(serieText.text!, forKey: "serie")
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        UserDefaults.standard.set(nameText.text!, forKey: "nombre")
+        
+        let Fromlogin = UserDefaults.standard.string(forKey: "from")
+        
+        if Fromlogin != nil{
+            if Fromlogin == "login" {
+                UserDefaults.standard.set("null", forKey: "from")
+                self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+            }else{
+                dismiss(animated: true, completion: nil)
+            }
+        }else{
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func addPhotosAction(_ sender: Any) {
@@ -142,6 +156,8 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         UserDefaults.standard.set(indexPath.row, forKey: "bici")
+        
+        NotificationCenter.default.post(name: name, object: nil)
     }
     
     @IBAction func closeWindow(_ sender: Any) {
