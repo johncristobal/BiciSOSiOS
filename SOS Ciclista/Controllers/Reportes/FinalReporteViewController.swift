@@ -19,7 +19,10 @@ class FinalReporteViewController: UIViewController {
         view.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
     }
     
-    @IBAction func buttonaction(_ sender: Any) {        self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
+    @IBAction func buttonaction(_ sender: Any) {
+        UserDefaults.standard.set("1", forKey: "reportado")
+
+        self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
     }
     
     /*

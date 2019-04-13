@@ -30,18 +30,18 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         
         reportes.removeAll()
 
-        getDataReportes()
-        
+        getDataReportes()        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print("sesion")
-        let sesion = UserDefaults.standard.string(forKey: "sesion")
-        if sesion != nil{
-            if sesion == "1"{
-                print(sesion!)
+        let reportado = UserDefaults.standard.string(forKey: "reportado")
+        if reportado != nil{
+            if reportado == "1"{
+                UserDefaults.standard.set("0", forKey: "reportado")
+                getDataReportes()
             }else{
-                print(sesion!)
+                print(reportado!)
             }
         }
     }
@@ -65,15 +65,49 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func saveReporte(){
-        
         performSegue(withIdentifier: "reporte", sender: nil)
     }
     
     func getDataReportes(){
+        
+        self.reportes.removeAll()
+        
         var ref: DatabaseReference!
         ref = Database.database().reference().child("reportes")
         ref.observeSingleEvent(of: .value, with: { (data) in
-            let value = data.value as? NSDictionary
+            
+            for child in data.children {
+                let snap = child as! DataSnapshot
+                let datos = snap.value as! [String: Any]
+                let id = datos["id"] as! String
+                let date = datos["date"] as! String
+                let description = datos["description"] as! String
+                let estatus = datos["estatus"] as! Int
+                let name = datos["name"] as! String
+                let serie = datos["serie"] as! String
+                
+                self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date))
+            }
+            
+            /*for child in data.children {
+                if let snapshot = child as? DataSnapshot {
+                    do{
+                        let id = child.value(forKey: "id") as! String
+                        let date = snapshot.value(forKey: "date") as! String
+                        let description = snapshot.value(forKey: "description") as! String
+                        let estatus = snapshot.value(forKey: "estatus") as! Int
+                        let name = snapshot.value(forKey: "name") as! String
+                        let serie = snapshot.value(forKey: "serie") as! String
+                        let reporte = Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date)
+                        self.reportes.append(reporte)
+                    }
+                    catch{
+                        print("error")
+                    }
+                }
+            }*/
+            
+            /*let value = data.value as? NSDictionary
             value?.forEach({ (arg0) in
                 let (key, value) = arg0
                 
@@ -86,8 +120,9 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
                 let serie = datos["serie"] as! String
 
                 self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date))
-            })
+            })*/
             
+            self.reportes.reverse()
             self.tableview.reloadData()            
             
         }) { (error) in
@@ -102,7 +137,7 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reportCell") as! ReportTableViewCell
         
-        cell.titleLabel.text = reportes[indexPath.row].name
+        cell.titleLabel.text = "# Serie \(reportes[indexPath.row].serie)"
         cell.descriptionLabel.text = reportes[indexPath.row].description
         let idfolder = reportes[indexPath.row].id
         
