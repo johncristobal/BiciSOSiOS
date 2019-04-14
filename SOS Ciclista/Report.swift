@@ -15,13 +15,15 @@ struct Report: Codable{
     var description: String
     var estatus: Int
     var date: String
+    var fotos: String
 
-    init(id: String, name:String, serie:String, description:String, estatus: Int, date: String) {
+    init(id: String, name:String, serie:String, description:String, estatus: Int, date: String, fotos: String) {
         self.id = id
         self.name = name
         self.serie = serie
         self.description = description
         self.estatus = estatus
         self.date = date
+        self.fotos = fotos
     }
 }

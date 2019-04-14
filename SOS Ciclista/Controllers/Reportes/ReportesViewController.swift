@@ -86,7 +86,12 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
                 let name = datos["name"] as! String
                 let serie = datos["serie"] as! String
                 
-                self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date))
+                var fotos = ""
+                if datos["fotos"] != nil{
+                    fotos = datos["fotos"] as! String
+                }
+                
+                self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos))
             }
             
             /*for child in data.children {
@@ -134,6 +139,11 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         return reportes.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let report = reportes[indexPath.row]
+        performSegue(withIdentifier: "detalleReporte", sender: report)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reportCell") as! ReportTableViewCell
         
@@ -159,15 +169,18 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "detalleReporte"{
+            let vc = segue.destination as! DetalleReporteViewController
+            vc.report = sender as? Report
+        }
     }
-    */
 
 }

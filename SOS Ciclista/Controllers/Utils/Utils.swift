@@ -64,3 +64,12 @@ extension UIImage {
     }
 }
 
+extension UIView{
+    func borderAmarillo(){
+        let yellow : UIColor = UIColor( red: 255.0/255.0, green: 216.0/255.0, blue:0, alpha: 1.0)
+        self.layer.masksToBounds = true
+        self.layer.borderColor = yellow.cgColor
+        self.layer.borderWidth = 3.0
+        self.layer.cornerRadius = 15.0
+    }
+}

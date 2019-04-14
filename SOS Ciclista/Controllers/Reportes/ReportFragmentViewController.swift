@@ -66,6 +66,15 @@ class ReportFragmentViewController: UIViewController {
     @IBAction func saveReport(_ sender: Any) {
         
         //antes de dismiss...tenemos que guarda datos
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].path
+        let name = "bici"
+        var fotos = ""
+        for index in 0...3 {
+            let complete = path.appending("/\(name)_\(index).png")
+            if FileManager.default.fileExists(atPath: complete){
+                fotos += "\(name)_\(index).png,"
+            }
+        }
         //1. guardar json con reporte: nombre, serie, descripcion, id, estatus, fecha
         let fecha = Date()
         let formatted = DateFormatter()
@@ -81,7 +90,8 @@ class ReportFragmentViewController: UIViewController {
                 "serie":serieText.text,
                 "description":detailsText.text,
                 "estatus":1,
-                "date":fechaString
+                "date":fechaString,
+                "fotos": fotos
             ]
         ){(error:Error?, ref:DatabaseReference) in
             if let error = error {
@@ -94,9 +104,6 @@ class ReportFragmentViewController: UIViewController {
 
         //2. guardar fotos en storage con id json
         //recuperamos fotos en arreglo
-        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].path
-        
-        let name = "bici"
         //referencia a stoarge
         let storage = Storage.storage()
         let storageRef = storage.reference()

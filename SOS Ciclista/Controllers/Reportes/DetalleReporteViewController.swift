@@ -7,15 +7,87 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
-class DetalleReporteViewController: UIViewController {
+import Alamofire
+import AlamofireImage
 
+class DetalleReporteViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+    @IBOutlet weak var nameOutlet: UILabel!
+    @IBOutlet weak var fotosCollection: UICollectionView!
+    @IBOutlet weak var vistaAmarilla: UIView!
+    @IBOutlet weak var serieOutlet: UILabel!
+    @IBOutlet weak var descriptionOutlet: UILabel!
+    
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var reportarButton: UIButton!
+    
+    var report: Report? = nil
+    var fotosArray: [String] = []
+    
+    var reporteRef: StorageReference? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = UIColor(white: 0.0, alpha: 0.7)
+
         // Do any additional setup after loading the view.
+        vistaAmarilla.borderAmarillo()
+        
+        nameOutlet.text = report?.name
+        serieOutlet.text = report?.serie
+        descriptionOutlet.text = report?.description
+        
+        let fotos = report?.fotos.components(separatedBy: ",")
+        for word in fotos!{
+            if word != ""{
+                fotosArray.append(word)
+            }
+        }
+        
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        reporteRef = storageRef.child("reportes")
+        
+        fotosCollection.reloadData()
+
     }
     
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func reportarAction(_ sender: Any) {
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return fotosArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let celda = collectionView.dequeueReusableCell(withReuseIdentifier: "celdaBicidos", for: indexPath) as! DetalleCeldaCollectionViewCell
+        
+        let refFinal = reporteRef!.child(report!.id).child(fotosArray[indexPath.row])
+        
+        refFinal.downloadURL { (url, error) in
+            if error != nil{
+                print("error")
+            }else{
+                Alamofire.request(url!).responseImage { response in
+                    if let image = response.result.value {
+                        celda.fotobici.image = image
+                    }
+                }
+            }
+        }
+
+        
+        return celda
+    }
 
     /*
     // MARK: - Navigation
@@ -26,5 +98,4 @@ class DetalleReporteViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

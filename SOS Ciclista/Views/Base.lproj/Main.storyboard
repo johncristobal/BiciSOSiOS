@@ -1197,6 +1197,7 @@
                                                     <color key="titleColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="cancelAction:" destination="pLU-OA-b9l" eventType="touchUpInside" id="ZZl-Rc-s7I"/>
                                                     <action selector="cancelReport:" destination="rWD-wZ-Eei" eventType="touchUpInside" id="ZGl-ue-9kv"/>
                                                 </connections>
                                             </button>
@@ -1207,10 +1208,11 @@
                                                     <constraint firstAttribute="height" constant="30" id="U5N-jM-04B"/>
                                                     <constraint firstAttribute="width" constant="120" id="jTd-x1-500"/>
                                                 </constraints>
-                                                <state key="normal" title="REPORTAR">
+                                                <state key="normal" title="COMPARTIR">
                                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="reportarAction:" destination="pLU-OA-b9l" eventType="touchUpInside" id="qPv-S0-Ldw"/>
                                                     <action selector="saveReport:" destination="rWD-wZ-Eei" eventType="touchUpInside" id="jiK-1D-8vZ"/>
                                                 </connections>
                                             </button>
@@ -1221,26 +1223,44 @@
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Q-En-IFI">
                                                 <rect key="frame" x="8" y="8" width="303" height="104"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zpc-pS-prc">
-                                                    <size key="itemSize" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zpc-pS-prc">
+                                                    <size key="itemSize" width="130" height="100"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bIL-Tu-STL">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celdaBicidos" id="bIL-Tu-STL" customClass="DetalleCeldaCollectionViewCell" customModule="SOS_Ciclista" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="2" width="130" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="100"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nsk-ra-8tx">
+                                                                    <rect key="frame" x="10" y="10" width="110" height="80"/>
+                                                                </imageView>
+                                                            </subviews>
                                                         </view>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="Nsk-ra-8tx" secondAttribute="trailing" constant="10" id="Ddq-6H-lry"/>
+                                                            <constraint firstItem="Nsk-ra-8tx" firstAttribute="top" secondItem="bIL-Tu-STL" secondAttribute="top" constant="10" id="lpJ-AE-BIk"/>
+                                                            <constraint firstItem="Nsk-ra-8tx" firstAttribute="leading" secondItem="bIL-Tu-STL" secondAttribute="leading" constant="10" id="nNY-H7-jv2"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Nsk-ra-8tx" secondAttribute="bottom" constant="10" id="pBj-ev-Bzb"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="fotobici" destination="Nsk-ra-8tx" id="LDW-hn-oGw"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="pLU-OA-b9l" id="CsJ-zB-qpo"/>
+                                                    <outlet property="delegate" destination="pLU-OA-b9l" id="EDz-Ch-DhM"/>
+                                                </connections>
                                             </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Q4Q-En-IFI" secondAttribute="bottom" constant="8" id="C5N-bf-aUh"/>
                                             <constraint firstAttribute="height" constant="120" id="Wly-3D-J1L"/>
@@ -1250,15 +1270,15 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXu-y4-VTT">
-                                        <rect key="frame" x="146.5" y="187" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="148" y="187" width="39.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1U-2I-KOv">
-                                        <rect key="frame" x="146.5" y="223.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="148" y="222" width="39.5" height="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1287,6 +1307,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Iaq-vE-YFi"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="GKB-AA-Twk" id="Rhh-52-Smj"/>
+                        <outlet property="descriptionOutlet" destination="p1U-2I-KOv" id="aDX-tq-uVi"/>
+                        <outlet property="fotosCollection" destination="Q4Q-En-IFI" id="x6z-bk-7bR"/>
+                        <outlet property="nameOutlet" destination="7kg-JP-GvP" id="rxP-y3-SY1"/>
+                        <outlet property="reportarButton" destination="Dun-fT-XXm" id="dYg-BE-rxn"/>
+                        <outlet property="serieOutlet" destination="KXu-y4-VTT" id="yzU-Ol-6gu"/>
+                        <outlet property="vistaAmarilla" destination="Wn0-Rj-rk5" id="s9Z-Ky-2Pn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utl-iO-WsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1341,7 +1370,7 @@
         <image name="reportar" width="604" height="410"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="91z-Mt-Myz"/>
+        <segue reference="tGv-Bd-n8q"/>
         <segue reference="O9I-pU-wnc"/>
         <segue reference="9Bx-r1-g3R"/>
     </inferredMetricsTieBreakers>

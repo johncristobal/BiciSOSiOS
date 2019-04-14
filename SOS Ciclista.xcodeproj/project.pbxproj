@@ -19,6 +19,7 @@
 		7DD697732236E4A400810255 /* Taller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD697722236E4A400810255 /* Taller.swift */; };
 		7DD69775223720CA00810255 /* customPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD69774223720CA00810255 /* customPin.xib */; };
 		7DD69777223721F300810255 /* Custompin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD69776223721F300810255 /* Custompin.swift */; };
+		8B1A4F8B2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A4F8A2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift */; };
 		8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC022322E9800727464 /* MenuViewController.swift */; };
 		8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC222322FEC00727464 /* SerieViewController.swift */; };
 		8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */; };
@@ -52,6 +53,7 @@
 		7DD69774223720CA00810255 /* customPin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customPin.xib; sourceTree = "<group>"; };
 		7DD69776223721F300810255 /* Custompin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custompin.swift; sourceTree = "<group>"; };
 		841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS_Ciclista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B1A4F8A2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleCeldaCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B3D5BC022322E9800727464 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC222322FEC00727464 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				8BA1B5B622591C0000C43529 /* ReportFragmentViewController.swift */,
 				7D503349225E5A3100B5A0D6 /* FinalReporteViewController.swift */,
 				8BA1B5B822625BB200C43529 /* DetalleReporteViewController.swift */,
+				8B1A4F8A2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift */,
 			);
 			path = Reportes;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			files = (
 				7DB660922241A648007AA974 /* LoginViewController.swift in Sources */,
 				7D50E3A72245513E006A815B /* PhotosBiciViewController.swift in Sources */,
+				8B1A4F8B2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift in Sources */,
 				8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */,
 				8BB95C2E222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld in Sources */,
 				7D5AE3732242B48700E53FCC /* Report.swift in Sources */,
