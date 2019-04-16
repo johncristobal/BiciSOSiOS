@@ -10,6 +10,7 @@ import UIKit
 
 class RoboBiciViewController: UIViewController {
 
+    @IBOutlet var vistaAmarilla: UIView!
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet var butonStart: UIButton!
@@ -26,6 +27,7 @@ class RoboBiciViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         pageControl.addTarget(self, action: "didChangePageControlValue", for: .valueChanged)
+        vistaAmarilla.borderAmarillo()
 
     }
     
@@ -34,7 +36,10 @@ class RoboBiciViewController: UIViewController {
         print("Aqui change")
     }
     
-
+    @IBAction func closeAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tutorialPageViewController = segue.destination as? OnboardingViewController {
             //tutorialPageViewController.tutorialDelegate = self as! OnboardingViewControllerDelegate
