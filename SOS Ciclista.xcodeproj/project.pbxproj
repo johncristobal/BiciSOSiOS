@@ -20,6 +20,11 @@
 		7DD69775223720CA00810255 /* customPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD69774223720CA00810255 /* customPin.xib */; };
 		7DD69777223721F300810255 /* Custompin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD69776223721F300810255 /* Custompin.swift */; };
 		8B1A4F8B2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A4F8A2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift */; };
+		8B29B45E22656BAE0079280C /* RoboBiciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B29B45D22656BAE0079280C /* RoboBiciViewController.swift */; };
+		8B29B460226581920079280C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B29B45F226581920079280C /* OnboardingViewController.swift */; };
+		8B29B46222658B980079280C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B29B46122658B980079280C /* FirstViewController.swift */; };
+		8B29B46422658BBE0079280C /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B29B46322658BBE0079280C /* TwoViewController.swift */; };
+		8B29B46622658BCB0079280C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B29B46522658BCB0079280C /* ThirdViewController.swift */; };
 		8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC022322E9800727464 /* MenuViewController.swift */; };
 		8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC222322FEC00727464 /* SerieViewController.swift */; };
 		8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */; };
@@ -54,6 +59,11 @@
 		7DD69776223721F300810255 /* Custompin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custompin.swift; sourceTree = "<group>"; };
 		841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS_Ciclista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1A4F8A2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleCeldaCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B29B45D22656BAE0079280C /* RoboBiciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoboBiciViewController.swift; sourceTree = "<group>"; };
+		8B29B45F226581920079280C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8B29B46122658B980079280C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		8B29B46322658BBE0079280C /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
+		8B29B46522658BCB0079280C /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC022322E9800727464 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC222322FEC00727464 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +158,18 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		8B29B45C22656B780079280C /* Robo */ = {
+			isa = PBXGroup;
+			children = (
+				8B29B45D22656BAE0079280C /* RoboBiciViewController.swift */,
+				8B29B45F226581920079280C /* OnboardingViewController.swift */,
+				8B29B46122658B980079280C /* FirstViewController.swift */,
+				8B29B46322658BBE0079280C /* TwoViewController.swift */,
+				8B29B46522658BCB0079280C /* ThirdViewController.swift */,
+			);
+			path = Robo;
+			sourceTree = "<group>";
+		};
 		8B3D5BBF22322E7C00727464 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +226,7 @@
 		8BB95C3C222C8D6800ABA1F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8B29B45C22656B780079280C /* Robo */,
 				8B3D5BBF22322E7C00727464 /* Menu */,
 				7D503348225D450000B5A0D6 /* Home */,
 				7D1FD52E223B313600B0A03B /* Reportes */,
@@ -408,6 +431,8 @@
 				7D50334A225E5A3100B5A0D6 /* FinalReporteViewController.swift in Sources */,
 				8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */,
 				7DD69777223721F300810255 /* Custompin.swift in Sources */,
+				8B29B45E22656BAE0079280C /* RoboBiciViewController.swift in Sources */,
+				8B29B46422658BBE0079280C /* TwoViewController.swift in Sources */,
 				8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */,
 				8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */,
 				7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */,
@@ -415,7 +440,10 @@
 				8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */,
 				8BA625A422358585008E9337 /* DataManager.swift in Sources */,
 				8BA1B5B922625BB500C43529 /* DetalleReporteViewController.swift in Sources */,
+				8B29B46622658BCB0079280C /* ThirdViewController.swift in Sources */,
 				7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */,
+				8B29B460226581920079280C /* OnboardingViewController.swift in Sources */,
+				8B29B46222658B980079280C /* FirstViewController.swift in Sources */,
 				8BB95C41222F6DBA00ABA1F9 /* SWRevealViewController.m in Sources */,
 				8BA1B5B722591C0000C43529 /* ReportFragmentViewController.swift in Sources */,
 				7D503346225D436B00B5A0D6 /* Utils.swift in Sources */,

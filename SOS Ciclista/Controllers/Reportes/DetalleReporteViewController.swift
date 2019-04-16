@@ -79,7 +79,8 @@ class DetalleReporteViewController: UIViewController, UICollectionViewDelegate, 
             }else{
                 Alamofire.request(url!).responseImage { response in
                     if let image = response.result.value {
-                        celda.fotobici.image = image
+                        let finalimage = image.jpegData(compressionQuality: 0.25)
+                        celda.fotobici.image = UIImage(data: finalimage!)
                     }
                 }
             }
