@@ -72,5 +72,11 @@ extension UIView{
         self.layer.borderWidth = 3.0
         self.layer.cornerRadius = 15.0
     }
+    
+    func borderButton(){
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 10.0
+    }
+    
 }
 

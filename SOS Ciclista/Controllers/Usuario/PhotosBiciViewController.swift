@@ -41,8 +41,7 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
         vistaAmarilla.layer.borderWidth = 3.0
         vistaAmarilla.layer.cornerRadius = 15.0
 
-        botonAceptar.layer.masksToBounds = true
-        botonAceptar.layer.cornerRadius = 10.0
+        botonAceptar.borderButton()
 
         let gestureA = TapGesture(target: self,action: #selector(self.updatePhoto))
         gestureA.title = 0

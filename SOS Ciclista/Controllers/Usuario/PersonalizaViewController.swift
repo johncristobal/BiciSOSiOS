@@ -85,6 +85,8 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
         
         let Fromlogin = UserDefaults.standard.string(forKey: "from")
         
+        NotificationCenter.default.post(name: name, object: nil)
+
         if Fromlogin != nil{
             if Fromlogin == "login" {
                 UserDefaults.standard.set("null", forKey: "from")

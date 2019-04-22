@@ -21,6 +21,9 @@ class ReportFragmentViewController: UIViewController {
     @IBOutlet weak var serieText: UITextField!
     @IBOutlet weak var detailsText: UITextField!
     @IBOutlet weak var viewData: UIView!
+    @IBOutlet weak var cancelarButton: UIButton!
+    
+    @IBOutlet weak var reportarButton: UIButton!
     
     var flag = false
     
@@ -53,6 +56,9 @@ class ReportFragmentViewController: UIViewController {
         addToolBar(textField: nameText)
         addToolBar(textField: serieText)
         addToolBar(textField: detailsText)
+        
+        cancelarButton.borderButton()
+        reportarButton.borderButton()
     }
 
     override func donePressed() {

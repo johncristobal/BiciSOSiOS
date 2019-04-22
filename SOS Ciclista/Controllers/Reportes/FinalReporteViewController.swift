@@ -17,6 +17,8 @@ class FinalReporteViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        
+        buttonFinal.borderButton()
     }
     
     @IBAction func buttonaction(_ sender: Any) {

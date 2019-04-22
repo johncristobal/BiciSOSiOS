@@ -53,6 +53,9 @@ class DetalleReporteViewController: UIViewController, UICollectionViewDelegate, 
         reporteRef = storageRef.child("reportes")
         
         fotosCollection.reloadData()
+        
+        cancelButton.borderButton()
+        reportarButton.borderButton()
 
     }
     

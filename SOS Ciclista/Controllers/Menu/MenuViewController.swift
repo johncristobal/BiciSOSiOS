@@ -21,7 +21,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     let opciones : [String] = ["Reportes","Me robaron la bici...","# serie con reporte","Tips","Contáctanos","Acerca de","Ajustes","Iniciar sesión"]
     let iconos = [#imageLiteral(resourceName: "reportesiconsmall"),#imageLiteral(resourceName: "serieiconsmall"),#imageLiteral(resourceName: "buscaricon"),#imageLiteral(resourceName: "tipsicon"),#imageLiteral(resourceName: "contactoiconsmall"),#imageLiteral(resourceName: "acercaicon"),#imageLiteral(resourceName: "ajustesicon"),#imageLiteral(resourceName: "saliricon")]
 
-    let segues : [String] = ["reportes","robo","reportes","serie","reportes","serie","reportes","login"]
+    let segues : [String] = ["reportes","robo","serie","serie","reportes","serie","reportes","login"]
     
     var sesion = "0"
     
@@ -74,6 +74,17 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }else{
             nameUser.text = "SOS Ciclista"
         }
+        let ses = UserDefaults.standard.string(forKey: "sesion")
+        if ses != nil{
+            sesion = ses!
+            if sesion == "1"{
+                let tapgesture = UITapGestureRecognizer(target: self, action: #selector(abrirPersonaliza))
+                
+                miniView.isUserInteractionEnabled = true
+                miniView.addGestureRecognizer(tapgesture)
+            }
+        }
+        tableview.reloadData()
     }
 
     @objc func abrirPersonaliza(){
