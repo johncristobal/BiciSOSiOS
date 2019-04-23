@@ -12,6 +12,8 @@ import Hero
 class DetalleTipViewController: UIViewController {
 
     @IBOutlet var detqlleText: UILabel!
+    @IBOutlet weak var imagenTip: UIImageView!
+    @IBOutlet weak var descriptionTip: UILabel!
     var texto: String?
     
     override func viewDidLoad() {
