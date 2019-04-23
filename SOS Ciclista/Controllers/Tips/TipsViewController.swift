@@ -13,9 +13,12 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var vistaAmarilla: UIView!
     
     @IBOutlet var tableview: UITableView!
-    var textoFinal = ""
+    var textoFinal : Tip?
 
-    var tips : [String] = ["Tips generales","Como asegurar tu bici","Candados que no debes usar"]
+    var tips : [Tip] = [Tip(name: "Tips generales", imagen: "bicicuatro.png", description: ""),Tip(name: "Como asegurar tu bici", imagen: "tipsdos.png", description: "Fijar la bicicleta en un soporte empotrado, nunca en soporte atornillado, ni en árboles.\n" +
+        "• Utiliza dos candados como mínimo.\n" +
+        "• Asegurar el cuadro y una de las dos llantas con cable de acero.\n" +
+        "• NO fijar solo el sillín."),Tip(name: "Candados que no debes usar", imagen: "tipstres.png", description: "")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,7 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celdaTip", for: indexPath) as! TipTableViewCell
         
-        cell.tipText.text = tips[indexPath.row]
+        cell.tipText.text = tips[indexPath.row].name
         
         return cell
     }

@@ -18,6 +18,8 @@
 		7D99F884226E76D300E1AAE5 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F883226E76D300E1AAE5 /* TipsViewController.swift */; };
 		7D99F886226E861500E1AAE5 /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F885226E861500E1AAE5 /* TipTableViewCell.swift */; };
 		7D99F888226E8C2100E1AAE5 /* DetalleTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F887226E8C2100E1AAE5 /* DetalleTipViewController.swift */; };
+		7D99F88A226F8E9100E1AAE5 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F889226F8E9100E1AAE5 /* Tip.swift */; };
+		7D99F88D226F978D00E1AAE5 /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F88C226F978D00E1AAE5 /* ContactoViewController.swift */; };
 		7DB660922241A648007AA974 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB660912241A648007AA974 /* LoginViewController.swift */; };
 		7DD697732236E4A400810255 /* Taller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD697722236E4A400810255 /* Taller.swift */; };
 		7DD69775223720CA00810255 /* customPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD69774223720CA00810255 /* customPin.xib */; };
@@ -59,6 +61,8 @@
 		7D99F883226E76D300E1AAE5 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		7D99F885226E861500E1AAE5 /* TipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
 		7D99F887226E8C2100E1AAE5 /* DetalleTipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTipViewController.swift; sourceTree = "<group>"; };
+		7D99F889226F8E9100E1AAE5 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		7D99F88C226F978D00E1AAE5 /* ContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
 		7DB660912241A648007AA974 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7DD697722236E4A400810255 /* Taller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taller.swift; sourceTree = "<group>"; };
 		7DD69774223720CA00810255 /* customPin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customPin.xib; sourceTree = "<group>"; };
@@ -164,12 +168,21 @@
 			path = Tips;
 			sourceTree = "<group>";
 		};
+		7D99F88B226F977B00E1AAE5 /* contacto */ = {
+			isa = PBXGroup;
+			children = (
+				7D99F88C226F978D00E1AAE5 /* ContactoViewController.swift */,
+			);
+			path = contacto;
+			sourceTree = "<group>";
+		};
 		7D9F0B7E2232FBC10099808D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8BA625A322358585008E9337 /* DataManager.swift */,
 				7DD697722236E4A400810255 /* Taller.swift */,
 				7D5AE3722242B48700E53FCC /* Report.swift */,
+				7D99F889226F8E9100E1AAE5 /* Tip.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -242,6 +255,7 @@
 		8BB95C3C222C8D6800ABA1F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7D99F88B226F977B00E1AAE5 /* contacto */,
 				7D99F881226E76B000E1AAE5 /* Tips */,
 				8B29B45C22656B780079280C /* Robo */,
 				8B3D5BBF22322E7C00727464 /* Menu */,
@@ -448,6 +462,7 @@
 				8BB95C2E222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld in Sources */,
 				7D5AE3732242B48700E53FCC /* Report.swift in Sources */,
 				7D5AE3712242AED800E53FCC /* ReportTableViewCell.swift in Sources */,
+				7D99F88A226F8E9100E1AAE5 /* Tip.swift in Sources */,
 				7D50334A225E5A3100B5A0D6 /* FinalReporteViewController.swift in Sources */,
 				8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */,
 				7DD69777223721F300810255 /* Custompin.swift in Sources */,
@@ -456,6 +471,7 @@
 				8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */,
 				8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */,
 				7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */,
+				7D99F88D226F978D00E1AAE5 /* ContactoViewController.swift in Sources */,
 				8BB95C28222C8C4000ABA1F9 /* ViewController.swift in Sources */,
 				8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */,
 				8BA625A422358585008E9337 /* DataManager.swift in Sources */,

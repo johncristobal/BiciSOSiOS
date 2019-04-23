@@ -14,7 +14,8 @@ class DetalleTipViewController: UIViewController {
     @IBOutlet var detqlleText: UILabel!
     @IBOutlet weak var imagenTip: UIImageView!
     @IBOutlet weak var descriptionTip: UILabel!
-    var texto: String?
+
+    var texto: Tip?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,9 @@ class DetalleTipViewController: UIViewController {
         self.hero.isEnabled = true
         detqlleText.hero.id = "tip"
         
-        detqlleText.text = texto
+        detqlleText.text = texto?.name
+        imagenTip.image = UIImage(named: texto!.imagen)
+        descriptionTip.text = texto?.description
         // Do any additional setup after loading the view.
     }
     
