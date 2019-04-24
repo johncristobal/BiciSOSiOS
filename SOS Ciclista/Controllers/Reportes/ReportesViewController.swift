@@ -14,6 +14,7 @@ import AlamofireImage
 
 class ReportesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var vistaAmarilla: UIView!
     @IBOutlet var imageReportar: UIImageView!
     @IBOutlet var tableview: UITableView!
     
@@ -23,6 +24,7 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       vistaAmarilla.borderAmarillo()
         imageReportar.isUserInteractionEnabled = true
 
         let gesture = UITapGestureRecognizer(target: self,action: #selector(self.reportarAction))

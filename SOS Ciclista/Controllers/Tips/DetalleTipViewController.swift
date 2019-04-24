@@ -15,11 +15,14 @@ class DetalleTipViewController: UIViewController {
     @IBOutlet weak var imagenTip: UIImageView!
     @IBOutlet weak var descriptionTip: UILabel!
 
+    @IBOutlet var vistaAmarilla: UIView!
     var texto: Tip?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        vistaAmarilla.borderAmarillo()
+        
         self.hero.isEnabled = true
         detqlleText.hero.id = "tip"
         
