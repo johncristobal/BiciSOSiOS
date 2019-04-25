@@ -62,6 +62,8 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
             }else{
                 performSegue(withIdentifier: "sesion", sender: nil)
             }
+        }else{
+            performSegue(withIdentifier: "sesion", sender: nil)
         }
         return true
     }

@@ -69,7 +69,7 @@ class SerieViewController: UIViewController {
                         fotos = datos["fotos"] as! String
                     }*/
                     
-                    self.reporteText.text = "Serie reportada \n ROBO"
+                    self.reporteText.text = "# Serie reportado como robado"
                 }else{
                     print("no hay datos")
                 }
@@ -89,6 +89,8 @@ class SerieViewController: UIViewController {
             }else{
                 performSegue(withIdentifier: "sesionSerie", sender: nil)
             }
+        }else{
+            performSegue(withIdentifier: "sesionSerie", sender: nil)
         }
         return true
     }

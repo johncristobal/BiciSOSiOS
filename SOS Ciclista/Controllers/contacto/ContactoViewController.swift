@@ -24,6 +24,7 @@ class ContactoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         vistaAmarilla.borderAmarillo()
+        vistaContacto.borderButton()
         buttonSend.borderButton()
         
         let gestureFace = UITapGestureRecognizer(target: self, action: #selector(showFace))
