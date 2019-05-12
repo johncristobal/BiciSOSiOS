@@ -97,24 +97,24 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
                     }
                 }
 
-                self.selected[self.index] = UIImage(named: "bicia")!
+                self.selected[self.index] = UIImage(named: "cameraicon")!
                 
                 switch(self.index){
                 case 0:
                     self.flags[0] = false
-                    self.biciA.image = UIImage(named: "bicia")
+                    self.biciA.image = UIImage(named: "cameraicon")
                     break
                 case 1:
                     self.flags[1] = false
-                    self.biciB.image = UIImage(named: "bicia")
+                    self.biciB.image = UIImage(named: "cameraicon")
                     break
                 case 2:
                     self.flags[2] = false
-                    self.biciC.image = UIImage(named: "bicia")
+                    self.biciC.image = UIImage(named: "cameraicon")
                     break
                 case 3:
                     self.flags[3] = false
-                    self.biciD.image = UIImage(named: "bicia")
+                    self.biciD.image = UIImage(named: "cameraicon")
                     break
                 default: break
                 }
@@ -172,7 +172,7 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
         var i = 0
         selected.forEach { (image) in
             
-            if image != UIImage(named: "bicia"){
+            if image != UIImage(named: "cameraicon"){
                 let data = image.jpegData(compressionQuality: 0.9)
                 let complete = path.appending("/\(name)_\(i).png")
                 if FileManager.default.fileExists(atPath: complete){
@@ -201,7 +201,7 @@ class PhotosBiciViewController: UIViewController, UINavigationControllerDelegate
         if selected != nil {
             selected.forEach { (asset) in
                 
-                if asset != UIImage(named: "bicia"){
+                if asset != UIImage(named: "cameraicon"){
                     switch(i){
                     case 0:
                         flags[0] = true

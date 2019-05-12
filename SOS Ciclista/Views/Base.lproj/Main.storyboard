@@ -793,14 +793,8 @@ y auxilio vial</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cL-EC-ovG">
                                         <rect key="frame" x="16" y="73" width="343" height="554"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reportar" translatesAutoresizingMaskIntoConstraints="NO" id="KAC-23-lsv">
-                                                <rect key="frame" x="8" y="8" width="327" height="120"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="lDP-XW-6QD"/>
-                                                </constraints>
-                                            </imageView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zo2-Ba-kOB">
-                                                <rect key="frame" x="0.0" y="136" width="343" height="410"/>
+                                                <rect key="frame" x="0.0" y="8" width="343" height="538"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reportCell" id="A13-LJ-ue8" customClass="ReportTableViewCell" customModule="SOS_Ciclista" customModuleProvider="target">
@@ -857,14 +851,10 @@ y auxilio vial</string>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="KAC-23-lsv" secondAttribute="trailing" constant="8" id="2Ck-xR-KOB"/>
                                             <constraint firstAttribute="bottom" secondItem="Zo2-Ba-kOB" secondAttribute="bottom" constant="8" id="F88-cQ-boh"/>
-                                            <constraint firstItem="Zo2-Ba-kOB" firstAttribute="top" secondItem="KAC-23-lsv" secondAttribute="bottom" constant="8" id="GZ9-Oh-rF1"/>
                                             <constraint firstItem="Zo2-Ba-kOB" firstAttribute="leading" secondItem="1cL-EC-ovG" secondAttribute="leading" id="OEw-Ry-qMo"/>
                                             <constraint firstAttribute="trailing" secondItem="Zo2-Ba-kOB" secondAttribute="trailing" id="WoU-IA-sJa"/>
-                                            <constraint firstItem="KAC-23-lsv" firstAttribute="centerX" secondItem="1cL-EC-ovG" secondAttribute="centerX" id="eaE-xS-kUV"/>
-                                            <constraint firstItem="KAC-23-lsv" firstAttribute="top" secondItem="1cL-EC-ovG" secondAttribute="top" constant="8" id="hFb-Hy-jHO"/>
-                                            <constraint firstItem="KAC-23-lsv" firstAttribute="leading" secondItem="1cL-EC-ovG" secondAttribute="leading" constant="8" id="prd-sQ-eJe"/>
+                                            <constraint firstItem="Zo2-Ba-kOB" firstAttribute="top" secondItem="1cL-EC-ovG" secondAttribute="top" constant="8" id="uwj-fZ-Sey"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reportes de robo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8I-ON-qzu">
@@ -893,6 +883,13 @@ y auxilio vial</string>
                                             <action selector="closeWindow:" destination="2Lr-un-sLy" eventType="touchUpInside" id="kLk-WJ-4iM"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertafinal" translatesAutoresizingMaskIntoConstraints="NO" id="KAC-23-lsv">
+                                        <rect key="frame" x="227" y="499" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="em7-Ze-86t"/>
+                                            <constraint firstAttribute="width" constant="120" id="uLr-uU-dTK"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -904,6 +901,8 @@ y auxilio vial</string>
                                     <constraint firstItem="oHr-G5-DLU" firstAttribute="leading" secondItem="yEs-fY-E0d" secondAttribute="leading" id="D70-re-NZg"/>
                                     <constraint firstItem="Fnh-XF-qkS" firstAttribute="leading" secondItem="yEs-fY-E0d" secondAttribute="leading" constant="8" id="G9r-Lc-Pfs"/>
                                     <constraint firstItem="1cL-EC-ovG" firstAttribute="leading" secondItem="yEs-fY-E0d" secondAttribute="leading" constant="16" id="HSV-My-af6"/>
+                                    <constraint firstAttribute="bottom" secondItem="KAC-23-lsv" secondAttribute="bottom" constant="28" id="ISy-D7-wrB"/>
+                                    <constraint firstAttribute="trailing" secondItem="KAC-23-lsv" secondAttribute="trailing" constant="28" id="K6c-iA-azC"/>
                                     <constraint firstItem="Fnh-XF-qkS" firstAttribute="top" secondItem="yEs-fY-E0d" secondAttribute="top" constant="16" id="LQF-vS-FhG"/>
                                     <constraint firstItem="R8I-ON-qzu" firstAttribute="top" secondItem="yEs-fY-E0d" secondAttribute="top" constant="16" id="OCJ-DF-1TF"/>
                                     <constraint firstAttribute="trailing" secondItem="1cL-EC-ovG" secondAttribute="trailing" constant="16" id="Oc4-7q-7qC"/>
@@ -937,7 +936,7 @@ y auxilio vial</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeA-C8-erR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="-1803"/>
+            <point key="canvasLocation" x="1720.8" y="-1803.1484257871066"/>
         </scene>
         <!--Report Fragment View Controller-->
         <scene sceneID="Zso-cO-i7Q">
@@ -970,7 +969,7 @@ y auxilio vial</string>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No. de serie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bst-7t-fzc">
-                                        <rect key="frame" x="100" y="100" width="225" height="40"/>
+                                        <rect key="frame" x="80" y="100" width="245" height="40"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Osc-1l-Voa"/>
@@ -983,14 +982,14 @@ y auxilio vial</string>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-l9-wjO">
-                                        <rect key="frame" x="10" y="100" width="80" height="40"/>
+                                        <rect key="frame" x="15" y="100" width="55" height="40"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="JiU-pS-Xpc"/>
+                                            <constraint firstAttribute="width" constant="55" id="JiU-pS-Xpc"/>
                                             <constraint firstAttribute="height" constant="40" id="pb3-Od-hv3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                        <state key="normal" title="Fotos +">
+                                        <state key="normal" backgroundImage="cameraicon">
                                             <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -1051,7 +1050,7 @@ y auxilio vial</string>
                                     <constraint firstItem="09W-Pv-mHc" firstAttribute="top" secondItem="eJ1-Cg-0Q8" secondAttribute="top" constant="20" id="3Uu-J6-Sxo"/>
                                     <constraint firstAttribute="height" constant="312" id="5kF-OP-kRF"/>
                                     <constraint firstItem="GOT-bg-dft" firstAttribute="leading" secondItem="eJ1-Cg-0Q8" secondAttribute="leading" constant="10" id="749-qR-QOd"/>
-                                    <constraint firstItem="KOO-l9-wjO" firstAttribute="leading" secondItem="eJ1-Cg-0Q8" secondAttribute="leading" constant="10" id="9Xd-4y-6Gf"/>
+                                    <constraint firstItem="KOO-l9-wjO" firstAttribute="leading" secondItem="eJ1-Cg-0Q8" secondAttribute="leading" constant="15" id="9Xd-4y-6Gf"/>
                                     <constraint firstItem="09W-Pv-mHc" firstAttribute="centerX" secondItem="eJ1-Cg-0Q8" secondAttribute="centerX" id="CNl-gB-OIO"/>
                                     <constraint firstItem="KOO-l9-wjO" firstAttribute="top" secondItem="H1r-7u-eqZ" secondAttribute="bottom" constant="10" id="EY2-kz-Gpl"/>
                                     <constraint firstItem="bst-7t-fzc" firstAttribute="trailing" secondItem="H1r-7u-eqZ" secondAttribute="trailing" id="KYx-bS-KJp"/>
@@ -1256,7 +1255,7 @@ y auxilio vial</string>
                                             <color key="titleColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELX-zD-1Cr">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELX-zD-1Cr">
                                         <rect key="frame" x="152.5" y="557" width="70" height="30"/>
                                         <state key="normal" title="Registrate"/>
                                     </button>
@@ -1440,15 +1439,13 @@ y auxilio vial</string>
                                                             <outlet property="delegate" destination="hWB-jh-9Mf" id="MZq-vF-PRA"/>
                                                         </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aud-gF-sjP">
-                                                        <rect key="frame" x="0.0" y="249.5" width="80" height="40"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aud-gF-sjP">
+                                                        <rect key="frame" x="8" y="249.5" width="60" height="40"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="ExI-cG-29p"/>
+                                                            <constraint firstAttribute="width" constant="60" id="ExI-cG-29p"/>
                                                             <constraint firstAttribute="height" constant="40" id="Ug4-7M-QOn"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
-                                                        <state key="normal" title="+">
+                                                        <state key="normal" backgroundImage="cameraicon">
                                                             <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
@@ -1531,7 +1528,7 @@ y auxilio vial</string>
                                                     <constraint firstItem="z5q-YQ-GOR" firstAttribute="top" secondItem="mYC-fP-rn5" secondAttribute="bottom" constant="8" id="dLX-db-k07"/>
                                                     <constraint firstItem="mYC-fP-rn5" firstAttribute="top" secondItem="q1P-cu-CfN" secondAttribute="top" constant="8" id="eUM-Tt-jx7"/>
                                                     <constraint firstAttribute="trailing" secondItem="z5q-YQ-GOR" secondAttribute="trailing" id="h6W-h0-FBy"/>
-                                                    <constraint firstItem="aud-gF-sjP" firstAttribute="leading" secondItem="0oW-tx-due" secondAttribute="leading" id="j47-tX-YGk"/>
+                                                    <constraint firstItem="aud-gF-sjP" firstAttribute="leading" secondItem="0oW-tx-due" secondAttribute="leading" constant="8" id="j47-tX-YGk"/>
                                                     <constraint firstAttribute="trailing" secondItem="Qs1-i0-dGH" secondAttribute="trailing" constant="8" id="kQw-Yl-Otw"/>
                                                     <constraint firstItem="fB3-zO-B6w" firstAttribute="top" secondItem="Og1-OR-qUz" secondAttribute="bottom" constant="8" id="pMz-2m-l9x"/>
                                                     <constraint firstItem="2Kb-wx-BjB" firstAttribute="top" secondItem="wvq-zM-mPq" secondAttribute="bottom" constant="8" id="ps3-Et-sId"/>
@@ -2046,7 +2043,7 @@ hagan su trabajo **</string>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="83R-kU-MHD">
                                         <rect key="frame" x="8" y="176" width="327" height="127"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicia" translatesAutoresizingMaskIntoConstraints="NO" id="Pwc-2G-2Pb">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraicon" translatesAutoresizingMaskIntoConstraints="NO" id="Pwc-2G-2Pb">
                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="127"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vty-5z-WHM">
@@ -2058,7 +2055,7 @@ hagan su trabajo **</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicia" translatesAutoresizingMaskIntoConstraints="NO" id="EUa-oF-qgt">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraicon" translatesAutoresizingMaskIntoConstraints="NO" id="EUa-oF-qgt">
                                                 <rect key="frame" x="169" y="0.0" width="158" height="127"/>
                                             </imageView>
                                         </subviews>
@@ -2093,7 +2090,7 @@ hagan su trabajo **</string>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EnG-yv-FtX">
                                         <rect key="frame" x="8" y="39" width="327" height="127"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicia" translatesAutoresizingMaskIntoConstraints="NO" id="9Uf-8B-Yhu">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraicon" translatesAutoresizingMaskIntoConstraints="NO" id="9Uf-8B-Yhu">
                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="127"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hus-lw-yow">
@@ -2105,7 +2102,7 @@ hagan su trabajo **</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicia" translatesAutoresizingMaskIntoConstraints="NO" id="UuL-jY-RpO">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraicon" translatesAutoresizingMaskIntoConstraints="NO" id="UuL-jY-RpO">
                                                 <rect key="frame" x="169" y="0.0" width="158" height="127"/>
                                             </imageView>
                                         </subviews>
@@ -2601,11 +2598,13 @@ y te robaron tu bici, repórtala directamente.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="alertafinal" width="989" height="958"/>
         <image name="backarrow" width="109" height="105"/>
         <image name="backlogindos" width="1066" height="1067"/>
         <image name="bicia" width="244" height="151"/>
         <image name="biciwhitejust" width="1001" height="561"/>
         <image name="buscaricon" width="82" height="82"/>
+        <image name="cameraicon" width="349" height="284"/>
         <image name="closeicon" width="94" height="94"/>
         <image name="face" width="194" height="194"/>
         <image name="headPersonaliza" width="1242" height="196"/>
@@ -2622,9 +2621,9 @@ y te robaron tu bici, repórtala directamente.</string>
         <image name="twwiter" width="192" height="192"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="91z-Mt-Myz"/>
-        <segue reference="O9I-pU-wnc"/>
-        <segue reference="8JX-Jj-J98"/>
-        <segue reference="MdW-eq-pW5"/>
+        <segue reference="tGv-Bd-n8q"/>
+        <segue reference="ZpG-WP-dvz"/>
+        <segue reference="9Bx-r1-g3R"/>
+        <segue reference="2Wc-eN-v3a"/>
     </inferredMetricsTieBreakers>
 </document>
