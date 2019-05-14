@@ -28,6 +28,7 @@ class DetalleReporteViewController: UIViewController, UICollectionViewDelegate, 
     var fotosArray: [String] = []
     
     var reporteRef: StorageReference? = nil
+    let nameNot = Notification.Name("tabla")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +61,8 @@ class DetalleReporteViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     @IBAction func cancelAction(_ sender: Any) {
+        NotificationCenter.default.post(name: nameNot, object: nil)
+
         dismiss(animated: true, completion: nil)
     }
     

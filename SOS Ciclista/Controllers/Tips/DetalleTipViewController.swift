@@ -18,6 +18,7 @@ class DetalleTipViewController: UIViewController {
     @IBOutlet var vistaAmarilla: UIView!
     var texto: Tip?
     
+    @IBOutlet var heightConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,10 +28,18 @@ class DetalleTipViewController: UIViewController {
         detqlleText.hero.id = "tip"
         
         detqlleText.text = texto?.name
-        imagenTip.image = UIImage(named: texto!.imagen)
         descriptionTip.text = texto?.description
-        // Do any additional setup after loading the view.
-    }
+
+        //antes de agiantr la imagen, tenemos que actualizar al height de la imagen que viene
+        
+        let image =  UIImage(named: texto!.imagen)
+        let height = image!.size.height
+        print("height: \(height)")
+        
+        //imagenTip.frame = CGRect(x: 0, y: 0, width: imagenTip.frame.size.width, height: (height))
+        heightConstraint.constant = height / 2.5
+        imagenTip.image = UIImage(named: texto!.imagen)
+   }
     
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)

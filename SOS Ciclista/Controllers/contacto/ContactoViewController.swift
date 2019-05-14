@@ -38,17 +38,34 @@ class ContactoViewController: UIViewController {
     }
     
     @objc func showFace(){
-        if let url = URL(string: "https://www.facebook.com/groups/266612746861233/") {
-            let vc = SFSafariViewController(url: url)
-            present(vc, animated: true)
+        
+        let appURL = URL(string: "fb://profile/266612746861233/")!
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL)
+        } else {
+            if let url = URL(string: "https://www.facebook.com/groups/266612746861233/") {
+                let vc = SFSafariViewController(url: url)
+                present(vc, animated: true)
+            }
         }
     }
 
     @objc func showTwitter(){
-        if let url = URL(string: "https://twitter.com/BiciRobos_SOSmx?lang=es") {
-            let vc = SFSafariViewController(url: url)
-            present(vc, animated: true)
+        let appURL = URL(string: "twitter://user?screen_name=BiciRobos_SOSmx")!
+        let application = UIApplication.shared
+        
+        if application.canOpenURL(appURL) {
+            application.open(appURL)
+        } else {
+            
+            if let url = URL(string: "https://twitter.com/BiciRobos_SOSmx?lang=es") {
+                let vc = SFSafariViewController(url: url)
+                present(vc, animated: true)
+            }
         }
+
     }
 
     

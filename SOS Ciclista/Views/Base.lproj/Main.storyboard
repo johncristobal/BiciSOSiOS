@@ -180,7 +180,7 @@
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headtips" translatesAutoresizingMaskIntoConstraints="NO" id="ESo-yi-uEZ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Pl1-JQ-jiH"/>
                                 </constraints>
@@ -312,7 +312,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="gP1-VW-44C">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="hAz-wo-G6G"/>
                                 </constraints>
@@ -363,7 +363,7 @@
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headtips" translatesAutoresizingMaskIntoConstraints="NO" id="Dyy-mV-HQf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="g86-8O-79u"/>
                                 </constraints>
@@ -372,7 +372,7 @@
                                 <rect key="frame" x="24" y="93" width="327" height="550"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvV-TD-Fu4">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="800"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips de seguridad, prevención vial, recomnedaciones y mucho más. La comunidad ciclista la conformamos todos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-0v-O8E">
                                                 <rect key="frame" x="48" y="2" width="231" height="60"/>
@@ -423,11 +423,14 @@
                                                     <constraint firstItem="7bN-1e-fTm" firstAttribute="leading" secondItem="3VT-0F-hEn" secondAttribute="leading" constant="1" id="wGI-tr-Pfm"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tipsdos" translatesAutoresizingMaskIntoConstraints="NO" id="8hi-ZJ-3rZ">
-                                                <rect key="frame" x="16" y="136" width="295" height="290"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="bicicuatro" translatesAutoresizingMaskIntoConstraints="NO" id="8hi-ZJ-3rZ">
+                                                <rect key="frame" x="16" y="136" width="295" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="Xht-55-zZQ"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhz-4U-xc6">
-                                                <rect key="frame" x="8" y="434" width="311" height="150"/>
+                                                <rect key="frame" x="8" y="402" width="311" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="ZeE-8N-v7G"/>
                                                 </constraints>
@@ -443,10 +446,10 @@
                                             <constraint firstItem="9TW-0v-O8E" firstAttribute="top" secondItem="fvV-TD-Fu4" secondAttribute="top" constant="2" id="64b-up-81t"/>
                                             <constraint firstItem="gFe-Yn-2h9" firstAttribute="top" secondItem="9TW-0v-O8E" secondAttribute="top" id="6D8-c9-7sf"/>
                                             <constraint firstAttribute="trailing" secondItem="3VT-0F-hEn" secondAttribute="trailing" constant="8" id="CaN-AE-cwU"/>
-                                            <constraint firstAttribute="bottom" secondItem="Mhz-4U-xc6" secondAttribute="bottom" constant="16" id="FZh-4a-7Jf"/>
                                             <constraint firstItem="oeR-DG-i9Y" firstAttribute="centerY" secondItem="9TW-0v-O8E" secondAttribute="centerY" id="GVv-PU-Elz"/>
                                             <constraint firstItem="gFe-Yn-2h9" firstAttribute="bottom" secondItem="9TW-0v-O8E" secondAttribute="bottom" id="Jxm-WA-CaG"/>
                                             <constraint firstItem="3VT-0F-hEn" firstAttribute="top" secondItem="9TW-0v-O8E" secondAttribute="bottom" constant="16" id="KZO-bx-9pL"/>
+                                            <constraint firstItem="Mhz-4U-xc6" firstAttribute="top" secondItem="8hi-ZJ-3rZ" secondAttribute="bottom" constant="16" id="Lwc-iY-fqu"/>
                                             <constraint firstItem="8hi-ZJ-3rZ" firstAttribute="top" secondItem="3VT-0F-hEn" secondAttribute="bottom" constant="8" id="Z4z-BK-6Qd"/>
                                             <constraint firstItem="gFe-Yn-2h9" firstAttribute="leading" secondItem="9TW-0v-O8E" secondAttribute="trailing" constant="20" id="ZMC-ge-nhP"/>
                                             <constraint firstItem="oeR-DG-i9Y" firstAttribute="leading" secondItem="fvV-TD-Fu4" secondAttribute="leading" constant="25" id="bAT-NQ-ARw"/>
@@ -454,8 +457,7 @@
                                             <constraint firstItem="Mhz-4U-xc6" firstAttribute="leading" secondItem="fvV-TD-Fu4" secondAttribute="leading" constant="8" id="dcO-6e-Ac4"/>
                                             <constraint firstItem="9TW-0v-O8E" firstAttribute="centerX" secondItem="fvV-TD-Fu4" secondAttribute="centerX" id="eEd-mK-pnG"/>
                                             <constraint firstItem="oeR-DG-i9Y" firstAttribute="bottom" secondItem="9TW-0v-O8E" secondAttribute="bottom" id="eGP-Sp-5ek"/>
-                                            <constraint firstItem="Mhz-4U-xc6" firstAttribute="top" secondItem="8hi-ZJ-3rZ" secondAttribute="bottom" constant="8" id="jiz-Q0-sel"/>
-                                            <constraint firstAttribute="height" constant="600" id="nGR-Q4-xgj"/>
+                                            <constraint firstAttribute="height" constant="800" id="nGR-Q4-xgj"/>
                                             <constraint firstAttribute="trailing" secondItem="Mhz-4U-xc6" secondAttribute="trailing" constant="8" id="nev-br-LNd"/>
                                             <constraint firstItem="9TW-0v-O8E" firstAttribute="leading" secondItem="oeR-DG-i9Y" secondAttribute="trailing" constant="20" id="yKW-Mf-2Sw"/>
                                             <constraint firstItem="8hi-ZJ-3rZ" firstAttribute="leading" secondItem="fvV-TD-Fu4" secondAttribute="leading" constant="16" id="yVl-FH-m2y"/>
@@ -472,7 +474,7 @@
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="rbV-zr-Wz0">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="QGx-nK-3BZ"/>
                                 </constraints>
@@ -528,13 +530,14 @@
                     <connections>
                         <outlet property="descriptionTip" destination="Mhz-4U-xc6" id="1pk-H5-wfe"/>
                         <outlet property="detqlleText" destination="7bN-1e-fTm" id="p5a-8D-jdZ"/>
+                        <outlet property="heightConstraint" destination="Xht-55-zZQ" id="Xtn-hB-Vmt"/>
                         <outlet property="imagenTip" destination="8hi-ZJ-3rZ" id="uah-IN-2fF"/>
                         <outlet property="vistaAmarilla" destination="7dr-zF-0uc" id="dWg-4j-NSe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLC-46-WA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="-16"/>
+            <point key="canvasLocation" x="-300" y="13"/>
         </scene>
         <!--Contacto View Controller-->
         <scene sceneID="P8l-f5-6uT">
@@ -548,7 +551,7 @@
                                 <rect key="frame" x="8" y="18" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headcontacto" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-Nm-qxG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="bQI-8R-LNh"/>
                                 </constraints>
@@ -713,7 +716,7 @@ y auxilio vial</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="sAa-XT-7jH">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Drj-sJ-ToF"/>
                                 </constraints>
@@ -785,7 +788,7 @@ y auxilio vial</string>
                                         <rect key="frame" x="8" y="16" width="359" height="623"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headReportes" translatesAutoresizingMaskIntoConstraints="NO" id="Pso-kZ-Z0h">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="Tpr-rQ-C22"/>
                                         </constraints>
@@ -867,7 +870,7 @@ y auxilio vial</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="oHr-G5-DLU">
-                                        <rect key="frame" x="0.0" y="447" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="446.99999999999994" width="375" height="200.00000000000017"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="uqb-Iz-acc"/>
                                         </constraints>
@@ -884,10 +887,10 @@ y auxilio vial</string>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertafinal" translatesAutoresizingMaskIntoConstraints="NO" id="KAC-23-lsv">
-                                        <rect key="frame" x="227" y="499" width="120" height="120"/>
+                                        <rect key="frame" x="247" y="519" width="100" height="100.00000000000023"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="em7-Ze-86t"/>
-                                            <constraint firstAttribute="width" constant="120" id="uLr-uU-dTK"/>
+                                            <constraint firstAttribute="height" constant="100" id="em7-Ze-86t"/>
+                                            <constraint firstAttribute="width" constant="100" id="uLr-uU-dTK"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -983,7 +986,6 @@ y auxilio vial</string>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-l9-wjO">
                                         <rect key="frame" x="15" y="100" width="55" height="40"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="JiU-pS-Xpc"/>
                                             <constraint firstAttribute="height" constant="40" id="pb3-Od-hv3"/>
@@ -1551,7 +1553,7 @@ y auxilio vial</string>
                                         </constraints>
                                     </scrollView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headPersonaliza" translatesAutoresizingMaskIntoConstraints="NO" id="aZd-Sy-wBt">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="cWK-5y-aSq"/>
                                         </constraints>
@@ -1577,7 +1579,7 @@ y auxilio vial</string>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="4li-hH-7X1">
-                                        <rect key="frame" x="0.0" y="447" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="446.99999999999994" width="375" height="200.00000000000017"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="aGo-qQ-YMl"/>
                                         </constraints>
@@ -1918,7 +1920,7 @@ hagan su trabajo **</string>
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headrobobici" translatesAutoresizingMaskIntoConstraints="NO" id="l8t-lI-GD3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="WnT-6c-8TF"/>
                                 </constraints>
@@ -1982,7 +1984,7 @@ hagan su trabajo **</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="UQ4-1r-Oz3">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="K7t-ez-eYJ"/>
                                 </constraints>
@@ -2028,6 +2030,91 @@ hagan su trabajo **</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5p-pz-dTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1340" y="720"/>
+        </scene>
+        <!--Result Serie View Controller-->
+        <scene sceneID="yYr-Xp-ri0">
+            <objects>
+                <viewController id="Y0J-QO-IuJ" customClass="resultSerieViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JiZ-A2-n7d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRX-4i-AFQ">
+                                <rect key="frame" x="16" y="205.5" width="343" height="256"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlG-uF-bh0">
+                                        <rect key="frame" x="8" y="47.5" width="327" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBQ-GI-4jU">
+                                                <rect key="frame" x="24" y="24" width="279" height="32"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="7jN-zz-EjJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="BBQ-GI-4jU" secondAttribute="bottom" constant="24" id="FQ7-YR-cI3"/>
+                                            <constraint firstAttribute="trailing" secondItem="BBQ-GI-4jU" secondAttribute="trailing" constant="24" id="Gao-kE-r8i"/>
+                                            <constraint firstItem="BBQ-GI-4jU" firstAttribute="leading" secondItem="IlG-uF-bh0" secondAttribute="leading" constant="24" id="IIo-Ba-OXo"/>
+                                            <constraint firstItem="BBQ-GI-4jU" firstAttribute="top" secondItem="IlG-uF-bh0" secondAttribute="top" constant="24" id="JtB-OB-aoV"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFg-Bd-P1A">
+                                        <rect key="frame" x="147" y="8" width="49" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uyq-6b-Ke7">
+                                        <rect key="frame" x="111.5" y="143.5" width="120" height="31"/>
+                                        <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="g6L-uU-gvF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <state key="normal" title="REGRESAR">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButton:" destination="Y0J-QO-IuJ" eventType="touchUpInside" id="FT2-PY-skA"/>
+                                            <action selector="savePhotos:" destination="pGV-Yl-l4s" eventType="touchUpInside" id="gRs-Kq-YoP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IlG-uF-bh0" secondAttribute="trailing" constant="8" id="9RO-58-KCG"/>
+                                    <constraint firstItem="IlG-uF-bh0" firstAttribute="top" secondItem="cFg-Bd-P1A" secondAttribute="bottom" constant="16" id="Ooh-lM-yGk"/>
+                                    <constraint firstItem="Uyq-6b-Ke7" firstAttribute="top" secondItem="IlG-uF-bh0" secondAttribute="bottom" constant="16" id="Pcg-39-fK2"/>
+                                    <constraint firstItem="cFg-Bd-P1A" firstAttribute="top" secondItem="MRX-4i-AFQ" secondAttribute="top" constant="8" id="VKQ-Uy-SLe"/>
+                                    <constraint firstAttribute="height" constant="256" id="o5s-8I-Acj"/>
+                                    <constraint firstItem="Uyq-6b-Ke7" firstAttribute="centerX" secondItem="IlG-uF-bh0" secondAttribute="centerX" id="szN-kC-Rkt"/>
+                                    <constraint firstItem="IlG-uF-bh0" firstAttribute="leading" secondItem="MRX-4i-AFQ" secondAttribute="leading" constant="8" id="w1g-Ql-8g0"/>
+                                    <constraint firstItem="cFg-Bd-P1A" firstAttribute="centerX" secondItem="MRX-4i-AFQ" secondAttribute="centerX" id="x4T-Jb-GR7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MRX-4i-AFQ" firstAttribute="leading" secondItem="ZAZ-Vt-egM" secondAttribute="leading" constant="16" id="2oF-wU-eAf"/>
+                            <constraint firstItem="ZAZ-Vt-egM" firstAttribute="trailing" secondItem="MRX-4i-AFQ" secondAttribute="trailing" constant="16" id="JBk-Ud-1fI"/>
+                            <constraint firstItem="MRX-4i-AFQ" firstAttribute="centerY" secondItem="JiZ-A2-n7d" secondAttribute="centerY" id="yCP-eE-Oru"/>
+                            <constraint firstItem="MRX-4i-AFQ" firstAttribute="centerX" secondItem="JiZ-A2-n7d" secondAttribute="centerX" id="zq9-ZS-Kqf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZAZ-Vt-egM"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonFinal" destination="Uyq-6b-Ke7" id="Gpi-au-F25"/>
+                        <outlet property="textContent" destination="BBQ-GI-4jU" id="3ey-i7-7eI"/>
+                        <outlet property="textTitle" destination="cFg-Bd-P1A" id="UvG-Rb-8Q6"/>
+                        <outlet property="vista" destination="IlG-uF-bh0" id="RpE-3g-twp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xx2-86-NwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721" y="-63"/>
         </scene>
         <!--Photos Bici View Controller-->
         <scene sceneID="CQZ-Jx-fih">
@@ -2167,7 +2254,7 @@ hagan su trabajo **</string>
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headserie" translatesAutoresizingMaskIntoConstraints="NO" id="OjH-wZ-ZY3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Jrp-cL-rsI"/>
                                 </constraints>
@@ -2273,25 +2360,26 @@ y te robaron tu bici, repórtala directamente.</string>
                                                     <action selector="searchAction:" destination="pqe-ZY-8UC" eventType="touchUpInside" id="3Vn-7f-T8t"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reportar" translatesAutoresizingMaskIntoConstraints="NO" id="hWf-zT-zoI">
-                                                <rect key="frame" x="8" y="370" width="327" height="100"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertafinal" translatesAutoresizingMaskIntoConstraints="NO" id="hWf-zT-zoI">
+                                                <rect key="frame" x="8" y="322" width="327" height="100.00000000000023"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="06r-N0-TDw"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jg-ul-70t">
-                                                <rect key="frame" x="8" y="262" width="327" height="100"/>
+                                                <rect key="frame" x="8" y="262" width="327" height="52"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaC-6c-MbG">
-                                                        <rect key="frame" x="24" y="24" width="279" height="52"/>
+                                                        <rect key="frame" x="24" y="24" width="279" height="4"/>
+                                                        <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="cUY-eM-dwm"/>
+                                                    <constraint firstAttribute="height" constant="52" id="cUY-eM-dwm"/>
                                                     <constraint firstAttribute="bottom" secondItem="TaC-6c-MbG" secondAttribute="bottom" constant="24" id="sOd-Ui-fnt"/>
                                                     <constraint firstItem="TaC-6c-MbG" firstAttribute="leading" secondItem="2jg-ul-70t" secondAttribute="leading" constant="24" id="uMA-AW-cs0"/>
                                                     <constraint firstAttribute="trailing" secondItem="TaC-6c-MbG" secondAttribute="trailing" constant="24" id="vuw-Gm-jvQ"/>
@@ -2339,7 +2427,7 @@ y te robaron tu bici, repórtala directamente.</string>
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="5DE-TB-Jh4">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8jn-Ji-Wpu"/>
                                 </constraints>
@@ -2387,10 +2475,12 @@ y te robaron tu bici, repórtala directamente.</string>
                         <outlet property="reportarView" destination="hWf-zT-zoI" id="BGJ-ji-bei"/>
                         <outlet property="reporteText" destination="TaC-6c-MbG" id="mN5-kO-2Ah"/>
                         <outlet property="resultadoView" destination="2jg-ul-70t" id="107-j1-lAl"/>
+                        <outlet property="scrollHide" destination="lIU-O7-vhf" id="0sa-SY-SAi"/>
                         <outlet property="serieText" destination="Gav-S2-Cob" id="dqZ-cT-2bK"/>
                         <outlet property="vistaAmarrilla" destination="xOf-Rq-FRG" id="MAh-18-6OB"/>
                         <segue destination="rWD-wZ-Eei" kind="presentation" identifier="reporteSerie" modalPresentationStyle="overCurrentContext" id="MdW-eq-pW5"/>
                         <segue destination="f8L-aS-QNg" kind="show" identifier="sesionSerie" id="8JX-Jj-J98"/>
+                        <segue destination="Y0J-QO-IuJ" kind="presentation" identifier="result" modalPresentationStyle="overCurrentContext" id="xdT-fw-qo7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVi-mj-FSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2602,6 +2692,7 @@ y te robaron tu bici, repórtala directamente.</string>
         <image name="backarrow" width="109" height="105"/>
         <image name="backlogindos" width="1066" height="1067"/>
         <image name="bicia" width="244" height="151"/>
+        <image name="bicicuatro" width="712" height="1280"/>
         <image name="biciwhitejust" width="1001" height="561"/>
         <image name="buscaricon" width="82" height="82"/>
         <image name="cameraicon" width="349" height="284"/>
@@ -2617,13 +2708,12 @@ y te robaron tu bici, repórtala directamente.</string>
         <image name="menuhead" width="1052" height="605"/>
         <image name="reportado" width="292" height="285"/>
         <image name="reportar" width="604" height="410"/>
-        <image name="tipsdos" width="899" height="628"/>
         <image name="twwiter" width="192" height="192"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tGv-Bd-n8q"/>
         <segue reference="ZpG-WP-dvz"/>
-        <segue reference="9Bx-r1-g3R"/>
-        <segue reference="2Wc-eN-v3a"/>
+        <segue reference="8JX-Jj-J98"/>
+        <segue reference="MdW-eq-pW5"/>
     </inferredMetricsTieBreakers>
 </document>

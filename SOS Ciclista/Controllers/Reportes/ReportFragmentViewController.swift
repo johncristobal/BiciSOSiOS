@@ -29,11 +29,13 @@ class ReportFragmentViewController: UIViewController {
     
     var ancho : CGFloat!
     var alto : CGFloat!
-    var selected : [UIImage]! = [UIImage(named: "bicia")!,UIImage(named: "bicia")!,UIImage(named: "bicia")!,UIImage(named: "bicia")!]
+    var selected : [UIImage]! = [UIImage(named: "cameraicon")!,UIImage(named: "cameraicon")!,UIImage(named: "cameraicon")!,UIImage(named: "cameraicon")!]
     
     var flags : [Bool] = [false,false,false,false]
     var index = -1
 
+    let name = Notification.Name("tabla")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -66,6 +68,7 @@ class ReportFragmentViewController: UIViewController {
     }
     
     @IBAction func cancelReport(_ sender: Any) {
+        NotificationCenter.default.post(name: name, object: nil)
         dismiss(animated: true, completion: nil)
     }
     
@@ -158,7 +161,7 @@ class ReportFragmentViewController: UIViewController {
                 if FileManager.default.fileExists(atPath: complete){
                     selected[index] = UIImage(contentsOfFile: complete)!
                 }else{
-                    selected[index] = UIImage(named: "bicia")!
+                    selected[index] = UIImage(named: "cameraicon")!
                 }
             }
             

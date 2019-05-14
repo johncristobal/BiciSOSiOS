@@ -19,12 +19,14 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var tableview: UITableView!
     
     var reportes : [Report] = []
+
+    let nameNot = Notification.Name("tabla")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-       vistaAmarilla.borderAmarillo()
+        vistaAmarilla.borderAmarillo()
         imageReportar.isUserInteractionEnabled = true
 
         let gesture = UITapGestureRecognizer(target: self,action: #selector(self.reportarAction))
@@ -32,10 +34,17 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         
         reportes.removeAll()
 
-        getDataReportes()        
+        getDataReportes()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(mostrarTabla), name: nameNot, object: nil)
+    }
+
+    @objc func mostrarTabla(){
+        tableview.isHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         print("sesion")
         let reportado = UserDefaults.standard.string(forKey: "reportado")
         if reportado != nil{
@@ -69,6 +78,7 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func saveReporte(){
+        tableview.isHidden = true
         performSegue(withIdentifier: "reporte", sender: nil)
     }
     
@@ -144,6 +154,9 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableview.isHidden = true
+        
         let report = reportes[indexPath.row]
         performSegue(withIdentifier: "detalleReporte", sender: report)
     }

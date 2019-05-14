@@ -23,7 +23,7 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
     let picker = UIImagePickerController()
 
     @IBOutlet var vistaAmarillo: UIView!
-    let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic")]
+    let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic"),#imageLiteral(resourceName: "bicie"),#imageLiteral(resourceName: "bicif")]
     var selected : [UIImage]! = [UIImage(named: "bicia")!,UIImage(named: "bicia")!,UIImage(named: "bicia")!,UIImage(named: "bicia")!]
 
     var ancho : CGFloat!

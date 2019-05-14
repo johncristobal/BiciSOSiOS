@@ -134,6 +134,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             for (index, value) in (puntosArray.enumerated()) {
                 if value === theAnnotation {
                     print("The annotation's array index is \(index)")
+                    
+                    let taller = talleres[index]
+                    let coordinates = taller.coordinates.split(separator: ",")
+                    let long = coordinates[0]
+                    let lat = coordinates[1]
+                    if  UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL) {
+                        UIApplication.shared.openURL(NSURL(string:
+                            "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving")! as URL)
+                    } else {
+                        NSLog("Can't use comgooglemaps://");
+                    }
                 }
             }
         }

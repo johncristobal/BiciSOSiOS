@@ -16,7 +16,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var miniView: UIView!
     @IBOutlet weak var biciUser: UIImageView!
     @IBOutlet weak var nameUser: UILabel!
-    let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic")]
+    let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic"),#imageLiteral(resourceName: "bicie"),#imageLiteral(resourceName: "bicif")]
 
     let opciones : [String] = ["Reportes","Me robaron la bici...","# serie con reporte","Tips","Contáctanos","Acerca de","Ajustes","Iniciar sesión"]
     let iconos = [#imageLiteral(resourceName: "reportesiconsmall"),#imageLiteral(resourceName: "serieiconsmall"),#imageLiteral(resourceName: "buscaricon"),#imageLiteral(resourceName: "tipsicon"),#imageLiteral(resourceName: "contactoiconsmall"),#imageLiteral(resourceName: "acercaicon"),#imageLiteral(resourceName: "ajustesicon"),#imageLiteral(resourceName: "saliricon")]

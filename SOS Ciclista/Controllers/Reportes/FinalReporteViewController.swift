@@ -13,6 +13,9 @@ class FinalReporteViewController: UIViewController {
     @IBOutlet var buttonFinal: UIButton!
     @IBOutlet var labelFinal: UILabel!
     @IBOutlet var imageFinal: UIImageView!
+    
+    let name = Notification.Name("tabla")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +27,7 @@ class FinalReporteViewController: UIViewController {
     @IBAction func buttonaction(_ sender: Any) {
         UserDefaults.standard.set("1", forKey: "reportado")
 
+       NotificationCenter.default.post(name: name, object: nil)
         self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
     }
     
