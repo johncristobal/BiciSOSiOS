@@ -22,6 +22,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var puntosArray : [MKAnnotation] = []
     var talleres : [Taller] = []
     
+    var lastlocation : CLLocation? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -41,6 +43,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         mapview.delegate = self
         mapview.showsUserLocation = true
+        
+        initListenerBike()
     }
     
     func setMenu(){
@@ -72,6 +76,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 self.mapview.addAnnotations([punto])
             })
         }
+    }
+    
+    func initListenerBike(){
+        
+        //primero enviar mi bike para que este en fierbase
+        //si y solo si estoy logueado
+        //mando nombre, bike, ubication
+        let reportado = UserDefaults.standard.string(forKey: "reportado")
+        if reportado != nil{
+            if reportado == "1"{
+                let punto = MKPointAnnotation()
+                let name = UserDefaults.standard.string(forKey: "nombre")
+                if name != nil{
+                    punto.title = name
+                }else{
+                    punto.title = "SOS Ciclista"
+                }
+                
+                //punto.subtitle = taller.description
+                //let coordinates = taller.coordinates.split(separator: ",")
+                let long = lastlocation?.coordinate.longitude
+                let lat = lastlocation?.coordinate.latitude
+                
+                punto.coordinate = CLLocationCoordinate2D(latitude: Double(lat!), longitude: Double(long!))
+                
+                //self.puntosArray.append(punto)
+                
+                self.mapview.addAnnotations([punto])
+            }else{
+                print(reportado!)
+            }
+        }
+        
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
@@ -124,6 +161,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 customView.imageOutel.image = #imageLiteral(resourceName: "llaveicono")
                 customView.id = ""
             }
+            
             return annotationView
         }
     }
@@ -154,6 +192,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         if let loca = locations.last{
             if flagLocation {
                 flagLocation = false
+
+                lastlocation = loca
+
                 let point: CLLocationCoordinate2D = CLLocationCoordinate2DMake(loca.coordinate.latitude,loca.coordinate.longitude)
                 let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 2000.0/111000.0,longitudeDelta: 2000.0/110000.0)
                 self.mapview.setRegion(MKCoordinateRegion(center: point,span: span),animated:true)

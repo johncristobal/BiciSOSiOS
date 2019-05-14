@@ -180,7 +180,7 @@
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headtips" translatesAutoresizingMaskIntoConstraints="NO" id="ESo-yi-uEZ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Pl1-JQ-jiH"/>
                                 </constraints>
@@ -312,7 +312,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="gP1-VW-44C">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="hAz-wo-G6G"/>
                                 </constraints>
@@ -363,7 +363,7 @@
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headtips" translatesAutoresizingMaskIntoConstraints="NO" id="Dyy-mV-HQf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="g86-8O-79u"/>
                                 </constraints>
@@ -474,7 +474,7 @@
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="rbV-zr-Wz0">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="QGx-nK-3BZ"/>
                                 </constraints>
@@ -551,7 +551,7 @@
                                 <rect key="frame" x="8" y="18" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headcontacto" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-Nm-qxG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="bQI-8R-LNh"/>
                                 </constraints>
@@ -716,7 +716,7 @@ y auxilio vial</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="sAa-XT-7jH">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Drj-sJ-ToF"/>
                                 </constraints>
@@ -788,7 +788,7 @@ y auxilio vial</string>
                                         <rect key="frame" x="8" y="16" width="359" height="623"/>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headReportes" translatesAutoresizingMaskIntoConstraints="NO" id="Pso-kZ-Z0h">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="Tpr-rQ-C22"/>
                                         </constraints>
@@ -870,7 +870,7 @@ y auxilio vial</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="oHr-G5-DLU">
-                                        <rect key="frame" x="0.0" y="446.99999999999994" width="375" height="200.00000000000017"/>
+                                        <rect key="frame" x="0.0" y="447" width="375" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="uqb-Iz-acc"/>
                                         </constraints>
@@ -887,7 +887,7 @@ y auxilio vial</string>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertafinal" translatesAutoresizingMaskIntoConstraints="NO" id="KAC-23-lsv">
-                                        <rect key="frame" x="247" y="519" width="100" height="100.00000000000023"/>
+                                        <rect key="frame" x="247" y="519" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="em7-Ze-86t"/>
                                             <constraint firstAttribute="width" constant="100" id="uLr-uU-dTK"/>
@@ -1553,7 +1553,7 @@ y auxilio vial</string>
                                         </constraints>
                                     </scrollView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headPersonaliza" translatesAutoresizingMaskIntoConstraints="NO" id="aZd-Sy-wBt">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="cWK-5y-aSq"/>
                                         </constraints>
@@ -1579,7 +1579,7 @@ y auxilio vial</string>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="4li-hH-7X1">
-                                        <rect key="frame" x="0.0" y="446.99999999999994" width="375" height="200.00000000000017"/>
+                                        <rect key="frame" x="0.0" y="447" width="375" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="aGo-qQ-YMl"/>
                                         </constraints>
@@ -1920,7 +1920,7 @@ hagan su trabajo **</string>
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headrobobici" translatesAutoresizingMaskIntoConstraints="NO" id="l8t-lI-GD3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="WnT-6c-8TF"/>
                                 </constraints>
@@ -1984,7 +1984,7 @@ hagan su trabajo **</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="UQ4-1r-Oz3">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="K7t-ez-eYJ"/>
                                 </constraints>
@@ -2254,7 +2254,7 @@ hagan su trabajo **</string>
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headserie" translatesAutoresizingMaskIntoConstraints="NO" id="OjH-wZ-ZY3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Jrp-cL-rsI"/>
                                 </constraints>
@@ -2361,7 +2361,7 @@ y te robaron tu bici, repórtala directamente.</string>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertafinal" translatesAutoresizingMaskIntoConstraints="NO" id="hWf-zT-zoI">
-                                                <rect key="frame" x="8" y="322" width="327" height="100.00000000000023"/>
+                                                <rect key="frame" x="8" y="322" width="327" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="06r-N0-TDw"/>
                                                 </constraints>
@@ -2427,7 +2427,7 @@ y te robaron tu bici, repórtala directamente.</string>
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="5DE-TB-Jh4">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8jn-Ji-Wpu"/>
                                 </constraints>
