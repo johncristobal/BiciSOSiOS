@@ -9,23 +9,42 @@
 import UIKit
 import MapKit
 
-class Bicipin: MKAnnotationView {
+protocol MapMarkerDelegate: class {
+    func didTapInfoButton(data: NSDictionary)
+}
+
+class Bicipin: NSObject, MKAnnotation {
 
     @IBOutlet var biciimage: UIImageView!
     var id: String!
     
-    /*var coordinate: CLLocationCoordinate2D
-    var title: String
-    var subtitle: String
-    var status: Int*/
+    let title: String?
+    let locationName: String
+    let discipline: String
+    let coordinate: CLLocationCoordinate2D
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    var markerTintColor: UIColor  {
+        switch discipline {
+        case "Monument":
+            return .red
+        case "Mural":
+            return .cyan
+        case "Plaque":
+            return .blue
+        case "Sculpture":
+            return .purple
+        default:
+            return .green
+        }
     }
     
-    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
-        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
+        self.title = title
+        self.locationName = locationName
+        self.discipline = discipline
+        self.coordinate = coordinate
         
+        super.init()
     }
     /*
     // Only override draw() if you perform custom drawing.

@@ -13,6 +13,7 @@ import FacebookCore
 import FacebookLogin
 import Firebase
 
+@available(iOS 11.0, *)
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var menuButton: UIButton!
@@ -27,6 +28,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        mapview.register(Bicipinview.self,
+                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
 
         flagLocation = true
         setMenu()
@@ -44,7 +48,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapview.delegate = self
         mapview.showsUserLocation = true
         
-        initListenerBike()
+        //initListenerBike()
     }
     
     func setMenu(){
@@ -62,14 +66,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             self.talleres = datos
             
             datos.forEach({ (taller) in
-                let punto = MKPointAnnotation()
+
+                let coordinates = taller.coordinates.split(separator: ",")
+                let long = coordinates[0]
+                let lat = coordinates[1]
+                
+                let coordinate = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!)
+                
+                let punto = Bicipin(title: taller.name, locationName: taller.description, discipline: "Sculpture", coordinate: coordinate)
+
+                /*let punto = MKPointAnnotation()
                 punto.title = taller.name
                 //punto.subtitle = taller.description
                 let coordinates = taller.coordinates.split(separator: ",")
                 let long = coordinates[0]
                 let lat = coordinates[1]
                 
-                punto.coordinate = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!)
+                punto.coordinate = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!)*/
 
                 self.puntosArray.append(punto)
                 
@@ -122,9 +135,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         if annotation is MKUserLocation {
             return nil
-            
         } else {
-            let viewFromNib = Bundle.main.loadNibNamed("customPin", owner: self, options: nil)?.first as! Custompin
+            /*let viewFromNib = Bundle.main.loadNibNamed("customPin", owner: self, options: nil)?.first as! Custompin
             
             var annotationView: Custompin?
             let annotationIdentifier = "pin"
@@ -162,7 +174,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 customView.id = ""
             }
             
-            return annotationView
+            return annotationView*/
+            
+            guard let annotation = annotation as? Bicipin else { return nil }
+            // 3
+            let identifier = "marker"
+            var view: MKMarkerAnnotationView
+            // 4
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+                as? MKMarkerAnnotationView {
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                // 5
+                view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            }
+            return view
         }
     }
     
@@ -204,6 +234,4 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     @IBAction func showMenu(_ sender: Any) {
     }
-    
-    
 }
