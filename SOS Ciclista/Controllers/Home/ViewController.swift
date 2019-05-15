@@ -13,7 +13,6 @@ import FacebookCore
 import FacebookLogin
 import Firebase
 
-@available(iOS 11.0, *)
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var menuButton: UIButton!
@@ -29,8 +28,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        mapview.register(Bicipinview.self,
-                         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        //mapview.register(Bicipinview.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
 
         flagLocation = true
         setMenu()
@@ -47,8 +45,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         mapview.delegate = self
         mapview.showsUserLocation = true
-        
-        //initListenerBike()
+       
     }
     
     func setMenu(){
@@ -70,23 +67,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 let coordinates = taller.coordinates.split(separator: ",")
                 let long = coordinates[0]
                 let lat = coordinates[1]
-                
                 let coordinate = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!)
                 
-                let punto = Bicipin(title: taller.name, locationName: taller.description, discipline: "Sculpture", coordinate: coordinate)
+                let punto = Bicipin()
+                punto.pinCustomImageName = "iconomapa"
+                punto.coordinate = coordinate
+                punto.title = taller.name
+                punto.subtitle = taller.description
+                
+                let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
+                
+                self.mapview.addAnnotation(pinAnnotationView.annotation!)
+                /*
+                /*let punto = Bicipin(title: taller.name, locationName: taller.description, discipline: "Sculpture", coordinate: coordinate)*/
 
-                /*let punto = MKPointAnnotation()
+                let punto = MKPointAnnotation()
                 punto.title = taller.name
                 //punto.subtitle = taller.description
-                let coordinates = taller.coordinates.split(separator: ",")
-                let long = coordinates[0]
-                let lat = coordinates[1]
-                
+                //let coordinates = taller.coordinates.split(separator: ",")
+                //let long = coordinates[0]
+                //let lat = coordinates[1]
                 punto.coordinate = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!)*/
 
                 self.puntosArray.append(punto)
                 
-                self.mapview.addAnnotations([punto])
+                //self.mapview.addAnnotations([punto])
             })
         }
     }
@@ -96,10 +101,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         //primero enviar mi bike para que este en fierbase
         //si y solo si estoy logueado
         //mando nombre, bike, ubication
-        let reportado = UserDefaults.standard.string(forKey: "reportado")
+        let reportado = UserDefaults.standard.string(forKey: "sesion")
         if reportado != nil{
             if reportado == "1"{
-                let punto = MKPointAnnotation()
+                let punto = Bicipin()
+                punto.pinCustomImageName = "bicif"
                 let name = UserDefaults.standard.string(forKey: "nombre")
                 if name != nil{
                     punto.title = name
@@ -115,13 +121,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 punto.coordinate = CLLocationCoordinate2D(latitude: Double(lat!), longitude: Double(long!))
                 
                 //self.puntosArray.append(punto)
+                let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
                 
-                self.mapview.addAnnotations([punto])
+                self.mapview.addAnnotation(pinAnnotationView.annotation!)
+                //self.mapview.addAnnotations([punto])
             }else{
                 print(reportado!)
             }
         }
-        
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
@@ -136,6 +143,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         if annotation is MKUserLocation {
             return nil
         } else {
+            let reuseIdentifier = "pin"
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
+            
+            if annotationView == nil {
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+                annotationView?.canShowCallout = true
+            } else {
+                annotationView?.annotation = annotation
+            }
+            
+            let customPointAnnotation = annotation as! Bicipin
+            annotationView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            //annotationView!.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+            annotationView?.image = UIImage(named: customPointAnnotation.pinCustomImageName)
+            
+            return annotationView
+            
             /*let viewFromNib = Bundle.main.loadNibNamed("customPin", owner: self, options: nil)?.first as! Custompin
             
             var annotationView: Custompin?
@@ -176,7 +200,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             return annotationView*/
             
-            guard let annotation = annotation as? Bicipin else { return nil }
+            /*guard let annotation = annotation as? Bicipin else { return nil }
             // 3
             let identifier = "marker"
             var view: MKMarkerAnnotationView
@@ -192,7 +216,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 view.calloutOffset = CGPoint(x: -5, y: 5)
                 view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             }
-            return view
+            return view*/
         }
     }
     
@@ -228,6 +252,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 let point: CLLocationCoordinate2D = CLLocationCoordinate2DMake(loca.coordinate.latitude,loca.coordinate.longitude)
                 let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 2000.0/111000.0,longitudeDelta: 2000.0/110000.0)
                 self.mapview.setRegion(MKCoordinateRegion(center: point,span: span),animated:true)
+                
+                 initListenerBike()
             }
         }
     }
