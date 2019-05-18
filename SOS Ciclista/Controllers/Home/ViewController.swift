@@ -18,12 +18,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var mapview: MKMapView!
     let location: CLLocationManager = CLLocationManager()
-    var flagLocation = false
+    
     var puntosArray : [MKAnnotation] = []
     var talleres : [Taller] = []
     
     var lastlocation : CLLocation? = nil
     
+    var reportes : [Report] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,6 +36,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         setMenu()
         setLocation()
         getTalleres()
+        listenerBikers()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        /*if mapaListo{
+            initListenerBike()
+        }*/
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        let bici = UserDefaults.standard.string(forKey: "keySelf")
+        if bici != nil{
+            
+            UserDefaults.standard.set("null", forKey: "keySelf")
+            
+            let ref = Database.database().reference()
+            let thisUsersGamesRef = ref.child("bikers")
+            thisUsersGamesRef.child(bici!).removeValue()
+        }else{
+            print("no hay bici")
+            //punto.title = "SOS Ciclista"
+        }
     }
     
     func setLocation(){
@@ -45,7 +69,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         mapview.delegate = self
         mapview.showsUserLocation = true
-       
     }
     
     func setMenu(){
@@ -96,6 +119,42 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    func listenerBikers(){
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference().child("bikers")
+        ref.observe(.value, with: { (data) in
+            
+            self.reportes.removeAll()
+
+            for child in data.children {
+                let snap = child as! DataSnapshot
+                let datos = snap.value as! [String: Any]
+                let id = datos["id"] as! String
+                let date = datos["date"] as! String
+                let description = datos["description"] as! String
+                let estatus = datos["estatus"] as! Int
+                let name = datos["name"] as! String
+                let serie = datos["serie"] as! String
+                
+                var fotos = ""
+                if datos["fotos"] != nil{
+                    fotos = datos["fotos"] as! String
+                }
+                
+                self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos))
+            }
+            
+            
+            
+            self.reportes.reverse()
+            //self.tableview.reloadData()
+            
+        }) { (error) in
+            print(error)
+        }
+    }
+    
     func initListenerBike(){
         
         //primero enviar mi bike para que este en fierbase
@@ -107,23 +166,48 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 let punto = Bicipin()
                 punto.pinCustomImageName = "bicif"
                 let name = UserDefaults.standard.string(forKey: "nombre")
+                let bici = UserDefaults.standard.integer(forKey: "bici")
                 if name != nil{
                     punto.title = name
                 }else{
                     punto.title = "SOS Ciclista"
                 }
                 
-                //punto.subtitle = taller.description
-                //let coordinates = taller.coordinates.split(separator: ",")
                 let long = lastlocation?.coordinate.longitude
                 let lat = lastlocation?.coordinate.latitude
+
+                //enviar mi ubiaciaon al mapa
+                let ref = Database.database().reference()
+                let thisUsersGamesRef = ref.child("bikers").childByAutoId()
+                thisUsersGamesRef.setValue(
+                    [
+                        "id":thisUsersGamesRef.key,
+                        "name":name,
+                        "bici":bici,
+                        "latitud":lat,
+                        "longitude":long
+                    ]
+                ){(error:Error?, ref:DatabaseReference) in
+                    if let error = error {
+                        print("Data could not be saved: \(error).")
+                    } else {
+                        print("Data saved successfully!")
+                        UserDefaults.standard.set("1", forKey: "enviado")
+                        UserDefaults.standard.set(thisUsersGamesRef.key, forKey: "keySelf")
+                    }
+                }
                 
-                punto.coordinate = CLLocationCoordinate2D(latitude: Double(lat!), longitude: Double(long!))
+                //prueba pin difrnete
+                
+                //punto.subtitle = taller.description
+                //let coordinates = taller.coordinates.split(separator: ",")
+                
+                /*punto.coordinate = CLLocationCoordinate2D(latitude: Double(lat!), longitude: Double(long!))
                 
                 //self.puntosArray.append(punto)
                 let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
                 
-                self.mapview.addAnnotation(pinAnnotationView.annotation!)
+                self.mapview.addAnnotation(pinAnnotationView.annotation!)*/
                 //self.mapview.addAnnotations([punto])
             }else{
                 print(reportado!)
@@ -253,7 +337,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 2000.0/111000.0,longitudeDelta: 2000.0/110000.0)
                 self.mapview.setRegion(MKCoordinateRegion(center: point,span: span),animated:true)
                 
-                 initListenerBike()
+                initListenerBike()
+                
+                mapaListo = true
             }
         }
     }

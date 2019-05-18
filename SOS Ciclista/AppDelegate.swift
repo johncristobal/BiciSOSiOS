@@ -11,6 +11,9 @@ import CoreData
 import Firebase
 import FacebookCore
 
+var mapaListo = false
+var flagLocation = false
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -37,6 +40,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        print("adios")
+        flagLocation = true
+        let bici = UserDefaults.standard.string(forKey: "keySelf")
+        if bici != nil{
+            if bici != "null"{
+                let ref = Database.database().reference()
+                let thisUsersGamesRef = ref.child("bikers")
+                thisUsersGamesRef.child(bici!).removeValue()
+            }
+        }else{
+            print("no hay bici")
+            //punto.title = "SOS Ciclista"
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -45,6 +61,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        if mapaListo{
+            print("enviar de nuevo")
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
