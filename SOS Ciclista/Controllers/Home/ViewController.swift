@@ -24,7 +24,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var lastlocation : CLLocation? = nil
     
-    var reportes : [Report] = []
+    var reportIdS : [String] = []
+    var bikers : [Biker] = []
+    
+    var hashMapMarker: [String : Bicipin] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +39,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         setMenu()
         setLocation()
         getTalleres()
-        listenerBikers()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         /*if mapaListo{
             initListenerBike()
         }*/
+        flagLocation = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -125,31 +129,65 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         ref = Database.database().reference().child("bikers")
         ref.observe(.value, with: { (data) in
             
-            self.reportes.removeAll()
-
+            self.bikers.removeAll()
+            self.reportIdS.removeAll()
+            var keySelf = UserDefaults.standard.string(forKey: "keySelf")
+            if keySelf != nil{
+                print(keySelf!)
+            }else{
+                keySelf = "null"
+            }
             for child in data.children {
                 let snap = child as! DataSnapshot
                 let datos = snap.value as! [String: Any]
                 let id = datos["id"] as! String
-                let date = datos["date"] as! String
-                let description = datos["description"] as! String
-                let estatus = datos["estatus"] as! Int
                 let name = datos["name"] as! String
-                let serie = datos["serie"] as! String
-                
-                var fotos = ""
-                if datos["fotos"] != nil{
-                    fotos = datos["fotos"] as! String
-                }
-                
-                self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos))
+                let bici = datos["bici"] as! Int
+                let latitud = datos["latitud"] as! Double
+                let longitude = datos["longitude"] as! Double
+                                
+                self.bikers.append(Biker(id: id, name: name, bici: bici, latitud: latitud, longitude: longitude))
             }
             
-            
-            
-            self.reportes.reverse()
-            //self.tableview.reloadData()
-            
+            self.bikers.forEach({ (biker) in
+                self.reportIdS.append(biker.id)
+                
+                if biker.id != keySelf && keySelf != "null"{
+                    
+                    let punto = Bicipin()
+                    var bici = ""
+                    switch biker.bici{
+                        case 0:bici = "bicia"; break;
+                        case 1:bici = "bicib"; break;
+                        case 2:bici = "bicic"; break;
+                        case 3:bici = "bicid"; break;
+                        case 4:bici = "bicie"; break;
+                        case 5:bici = "bicif"; break;
+                        default: break
+                    }
+                    punto.pinCustomImageName = bici
+                    punto.title = biker.name
+                    
+                    punto.coordinate = CLLocationCoordinate2D(latitude: biker.latitud, longitude: biker.longitude)
+                     
+                     //self.puntosArray.append(punto)
+                     let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
+                     
+                     self.mapview.addAnnotation(pinAnnotationView.annotation!)
+                    
+                    self.hashMapMarker[biker.id] = punto
+                }
+                
+                self.hashMapMarker.forEach({ (arg0) in
+                    
+                    let (key, value) = arg0
+                    if !self.reportIdS.contains(key){
+                        let punto = self.hashMapMarker[key]
+                        self.mapview.removeAnnotation(punto!)
+                        self.hashMapMarker.removeValue(forKey: key)
+                    }
+                })
+            })
         }) { (error) in
             print(error)
         }
@@ -163,19 +201,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let reportado = UserDefaults.standard.string(forKey: "sesion")
         if reportado != nil{
             if reportado == "1"{
-                let punto = Bicipin()
-                punto.pinCustomImageName = "bicif"
-                let name = UserDefaults.standard.string(forKey: "nombre")
-                let bici = UserDefaults.standard.integer(forKey: "bici")
-                if name != nil{
-                    punto.title = name
-                }else{
-                    punto.title = "SOS Ciclista"
-                }
-                
+
                 let long = lastlocation?.coordinate.longitude
                 let lat = lastlocation?.coordinate.latitude
-
+                var name = UserDefaults.standard.string(forKey: "nombre")
+                let bici = UserDefaults.standard.integer(forKey: "bici")
+                if name != nil{
+                    name = ""
+                }else{
+                    name = "SOS Ciclista"
+                }
                 //enviar mi ubiaciaon al mapa
                 let ref = Database.database().reference()
                 let thisUsersGamesRef = ref.child("bikers").childByAutoId()
@@ -194,21 +229,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         print("Data saved successfully!")
                         UserDefaults.standard.set("1", forKey: "enviado")
                         UserDefaults.standard.set(thisUsersGamesRef.key, forKey: "keySelf")
+                        
+                        self.listenerBikers()
                     }
                 }
-                
-                //prueba pin difrnete
-                
-                //punto.subtitle = taller.description
-                //let coordinates = taller.coordinates.split(separator: ",")
-                
-                /*punto.coordinate = CLLocationCoordinate2D(latitude: Double(lat!), longitude: Double(long!))
-                
-                //self.puntosArray.append(punto)
-                let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
-                
-                self.mapview.addAnnotation(pinAnnotationView.annotation!)*/
-                //self.mapview.addAnnotations([punto])
             }else{
                 print(reportado!)
             }

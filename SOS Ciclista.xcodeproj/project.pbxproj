@@ -10,6 +10,7 @@
 		7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */; };
 		7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */; };
 		7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */; };
+		7D4980D92292E89E005EA139 /* Biker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4980D82292E89E005EA139 /* Biker.swift */; };
 		7D503346225D436B00B5A0D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503345225D436B00B5A0D6 /* Utils.swift */; };
 		7D50334A225E5A3100B5A0D6 /* FinalReporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503349225E5A3100B5A0D6 /* FinalReporteViewController.swift */; };
 		7D50E3A72245513E006A815B /* PhotosBiciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50E3A62245513E006A815B /* PhotosBiciViewController.swift */; };
@@ -57,6 +58,7 @@
 		7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizaViewController.swift; sourceTree = "<group>"; };
 		7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaBiciCollectionViewCell.swift; sourceTree = "<group>"; };
 		7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D4980D82292E89E005EA139 /* Biker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biker.swift; sourceTree = "<group>"; };
 		7D503345225D436B00B5A0D6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7D503349225E5A3100B5A0D6 /* FinalReporteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalReporteViewController.swift; sourceTree = "<group>"; };
 		7D50E3A62245513E006A815B /* PhotosBiciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosBiciViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				7DD697722236E4A400810255 /* Taller.swift */,
 				7D5AE3722242B48700E53FCC /* Report.swift */,
 				7D99F889226F8E9100E1AAE5 /* Tip.swift */,
+				7D4980D82292E89E005EA139 /* Biker.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */,
 				8B29B460226581920079280C /* OnboardingViewController.swift in Sources */,
 				8B29B46222658B980079280C /* FirstViewController.swift in Sources */,
+				7D4980D92292E89E005EA139 /* Biker.swift in Sources */,
 				7D99F886226E861500E1AAE5 /* TipTableViewCell.swift in Sources */,
 				7D80AC63228B73A30038AF06 /* Bicipin.swift in Sources */,
 				8B085181228BC3FB008EE2FC /* Bicipinview.swift in Sources */,
