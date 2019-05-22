@@ -43,10 +43,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        /*if mapaListo{
-            initListenerBike()
-        }*/
-        flagLocation = true
+        if mapaListo{
+            initListenerBikeOnce()
+        }
+        //flagLocation = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -130,7 +130,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         ref.observe(.value, with: { (data) in
             
             self.bikers.removeAll()
-            self.reportIdS.removeAll()
+            //self.reportIdS.removeAll()
+            var newIds : [String] = []
+            
             var keySelf = UserDefaults.standard.string(forKey: "keySelf")
             if keySelf != nil{
                 print(keySelf!)
@@ -145,14 +147,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 let bici = datos["bici"] as! Int
                 let latitud = datos["latitud"] as! Double
                 let longitude = datos["longitude"] as! Double
-                                
+                
                 self.bikers.append(Biker(id: id, name: name, bici: bici, latitud: latitud, longitude: longitude))
             }
             
             self.bikers.forEach({ (biker) in
-                self.reportIdS.append(biker.id)
                 
-                if biker.id != keySelf && keySelf != "null"{
+                newIds.append(biker.id)
+                
+                if !self.reportIdS.contains(biker.id)
+                {
+                    self.reportIdS.append(biker.id)
+                
+                    //if biker.id != keySelf && keySelf != "null"{
                     
                     let punto = Bicipin()
                     var bici = ""
@@ -176,20 +183,74 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                      self.mapview.addAnnotation(pinAnnotationView.annotation!)
                     
                     self.hashMapMarker[biker.id] = punto
+                //}
                 }
+                
+                //los puntos que se eliminaran
+                let justids = Array(Set(self.reportIdS).subtracting(newIds))
                 
                 self.hashMapMarker.forEach({ (arg0) in
                     
                     let (key, value) = arg0
-                    if !self.reportIdS.contains(key){
+                    if justids.contains(key){
                         let punto = self.hashMapMarker[key]
                         self.mapview.removeAnnotation(punto!)
                         self.hashMapMarker.removeValue(forKey: key)
+                        if let index = self.reportIdS.index(of: key) {
+                            self.reportIdS.remove(at: index)
+                        }
+
+                        print(self.reportIdS)
                     }
                 })
             })
         }) { (error) in
             print(error)
+        }
+    }
+    
+    func initListenerBikeOnce(){
+        
+        //primero enviar mi bike para que este en fierbase
+        //si y solo si estoy logueado
+        //mando nombre, bike, ubication
+        let reportado = UserDefaults.standard.string(forKey: "sesion")
+        if reportado != nil{
+            if reportado == "1"{
+                
+                let long = lastlocation?.coordinate.longitude
+                let lat = lastlocation?.coordinate.latitude
+                var name = UserDefaults.standard.string(forKey: "nombre")
+                let bici = UserDefaults.standard.integer(forKey: "bici")
+                if name != nil{
+                    name = ""
+                }else{
+                    name = "SOS Ciclista"
+                }
+                //enviar mi ubiaciaon al mapa
+                let ref = Database.database().reference()
+                let thisUsersGamesRef = ref.child("bikers").childByAutoId()
+                thisUsersGamesRef.setValue(
+                    [
+                        "id":thisUsersGamesRef.key,
+                        "name":name,
+                        "bici":bici,
+                        "latitud":lat,
+                        "longitude":long
+                    ]
+                ){(error:Error?, ref:DatabaseReference) in
+                    if let error = error {
+                        print("Data could not be saved: \(error).")
+                    } else {
+                        print("Data saved successfully!")
+                        UserDefaults.standard.set("1", forKey: "enviado")
+                        UserDefaults.standard.set(thisUsersGamesRef.key, forKey: "keySelf")
+                        
+                    }
+                }
+            }else{
+                print(reportado!)
+            }
         }
     }
     
