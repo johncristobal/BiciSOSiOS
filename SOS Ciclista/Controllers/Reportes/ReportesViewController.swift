@@ -22,6 +22,8 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
 
     let nameNot = Notification.Name("tabla")
     
+    @IBOutlet weak var buscarSerie: UITextField!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +37,9 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         reportes.removeAll()
 
         getDataReportes()
+        
+        addToolBar(textField: buscarSerie)
+
         
         NotificationCenter.default.addObserver(self, selector: #selector(mostrarTabla), name: nameNot, object: nil)
     }
@@ -199,5 +204,66 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
             vc.report = sender as? Report
         }
     }
+    
+    @IBAction func buscarAction(_ sender: Any) {
+        let texto = buscarSerie.text
+        if texto == ""{
+            print("escribe texto")
+        }else{
+            var ref =  Database.database().reference().child("reportes").queryOrdered(byChild:"serie").queryEqual(toValue: texto).observe(.value, with: { (data) in
+                //if let snap = data.value{
+                //self.scrollHide.isHidden = true
+                
+                if data.exists(){
+                    self.reportes.removeAll()
+                    //let datosTemp = data.value
+                    //print(datosTemp)
+                    
+                    for child in data.children {
+                        let snap = child as! DataSnapshot
+                        let datos = snap.value as! [String: Any]
+                        let id = datos["id"] as! String
+                        let date = datos["date"] as! String
+                        let description = datos["description"] as! String
+                        let estatus = datos["estatus"] as! Int
+                        let name = datos["name"] as! String
+                        let serie = datos["serie"] as! String
+                        
+                        var fotos = ""
+                        if datos["fotos"] != nil{
+                            fotos = datos["fotos"] as! String
+                        }
+                        
+                        self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos))
+                    }
+                    
+                    //let datos = datosTemp["-LcMv7u_I6OAJ80ZEg5a"] as! [String: Any]
+                    
+                    /*let date = datos["date"] as! String
+                     let description = datos["description"] as! String
+                     let estatus = datos["estatus"] as! Int
+                     let name = datos["name"] as! String
+                     let serie = datos["serie"] as! String
+                     
+                     var fotos = ""
+                     if datos["fotos"] != nil{
+                     fotos = datos["fotos"] as! String
+                     }*/
+                    
+                    self.tableview.reloadData()
 
+                    titlle = "# Serie reportado como robado"
+                    //mensaje = self.serieText.text!
+                    //self.performSegue(withIdentifier: "result", sender: nil)
+                }else{
+                    titlle = "# Serie no encontrado"
+                    mensaje = "Sin reporte de robo"
+                    //self.performSegue(withIdentifier: "result", sender: nil)
+                }
+                
+            }, withCancel: { (error) in
+                print(error)
+            })
+        }
+    }
 }
