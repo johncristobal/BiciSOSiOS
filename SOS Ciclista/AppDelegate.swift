@@ -47,7 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if bici != "null"{
                 
                 UserDefaults.standard.set("null", forKey: "keySelf")
-
+                UserDefaults.standard.set("null", forKey: "enviado")
+                
                 let ref = Database.database().reference()
                 let thisUsersGamesRef = ref.child("bikers")
                 thisUsersGamesRef.child(bici!).removeValue()

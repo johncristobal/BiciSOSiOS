@@ -15,6 +15,7 @@ import Firebase
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
+    @IBOutlet var alertaAction: UIImageView!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var mapview: MKMapView!
     let location: CLLocationManager = CLLocationManager()
@@ -40,10 +41,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         setLocation()
         getTalleres()
 
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(abrirAlerta))
+        alertaAction.isUserInteractionEnabled = true
+        alertaAction.addGestureRecognizer(gesture)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if mapaListo{
+            
             initListenerBikeOnce()
         }
         //flagLocation = true
@@ -54,7 +59,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         if bici != nil{
             
             UserDefaults.standard.set("null", forKey: "keySelf")
-            
+            UserDefaults.standard.set("null", forKey: "enviado")
+
             let ref = Database.database().reference()
             let thisUsersGamesRef = ref.child("bikers")
             thisUsersGamesRef.child(bici!).removeValue()
@@ -62,6 +68,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             print("no hay bici")
             //punto.title = "SOS Ciclista"
         }
+    }
+    
+    @objc func abrirAlerta(){
+        performSegue(withIdentifier: "alertas", sender: nil)
     }
     
     func setLocation(){
@@ -214,6 +224,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         //primero enviar mi bike para que este en fierbase
         //si y solo si estoy logueado
         //mando nombre, bike, ubication
+        let enviado = UserDefaults.standard.string(forKey: "enviado")
+        if enviado != "1"{
+            
         let reportado = UserDefaults.standard.string(forKey: "sesion")
         if reportado != nil{
             if reportado == "1"{
@@ -251,6 +264,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             }else{
                 print(reportado!)
             }
+        }
         }
     }
     

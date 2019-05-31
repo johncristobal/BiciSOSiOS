@@ -7,6 +7,14 @@
 //
 
 import Foundation
+import Toast_Swift
+
+//function to show toast
+func showmessage(message: String, controller: UIViewController){
+    
+    controller.view.makeToast(message ,duration:2.0, position: .center)
+    
+}
 
 extension UIViewController: UITextFieldDelegate{
     func addToolBar(textField: UITextField){
@@ -78,5 +86,10 @@ extension UIView{
         self.layer.cornerRadius = 10.0
     }
     
+    func borderBlack(){
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 10.0
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1.0
+    }
 }
-

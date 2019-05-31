@@ -24,6 +24,8 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var buscarSerie: UITextField!
         
+    @IBOutlet var buscarIcon: UIImageView!
+    @IBOutlet var vistaSerieText: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,9 +41,16 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         getDataReportes()
         
         addToolBar(textField: buscarSerie)
-
         
         NotificationCenter.default.addObserver(self, selector: #selector(mostrarTabla), name: nameNot, object: nil)
+        
+        buscarIcon.isUserInteractionEnabled = true
+        let gestureSearch = UITapGestureRecognizer(target: self, action: #selector(buscarActionImage))
+        buscarIcon.addGestureRecognizer(gestureSearch)
+        
+        vistaSerieText.borderButton()
+        
+        buscarSerie.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
 
     @objc func mostrarTabla(){
@@ -65,6 +74,24 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func closeWindow(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        /*if textField == buscarSerie{
+            if textField.text == ""{
+                print("vacio")
+                getDataReportes()
+            }
+        }*/
+    }
+    
+    /*func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == buscarSerie{
+            if textField.text == ""{
+                print("vacio")
+                getDataReportes()
+            }
+        }
+    }*/
     
     @objc func reportarAction() -> Bool {
         let sesion = UserDefaults.standard.string(forKey: "sesion")
@@ -205,7 +232,32 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    @IBAction func buscarAction(_ sender: Any) {
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        print("caracter: \(textField.text!)")
+        let searchTerm = textField.text!
+        
+        if searchTerm == "" {
+            print("vacio")
+            getDataReportes()
+        }
+        
+        //NSRegularExpression(pattern: T##String, options: T##NSRegularExpression.Options
+        /*let regex = try! NSRegularExpression(pattern: "^[a-z-A-Z-0-9 ]+$")
+        let range = NSRange(location: 0, length: searchTerm.utf16.count)
+        if regex.firstMatch(in: searchTerm, options: [], range: range) == nil {
+            print("could not handle special characters")
+            let runningNumber = String(searchTerm.dropLast())
+            textField.text = runningNumber
+        }*/
+        /*if regex.firstMatchInString(searchTerm!, options: nil, range: NSMakeRange(0, searchTerm!.length)) != nil {
+         print("could not handle special characters")
+         }*/
+    }
+    
+    @objc func buscarActionImage(){
+        buscarSerie.resignFirstResponder()
+        buscarSerie.endEditing(true)
+        
         let texto = buscarSerie.text
         if texto == ""{
             print("escribe texto")
@@ -251,19 +303,24 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
                      }*/
                     
                     self.tableview.reloadData()
-
+                    
                     titlle = "# Serie reportado como robado"
                     //mensaje = self.serieText.text!
                     //self.performSegue(withIdentifier: "result", sender: nil)
                 }else{
+                    //Toast...
+                    showmessage(message: "# Serie no encontrado", controller: self)
                     titlle = "# Serie no encontrado"
                     mensaje = "Sin reporte de robo"
                     //self.performSegue(withIdentifier: "result", sender: nil)
-                }
-                
+                }                
             }, withCancel: { (error) in
                 print(error)
             })
         }
+    }
+    
+    @IBAction func buscarAction(_ sender: Any) {
+        
     }
 }

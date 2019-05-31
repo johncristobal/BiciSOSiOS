@@ -6,6 +6,7 @@ target 'SOS Ciclista' do
   use_frameworks!
 
   # Pods for SOS Ciclista
+pod 'Toast-Swift'
 pod 'Alamofire'
 pod 'AlamofireImage'
 pod 'SwiftyJSON'

@@ -18,7 +18,7 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var tips : [Tip] = [Tip(name: "Tips generales", imagen: "bicicuatro.png", description: ""),Tip(name: "Como asegurar tu bici", imagen: "tipsdos.png", description: "Fijar la bicicleta en un soporte empotrado, nunca en soporte atornillado, ni en árboles.\n" +
         "• Utiliza dos candados como mínimo.\n" +
         "• Asegurar el cuadro y una de las dos llantas con cable de acero.\n" +
-        "• NO fijar solo el sillín."),Tip(name: "Candados que no debes usar", imagen: "tipstres.png", description: "")]
+        "• NO fijar solo el sillín."),Tip(name: "Candados que no debes usar", imagen: "tipstres.png", description: ""),Tip(name: "Reglamento uso y obligaciones", imagen: "tipcuatro.png", description: "")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -10,6 +10,9 @@
 		7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */; };
 		7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */; };
 		7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */; };
+		7D2775AD229D8B3C005181FA /* AcercaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2775AC229D8B3C005181FA /* AcercaViewController.swift */; };
+		7D2775B0229DE8EC005181FA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2775AF229DE8EC005181FA /* SplashViewController.swift */; };
+		7D2775B2229DEA12005181FA /* splash.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7D2775B1229DEA12005181FA /* splash.mp4 */; };
 		7D4980D92292E89E005EA139 /* Biker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4980D82292E89E005EA139 /* Biker.swift */; };
 		7D503346225D436B00B5A0D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503345225D436B00B5A0D6 /* Utils.swift */; };
 		7D50334A225E5A3100B5A0D6 /* FinalReporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503349225E5A3100B5A0D6 /* FinalReporteViewController.swift */; };
@@ -25,6 +28,7 @@
 		7D99F88A226F8E9100E1AAE5 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F889226F8E9100E1AAE5 /* Tip.swift */; };
 		7D99F88D226F978D00E1AAE5 /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F88C226F978D00E1AAE5 /* ContactoViewController.swift */; };
 		7DB660922241A648007AA974 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB660912241A648007AA974 /* LoginViewController.swift */; };
+		7DBA8882229F34A20093BD2D /* AlertasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA8881229F34A20093BD2D /* AlertasViewController.swift */; };
 		7DD697732236E4A400810255 /* Taller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD697722236E4A400810255 /* Taller.swift */; };
 		7DD69775223720CA00810255 /* customPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD69774223720CA00810255 /* customPin.xib */; };
 		7DD69777223721F300810255 /* Custompin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD69776223721F300810255 /* Custompin.swift */; };
@@ -58,6 +62,9 @@
 		7D1FD527223B123E00B0A03B /* PersonalizaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizaViewController.swift; sourceTree = "<group>"; };
 		7D1FD529223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaBiciCollectionViewCell.swift; sourceTree = "<group>"; };
 		7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7D2775AC229D8B3C005181FA /* AcercaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcercaViewController.swift; sourceTree = "<group>"; };
+		7D2775AF229DE8EC005181FA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		7D2775B1229DEA12005181FA /* splash.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = splash.mp4; sourceTree = "<group>"; };
 		7D4980D82292E89E005EA139 /* Biker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biker.swift; sourceTree = "<group>"; };
 		7D503345225D436B00B5A0D6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7D503349225E5A3100B5A0D6 /* FinalReporteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalReporteViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +80,7 @@
 		7D99F889226F8E9100E1AAE5 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		7D99F88C226F978D00E1AAE5 /* ContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
 		7DB660912241A648007AA974 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7DBA8881229F34A20093BD2D /* AlertasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertasViewController.swift; sourceTree = "<group>"; };
 		7DD697722236E4A400810255 /* Taller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taller.swift; sourceTree = "<group>"; };
 		7DD69774223720CA00810255 /* customPin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customPin.xib; sourceTree = "<group>"; };
 		7DD69776223721F300810255 /* Custompin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custompin.swift; sourceTree = "<group>"; };
@@ -152,6 +160,14 @@
 			path = numSerie;
 			sourceTree = "<group>";
 		};
+		7D2775AB229D8B2E005181FA /* acerca */ = {
+			isa = PBXGroup;
+			children = (
+				7D2775AC229D8B3C005181FA /* AcercaViewController.swift */,
+			);
+			path = acerca;
+			sourceTree = "<group>";
+		};
 		7D503347225D44EF00B5A0D6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +183,7 @@
 				8BB95C27222C8C4000ABA1F9 /* ViewController.swift */,
 				7D80AC62228B73A30038AF06 /* Bicipin.swift */,
 				8B085180228BC3FB008EE2FC /* Bicipinview.swift */,
+				7DBA8881229F34A20093BD2D /* AlertasViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -249,6 +266,7 @@
 				8BB95C3C222C8D6800ABA1F9 /* Controllers */,
 				8BB95C3B222C8D5A00ABA1F9 /* Views */,
 				8BB95C2F222C8C4300ABA1F9 /* Assets.xcassets */,
+				7D2775B1229DEA12005181FA /* splash.mp4 */,
 				8BB95C31222C8C4300ABA1F9 /* LaunchScreen.storyboard */,
 				8BB95C34222C8C4300ABA1F9 /* Info.plist */,
 				7D1FD52B223B2C5800B0A03B /* GoogleService-Info.plist */,
@@ -270,6 +288,7 @@
 		8BB95C3C222C8D6800ABA1F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7D2775AB229D8B2E005181FA /* acerca */,
 				7D99F88B226F977B00E1AAE5 /* contacto */,
 				7D99F881226E76B000E1AAE5 /* Tips */,
 				8B29B45C22656B780079280C /* Robo */,
@@ -279,6 +298,7 @@
 				7D1FD52F223B314200B0A03B /* numSerie */,
 				7D1FD52D223B311E00B0A03B /* Usuario */,
 				7D503347225D44EF00B5A0D6 /* Utils */,
+				7D2775AF229DE8EC005181FA /* SplashViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -380,6 +400,7 @@
 				7DD69775223720CA00810255 /* customPin.xib in Resources */,
 				8BB95C33222C8C4300ABA1F9 /* LaunchScreen.storyboard in Resources */,
 				7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */,
+				7D2775B2229DEA12005181FA /* splash.mp4 in Resources */,
 				8BB95C30222C8C4300ABA1F9 /* Assets.xcassets in Resources */,
 				7D80AC61228B72FD0038AF06 /* biciPin.xib in Resources */,
 				8BB95C2B222C8C4000ABA1F9 /* Main.storyboard in Resources */,
@@ -432,6 +453,7 @@
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TLPhotoPicker/TLPhotoPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -455,6 +477,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TLPhotoPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -488,6 +511,7 @@
 				8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */,
 				7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */,
 				7D99F88D226F978D00E1AAE5 /* ContactoViewController.swift in Sources */,
+				7D2775AD229D8B3C005181FA /* AcercaViewController.swift in Sources */,
 				8BB95C28222C8C4000ABA1F9 /* ViewController.swift in Sources */,
 				8BB95C26222C8C4000ABA1F9 /* AppDelegate.swift in Sources */,
 				8BA625A422358585008E9337 /* DataManager.swift in Sources */,
@@ -498,10 +522,12 @@
 				8B29B460226581920079280C /* OnboardingViewController.swift in Sources */,
 				8B29B46222658B980079280C /* FirstViewController.swift in Sources */,
 				7D4980D92292E89E005EA139 /* Biker.swift in Sources */,
+				7DBA8882229F34A20093BD2D /* AlertasViewController.swift in Sources */,
 				7D99F886226E861500E1AAE5 /* TipTableViewCell.swift in Sources */,
 				7D80AC63228B73A30038AF06 /* Bicipin.swift in Sources */,
 				8B085181228BC3FB008EE2FC /* Bicipinview.swift in Sources */,
 				8BB95C41222F6DBA00ABA1F9 /* SWRevealViewController.m in Sources */,
+				7D2775B0229DE8EC005181FA /* SplashViewController.swift in Sources */,
 				7D99F888226E8C2100E1AAE5 /* DetalleTipViewController.swift in Sources */,
 				8BA1B5B722591C0000C43529 /* ReportFragmentViewController.swift in Sources */,
 				7D503346225D436B00B5A0D6 /* Utils.swift in Sources */,
