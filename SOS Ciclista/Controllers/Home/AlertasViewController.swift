@@ -27,7 +27,7 @@ class AlertasViewController: UIViewController {
         
         averiaIcon.hero.id = "averia"
         
-        let longitud = lo
+        let longitud = location?.coordinate.longitude
     }
     
     @objc func cerrar(){
