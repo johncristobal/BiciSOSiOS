@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import CoreLocation
 
 class AlertasViewController: UIViewController {
 
+    @IBOutlet weak var averiaIcon: UIButton!
     @IBOutlet var cerrarAction: UILabel!
+    
+    var location : CLLocation? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,8 +23,11 @@ class AlertasViewController: UIViewController {
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(cerrar))
         cerrarAction.isUserInteractionEnabled = true
-        
         cerrarAction.addGestureRecognizer(gesture)
+        
+        averiaIcon.hero.id = "averia"
+        
+        let longitud = lo
     }
     
     @objc func cerrar(){
@@ -33,7 +41,9 @@ class AlertasViewController: UIViewController {
     }
     
     @IBAction func averiaAction(_ sender: Any) {
+        performSegue(withIdentifier: "averiaShow", sender: nil)
     }
+    
     @IBAction func apoyoAction(_ sender: Any) {
     }
     /*

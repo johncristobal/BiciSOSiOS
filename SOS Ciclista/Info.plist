@@ -69,7 +69,7 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>SOS Ciclista buscará imágenes en su galería</string>
 	<key>UILaunchStoryboardName</key>
-	<string>Main</string>
+	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

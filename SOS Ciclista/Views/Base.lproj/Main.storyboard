@@ -2158,6 +2158,153 @@ hagan su trabajo **</string>
             </objects>
             <point key="canvasLocation" x="-668" y="1292"/>
         </scene>
+        <!--Averia View Controller-->
+        <scene sceneID="yho-R2-hW0">
+            <objects>
+                <viewController storyboardIdentifier="averia" id="U2h-58-lZE" customClass="AveriaViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jR4-26-k8p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYf-XU-o9y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backalerta" translatesAutoresizingMaskIntoConstraints="NO" id="HDQ-RS-zU3">
+                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="420" id="zbs-xm-leW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Dn-Sw-Acd">
+                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSF-Qs-fY5">
+                                                <rect key="frame" x="0.0" y="85" width="375" height="250"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Si necesitas alguna refacción o ayuda mecánica, manda mensaje a la comunidad para que puedan auxiliarte." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5y-XW-AyY">
+                                                        <rect key="frame" x="50" y="8" width="275" height="75"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Detalles particulares..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rHE-ph-x5T">
+                                                        <rect key="frame" x="20" y="91" width="335" height="60"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="1jT-DO-0Tt"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="hWB-jh-9Mf" id="5bY-7M-rUG"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zos-gW-t2p">
+                                                        <rect key="frame" x="52.5" y="167" width="270" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvp-4J-iUS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="eGM-E2-VoE"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="rvF-4a-NyP"/>
+                                                                </constraints>
+                                                                <state key="normal" title="REGRESAR">
+                                                                    <color key="titleColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="backAction:" destination="U2h-58-lZE" eventType="touchUpInside" id="MP1-2Q-f7S"/>
+                                                                    <action selector="cancelReport:" destination="rWD-wZ-Eei" eventType="touchUpInside" id="M2C-vD-sUG"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh5-K0-skP">
+                                                                <rect key="frame" x="150" y="0.0" width="120" height="30"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="V1E-dP-OSV"/>
+                                                                    <constraint firstAttribute="width" constant="120" id="fkZ-LV-G5b"/>
+                                                                </constraints>
+                                                                <state key="normal" title="ENVIAR">
+                                                                    <color key="titleColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="saveReport:" destination="rWD-wZ-Eei" eventType="touchUpInside" id="Ucu-ra-CvT"/>
+                                                                    <action selector="sendReportAction:" destination="U2h-58-lZE" eventType="touchUpInside" id="RP1-0U-gTf"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="h5y-XW-AyY" secondAttribute="trailing" constant="50" id="315-Js-2mx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rHE-ph-x5T" secondAttribute="trailing" constant="20" id="7QI-dL-P6J"/>
+                                                    <constraint firstItem="zos-gW-t2p" firstAttribute="centerX" secondItem="QSF-Qs-fY5" secondAttribute="centerX" id="8gr-bJ-kHh"/>
+                                                    <constraint firstItem="rHE-ph-x5T" firstAttribute="leading" secondItem="QSF-Qs-fY5" secondAttribute="leading" constant="20" id="Fp8-Rd-Z6a"/>
+                                                    <constraint firstItem="rHE-ph-x5T" firstAttribute="centerX" secondItem="QSF-Qs-fY5" secondAttribute="centerX" id="IJE-4x-MBD"/>
+                                                    <constraint firstItem="h5y-XW-AyY" firstAttribute="leading" secondItem="QSF-Qs-fY5" secondAttribute="leading" constant="50" id="U9W-Z3-KGp"/>
+                                                    <constraint firstItem="rHE-ph-x5T" firstAttribute="top" secondItem="h5y-XW-AyY" secondAttribute="bottom" constant="8" id="USN-yY-fen"/>
+                                                    <constraint firstAttribute="height" constant="250" id="dSw-oh-O2E"/>
+                                                    <constraint firstItem="zos-gW-t2p" firstAttribute="top" secondItem="rHE-ph-x5T" secondAttribute="bottom" constant="16" id="gik-DV-TrY"/>
+                                                    <constraint firstItem="h5y-XW-AyY" firstAttribute="top" secondItem="QSF-Qs-fY5" secondAttribute="top" constant="8" id="rb7-Xt-0Lh"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmU-tR-c3v">
+                                                <rect key="frame" x="142.5" y="-40" width="90" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="h44-94-nUQ"/>
+                                                    <constraint firstAttribute="height" constant="100" id="xk2-EE-bwp"/>
+                                                </constraints>
+                                                <state key="normal" image="averiaicon"/>
+                                                <connections>
+                                                    <action selector="averiaAction:" destination="yrC-Wf-HTn" eventType="touchUpInside" id="hkL-5D-8vj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="QSF-Qs-fY5" firstAttribute="centerY" secondItem="0Dn-Sw-Acd" secondAttribute="centerY" id="05f-pn-w0g"/>
+                                            <constraint firstItem="SmU-tR-c3v" firstAttribute="top" secondItem="0Dn-Sw-Acd" secondAttribute="top" constant="-40" id="BMn-aZ-lha"/>
+                                            <constraint firstItem="SmU-tR-c3v" firstAttribute="centerX" secondItem="0Dn-Sw-Acd" secondAttribute="centerX" id="M2b-79-Ep1"/>
+                                            <constraint firstAttribute="trailing" secondItem="QSF-Qs-fY5" secondAttribute="trailing" id="WWP-OH-gzO"/>
+                                            <constraint firstItem="QSF-Qs-fY5" firstAttribute="centerX" secondItem="0Dn-Sw-Acd" secondAttribute="centerX" id="WqF-g9-2JE"/>
+                                            <constraint firstAttribute="height" constant="420" id="X1Z-lX-28s"/>
+                                            <constraint firstItem="QSF-Qs-fY5" firstAttribute="leading" secondItem="0Dn-Sw-Acd" secondAttribute="leading" id="ZxD-xV-b3u"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HDQ-RS-zU3" firstAttribute="centerX" secondItem="cYf-XU-o9y" secondAttribute="centerX" id="Y9a-VB-k2S"/>
+                                    <constraint firstItem="0Dn-Sw-Acd" firstAttribute="centerY" secondItem="cYf-XU-o9y" secondAttribute="centerY" id="dDQ-A4-fVM"/>
+                                    <constraint firstItem="0Dn-Sw-Acd" firstAttribute="leading" secondItem="cYf-XU-o9y" secondAttribute="leading" id="daJ-fT-hGL"/>
+                                    <constraint firstItem="0Dn-Sw-Acd" firstAttribute="centerX" secondItem="cYf-XU-o9y" secondAttribute="centerX" id="fDx-Hz-vQ6"/>
+                                    <constraint firstItem="HDQ-RS-zU3" firstAttribute="leading" secondItem="cYf-XU-o9y" secondAttribute="leading" id="lOK-Ld-10i"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Dn-Sw-Acd" secondAttribute="trailing" id="s4z-w5-gEZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="HDQ-RS-zU3" secondAttribute="trailing" id="wEH-6y-E4w"/>
+                                    <constraint firstItem="HDQ-RS-zU3" firstAttribute="centerY" secondItem="cYf-XU-o9y" secondAttribute="centerY" id="wFn-hp-9EK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="otz-uG-zhW" firstAttribute="bottom" secondItem="cYf-XU-o9y" secondAttribute="bottom" id="N30-DJ-qTM"/>
+                            <constraint firstItem="cYf-XU-o9y" firstAttribute="leading" secondItem="otz-uG-zhW" secondAttribute="leading" id="cs3-XI-Pf3"/>
+                            <constraint firstItem="cYf-XU-o9y" firstAttribute="top" secondItem="jR4-26-k8p" secondAttribute="top" id="kUR-NG-mK4"/>
+                            <constraint firstItem="cYf-XU-o9y" firstAttribute="trailing" secondItem="otz-uG-zhW" secondAttribute="trailing" id="u2x-Rf-vB0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="otz-uG-zhW"/>
+                    </view>
+                    <connections>
+                        <outlet property="averiaIcon" destination="SmU-tR-c3v" id="PNE-l5-6qf"/>
+                        <outlet property="detallesText" destination="rHE-ph-x5T" id="D7V-B7-gRg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ukx-Oe-7Qs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4262" y="-910"/>
+        </scene>
         <!--Alertas View Controller-->
         <scene sceneID="uhw-0r-0c1">
             <objects>
@@ -2250,6 +2397,7 @@ hagan su trabajo **</string>
                                                 <state key="normal" image="averiaicon"/>
                                                 <connections>
                                                     <action selector="averiaAction:" destination="yrC-Wf-HTn" eventType="touchUpInside" id="YT5-tK-kvv"/>
+                                                    <segue destination="U2h-58-lZE" kind="showDetail" identifier="averiaShow" id="kVp-eK-mcE"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyg-ew-E0e">
@@ -2320,6 +2468,7 @@ hagan su trabajo **</string>
                         <viewLayoutGuide key="safeArea" id="prU-7X-2DC"/>
                     </view>
                     <connections>
+                        <outlet property="averiaIcon" destination="u7a-9k-qru" id="xxx-Wx-3KC"/>
                         <outlet property="cerrarAction" destination="Z8M-vg-RhJ" id="f3Z-jk-lyp"/>
                     </connections>
                 </viewController>
@@ -3143,10 +3292,10 @@ y te robaron tu bici, repórtala directamente.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="alertafinal" width="989" height="958"/>
-        <image name="apoyoicon" width="350" height="396"/>
-        <image name="averiaicon" width="349" height="396"/>
-        <image name="backalerta" width="1242" height="1447"/>
+        <image name="alertafinal" width="200" height="194"/>
+        <image name="apoyoicon" width="120" height="136"/>
+        <image name="averiaicon" width="120" height="136"/>
+        <image name="backalerta" width="240" height="280"/>
         <image name="backarrow" width="109" height="105"/>
         <image name="backlogindos" width="1066" height="1067"/>
         <image name="bicia" width="244" height="151"/>
@@ -3154,7 +3303,7 @@ y te robaron tu bici, repórtala directamente.</string>
         <image name="biciwhitejust" width="1001" height="561"/>
         <image name="buscaricon" width="82" height="82"/>
         <image name="cameraicon" width="349" height="284"/>
-        <image name="cicloviaicon" width="349" height="394"/>
+        <image name="cicloviaicon" width="120" height="135"/>
         <image name="closeicon" width="94" height="94"/>
         <image name="face" width="194" height="194"/>
         <image name="headPersonaliza" width="1242" height="196"/>
@@ -3164,7 +3313,7 @@ y te robaron tu bici, repórtala directamente.</string>
         <image name="headrobobici" width="1242" height="196"/>
         <image name="headserie" width="1242" height="196"/>
         <image name="headtips" width="1242" height="196"/>
-        <image name="helpicon" width="349" height="395"/>
+        <image name="helpicon" width="120" height="136"/>
         <image name="launcher" width="167" height="167"/>
         <image name="menuhead" width="1052" height="605"/>
         <image name="reportado" width="292" height="285"/>

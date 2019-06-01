@@ -34,6 +34,7 @@
 		7DD69777223721F300810255 /* Custompin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD69776223721F300810255 /* Custompin.swift */; };
 		8B085181228BC3FB008EE2FC /* Bicipinview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B085180228BC3FB008EE2FC /* Bicipinview.swift */; };
 		8B1A4F8B2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A4F8A2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift */; };
+		8B27985C22A2F684002FC6A6 /* AveriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B27985B22A2F684002FC6A6 /* AveriaViewController.swift */; };
 		8B29B45E22656BAE0079280C /* RoboBiciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B29B45D22656BAE0079280C /* RoboBiciViewController.swift */; };
 		8B29B460226581920079280C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B29B45F226581920079280C /* OnboardingViewController.swift */; };
 		8B29B46222658B980079280C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B29B46122658B980079280C /* FirstViewController.swift */; };
@@ -87,6 +88,7 @@
 		841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS_Ciclista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B085180228BC3FB008EE2FC /* Bicipinview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bicipinview.swift; sourceTree = "<group>"; };
 		8B1A4F8A2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleCeldaCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B27985B22A2F684002FC6A6 /* AveriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AveriaViewController.swift; sourceTree = "<group>"; };
 		8B29B45D22656BAE0079280C /* RoboBiciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoboBiciViewController.swift; sourceTree = "<group>"; };
 		8B29B45F226581920079280C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		8B29B46122658B980079280C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		7D503348225D450000B5A0D6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8B27985A22A2F668002FC6A6 /* Averia */,
 				7DD69776223721F300810255 /* Custompin.swift */,
 				8BB95C27222C8C4000ABA1F9 /* ViewController.swift */,
 				7D80AC62228B73A30038AF06 /* Bicipin.swift */,
@@ -216,6 +219,14 @@
 				7D4980D82292E89E005EA139 /* Biker.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		8B27985A22A2F668002FC6A6 /* Averia */ = {
+			isa = PBXGroup;
+			children = (
+				8B27985B22A2F684002FC6A6 /* AveriaViewController.swift */,
+			);
+			path = Averia;
 			sourceTree = "<group>";
 		};
 		8B29B45C22656B780079280C /* Robo */ = {
@@ -505,6 +516,7 @@
 				7D50334A225E5A3100B5A0D6 /* FinalReporteViewController.swift in Sources */,
 				8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */,
 				7DD69777223721F300810255 /* Custompin.swift in Sources */,
+				8B27985C22A2F684002FC6A6 /* AveriaViewController.swift in Sources */,
 				8B29B45E22656BAE0079280C /* RoboBiciViewController.swift in Sources */,
 				8B29B46422658BBE0079280C /* TwoViewController.swift in Sources */,
 				8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */,
