@@ -12,9 +12,11 @@ import CoreLocation
 import FacebookCore
 import FacebookLogin
 import Firebase
+import GoogleMaps
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate,GMSMapViewDelegate {
 
+    @IBOutlet var mapaGoogle: UIView!
     @IBOutlet var alertaAction: UIImageView!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var mapview: MKMapView!
@@ -30,6 +32,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var hashMapMarker: [String : Bicipin] = [:]
 
+    var mapView : GMSMapView? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -81,8 +85,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         location.desiredAccuracy = kCLLocationAccuracyBest
         location.distanceFilter = 2
         
+        /*
         mapview.delegate = self
-        mapview.showsUserLocation = true
+        mapview.showsUserLocation = true*/
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 14.0)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView!.center = self.view.center
+        mapView!.isMyLocationEnabled = true
+        mapView?.delegate = self
+        
+        do {
+            // Set the map style by passing the URL of the local file.
+            if let styleURL = Bundle.main.url(forResource: "style_json", withExtension: "json") {
+                mapView!.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+            } else {
+                NSLog("Unable to find style_json.json")
+            }
+        } catch {
+            NSLog("One or more of the map styles failed to load. \(error)")
+        }
+        
+        self.mapaGoogle.addSubview(mapView!)
     }
     
     func setMenu(){
@@ -106,15 +129,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 let lat = coordinates[1]
                 let coordinate = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!)
                 
+                //Ahora con googleMaps
+                let marker = GMSMarker()
+                marker.position = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!)
+                marker.title = taller.name
+                marker.snippet = "Da click para ver ruta."
+                marker.icon = UIImage(named: "iconomapa")
+                marker.map = self.mapView
+                
                 let punto = Bicipin()
                 punto.pinCustomImageName = "iconomapa"
                 punto.coordinate = coordinate
                 punto.title = taller.name
                 punto.subtitle = taller.description
                 
-                let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
+                /*let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
+                self.mapview.addAnnotation(pinAnnotationView.annotation!)*/
                 
-                self.mapview.addAnnotation(pinAnnotationView.annotation!)
                 /*
                 /*let punto = Bicipin(title: taller.name, locationName: taller.description, discipline: "Sculpture", coordinate: coordinate)*/
 
@@ -187,10 +218,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     
                     punto.coordinate = CLLocationCoordinate2D(latitude: biker.latitud, longitude: biker.longitude)
                      
-                     //self.puntosArray.append(punto)
-                     let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
+                     //let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
                      
-                     self.mapview.addAnnotation(pinAnnotationView.annotation!)
+                     //self.mapview.addAnnotation(pinAnnotationView.annotation!)
+                    
+                    let marker = GMSMarker()
+                    marker.position = CLLocationCoordinate2D(latitude: biker.latitud, longitude: biker.longitude)
+                    marker.title = biker.name
+                    //marker.snippet = taller.description
+                    marker.icon = UIImage(named: bici)
+                    marker.map = self.mapView
                     
                     self.hashMapMarker[biker.id] = punto
                 //}
@@ -210,7 +247,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                             self.reportIdS.remove(at: index)
                         }
 
-                        print(self.reportIdS)
+                        //print(self.reportIdS)
                     }
                 })
             })
@@ -425,17 +462,45 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        let long = marker.position.longitude
+        let lat = marker.position.latitude
+        
+        if  UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL) {
+            UIApplication.shared.openURL(NSURL(string:
+                "comgooglemaps://?saddr=&daddr=\(lat),\(long)&directionsmode=driving")! as URL)
+        } else {
+            NSLog("Can't use comgooglemaps://");
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let loca = locations.last{
+        if let loca = locations.last {
+            
+            lastlocation = loca
+            
             if flagLocation {
                 flagLocation = false
 
-                lastlocation = loca
-
-                let point: CLLocationCoordinate2D = CLLocationCoordinate2DMake(loca.coordinate.latitude,loca.coordinate.longitude)
+                let point: CLLocationCoordinate2D =  CLLocationCoordinate2DMake(loca.coordinate.latitude,loca.coordinate.longitude)
                 let span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 2000.0/111000.0,longitudeDelta: 2000.0/110000.0)
                 self.mapview.setRegion(MKCoordinateRegion(center: point,span: span),animated:true)
                 
+                let camera = GMSCameraPosition.camera(withLatitude: loca.coordinate.latitude, longitude: loca.coordinate.longitude, zoom: 15.0)
+                mapView = GMSMapView.map(withFrame: mapaGoogle.frame, camera: camera)
+                do {
+                    // Set the map style by passing the URL of the local file.
+                    if let styleURL = Bundle.main.url(forResource: "style_json", withExtension: "json") {
+                        mapView!.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                    } else {
+                        NSLog("Unable to find style_json.json")
+                    }
+                } catch {
+                    NSLog("One or more of the map styles failed to load. \(error)")
+                }
+                mapView?.delegate = self
+                
+                self.mapaGoogle.addSubview(mapView!)
                 initListenerBike()
                 
                 mapaListo = true
@@ -454,8 +519,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
      // Pass the selected object to the new view controller.
         if segue.identifier == "alertas"{
             let vc = segue.destination as? AlertasViewController
-            vc?.location = sender as CLLocation
+            vc?.location = sender as! CLLocation
         }
      }
- 
 }
+//AIzaSyBJ_vwj9s5s2K5br87BHbeYfXXtTK49d4Q

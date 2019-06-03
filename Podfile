@@ -22,5 +22,7 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 pod "TLPhotoPicker"
 pod "BSImagePicker"
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 
 end

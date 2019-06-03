@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 import Firebase
 import FacebookCore
+import GoogleMaps
+import GooglePlaces
 
 var mapaListo = false
 var flagLocation = false
@@ -18,12 +20,16 @@ var flagLocation = false
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let API_KEY = "AIzaSyBJ_vwj9s5s2K5br87BHbeYfXXtTK49d4Q"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        GMSServices.provideAPIKey(API_KEY)
+        GMSPlacesClient.provideAPIKey(API_KEY)
         
         return true
     }

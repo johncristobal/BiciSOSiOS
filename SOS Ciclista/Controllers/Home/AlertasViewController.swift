@@ -13,6 +13,9 @@ class AlertasViewController: UIViewController {
 
     @IBOutlet weak var averiaIcon: UIButton!
     @IBOutlet var cerrarAction: UILabel!
+    @IBOutlet var apoyoIcon: UIButton!
+    @IBOutlet var cicloviaIcon: UIButton!
+    @IBOutlet var helpAction: UIButton!
     
     var location : CLLocation? = nil
 
@@ -26,6 +29,9 @@ class AlertasViewController: UIViewController {
         cerrarAction.addGestureRecognizer(gesture)
         
         averiaIcon.hero.id = "averia"
+        cicloviaIcon.hero.id = "ciclovia"
+        helpAction.hero.id = "help"
+        apoyoIcon.hero.id = "apoyo"
         
         let longitud = location?.coordinate.longitude
     }
@@ -35,9 +41,11 @@ class AlertasViewController: UIViewController {
     }
     
     @IBAction func cicloviaAction(_ sender: Any) {
+        performSegue(withIdentifier: "cicloviaShow", sender: nil)
     }
     
     @IBAction func helpAction(_ sender: Any) {
+        performSegue(withIdentifier: "helpShow", sender: nil)
     }
     
     @IBAction func averiaAction(_ sender: Any) {
@@ -45,6 +53,7 @@ class AlertasViewController: UIViewController {
     }
     
     @IBAction func apoyoAction(_ sender: Any) {
+        performSegue(withIdentifier: "apoyoShow", sender: nil)
     }
     /*
     // MARK: - Navigation

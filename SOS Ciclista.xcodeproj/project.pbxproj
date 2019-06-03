@@ -29,6 +29,11 @@
 		7D99F88D226F978D00E1AAE5 /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F88C226F978D00E1AAE5 /* ContactoViewController.swift */; };
 		7DB660922241A648007AA974 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB660912241A648007AA974 /* LoginViewController.swift */; };
 		7DBA8882229F34A20093BD2D /* AlertasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA8881229F34A20093BD2D /* AlertasViewController.swift */; };
+		7DBA888422A579370093BD2D /* style_json.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DBA888322A579370093BD2D /* style_json.json */; };
+		7DBA888722A5924A0093BD2D /* CicloviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA888622A5924A0093BD2D /* CicloviaViewController.swift */; };
+		7DBA888A22A59B9F0093BD2D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA888922A59B9F0093BD2D /* HelpViewController.swift */; };
+		7DBA888D22A5A1CA0093BD2D /* ApoyoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA888C22A5A1CA0093BD2D /* ApoyoViewController.swift */; };
+		7DBA888F22A5A4B70093BD2D /* DetalleApoyoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA888E22A5A4B70093BD2D /* DetalleApoyoViewController.swift */; };
 		7DD697732236E4A400810255 /* Taller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD697722236E4A400810255 /* Taller.swift */; };
 		7DD69775223720CA00810255 /* customPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD69774223720CA00810255 /* customPin.xib */; };
 		7DD69777223721F300810255 /* Custompin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD69776223721F300810255 /* Custompin.swift */; };
@@ -82,6 +87,11 @@
 		7D99F88C226F978D00E1AAE5 /* ContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
 		7DB660912241A648007AA974 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7DBA8881229F34A20093BD2D /* AlertasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertasViewController.swift; sourceTree = "<group>"; };
+		7DBA888322A579370093BD2D /* style_json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style_json.json; sourceTree = "<group>"; };
+		7DBA888622A5924A0093BD2D /* CicloviaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CicloviaViewController.swift; sourceTree = "<group>"; };
+		7DBA888922A59B9F0093BD2D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		7DBA888C22A5A1CA0093BD2D /* ApoyoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApoyoViewController.swift; sourceTree = "<group>"; };
+		7DBA888E22A5A4B70093BD2D /* DetalleApoyoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleApoyoViewController.swift; sourceTree = "<group>"; };
 		7DD697722236E4A400810255 /* Taller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taller.swift; sourceTree = "<group>"; };
 		7DD69774223720CA00810255 /* customPin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customPin.xib; sourceTree = "<group>"; };
 		7DD69776223721F300810255 /* Custompin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custompin.swift; sourceTree = "<group>"; };
@@ -181,6 +191,9 @@
 		7D503348225D450000B5A0D6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7DBA888B22A5A1B90093BD2D /* apoyo */,
+				7DBA888822A59B900093BD2D /* help */,
+				7DBA888522A5923C0093BD2D /* ciclovia */,
 				8B27985A22A2F668002FC6A6 /* Averia */,
 				7DD69776223721F300810255 /* Custompin.swift */,
 				8BB95C27222C8C4000ABA1F9 /* ViewController.swift */,
@@ -219,6 +232,31 @@
 				7D4980D82292E89E005EA139 /* Biker.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		7DBA888522A5923C0093BD2D /* ciclovia */ = {
+			isa = PBXGroup;
+			children = (
+				7DBA888622A5924A0093BD2D /* CicloviaViewController.swift */,
+			);
+			path = ciclovia;
+			sourceTree = "<group>";
+		};
+		7DBA888822A59B900093BD2D /* help */ = {
+			isa = PBXGroup;
+			children = (
+				7DBA888922A59B9F0093BD2D /* HelpViewController.swift */,
+			);
+			path = help;
+			sourceTree = "<group>";
+		};
+		7DBA888B22A5A1B90093BD2D /* apoyo */ = {
+			isa = PBXGroup;
+			children = (
+				7DBA888C22A5A1CA0093BD2D /* ApoyoViewController.swift */,
+				7DBA888E22A5A4B70093BD2D /* DetalleApoyoViewController.swift */,
+			);
+			path = apoyo;
 			sourceTree = "<group>";
 		};
 		8B27985A22A2F668002FC6A6 /* Averia */ = {
@@ -277,6 +315,7 @@
 				8BB95C3C222C8D6800ABA1F9 /* Controllers */,
 				8BB95C3B222C8D5A00ABA1F9 /* Views */,
 				8BB95C2F222C8C4300ABA1F9 /* Assets.xcassets */,
+				7DBA888322A579370093BD2D /* style_json.json */,
 				7D2775B1229DEA12005181FA /* splash.mp4 */,
 				8BB95C31222C8C4300ABA1F9 /* LaunchScreen.storyboard */,
 				8BB95C34222C8C4300ABA1F9 /* Info.plist */,
@@ -354,6 +393,7 @@
 				8BB95C1F222C8C4000ABA1F9 /* Frameworks */,
 				8BB95C20222C8C4000ABA1F9 /* Resources */,
 				C3F3C9A44E5BE3FADA5E1583 /* [CP] Embed Pods Frameworks */,
+				3D5E32B7C0D99C4DF3850D19 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -412,6 +452,7 @@
 				8BB95C33222C8C4300ABA1F9 /* LaunchScreen.storyboard in Resources */,
 				7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */,
 				7D2775B2229DEA12005181FA /* splash.mp4 in Resources */,
+				7DBA888422A579370093BD2D /* style_json.json in Resources */,
 				8BB95C30222C8C4300ABA1F9 /* Assets.xcassets in Resources */,
 				7D80AC61228B72FD0038AF06 /* biciPin.xib in Resources */,
 				8BB95C2B222C8C4000ABA1F9 /* Main.storyboard in Resources */,
@@ -437,6 +478,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D5E32B7C0D99C4DF3850D19 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SOS Ciclista/Pods-SOS Ciclista-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C3F3C9A44E5BE3FADA5E1583 /* [CP] Embed Pods Frameworks */ = {
@@ -511,16 +572,19 @@
 				8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */,
 				8BB95C2E222C8C4000ABA1F9 /* SOS_Ciclista.xcdatamodeld in Sources */,
 				7D5AE3732242B48700E53FCC /* Report.swift in Sources */,
+				7DBA888A22A59B9F0093BD2D /* HelpViewController.swift in Sources */,
 				7D5AE3712242AED800E53FCC /* ReportTableViewCell.swift in Sources */,
 				7D99F88A226F8E9100E1AAE5 /* Tip.swift in Sources */,
 				7D50334A225E5A3100B5A0D6 /* FinalReporteViewController.swift in Sources */,
 				8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */,
 				7DD69777223721F300810255 /* Custompin.swift in Sources */,
 				8B27985C22A2F684002FC6A6 /* AveriaViewController.swift in Sources */,
+				7DBA888F22A5A4B70093BD2D /* DetalleApoyoViewController.swift in Sources */,
 				8B29B45E22656BAE0079280C /* RoboBiciViewController.swift in Sources */,
 				8B29B46422658BBE0079280C /* TwoViewController.swift in Sources */,
 				8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */,
 				8BB47257222F773300D5C51D /* ReportesViewController.swift in Sources */,
+				7DBA888722A5924A0093BD2D /* CicloviaViewController.swift in Sources */,
 				7D1FD52A223B1BAB00B0A03B /* celdaBiciCollectionViewCell.swift in Sources */,
 				7D99F88D226F978D00E1AAE5 /* ContactoViewController.swift in Sources */,
 				7D2775AD229D8B3C005181FA /* AcercaViewController.swift in Sources */,
@@ -529,6 +593,7 @@
 				8BA625A422358585008E9337 /* DataManager.swift in Sources */,
 				8BA1B5B922625BB500C43529 /* DetalleReporteViewController.swift in Sources */,
 				8B29B46622658BCB0079280C /* ThirdViewController.swift in Sources */,
+				7DBA888D22A5A1CA0093BD2D /* ApoyoViewController.swift in Sources */,
 				7D80AC5F2289F8E00038AF06 /* resultSerieViewController.swift in Sources */,
 				7D1FD528223B123E00B0A03B /* PersonalizaViewController.swift in Sources */,
 				8B29B460226581920079280C /* OnboardingViewController.swift in Sources */,
