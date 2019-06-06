@@ -768,8 +768,6 @@ Versión 2019</string>
                                         </state>
                                         <connections>
                                             <action selector="actionSend:" destination="llT-eU-dLw" eventType="touchUpInside" id="Zxx-Fc-iLc"/>
-                                            <action selector="reportarAction:" destination="pLU-OA-b9l" eventType="touchUpInside" id="80z-GB-4bf"/>
-                                            <action selector="saveReport:" destination="rWD-wZ-Eei" eventType="touchUpInside" id="YYl-Hn-rxk"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ó contáctanos por:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGM-vg-u5q">
@@ -1194,7 +1192,7 @@ y auxilio vial</string>
         <!--Report Fragment View Controller-->
         <scene sceneID="Zso-cO-i7Q">
             <objects>
-                <viewController id="rWD-wZ-Eei" customClass="ReportFragmentViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reportFragment" id="rWD-wZ-Eei" customClass="ReportFragmentViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="91W-AB-V3e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2328,7 +2326,12 @@ hagan su trabajo **</string>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMs-VG-qlq">
                                                         <rect key="frame" x="50" y="8" width="275" height="112"/>
-                                                        <string key="text">Aqui podrás reportar todos los inconvenientessuscitados en cualquierciclovía de tu ciudad y asípoder prevenir accidentes a la comunidad ciclista.</string>
+                                                        <string key="text">Aqui podrás reportar 
+todos los inconvenientes
+suscitados en cualquier
+ciclovía de tu ciudad y así
+poder prevenir accidentes 
+a la comunidad ciclista.</string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2471,7 +2474,8 @@ hagan su trabajo **</string>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncI-On-Qtt">
                                                         <rect key="frame" x="50" y="8" width="275" height="52.5"/>
-                                                        <string key="text">Si necesitas apoyo urgentepor parte de la polcía auxiliar o ambulancia en caso de accidente </string>
+                                                        <string key="text">Si necesitas apoyo urgente
+por parte de la polcía auxiliar o ambulancia en caso de accidente </string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2489,7 +2493,9 @@ hagan su trabajo **</string>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1R-8Q-Eva">
                                                         <rect key="frame" x="103.5" y="133.5" width="168.5" height="52.5"/>
-                                                        <string key="text">o para contacto personalreporta directo en susredes sociales.</string>
+                                                        <string key="text">o para contacto personal
+reporta directo en sus
+redes sociales.</string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2680,7 +2686,8 @@ hagan su trabajo **</string>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juY-fG-CNI">
                                         <rect key="frame" x="22.5" y="8" width="298" height="47"/>
-                                        <string key="text">Proporciona los siguientes datos:•Lugar  • Fecha •hora •Motivo</string>
+                                        <string key="text">Proporciona los siguientes datos:
+•Lugar  • Fecha •hora •Motivo</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2776,7 +2783,8 @@ hagan su trabajo **</string>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayb-gh-bJM">
                                                         <rect key="frame" x="50" y="8" width="275" height="52.5"/>
-                                                        <string key="text">apoyo presencial de la comunidad ciclista por conflicto / confrontacióncon automovilista. </string>
+                                                        <string key="text">apoyo presencial de la comunidad ciclista por conflicto / confrontación
+con automovilista. </string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2794,7 +2802,8 @@ hagan su trabajo **</string>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkR-n4-lJJ">
                                                         <rect key="frame" x="130" y="133.5" width="115" height="35"/>
-                                                        <string key="text">convocatoriapara valla ciclista</string>
+                                                        <string key="text">convocatoria
+para valla ciclista</string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2958,6 +2967,9 @@ hagan su trabajo **</string>
                                                             <constraint firstAttribute="height" constant="80" id="r6d-Yg-GoL"/>
                                                         </constraints>
                                                         <state key="normal" image="alertafinal"/>
+                                                        <connections>
+                                                            <action selector="alertaAction:" destination="yrC-Wf-HTn" eventType="touchUpInside" id="BZu-ba-IUv"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3518,7 +3530,6 @@ y te robaron tu bici, repórtala directamente.</string>
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="savePhotos:" destination="pGV-Yl-l4s" eventType="touchUpInside" id="tgp-zo-tx9"/>
                                                     <action selector="searchAction:" destination="pqe-ZY-8UC" eventType="touchUpInside" id="3Vn-7f-T8t"/>
                                                 </connections>
                                             </button>
@@ -3696,7 +3707,6 @@ y te robaron tu bici, repórtala directamente.</string>
                                                 </state>
                                                 <connections>
                                                     <action selector="reportarAction:" destination="pLU-OA-b9l" eventType="touchUpInside" id="qPv-S0-Ldw"/>
-                                                    <action selector="saveReport:" destination="rWD-wZ-Eei" eventType="touchUpInside" id="jiK-1D-8vZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -3929,7 +3939,7 @@ y te robaron tu bici, repórtala directamente.</string>
     <inferredMetricsTieBreakers>
         <segue reference="tGv-Bd-n8q"/>
         <segue reference="O9I-pU-wnc"/>
-        <segue reference="YXD-he-ZMI"/>
-        <segue reference="2Wc-eN-v3a"/>
+        <segue reference="8JX-Jj-J98"/>
+        <segue reference="MdW-eq-pW5"/>
     </inferredMetricsTieBreakers>
 </document>

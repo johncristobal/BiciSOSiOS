@@ -55,6 +55,14 @@ class AlertasViewController: UIViewController {
     @IBAction func apoyoAction(_ sender: Any) {
         performSegue(withIdentifier: "apoyoShow", sender: nil)
     }
+    
+    @IBAction func alertaAction(_ sender: Any) {
+        
+        let storyboard = self.storyboard//UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard!.instantiateViewController(withIdentifier: "reportFragment") as! ReportFragmentViewController
+        present(vc, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
