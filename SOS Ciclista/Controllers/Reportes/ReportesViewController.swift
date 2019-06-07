@@ -11,6 +11,7 @@ import Firebase
 import FirebaseDatabase
 import Alamofire
 import AlamofireImage
+import CoreLocation
 
 class ReportesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -23,6 +24,8 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     let nameNot = Notification.Name("tabla")
     
     @IBOutlet weak var buscarSerie: UITextField!
+    
+    var location : CLLocation? = nil
         
     @IBOutlet var buscarIcon: UIImageView!
     @IBOutlet var vistaSerieText: UIView!

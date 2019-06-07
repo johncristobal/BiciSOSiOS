@@ -20,6 +20,8 @@ class CicloviaViewController: UIViewController {
         self.hero.isEnabled = true
         cicloviaIcon.hero.id = "ciclovia"
         // Do any additional setup after loading the view.
+        
+        addToolBar(textField: textDetails)
     }
     
     @IBAction func backAction(_ sender: Any) {

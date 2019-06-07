@@ -24,14 +24,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var puntosArray : [MKAnnotation] = []
     var talleres : [Taller] = []
-    
-    var lastlocation : CLLocation? = nil
-    
+    var reportes : [Report] = []
     var reportIdS : [String] = []
     var bikers : [Biker] = []
-    
     var hashMapMarker: [String : Bicipin] = [:]
 
+    var lastlocation : CLLocation? = nil
+    
     var mapView : GMSMapView? = nil
     
     override func viewDidLoad() {
@@ -72,6 +71,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             print("no hay bici")
             //punto.title = "SOS Ciclista"
         }
+        
+        //guardamos latitud y longitud antes de salir, por si hace reporte en la otra ventana...
+        
     }
     
     @objc func abrirAlerta(){
@@ -117,6 +119,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    func imageWithImage(image:UIImage, newSize:CGSize) -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
     func getTalleres(){
         DataManager.shared.getTalleres(api: "") { (datos) in
             
@@ -133,8 +143,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 let marker = GMSMarker()
                 marker.position = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!)
                 marker.title = taller.name
-                marker.snippet = "Da click para ver ruta."
-                marker.icon = UIImage(named: "iconomapa")
+                marker.snippet = "Da click para ver ruta..."
+                marker.userData = "taller"
+                marker.icon = self.imageWithImage(image: UIImage(named: "iconomapa")!, newSize: CGSize(width: 20.0, height: 20.0))
+                
+                    //[self image:marker.icon scaledToSize:CGSizeMake(3.0f, 3.0f)] // UIImage(named: "iconomapa")
                 marker.map = self.mapView
                 
                 let punto = Bicipin()
@@ -180,6 +193,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             }else{
                 keySelf = "null"
             }
+            
             for child in data.children {
                 let snap = child as! DataSnapshot
                 let datos = snap.value as! [String: Any]
@@ -219,14 +233,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     punto.coordinate = CLLocationCoordinate2D(latitude: biker.latitud, longitude: biker.longitude)
                      
                      //let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
-                     
                      //self.mapview.addAnnotation(pinAnnotationView.annotation!)
                     
                     let marker = GMSMarker()
                     marker.position = CLLocationCoordinate2D(latitude: biker.latitud, longitude: biker.longitude)
                     marker.title = biker.name
                     //marker.snippet = taller.description
-                    marker.icon = UIImage(named: bici)
+                    marker.icon = self.imageWithImage(image: UIImage(named: bici)!, newSize: CGSize(width: 65.0, height: 40.0)) //UIImage(named: bici)
+                    marker.userData = "bici"
                     marker.map = self.mapView
                     
                     self.hashMapMarker[biker.id] = punto
@@ -246,7 +260,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         if let index = self.reportIdS.index(of: key) {
                             self.reportIdS.remove(at: index)
                         }
-
                         //print(self.reportIdS)
                     }
                 })
@@ -255,6 +268,123 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             print(error)
         }
     }
+    
+    func listenerReports(){
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference().child("reportes")
+        ref.observe(.value, with: { (data) in
+            
+            self.bikers.removeAll()
+            //self.reportIdS.removeAll()
+            var newIds : [String] = []
+
+            
+            for child in data.children {
+                let snap = child as! DataSnapshot
+                let datos = snap.value as! [String: Any]
+                let id = datos["id"] as! String
+                let name = datos["name"] as! String
+                let tipo = datos["bici"] as! Int
+                let latitud = datos["latitud"] as! Double
+                let longitude = datos["longitude"] as! Double
+                var bici = ""
+                switch tipo{
+                case 0:bici = "bicia"; break;
+                case 1:bici = "bicib"; break;
+                case 2:bici = "bicic"; break;
+                case 3:bici = "bicid"; break;
+                case 4:bici = "bicie"; break;
+                case 5:bici = "bicif"; break;
+                default: break
+                }
+                //self.bikers.append(Biker(id: id, name: name, bici: bici, latitud: latitud, longitude: longitude))
+                
+                /*let date = datos["date"] as! String
+                let description = datos["description"] as! String
+                let estatus = datos["estatus"] as! Int
+                let serie = datos["serie"] as! String
+                
+                var fotos = ""
+                if datos["fotos"] != nil{
+                    fotos = datos["fotos"] as! String
+                }*/
+                
+                //self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos))
+                
+                let marker = GMSMarker()
+                marker.position = CLLocationCoordinate2D(latitude: latitud, longitude: longitude)
+                marker.title = name
+                //marker.snippet = taller.description
+                marker.icon = self.imageWithImage(image: UIImage(named: bici)!, newSize: CGSize(width: 65.0, height: 40.0)) //UIImage(named: bici)
+                marker.userData = "reporte"
+                marker.map = self.mapView
+                
+            }
+            
+            self.bikers.forEach({ (biker) in
+                
+                newIds.append(biker.id)
+                
+                if !self.reportIdS.contains(biker.id)
+                {
+                    self.reportIdS.append(biker.id)
+                    
+                    //if biker.id != keySelf && keySelf != "null"{
+                    
+                    let punto = Bicipin()
+                    var bici = ""
+                    switch biker.bici{
+                    case 0:bici = "bicia"; break;
+                    case 1:bici = "bicib"; break;
+                    case 2:bici = "bicic"; break;
+                    case 3:bici = "bicid"; break;
+                    case 4:bici = "bicie"; break;
+                    case 5:bici = "bicif"; break;
+                    default: break
+                    }
+                    punto.pinCustomImageName = bici
+                    punto.title = biker.name
+                    
+                    punto.coordinate = CLLocationCoordinate2D(latitude: biker.latitud, longitude: biker.longitude)
+                    
+                    //let pinAnnotationView = MKPinAnnotationView(annotation: punto, reuseIdentifier: "pin")
+                    //self.mapview.addAnnotation(pinAnnotationView.annotation!)
+                    
+                    let marker = GMSMarker()
+                    marker.position = CLLocationCoordinate2D(latitude: biker.latitud, longitude: biker.longitude)
+                    marker.title = biker.name
+                    //marker.snippet = taller.description
+                    marker.icon = self.imageWithImage(image: UIImage(named: bici)!, newSize: CGSize(width: 65.0, height: 40.0)) //UIImage(named: bici)
+                    marker.userData = "bici"
+                    marker.map = self.mapView
+                    
+                    self.hashMapMarker[biker.id] = punto
+                    //}
+                }
+                
+                //los puntos que se eliminaran
+                let justids = Array(Set(self.reportIdS).subtracting(newIds))
+                
+                self.hashMapMarker.forEach({ (arg0) in
+                    
+                    let (key, value) = arg0
+                    if justids.contains(key){
+                        let punto = self.hashMapMarker[key]
+                        self.mapview.removeAnnotation(punto!)
+                        self.hashMapMarker.removeValue(forKey: key)
+                        if let index = self.reportIdS.index(of: key) {
+                            self.reportIdS.remove(at: index)
+                        }
+                        //print(self.reportIdS)
+                    }
+                })
+            })
+        }) { (error) in
+            print(error)
+        }
+    }
+    
     
     func initListenerBikeOnce(){
         
@@ -356,6 +486,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         if let annotation = view.annotation as? Custompin {
             print("Your annotation title: \(annotation)");
         }*/
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        if marker.userData as? String == "bici"{
+            return true
+        }
+        
+        return false
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

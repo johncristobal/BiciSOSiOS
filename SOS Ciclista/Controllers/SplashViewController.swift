@@ -49,8 +49,6 @@ class SplashViewController: UIViewController {
         present(vc, animated: true) {
             vc.player?.play()
         }*/
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,6 +56,7 @@ class SplashViewController: UIViewController {
             debugPrint("video.m4v not found")
             return
         }
+        
         let player = AVPlayer(url: videoURL)
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = self.imagengif.bounds
@@ -79,5 +78,4 @@ class SplashViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

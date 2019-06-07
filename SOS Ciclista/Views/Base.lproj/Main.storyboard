@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-418" y="-909"/>
+            <point key="canvasLocation" x="-300" y="-1803"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="R2i-hf-sKx">
@@ -167,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5L4-3R-9vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="-909"/>
+            <point key="canvasLocation" x="556" y="-1803"/>
         </scene>
         <!--Tips View Controller-->
         <scene sceneID="olo-wB-fq3">
@@ -350,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ym9-gF-f01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="-15.742128935532236"/>
+            <point key="canvasLocation" x="1294" y="-2776"/>
         </scene>
         <!--Detalle Tip View Controller-->
         <scene sceneID="EPF-zl-6ew">
@@ -538,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLC-46-WA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="13"/>
+            <point key="canvasLocation" x="2284" y="-2776"/>
         </scene>
         <!--Acerca View Controller-->
         <scene sceneID="d89-30-xh3">
@@ -679,7 +679,7 @@ Versión 2019</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acI-7K-yIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1086" y="-1853"/>
+            <point key="canvasLocation" x="-1017" y="-2600"/>
         </scene>
         <!--Contacto View Controller-->
         <scene sceneID="P8l-f5-6uT">
@@ -911,7 +911,7 @@ y auxilio vial</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JiJ-d4-MhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58.399999999999999" y="-1842.7286356821592"/>
+            <point key="canvasLocation" x="65" y="-2600"/>
         </scene>
         <!--Reportes View Controller-->
         <scene sceneID="f0p-p5-VLV">
@@ -1341,7 +1341,7 @@ y auxilio vial</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgf-Jg-RJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2738" y="-911"/>
+            <point key="canvasLocation" x="1721" y="-913"/>
         </scene>
         <!--Final Reporte View Controller-->
         <scene sceneID="1pr-dC-Eap">
@@ -1421,7 +1421,7 @@ y auxilio vial</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGv-Tl-Mmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4466" y="-913"/>
+            <point key="canvasLocation" x="4098" y="-911"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="B3t-jN-RUN">
@@ -1576,7 +1576,7 @@ y auxilio vial</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLs-cM-tuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3575" y="-912"/>
+            <point key="canvasLocation" x="3063" y="-911"/>
         </scene>
         <!--Personaliza View Controller-->
         <scene sceneID="3EC-ny-cqv">
@@ -1878,7 +1878,7 @@ y auxilio vial</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGE-UG-zJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3574" y="-63"/>
+            <point key="canvasLocation" x="3062" y="-63"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bpY-YH-zhS">
@@ -2195,7 +2195,7 @@ hagan su trabajo **</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <outlet property="delegate" destination="hWB-jh-9Mf" id="5bY-7M-rUG"/>
+                                                            <outlet property="delegate" destination="U2h-58-lZE" id="PnG-Kq-rd4"/>
                                                         </connections>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zos-gW-t2p">
@@ -2299,7 +2299,7 @@ hagan su trabajo **</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ukx-Oe-7Qs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4262" y="-910"/>
+            <point key="canvasLocation" x="-1538" y="-759"/>
         </scene>
         <!--Ciclovia View Controller-->
         <scene sceneID="F8o-TD-6Z6">
@@ -2346,7 +2346,7 @@ a la comunidad ciclista.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <outlet property="delegate" destination="hWB-jh-9Mf" id="mav-iU-w89"/>
+                                                            <outlet property="delegate" destination="nmL-ia-3gq" id="8wf-tN-Vy0"/>
                                                         </connections>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kqi-87-nRU">
@@ -2447,7 +2447,7 @@ a la comunidad ciclista.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQ7-U1-JFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4263" y="-138"/>
+            <point key="canvasLocation" x="-1538" y="14"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="vsB-A6-Edf">
@@ -2651,7 +2651,7 @@ redes sociales.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5r4-At-so4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3476" y="-138.0809595202399"/>
+            <point key="canvasLocation" x="-751" y="14"/>
         </scene>
         <!--Detalle Apoyo View Controller-->
         <scene sceneID="J5H-Fo-2yr">
@@ -2673,6 +2673,9 @@ redes sociales.</string>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="uaG-3f-7Jy" id="Qul-ZM-93B"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -2706,7 +2709,6 @@ redes sociales.</string>
                                                     <color key="titleColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="backAction:" destination="U2h-58-lZE" eventType="touchUpInside" id="PvO-Fs-Czf"/>
                                                     <action selector="backAction:" destination="uaG-3f-7Jy" eventType="touchUpInside" id="lJ8-2a-5kk"/>
                                                 </connections>
                                             </button>
@@ -2722,7 +2724,6 @@ redes sociales.</string>
                                                 </state>
                                                 <connections>
                                                     <action selector="sendAction:" destination="uaG-3f-7Jy" eventType="touchUpInside" id="0Qa-od-yCM"/>
-                                                    <action selector="sendReportAction:" destination="U2h-58-lZE" eventType="touchUpInside" id="zBg-lN-Une"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -2756,7 +2757,7 @@ redes sociales.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTZ-cf-Zil" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4391" y="-1648"/>
+            <point key="canvasLocation" x="-3706" y="-760"/>
         </scene>
         <!--Apoyo View Controller-->
         <scene sceneID="Q7q-gJ-dJ9">
@@ -2895,12 +2896,12 @@ para valla ciclista</string>
                     </view>
                     <connections>
                         <outlet property="apoyoIcon" destination="gWF-oO-gLU" id="s0d-aq-8su"/>
-                        <segue destination="uaG-3f-7Jy" kind="show" identifier="detalleApoyo" animates="NO" id="9Pv-Zv-IM6"/>
+                        <segue destination="uaG-3f-7Jy" kind="showDetail" identifier="detalleApoyo" id="9Pv-Zv-IM6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wf8-rH-QTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3476" y="-1648"/>
+            <point key="canvasLocation" x="-2655" y="-760"/>
         </scene>
         <!--Alertas View Controller-->
         <scene sceneID="uhw-0r-0c1">
@@ -2969,6 +2970,7 @@ para valla ciclista</string>
                                                         <state key="normal" image="alertafinal"/>
                                                         <connections>
                                                             <action selector="alertaAction:" destination="yrC-Wf-HTn" eventType="touchUpInside" id="BZu-ba-IUv"/>
+                                                            <segue destination="rWD-wZ-Eei" kind="showDetail" identifier="alertaMain" id="83O-uh-Zp5"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3080,7 +3082,7 @@ para valla ciclista</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVD-d4-l2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3476" y="-910.79460269865069"/>
+            <point key="canvasLocation" x="-300" y="-911"/>
         </scene>
         <!--Robo Bici View Controller-->
         <scene sceneID="mts-uF-1Sl">
@@ -3195,7 +3197,7 @@ para valla ciclista</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qd-ob-xrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1340" y="39"/>
+            <point key="canvasLocation" x="3574" y="-2776"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="UyZ-cH-aJA">
@@ -3203,7 +3205,7 @@ para valla ciclista</string>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="TeL-pl-KSm" customClass="OnboardingViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5p-pz-dTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1340" y="720"/>
+            <point key="canvasLocation" x="4414" y="-2720"/>
         </scene>
         <!--Result Serie View Controller-->
         <scene sceneID="yYr-Xp-ri0">
@@ -3288,7 +3290,7 @@ para valla ciclista</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xx2-86-NwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="-63"/>
+            <point key="canvasLocation" x="556" y="-63"/>
         </scene>
         <!--Photos Bici View Controller-->
         <scene sceneID="CQZ-Jx-fih">
@@ -3414,7 +3416,7 @@ para valla ciclista</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sS4-Df-b0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2738" y="-62"/>
+            <point key="canvasLocation" x="1721" y="-63"/>
         </scene>
         <!--Serie View Controller-->
         <scene sceneID="UXc-LW-0fu">
@@ -3658,7 +3660,7 @@ y te robaron tu bici, repórtala directamente.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVi-mj-FSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="-910"/>
+            <point key="canvasLocation" x="556" y="-913"/>
         </scene>
         <!--Detalle Reporte View Controller-->
         <scene sceneID="VEC-wf-kKW">
@@ -3822,18 +3824,15 @@ y te robaron tu bici, repórtala directamente.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-wE-BYT">
-                                <rect key="frame" x="8" y="208.5" width="359" height="250"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="rwi-bE-cTW"/>
-                                </constraints>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-wE-BYT">
+                                <rect key="frame" x="8" y="20" width="359" height="647"/>
+                                <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862745100000003" green="0.85098039219999999" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fIj-wE-BYT" firstAttribute="centerY" secondItem="dMt-vQ-fcm" secondAttribute="centerY" id="Ehu-he-Lxn"/>
-                            <constraint firstItem="fIj-wE-BYT" firstAttribute="centerX" secondItem="dMt-vQ-fcm" secondAttribute="centerX" id="NXY-RD-wYE"/>
+                            <constraint firstItem="aba-vJ-DBI" firstAttribute="bottom" secondItem="fIj-wE-BYT" secondAttribute="bottom" id="4uB-cm-9IP"/>
+                            <constraint firstItem="fIj-wE-BYT" firstAttribute="top" secondItem="aba-vJ-DBI" secondAttribute="top" id="Fh2-2r-rsz"/>
                             <constraint firstItem="fIj-wE-BYT" firstAttribute="leading" secondItem="aba-vJ-DBI" secondAttribute="leading" constant="8" id="hS0-re-dlL"/>
                             <constraint firstItem="aba-vJ-DBI" firstAttribute="trailing" secondItem="fIj-wE-BYT" secondAttribute="trailing" constant="8" id="p8R-pw-lt2"/>
                         </constraints>
@@ -3846,7 +3845,7 @@ y te robaron tu bici, repórtala directamente.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrL-b8-KdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2263" y="-913"/>
+            <point key="canvasLocation" x="-2252" y="-1803"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4uv-rm-Jxs">
@@ -3901,7 +3900,7 @@ y te robaron tu bici, repórtala directamente.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g61-5r-vwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1350" y="-909"/>
+            <point key="canvasLocation" x="-1289" y="-1803"/>
         </scene>
     </scenes>
     <resources>
@@ -3937,9 +3936,9 @@ y te robaron tu bici, repórtala directamente.</string>
         <image name="vallaciclista" width="320" height="74"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tGv-Bd-n8q"/>
-        <segue reference="O9I-pU-wnc"/>
+        <segue reference="91z-Mt-Myz"/>
+        <segue reference="ZpG-WP-dvz"/>
         <segue reference="8JX-Jj-J98"/>
-        <segue reference="MdW-eq-pW5"/>
+        <segue reference="83O-uh-Zp5"/>
     </inferredMetricsTieBreakers>
 </document>

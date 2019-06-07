@@ -29,6 +29,7 @@ class ApoyoViewController: UIViewController {
     }
     
     @IBAction func vallaAction(_ sender: Any) {
+        performSegue(withIdentifier: "detalleApoyo", sender: nil)
     }
     /*
     // MARK: - Navigation

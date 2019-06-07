@@ -33,7 +33,7 @@ class AlertasViewController: UIViewController {
         helpAction.hero.id = "help"
         apoyoIcon.hero.id = "apoyo"
         
-        let longitud = location?.coordinate.longitude
+        //let longitud = location?.coordinate.longitude
     }
     
     @objc func cerrar(){
@@ -58,19 +58,27 @@ class AlertasViewController: UIViewController {
     
     @IBAction func alertaAction(_ sender: Any) {
         
+        performSegue(withIdentifier: "alertaMain", sender: nil)
+        
+        /*
         let storyboard = self.storyboard//UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard!.instantiateViewController(withIdentifier: "reportFragment") as! ReportFragmentViewController
         present(vc, animated: true, completion: nil)
+         */
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "alertaMain"{
+            let vc = segue.destination as? ReportFragmentViewController
+            vc?.location = sender as! CLLocation
+        }
     }
-    */
-
+ 
+    
 }

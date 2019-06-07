@@ -19,6 +19,8 @@ class AveriaViewController: UIViewController {
 
         self.hero.isEnabled = true
         averiaIcon.hero.id = "averia"
+        
+      addToolBar(textField: detallesText)
     }
     
     @IBAction func backAction(_ sender: Any) {

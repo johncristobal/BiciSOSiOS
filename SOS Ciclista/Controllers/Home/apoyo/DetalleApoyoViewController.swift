@@ -14,7 +14,10 @@ class DetalleApoyoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        
         // Do any additional setup after loading the view.
+        addToolBar(textField: detallesApoyo)
     }
     
     @IBAction func backAction(_ sender: Any) {

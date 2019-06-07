@@ -14,6 +14,7 @@ import Photos
 
 import Firebase
 import FirebaseDatabase
+import CoreLocation
 
 class ReportFragmentViewController: UIViewController {
     
@@ -35,6 +36,8 @@ class ReportFragmentViewController: UIViewController {
     var index = -1
 
     let name = Notification.Name("tabla")
+
+    var location : CLLocation? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,6 +87,7 @@ class ReportFragmentViewController: UIViewController {
                 fotos += "\(name)_\(index).png,"
             }
         }
+        
         //1. guardar json con reporte: nombre, serie, descripcion, id, estatus, fecha
         let fecha = Date()
         let formatted = DateFormatter()
@@ -95,12 +99,15 @@ class ReportFragmentViewController: UIViewController {
         thisUsersGamesRef.setValue(
             [
                 "id":thisUsersGamesRef.key,
-                "name":nameText.text,
-                "serie":serieText.text,
-                "description":detailsText.text,
-                "estatus":1,
+                "name":nameText.text!,
+                "serie":serieText.text!,
+                "description":detailsText.text!,
+                "estatus": 1,
                 "date":fechaString,
-                "fotos": fotos
+                "fotos": fotos,
+                "tipo": 1,
+                "latitude": location?.coordinate.latitude,
+                "longitude": location?.coordinate.longitude
             ]
         ){(error:Error?, ref:DatabaseReference) in
             if let error = error {
