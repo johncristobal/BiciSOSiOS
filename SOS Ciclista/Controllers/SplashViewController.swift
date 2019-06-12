@@ -52,7 +52,7 @@ class SplashViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        guard let videoURL = Bundle.main.url(forResource: "splash", withExtension:".mp4") else {
+        guard let videoURL = Bundle.main.url(forResource: "splash2", withExtension:".mp4") else {
             debugPrint("video.m4v not found")
             return
         }
@@ -60,6 +60,7 @@ class SplashViewController: UIViewController {
         let player = AVPlayer(url: videoURL)
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = self.imagengif.bounds
+        playerLayer.videoGravity = AVLayerVideoGravity.resize
         self.imagengif.layer.addSublayer(playerLayer)
         player.play()
         

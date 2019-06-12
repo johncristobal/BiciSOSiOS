@@ -37,6 +37,7 @@
 		7DD697732236E4A400810255 /* Taller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD697722236E4A400810255 /* Taller.swift */; };
 		7DD69775223720CA00810255 /* customPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD69774223720CA00810255 /* customPin.xib */; };
 		7DD69777223721F300810255 /* Custompin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD69776223721F300810255 /* Custompin.swift */; };
+		7DDEF62C22AED78B00517A69 /* splash2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7DDEF62B22AED78B00517A69 /* splash2.mp4 */; };
 		8B085181228BC3FB008EE2FC /* Bicipinview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B085180228BC3FB008EE2FC /* Bicipinview.swift */; };
 		8B1A4F8B2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A4F8A2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift */; };
 		8B27985C22A2F684002FC6A6 /* AveriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B27985B22A2F684002FC6A6 /* AveriaViewController.swift */; };
@@ -95,6 +96,7 @@
 		7DD697722236E4A400810255 /* Taller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taller.swift; sourceTree = "<group>"; };
 		7DD69774223720CA00810255 /* customPin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customPin.xib; sourceTree = "<group>"; };
 		7DD69776223721F300810255 /* Custompin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custompin.swift; sourceTree = "<group>"; };
+		7DDEF62B22AED78B00517A69 /* splash2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = splash2.mp4; sourceTree = "<group>"; };
 		841BCD03A32EFD4BF74C8890 /* Pods_SOS_Ciclista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOS_Ciclista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B085180228BC3FB008EE2FC /* Bicipinview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bicipinview.swift; sourceTree = "<group>"; };
 		8B1A4F8A2263D1E6003C8ABE /* DetalleCeldaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleCeldaCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				8BB95C3B222C8D5A00ABA1F9 /* Views */,
 				8BB95C2F222C8C4300ABA1F9 /* Assets.xcassets */,
 				7DBA888322A579370093BD2D /* style_json.json */,
+				7DDEF62B22AED78B00517A69 /* splash2.mp4 */,
 				7D2775B1229DEA12005181FA /* splash.mp4 */,
 				8BB95C31222C8C4300ABA1F9 /* LaunchScreen.storyboard */,
 				8BB95C34222C8C4300ABA1F9 /* Info.plist */,
@@ -448,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DDEF62C22AED78B00517A69 /* splash2.mp4 in Resources */,
 				7DD69775223720CA00810255 /* customPin.xib in Resources */,
 				8BB95C33222C8C4300ABA1F9 /* LaunchScreen.storyboard in Resources */,
 				7D1FD52C223B2C5800B0A03B /* GoogleService-Info.plist in Resources */,
