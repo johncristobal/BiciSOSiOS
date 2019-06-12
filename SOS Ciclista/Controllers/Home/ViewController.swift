@@ -42,27 +42,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         flagLocation = true
         setMenu()
         setLocation()
-        getTalleres()
-
+        //getTalleres()
+        listenerBikers()
+        
         let gesture = UITapGestureRecognizer(target: self, action: #selector(abrirAlerta))
         alertaAction.isUserInteractionEnabled = true
         alertaAction.addGestureRecognizer(gesture)
+        
+        print("viewdidload viewcontroller")
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if mapaListo{
-            
-            initListenerBikeOnce()
-        }
-        //flagLocation = true
+        
+        /*if mapaListo{
+            let enviado = UserDefaults.standard.string(forKey: "enviado")
+            if enviado != "1"{
+                initListenerBikeOnce()
+            }
+        }*/
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        print("adios wiil diseppear")
         let bici = UserDefaults.standard.string(forKey: "keySelf")
         if bici != nil{
             
             UserDefaults.standard.set("null", forKey: "keySelf")
             UserDefaults.standard.set("null", forKey: "enviado")
+
+            print("null everything")
 
             let ref = Database.database().reference()
             let thisUsersGamesRef = ref.child("bikers")
@@ -184,7 +192,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         ref.observe(.value, with: { (data) in
             
             self.bikers.removeAll()
-            //self.reportIdS.removeAll()
             var newIds : [String] = []
             
             var keySelf = UserDefaults.standard.string(forKey: "keySelf")
@@ -290,13 +297,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 let longitude = datos["longitude"] as! Double
                 var bici = ""
                 switch tipo{
-                case 0:bici = "bicia"; break;
-                case 1:bici = "bicib"; break;
-                case 2:bici = "bicic"; break;
-                case 3:bici = "bicid"; break;
-                case 4:bici = "bicie"; break;
-                case 5:bici = "bicif"; break;
-                default: break
+                    case 0:bici = "bicia"; break;
+                    case 1:bici = "bicib"; break;
+                    case 2:bici = "bicic"; break;
+                    case 3:bici = "bicid"; break;
+                    case 4:bici = "bicie"; break;
+                    case 5:bici = "bicif"; break;
+                    default: break
                 }
                 //self.bikers.append(Biker(id: id, name: name, bici: bici, latitud: latitud, longitude: longitude))
                 
@@ -319,7 +326,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 marker.icon = self.imageWithImage(image: UIImage(named: bici)!, newSize: CGSize(width: 65.0, height: 40.0)) //UIImage(named: bici)
                 marker.userData = "reporte"
                 marker.map = self.mapView
-                
             }
             
             self.bikers.forEach({ (biker) in
@@ -335,13 +341,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     let punto = Bicipin()
                     var bici = ""
                     switch biker.bici{
-                    case 0:bici = "bicia"; break;
-                    case 1:bici = "bicib"; break;
-                    case 2:bici = "bicic"; break;
-                    case 3:bici = "bicid"; break;
-                    case 4:bici = "bicie"; break;
-                    case 5:bici = "bicif"; break;
-                    default: break
+                        case 0:bici = "bicia"; break;
+                        case 1:bici = "bicib"; break;
+                        case 2:bici = "bicic"; break;
+                        case 3:bici = "bicid"; break;
+                        case 4:bici = "bicie"; break;
+                        case 5:bici = "bicif"; break;
+                        default: break
                     }
                     punto.pinCustomImageName = bici
                     punto.title = biker.name
@@ -394,10 +400,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let enviado = UserDefaults.standard.string(forKey: "enviado")
         if enviado != "1"{
             
-        let reportado = UserDefaults.standard.string(forKey: "sesion")
-        if reportado != nil{
-            if reportado == "1"{
-                
+        let sesion = UserDefaults.standard.string(forKey: "sesion")
+        if sesion != nil{
+            if sesion == "1"{
                 let long = lastlocation?.coordinate.longitude
                 let lat = lastlocation?.coordinate.latitude
                 var name = UserDefaults.standard.string(forKey: "nombre")
@@ -425,11 +430,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         print("Data saved successfully!")
                         UserDefaults.standard.set("1", forKey: "enviado")
                         UserDefaults.standard.set(thisUsersGamesRef.key, forKey: "keySelf")
-                        
                     }
                 }
             }else{
-                print(reportado!)
+                print(sesion!)
             }
         }
         }
@@ -441,6 +445,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         //si y solo si estoy logueado
         //mando nombre, bike, ubication
         let reportado = UserDefaults.standard.string(forKey: "sesion")
+        let enviado = UserDefaults.standard.string(forKey: "enviado")
+        if enviado != "1"{
+
         if reportado != nil{
             if reportado == "1"{
 
@@ -472,12 +479,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         UserDefaults.standard.set("1", forKey: "enviado")
                         UserDefaults.standard.set(thisUsersGamesRef.key, forKey: "keySelf")
                         
-                        self.listenerBikers()
                     }
                 }
             }else{
                 print(reportado!)
             }
+        }
         }
     }
     
