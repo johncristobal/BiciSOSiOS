@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 UserDefaults.standard.set("null", forKey: "keySelf")
                 UserDefaults.standard.set("null", forKey: "enviado")
-                
+                print("null everything")
                 let ref = Database.database().reference()
                 let thisUsersGamesRef = ref.child("bikers")
                 thisUsersGamesRef.child(bici!).removeValue()
