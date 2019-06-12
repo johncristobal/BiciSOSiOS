@@ -135,12 +135,16 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
                 let name = datos["name"] as! String
                 let serie = datos["serie"] as! String
                 
+                let tipo = datos["tipo"] as! Int
+                let latitud = datos["latitud"] as! Double
+                let longitude = datos["longitude"] as! Double
+                
                 var fotos = ""
                 if datos["fotos"] != nil{
                     fotos = datos["fotos"] as! String
                 }
                 
-                self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos))
+                self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos, tipo: tipo, latitude: latitud, longitude: longitude))
             }
             
             /*for child in data.children {
@@ -283,13 +287,16 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
                         let estatus = datos["estatus"] as! Int
                         let name = datos["name"] as! String
                         let serie = datos["serie"] as! String
+                        let tipo = datos["tipo"] as! Int
+                        let latitud = datos["latitude"] as! Double
+                        let longitude = datos["longitude"] as! Double
                         
                         var fotos = ""
                         if datos["fotos"] != nil{
                             fotos = datos["fotos"] as! String
                         }
                         
-                        self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos))
+                        self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos, tipo: tipo, latitude: latitud, longitude: longitude))
                     }
                     
                     //let datos = datosTemp["-LcMv7u_I6OAJ80ZEg5a"] as! [String: Any]

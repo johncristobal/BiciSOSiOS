@@ -44,6 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         setLocation()
         //getTalleres()
         listenerBikers()
+        listenerReports()
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(abrirAlerta))
         alertaAction.isUserInteractionEnabled = true
@@ -54,6 +55,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     override func viewDidAppear(_ animated: Bool) {
         
+        print("appear again")
         /*if mapaListo{
             let enviado = UserDefaults.standard.string(forKey: "enviado")
             if enviado != "1"{
@@ -247,7 +249,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     marker.title = biker.name
                     //marker.snippet = taller.description
                     marker.icon = self.imageWithImage(image: UIImage(named: bici)!, newSize: CGSize(width: 65.0, height: 40.0)) //UIImage(named: bici)
-                    marker.userData = "bici"
+                    marker.userData = "bici,\(biker.id)"
                     marker.map = self.mapView
                     
                     self.hashMapMarker[biker.id] = punto
@@ -277,35 +279,48 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func listenerReports(){
-        
         var ref: DatabaseReference!
         ref = Database.database().reference().child("reportes")
         ref.observe(.value, with: { (data) in
             
-            self.bikers.removeAll()
+            self.reportes.removeAll()
             //self.reportIdS.removeAll()
             var newIds : [String] = []
-
             
             for child in data.children {
                 let snap = child as! DataSnapshot
                 let datos = snap.value as! [String: Any]
                 let id = datos["id"] as! String
                 let name = datos["name"] as! String
-                let tipo = datos["bici"] as! Int
-                let latitud = datos["latitud"] as! Double
+                let serie = datos["serie"] as! String
+                let description = datos["description"] as! String
+                let tipo = datos["tipo"] as! Int
+                let latitud = datos["latitude"] as! Double
                 let longitude = datos["longitude"] as! Double
+                
                 var bici = ""
+                var ancho = 65.0
+                var alto = 40.0
+                
                 switch tipo{
                     case 0:bici = "bicia"; break;
-                    case 1:bici = "bicib"; break;
-                    case 2:bici = "bicic"; break;
+                    case 1:
+                        bici = "alertafinal"
+                        ancho = 50.0
+                        alto = 50.0
+                        break
+                    case 2:
+                        bici = "averiaicon"
+                        ancho = 50.0
+                        alto = 50.0
+                        break;
                     case 3:bici = "bicid"; break;
                     case 4:bici = "bicie"; break;
                     case 5:bici = "bicif"; break;
                     default: break
                 }
-                //self.bikers.append(Biker(id: id, name: name, bici: bici, latitud: latitud, longitude: longitude))
+                
+                //self.reportes.append(Report(id: id, name: name, bici: bici, latitud: latitud, longitude: longitude))
                 
                 /*let date = datos["date"] as! String
                 let description = datos["description"] as! String
@@ -323,12 +338,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 marker.position = CLLocationCoordinate2D(latitude: latitud, longitude: longitude)
                 marker.title = name
                 //marker.snippet = taller.description
-                marker.icon = self.imageWithImage(image: UIImage(named: bici)!, newSize: CGSize(width: 65.0, height: 40.0)) //UIImage(named: bici)
-                marker.userData = "reporte"
+                marker.icon = self.imageWithImage(image: UIImage(named: bici)!, newSize: CGSize(width: ancho, height: alto)) //UIImage(named: bici)
+                marker.userData = "reporte,\(id)"
                 marker.map = self.mapView
             }
             
-            self.bikers.forEach({ (biker) in
+            /*self.bikers.forEach({ (biker) in
                 
                 newIds.append(biker.id)
                 
@@ -385,7 +400,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         //print(self.reportIdS)
                     }
                 })
-            })
+            })*/
+            
         }) { (error) in
             print(error)
         }
@@ -497,7 +513,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
-        if marker.userData as? String == "bici"{
+        let userdata = marker.userData as? String
+        
+        if (userdata?.contains("bici"))!{
+            let idbiker = userdata?.split(separator: ",")[1]
+            //performSegue(withIdentifier: "alertas", sender: lastlocation)
+            print(idbiker!)
+            return true
+        }else if (userdata?.contains("reporte"))!{
+            let idreporte = userdata?.split(separator: ",")[1]
+            print(idreporte!)
             return true
         }
         

@@ -41,7 +41,7 @@ class AlertasViewController: UIViewController {
     }
     
     @IBAction func cicloviaAction(_ sender: Any) {
-        performSegue(withIdentifier: "cicloviaShow", sender: nil)
+        performSegue(withIdentifier: "cicloviaShow", sender: location)
     }
     
     @IBAction func helpAction(_ sender: Any) {
@@ -49,7 +49,7 @@ class AlertasViewController: UIViewController {
     }
     
     @IBAction func averiaAction(_ sender: Any) {
-        performSegue(withIdentifier: "averiaShow", sender: nil)
+        performSegue(withIdentifier: "averiaShow", sender: location)
     }
     
     @IBAction func apoyoAction(_ sender: Any) {
@@ -58,7 +58,7 @@ class AlertasViewController: UIViewController {
     
     @IBAction func alertaAction(_ sender: Any) {
         
-        performSegue(withIdentifier: "alertaMain", sender: nil)
+        performSegue(withIdentifier: "alertaMain", sender: location)
         
         /*
         let storyboard = self.storyboard//UIStoryboard(name: "Main", bundle: nil)
@@ -77,8 +77,12 @@ class AlertasViewController: UIViewController {
         if segue.identifier == "alertaMain"{
             let vc = segue.destination as? ReportFragmentViewController
             vc?.location = sender as! CLLocation
+        }else if segue.identifier == "averiaShow"{
+            let vc = segue.destination as? AveriaViewController
+            vc?.location = sender as! CLLocation
+        }else if segue.identifier == "cicloviaShow"{
+            let vc = segue.destination as? CicloviaViewController
+            vc?.location = sender as! CLLocation
         }
     }
- 
-    
 }

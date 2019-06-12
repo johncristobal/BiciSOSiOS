@@ -16,8 +16,11 @@ struct Report: Codable{
     var estatus: Int
     var date: String
     var fotos: String
+    var tipo: Int
+    var latitude: Double
+    var longitude: Double
 
-    init(id: String, name:String, serie:String, description:String, estatus: Int, date: String, fotos: String) {
+    init(id: String, name:String, serie:String, description:String, estatus: Int, date: String, fotos: String, tipo:Int, latitude: Double, longitude:Double) {
         self.id = id
         self.name = name
         self.serie = serie
@@ -25,5 +28,8 @@ struct Report: Codable{
         self.estatus = estatus
         self.date = date
         self.fotos = fotos
+        self.tipo = tipo
+        self.latitude = latitude
+        self.longitude = longitude
     }
 }
