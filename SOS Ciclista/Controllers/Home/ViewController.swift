@@ -322,9 +322,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         ancho = 50.0
                         alto = 50.0
                         break;
-                    case 3:bici = "bicid"; break;
-                    case 4:bici = "bicie"; break;
-                    case 5:bici = "bicif"; break;
+                    case 3:
+                        bici = "cicloviaicon"
+                        ancho = 50.0
+                        alto = 50.0
+                        break
+                    case 4:
+                        bici = "apoyoicon"
+                        ancho = 50.0
+                        alto = 50.0
+                        break
                     default: break
                 }
                 

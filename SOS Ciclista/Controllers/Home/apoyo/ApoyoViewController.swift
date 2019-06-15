@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ApoyoViewController: UIViewController {
 
     @IBOutlet var apoyoIcon: UIButton!
-    
+    var location : CLLocation? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(white: 0.0, alpha: 0.7)
@@ -26,19 +28,24 @@ class ApoyoViewController: UIViewController {
     }
     
     @IBAction func apoyoAction(_ sender: Any) {
+        performSegue(withIdentifier: "detalleApoyo", sender: location)
     }
     
     @IBAction func vallaAction(_ sender: Any) {
-        performSegue(withIdentifier: "detalleApoyo", sender: nil)
+        performSegue(withIdentifier: "detalleApoyo", sender: location)
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "detalleApoyo"{
+            let vc = segue.destination as? DetalleApoyoViewController
+            vc?.location = sender as! CLLocation
+        }
     }
-    */
+ 
 
 }

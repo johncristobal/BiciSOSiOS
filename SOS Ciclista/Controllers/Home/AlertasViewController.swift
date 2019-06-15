@@ -53,18 +53,11 @@ class AlertasViewController: UIViewController {
     }
     
     @IBAction func apoyoAction(_ sender: Any) {
-        performSegue(withIdentifier: "apoyoShow", sender: nil)
+        performSegue(withIdentifier: "apoyoShow", sender: location)
     }
     
     @IBAction func alertaAction(_ sender: Any) {
-        
         performSegue(withIdentifier: "alertaMain", sender: location)
-        
-        /*
-        let storyboard = self.storyboard//UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard!.instantiateViewController(withIdentifier: "reportFragment") as! ReportFragmentViewController
-        present(vc, animated: true, completion: nil)
-         */
     }
     
     
@@ -82,6 +75,9 @@ class AlertasViewController: UIViewController {
             vc?.location = sender as! CLLocation
         }else if segue.identifier == "cicloviaShow"{
             let vc = segue.destination as? CicloviaViewController
+            vc?.location = sender as! CLLocation
+        }else if segue.identifier == "apoyoShow"{
+            let vc = segue.destination as? ApoyoViewController
             vc?.location = sender as! CLLocation
         }
     }

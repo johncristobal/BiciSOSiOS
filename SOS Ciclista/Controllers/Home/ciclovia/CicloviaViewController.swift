@@ -16,6 +16,7 @@ class CicloviaViewController: UIViewController {
     @IBOutlet var textDetails: UITextField!
     @IBOutlet var cicloviaIcon: UIButton!
     var location : CLLocation? = nil
+    let nameNot = Notification.Name("gracias")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +58,7 @@ class CicloviaViewController: UIViewController {
                     "estatus": 1,
                     "date":fechaString,
                     "fotos": "sinfotos",
-                    "tipo": 2,
+                    "tipo": 3,
                     "latitude": location?.coordinate.latitude,
                     "longitude": location?.coordinate.longitude
                 ]
@@ -66,7 +67,11 @@ class CicloviaViewController: UIViewController {
                     print("Data could not be saved: \(error).")
                 } else {
                     print("Data saved successfully!")
-                self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
+                    //self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
+                    self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: {
+                        NotificationCenter.default.post(name: self.nameNot, object: nil)
+                        
+                    })
                 }
             }
         }

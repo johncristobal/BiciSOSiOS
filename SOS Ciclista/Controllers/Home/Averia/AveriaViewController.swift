@@ -36,8 +36,8 @@ class AveriaViewController: UIViewController {
     @IBAction func sendReportAction(_ sender: Any) {
         
         if detallesText.text == ""{
-            showmessage(message: "Describe tu averia", controller: self)
-        }else{
+            showmessage(message: "Describe tu averia...", controller: self)
+        }else{ 
             let name = UserDefaults.standard.string(forKey: "nombre")
             let serie = UserDefaults.standard.string(forKey: "serie")
             let desc = detallesText.text
