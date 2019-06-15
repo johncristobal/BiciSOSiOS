@@ -33,6 +33,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     var mapView : GMSMapView? = nil
     
+    let name = Notification.Name("gracias")
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -51,6 +53,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         alertaAction.addGestureRecognizer(gesture)
         
         print("viewdidload viewcontroller")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showThanks), name: name, object: nil)
+    }
+    
+    @objc func showThanks(){
+        self.performSegue(withIdentifier: "gracias", sender: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {

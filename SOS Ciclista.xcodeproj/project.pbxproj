@@ -49,6 +49,7 @@
 		8B3D5BC122322E9800727464 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC022322E9800727464 /* MenuViewController.swift */; };
 		8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC222322FEC00727464 /* SerieViewController.swift */; };
 		8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */; };
+		8B97847622B4702C004F2836 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97847522B4702C004F2836 /* ThanksViewController.swift */; };
 		8BA1B5B722591C0000C43529 /* ReportFragmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1B5B622591C0000C43529 /* ReportFragmentViewController.swift */; };
 		8BA1B5B922625BB500C43529 /* DetalleReporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1B5B822625BB200C43529 /* DetalleReporteViewController.swift */; };
 		8BA625A422358585008E9337 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA625A322358585008E9337 /* DataManager.swift */; };
@@ -109,6 +110,7 @@
 		8B3D5BC022322E9800727464 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC222322FEC00727464 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		8B97847522B4702C004F2836 /* ThanksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
 		8BA1B5B622591C0000C43529 /* ReportFragmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFragmentViewController.swift; sourceTree = "<group>"; };
 		8BA1B5B822625BB200C43529 /* DetalleReporteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleReporteViewController.swift; sourceTree = "<group>"; };
 		8BA625A322358585008E9337 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				7D80AC62228B73A30038AF06 /* Bicipin.swift */,
 				8B085180228BC3FB008EE2FC /* Bicipinview.swift */,
 				7DBA8881229F34A20093BD2D /* AlertasViewController.swift */,
+				8B97847522B4702C004F2836 /* ThanksViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				8B29B46222658B980079280C /* FirstViewController.swift in Sources */,
 				7D4980D92292E89E005EA139 /* Biker.swift in Sources */,
 				7DBA8882229F34A20093BD2D /* AlertasViewController.swift in Sources */,
+				8B97847622B4702C004F2836 /* ThanksViewController.swift in Sources */,
 				7D99F886226E861500E1AAE5 /* TipTableViewCell.swift in Sources */,
 				7D80AC63228B73A30038AF06 /* Bicipin.swift in Sources */,
 				8B085181228BC3FB008EE2FC /* Bicipinview.swift in Sources */,

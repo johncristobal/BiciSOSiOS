@@ -17,6 +17,8 @@ class AveriaViewController: UIViewController {
     @IBOutlet weak var averiaIcon: UIButton!
     var location : CLLocation? = nil
     
+    let nameNot = Notification.Name("gracias")
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(white: 0.0, alpha: 0.7)
@@ -65,7 +67,12 @@ class AveriaViewController: UIViewController {
                     print("Data could not be saved: \(error).")
                 } else {
                     print("Data saved successfully!")
-                self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
+                    self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: {
+                            NotificationCenter.default.post(name: self.nameNot, object: nil)
+                        
+                    })
+                    //self.performSegue(withIdentifier: "gracias", sender: nil)
+
                 }
             }
         }
