@@ -14,7 +14,7 @@ import FacebookLogin
 import Firebase
 import GoogleMaps
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate,GMSMapViewDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate,GMSMapViewDelegate,MapMarkerDelegate {
 
     @IBOutlet var mapaGoogle: UIView!
     @IBOutlet var alertaAction: UIImageView!
@@ -32,13 +32,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     var lastlocation : CLLocation? = nil
     
     var mapView : GMSMapView? = nil
+    private var infoWindow = MapMarkerCustom()
+    fileprivate var locationMarker : GMSMarker? = GMSMarker()
     
     let name = Notification.Name("gracias")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        self.infoWindow = loadNiB()
+        
         //mapview.register(Bicipinview.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
 
         flagLocation = true
@@ -422,6 +425,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
+    func loadNiB() -> MapMarkerCustom {
+        let infoWindow = MapMarkerCustom.instanceFromNib() as! MapMarkerCustom
+        return infoWindow
+    }
     
     func initListenerBikeOnce(){
         
@@ -538,10 +545,55 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }else if (userdata?.contains("reporte"))!{
             let idreporte = userdata?.split(separator: ",")[1]
             print(idreporte!)
-            return true
+            
+            locationMarker = marker
+            infoWindow.removeFromSuperview()
+            infoWindow = loadNiB()
+            
+            guard let location = locationMarker?.position else {
+                print("locationMarker is nil")
+                return false
+            }
+            
+            infoWindow.spotData = userdata
+            infoWindow.delegate = self //as! MapMarkerDelegate
+            
+            // Configure UI properties of info window
+            //infoWindow.alpha = 0.9
+            infoWindow.layer.cornerRadius = 12
+            //infoWindow.layer.borderWidth = 2
+            //infoWindow.layer.borderColor = UIColor(named: "19E698")?.cgColor
+            infoWindow.infoButton.layer.cornerRadius = infoWindow.infoButton.frame.height / 2
+            
+            infoWindow.addressLabel.text = "\(idreporte!)"
+            infoWindow.center = mapView.projection.point(for: location)
+            infoWindow.center.y = infoWindow.center.y - 100
+            self.view.addSubview(infoWindow)
+            return false
+
+            //return true
         }
         
         return false
+    }
+    
+    func didTapInfoButton(data: String) {
+        print(data)
+    }
+
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        if (locationMarker != nil){
+            guard let location = locationMarker?.position else {
+                print("locationMarker is nil")
+                return
+            }
+            infoWindow.center = mapView.projection.point(for: location)
+            infoWindow.center.y = infoWindow.center.y - 100
+        }
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        infoWindow.removeFromSuperview()
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

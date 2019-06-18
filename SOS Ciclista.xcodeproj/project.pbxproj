@@ -50,6 +50,8 @@
 		8B3D5BC322322FEC00727464 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC222322FEC00727464 /* SerieViewController.swift */; };
 		8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */; };
 		8B97847622B4702C004F2836 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97847522B4702C004F2836 /* ThanksViewController.swift */; };
+		8B97847822B882A4004F2836 /* MapMarkerCustom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B97847722B882A4004F2836 /* MapMarkerCustom.xib */; };
+		8B97847A22B883FA004F2836 /* MapMarkerCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97847922B883FA004F2836 /* MapMarkerCustom.swift */; };
 		8BA1B5B722591C0000C43529 /* ReportFragmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1B5B622591C0000C43529 /* ReportFragmentViewController.swift */; };
 		8BA1B5B922625BB500C43529 /* DetalleReporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1B5B822625BB200C43529 /* DetalleReporteViewController.swift */; };
 		8BA625A422358585008E9337 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA625A322358585008E9337 /* DataManager.swift */; };
@@ -111,6 +113,8 @@
 		8B3D5BC222322FEC00727464 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
 		8B3D5BC42232338B00727464 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		8B97847522B4702C004F2836 /* ThanksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksViewController.swift; sourceTree = "<group>"; };
+		8B97847722B882A4004F2836 /* MapMarkerCustom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapMarkerCustom.xib; sourceTree = "<group>"; };
+		8B97847922B883FA004F2836 /* MapMarkerCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerCustom.swift; sourceTree = "<group>"; };
 		8BA1B5B622591C0000C43529 /* ReportFragmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFragmentViewController.swift; sourceTree = "<group>"; };
 		8BA1B5B822625BB200C43529 /* DetalleReporteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleReporteViewController.swift; sourceTree = "<group>"; };
 		8BA625A322358585008E9337 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				8B085180228BC3FB008EE2FC /* Bicipinview.swift */,
 				7DBA8881229F34A20093BD2D /* AlertasViewController.swift */,
 				8B97847522B4702C004F2836 /* ThanksViewController.swift */,
+				8B97847922B883FA004F2836 /* MapMarkerCustom.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				8BB95C29222C8C4000ABA1F9 /* Main.storyboard */,
 				7DD69774223720CA00810255 /* customPin.xib */,
 				7D80AC60228B72FD0038AF06 /* biciPin.xib */,
+				8B97847722B882A4004F2836 /* MapMarkerCustom.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				7D2775B2229DEA12005181FA /* splash.mp4 in Resources */,
 				7DBA888422A579370093BD2D /* style_json.json in Resources */,
 				8BB95C30222C8C4300ABA1F9 /* Assets.xcassets in Resources */,
+				8B97847822B882A4004F2836 /* MapMarkerCustom.xib in Resources */,
 				7D80AC61228B72FD0038AF06 /* biciPin.xib in Resources */,
 				8BB95C2B222C8C4000ABA1F9 /* Main.storyboard in Resources */,
 			);
@@ -611,6 +618,7 @@
 				7D99F886226E861500E1AAE5 /* TipTableViewCell.swift in Sources */,
 				7D80AC63228B73A30038AF06 /* Bicipin.swift in Sources */,
 				8B085181228BC3FB008EE2FC /* Bicipinview.swift in Sources */,
+				8B97847A22B883FA004F2836 /* MapMarkerCustom.swift in Sources */,
 				8BB95C41222F6DBA00ABA1F9 /* SWRevealViewController.m in Sources */,
 				7D2775B0229DE8EC005181FA /* SplashViewController.swift in Sources */,
 				7D99F888226E8C2100E1AAE5 /* DetalleTipViewController.swift in Sources */,
