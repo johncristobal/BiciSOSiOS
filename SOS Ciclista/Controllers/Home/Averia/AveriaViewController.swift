@@ -37,7 +37,7 @@ class AveriaViewController: UIViewController {
         
         if detallesText.text == ""{
             showmessage(message: "Describe tu averia...", controller: self)
-        }else{ 
+        }else{
             let name = UserDefaults.standard.string(forKey: "nombre")
             let serie = UserDefaults.standard.string(forKey: "serie")
             let desc = detallesText.text
