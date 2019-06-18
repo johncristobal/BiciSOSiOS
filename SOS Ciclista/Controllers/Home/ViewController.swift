@@ -331,7 +331,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         bici = "apoyoicon"
                         ancho = 50.0
                         alto = 50.0
-                        break
+                    break
                     default: break
                 }
                 
@@ -421,7 +421,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             print(error)
         }
     }
-    
     
     func initListenerBikeOnce(){
         
@@ -527,6 +526,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        //marker.icon = [UIImage imageWithImage:imageData scale:2.0];
+        marker.icon = self.imageWithImage(image: UIImage(named: "bicia")!, newSize: CGSize(width: 70.0, height: 70.0)) //UIImage(named: bici)
         
         let userdata = marker.userData as? String
         

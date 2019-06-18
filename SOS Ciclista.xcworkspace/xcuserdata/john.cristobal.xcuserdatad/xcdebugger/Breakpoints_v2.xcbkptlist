@@ -442,7 +442,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.89476"
+            timestampString = "582501696.847663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "186"
@@ -458,7 +458,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.895287"
+            timestampString = "582501696.8495851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "208"
@@ -506,7 +506,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.895854"
+            timestampString = "582501696.850242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "238"
@@ -522,12 +522,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.8962131"
+            timestampString = "582501696.8510751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "194"
             endingLineNumber = "194"
-            landmarkName = "listenerBikers()"
+            landmarkName = "getTalleres()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -538,7 +538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.896539"
+            timestampString = "582501696.85158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "212"
@@ -554,7 +554,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.896845"
+            timestampString = "582501696.852524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "236"
@@ -602,11 +602,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.897135"
+            timestampString = "582501696.853025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "629"
-            endingLineNumber = "629"
+            startingLineNumber = "631"
+            endingLineNumber = "631"
             landmarkName = "mapView(_:annotationView:calloutAccessoryControlTapped:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -618,12 +618,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.897421"
+            timestampString = "582501696.855358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "508"
-            endingLineNumber = "508"
-            landmarkName = "mapView(_:didSelect:)"
+            startingLineNumber = "507"
+            endingLineNumber = "507"
+            landmarkName = "initListenerBike()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -634,12 +634,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.897761"
+            timestampString = "582501696.856016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "508"
-            endingLineNumber = "508"
-            landmarkName = "mapView(_:didSelect:)"
+            startingLineNumber = "507"
+            endingLineNumber = "507"
+            landmarkName = "initListenerBike()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -650,12 +650,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.8980581"
+            timestampString = "582501696.85675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "509"
-            endingLineNumber = "509"
-            landmarkName = "mapView(_:didSelect:)"
+            startingLineNumber = "508"
+            endingLineNumber = "508"
+            landmarkName = "initListenerBike()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -698,12 +698,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SOS Ciclista/Controllers/Home/ViewController.swift"
-            timestampString = "582070450.898463"
+            timestampString = "582501696.857455"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "285"
             endingLineNumber = "285"
-            landmarkName = "listenerReports()"
+            landmarkName = "listenerBikers()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
