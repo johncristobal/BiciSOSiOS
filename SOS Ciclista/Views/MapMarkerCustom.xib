@@ -16,43 +16,92 @@
             <rect key="frame" x="0.0" y="0.0" width="309" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backyellow" translatesAutoresizingMaskIntoConstraints="NO" id="JSw-tD-YbW">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lastback" translatesAutoresizingMaskIntoConstraints="NO" id="JSw-tD-YbW">
                     <rect key="frame" x="0.0" y="0.0" width="309" height="250"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8Q-CQ-xL0">
-                    <rect key="frame" x="133.5" y="16" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="16" y="8" width="277" height="19"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" text="# Serie: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iq4-C1-vQ5">
+                    <rect key="frame" x="16" y="35" width="277" height="16.5"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVH-Uz-YoA">
-                    <rect key="frame" x="104" y="87" width="100" height="30"/>
+                    <rect key="frame" x="104" y="191" width="100" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="X"/>
                     <connections>
                         <action selector="didTapInfoButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="4D5-X1-20O"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMb-dK-Dq4">
+                    <rect key="frame" x="16" y="55.5" width="277" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" text="# Serie: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTh-O0-9ce">
+                            <rect key="frame" x="8" y="8" width="261" height="80"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" text="# Serie: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftp-rm-qCd">
+                            <rect key="frame" x="0.0" y="104" width="277" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="YjY-hx-WFl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92941176470588238" green="0.9137254901960784" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ftp-rm-qCd" secondAttribute="bottom" constant="1" id="2Du-tV-tCM"/>
+                        <constraint firstAttribute="trailing" secondItem="ftp-rm-qCd" secondAttribute="trailing" id="7fx-9u-jVB"/>
+                        <constraint firstItem="ftp-rm-qCd" firstAttribute="leading" secondItem="DMb-dK-Dq4" secondAttribute="leading" id="Qcl-kp-x6K"/>
+                        <constraint firstItem="ftp-rm-qCd" firstAttribute="top" secondItem="BTh-O0-9ce" secondAttribute="bottom" constant="16" id="SNO-2w-Wlu"/>
+                        <constraint firstItem="BTh-O0-9ce" firstAttribute="top" secondItem="DMb-dK-Dq4" secondAttribute="top" constant="8" id="iCU-UW-dmY"/>
+                        <constraint firstAttribute="trailing" secondItem="BTh-O0-9ce" secondAttribute="trailing" constant="8" id="sy9-Mn-oaA"/>
+                        <constraint firstItem="BTh-O0-9ce" firstAttribute="leading" secondItem="DMb-dK-Dq4" secondAttribute="leading" constant="8" id="szv-vP-j9L"/>
+                        <constraint firstAttribute="height" constant="120" id="wLn-SC-IHu"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="JSw-tD-YbW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3qV-Jj-yo6"/>
+                <constraint firstItem="p8Q-CQ-xL0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="5m5-Xb-j24"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JSw-tD-YbW" secondAttribute="trailing" id="6HM-TU-WFD"/>
-                <constraint firstItem="p8Q-CQ-xL0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="Ehe-yb-WjI"/>
+                <constraint firstItem="p8Q-CQ-xL0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="Ehe-yb-WjI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JSw-tD-YbW" secondAttribute="bottom" id="FgM-TG-LIB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="p8Q-CQ-xL0" secondAttribute="trailing" constant="16" id="Jqq-uU-YsM"/>
                 <constraint firstItem="JSw-tD-YbW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UY6-ef-6RR"/>
                 <constraint firstItem="p8Q-CQ-xL0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eNH-TG-w4z"/>
+                <constraint firstItem="iq4-C1-vQ5" firstAttribute="leading" secondItem="p8Q-CQ-xL0" secondAttribute="leading" id="i9o-n1-TMN"/>
+                <constraint firstItem="DMb-dK-Dq4" firstAttribute="trailing" secondItem="iq4-C1-vQ5" secondAttribute="trailing" id="nZf-7u-z3L"/>
+                <constraint firstItem="DMb-dK-Dq4" firstAttribute="leading" secondItem="iq4-C1-vQ5" secondAttribute="leading" id="rjI-rG-qDF"/>
+                <constraint firstItem="DMb-dK-Dq4" firstAttribute="top" secondItem="iq4-C1-vQ5" secondAttribute="bottom" constant="4" id="uaG-GT-hZq"/>
+                <constraint firstItem="iq4-C1-vQ5" firstAttribute="top" secondItem="p8Q-CQ-xL0" secondAttribute="bottom" constant="8" id="xIv-9v-h4J"/>
+                <constraint firstItem="iq4-C1-vQ5" firstAttribute="trailing" secondItem="p8Q-CQ-xL0" secondAttribute="trailing" id="ySg-Kv-xfC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="addressLabel" destination="p8Q-CQ-xL0" id="75w-3A-2EU"/>
+                <outlet property="detailsView" destination="DMb-dK-Dq4" id="RAh-WN-ZSF"/>
+                <outlet property="detalleText" destination="BTh-O0-9ce" id="Xin-Wn-rBM"/>
+                <outlet property="fechaText" destination="ftp-rm-qCd" id="g8P-We-Ei7"/>
                 <outlet property="infoButton" destination="rVH-Uz-YoA" id="phN-NU-ofB"/>
+                <outlet property="serieLabel" destination="iq4-C1-vQ5" id="5If-gc-2QA"/>
             </connections>
             <point key="canvasLocation" x="85.599999999999994" y="-97.151424287856074"/>
         </view>
     </objects>
     <resources>
-        <image name="backyellow" width="937" height="814"/>
+        <image name="lastback" width="909" height="776"/>
     </resources>
 </document>

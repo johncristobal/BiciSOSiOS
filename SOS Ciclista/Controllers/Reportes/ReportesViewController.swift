@@ -121,8 +121,9 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.reportes.removeAll()
         
-        var ref: DatabaseReference!
-        ref = Database.database().reference().child("reportes")
+        //var ref: DatabaseReference!
+        let ref = Database.database().reference().child("reportes").queryOrdered(byChild: "tipo").queryEqual(toValue: 1)
+        
         ref.observeSingleEvent(of: .value, with: { (data) in
             
             for child in data.children {
@@ -136,7 +137,7 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
                 let serie = datos["serie"] as! String
                 
                 let tipo = datos["tipo"] as! Int
-                let latitud = datos["latitud"] as! Double
+                let latitud = datos["latitude"] as! Double
                 let longitude = datos["longitude"] as! Double
                 
                 var fotos = ""

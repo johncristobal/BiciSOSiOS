@@ -9,18 +9,22 @@
 import UIKit
 
 protocol MapMarkerDelegate: class {
-    func didTapInfoButton(data: String)
+    func didTapInfoButton(data: Report)
 }
 
 class MapMarkerCustom: UIView {
     
+    @IBOutlet var fechaText: UILabel!
+    @IBOutlet var detalleText: UILabel!
+    @IBOutlet var detailsView: UIView!
+    @IBOutlet var serieLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     //@IBOutlet weak var availibilityLabel: UILabel!
     //@IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var infoButton: UIButton!
     
     weak var delegate: MapMarkerDelegate?
-    var spotData: String?
+    var spotData: Report?
     
     @IBAction func didTapInfoButton(_ sender: UIButton) {
         delegate?.didTapInfoButton(data: spotData!)

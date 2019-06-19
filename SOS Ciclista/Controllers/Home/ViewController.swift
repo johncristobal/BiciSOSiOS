@@ -48,8 +48,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         setMenu()
         setLocation()
         //getTalleres()
-        listenerBikers()
-        listenerReports()
+        //listenerBikers()
+        //listenerReports()
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(abrirAlerta))
         alertaAction.isUserInteractionEnabled = true
@@ -67,6 +67,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     override func viewDidAppear(_ animated: Bool) {
         
         print("appear again")
+        
         /*if mapaListo{
             let enviado = UserDefaults.standard.string(forKey: "enviado")
             if enviado != "1"{
@@ -306,6 +307,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 let serie = datos["serie"] as! String
                 let description = datos["description"] as! String
                 let tipo = datos["tipo"] as! Int
+                let date = datos["date"] as! String
+                let estatus = datos["estatus"] as! Int
+                let fotos = datos["fotos"] as! String
                 let latitud = datos["latitude"] as! Double
                 let longitude = datos["longitude"] as! Double
                 
@@ -352,12 +356,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 
                 //self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos))
                 
+                let report = Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos,tipo: tipo, latitude: latitud, longitude:longitude)
+                
                 let marker = GMSMarker()
                 marker.position = CLLocationCoordinate2D(latitude: latitud, longitude: longitude)
                 marker.title = name
                 //marker.snippet = taller.description
                 marker.icon = self.imageWithImage(image: UIImage(named: bici)!, newSize: CGSize(width: ancho, height: alto)) //UIImage(named: bici)
-                marker.userData = "reporte,\(id)"
+                marker.userData = report
                 marker.map = self.mapView
             }
             
@@ -425,12 +431,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
-    func loadNiB() -> MapMarkerCustom {
-        let infoWindow = MapMarkerCustom.instanceFromNib() as! MapMarkerCustom
-        return infoWindow
-    }
-    
-    func initListenerBikeOnce(){
+    /*func initListenerBikeOnce(){
         
         //primero enviar mi bike para que este en fierbase
         //si y solo si estoy logueado
@@ -475,7 +476,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             }
         }
         }
-    }
+    }*/
     
     func initListenerBike(){
         
@@ -533,20 +534,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }*/
     }
     
+    func loadNiB() -> MapMarkerCustom {
+        let infoWindow = MapMarkerCustom.instanceFromNib() as! MapMarkerCustom
+        return infoWindow
+    }
+    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
         //marker.icon = [UIImage imageWithImage:imageData scale:2.0];
-        marker.icon = self.imageWithImage(image: UIImage(named: "bicia")!, newSize: CGSize(width: 70.0, height: 70.0)) //UIImage(named: bici)
+        //marker.icon = self.imageWithImage(image: UIImage(named: "bicia")!, newSize: CGSize(width: 70.0, height: 70.0)) //UIImage(named: bici)
         
-        let userdata = marker.userData as? String
+        let userdata = marker.userData as? Report
         
-        if (userdata?.contains("bici"))!{
+        /*if (userdata?.contains("bici"))!{
             let idbiker = userdata?.split(separator: ",")[1]
             //performSegue(withIdentifier: "alertas", sender: lastlocation)
             print(idbiker!)
             return true
-        }else if (userdata?.contains("reporte"))!{
-            let idreporte = userdata?.split(separator: ",")[1]
+        }else */
+        if (userdata?.tipo == 1 || userdata?.tipo == 2 || userdata?.tipo == 3 || userdata?.tipo == 4){
+            let idreporte = userdata?.id
             print(idreporte!)
             
             locationMarker = marker
@@ -563,25 +570,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             // Configure UI properties of info window
             //infoWindow.alpha = 0.9
-            infoWindow.layer.cornerRadius = 12
+            infoWindow.detailsView.layer.cornerRadius = 10
             //infoWindow.layer.borderWidth = 2
             //infoWindow.layer.borderColor = UIColor(named: "19E698")?.cgColor
             infoWindow.infoButton.layer.cornerRadius = infoWindow.infoButton.frame.height / 2
             
-            infoWindow.addressLabel.text = "\(idreporte!)"
-            infoWindow.center = mapView.projection.point(for: location)
-            infoWindow.center.y = infoWindow.center.y - 100
-            self.view.addSubview(infoWindow)
-            return false
+            infoWindow.addressLabel.text = userdata?.name
+            infoWindow.detalleText.text = userdata?.description
+            infoWindow.fechaText.text = userdata?.date
+            if let descrip = userdata?.serie{
+                infoWindow.serieLabel.text = "# Serie: \(descrip)"
+            }
 
-            //return true
+            infoWindow.center = mapView.projection.point(for: location)
+            infoWindow.center.y = infoWindow.center.y - 110
+            self.view.addSubview(infoWindow)
+            //return false
+
+            return true
         }
         
         return false
     }
     
-    func didTapInfoButton(data: String) {
+    func didTapInfoButton(data: Report) {
         print(data)
+        infoWindow.removeFromSuperview()
     }
 
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
@@ -591,7 +605,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 return
             }
             infoWindow.center = mapView.projection.point(for: location)
-            infoWindow.center.y = infoWindow.center.y - 100
+            infoWindow.center.y = infoWindow.center.y - 110
         }
     }
     
@@ -742,7 +756,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 mapView?.delegate = self
                 
                 self.mapaGoogle.addSubview(mapView!)
+                //mando mi ubicaicon
                 initListenerBike()
+                //recuoero talleres
+                getTalleres()
+                //recupero reportes
+                listenerReports()
+                //recupero otros cilista
+                listenerBikers()
                 
                 mapaListo = true
             }
