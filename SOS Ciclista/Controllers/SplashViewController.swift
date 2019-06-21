@@ -60,7 +60,7 @@ class SplashViewController: UIViewController {
         let player = AVPlayer(url: videoURL)
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = self.imagengif.bounds
-        playerLayer.videoGravity = AVLayerVideoGravity.resize
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
         self.imagengif.layer.addSublayer(playerLayer)
         player.play()
         

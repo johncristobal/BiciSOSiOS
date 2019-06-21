@@ -552,7 +552,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             print(idbiker!)
             return true
         }else */
-        if (userdata?.tipo == 1 || userdata?.tipo == 2 || userdata?.tipo == 3 || userdata?.tipo == 4){
+        if userdata?.tipo == 1 {
+            performSegue(withIdentifier: "detalleReporte", sender: userdata)
+            return true
+
+        }else if (userdata?.tipo == 2 || userdata?.tipo == 3 || userdata?.tipo == 4){
             let idreporte = userdata?.id
             print(idreporte!)
             
@@ -782,6 +786,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         if segue.identifier == "alertas"{
             let vc = segue.destination as? AlertasViewController
             vc?.location = sender as! CLLocation
+        }
+        if segue.identifier == "detalleReporte"{
+            let vc = segue.destination as! DetalleReporteViewController
+            vc.report = sender as? Report
         }
      }
 }

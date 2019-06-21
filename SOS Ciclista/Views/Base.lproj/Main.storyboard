@@ -1182,7 +1182,7 @@ y auxilio vial</string>
                         <outlet property="vistaSerieText" destination="TfE-xS-1UH" id="UAe-87-p9P"/>
                         <segue destination="f8L-aS-QNg" kind="show" identifier="sesion" id="9Bx-r1-g3R"/>
                         <segue destination="rWD-wZ-Eei" kind="presentation" identifier="reporte" modalPresentationStyle="overCurrentContext" id="2Wc-eN-v3a"/>
-                        <segue destination="pLU-OA-b9l" kind="presentation" identifier="detalleReporte" animates="NO" modalPresentationStyle="overCurrentContext" id="biv-CZ-KJp"/>
+                        <segue destination="pLU-OA-b9l" kind="presentation" identifier="detalleReporte" modalPresentationStyle="overCurrentContext" id="biv-CZ-KJp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeA-C8-erR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3824,7 +3824,7 @@ y te robaron tu bici, repórtala directamente.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-wE-BYT">
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-wE-BYT">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -3896,6 +3896,7 @@ y te robaron tu bici, repórtala directamente.</string>
                         <outlet property="menuButton" destination="QRO-FT-oGe" id="fjZ-k0-wIS"/>
                         <segue destination="yrC-Wf-HTn" kind="presentation" identifier="alertas" modalPresentationStyle="overCurrentContext" id="x3x-a9-PaN"/>
                         <segue destination="8cW-CQ-DUc" kind="presentation" identifier="gracias" modalPresentationStyle="overCurrentContext" id="koD-ui-bkg"/>
+                        <segue destination="pLU-OA-b9l" kind="presentation" identifier="detalleReporte" modalPresentationStyle="overCurrentContext" id="fPl-DG-IN3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g61-5r-vwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4014,6 +4015,7 @@ y te robaron tu bici, repórtala directamente.</string>
         <image name="vallaciclista" width="320" height="74"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="biv-CZ-KJp"/>
         <segue reference="91z-Mt-Myz"/>
         <segue reference="ZpG-WP-dvz"/>
         <segue reference="8JX-Jj-J98"/>
