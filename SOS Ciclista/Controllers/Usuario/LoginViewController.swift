@@ -13,6 +13,8 @@ import Firebase
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var faceButton: UIButton!
+    @IBOutlet var loadingFace: UIActivityIndicatorView!
     @IBOutlet weak var ingresarButton: UIButton!
     
     
@@ -21,6 +23,12 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         ingresarButton.borderButton()
+        
+        if UserDefaults.standard.string(forKey: "sesion") == "1"{
+             faceButton.setTitle("Salir", for: .normal)
+        }else{
+             faceButton.setTitle("Continuar con facebook", for: .normal)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,8 +45,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func faceAction(_ sender: Any) {
-        let loginManager = LoginManager()
         
+        faceButton.setTitle("", for: .normal)
+        loadingFace.isHidden = false
+        
+        let loginManager = LoginManager()
         loginManager.logIn(readPermissions: [.email, .publicProfile], viewController: self) { (loginResult) in
             switch loginResult {
             case .failed(let error):

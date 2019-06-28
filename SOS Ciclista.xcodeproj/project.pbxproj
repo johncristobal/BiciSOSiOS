@@ -22,6 +22,7 @@
 		7D80AC5F2289F8E00038AF06 /* resultSerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80AC5E2289F8E00038AF06 /* resultSerieViewController.swift */; };
 		7D80AC61228B72FD0038AF06 /* biciPin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D80AC60228B72FD0038AF06 /* biciPin.xib */; };
 		7D80AC63228B73A30038AF06 /* Bicipin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80AC62228B73A30038AF06 /* Bicipin.swift */; };
+		7D810E7322C2D16A004FC03B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D810E7222C2D16A004FC03B /* LoadingViewController.swift */; };
 		7D99F884226E76D300E1AAE5 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F883226E76D300E1AAE5 /* TipsViewController.swift */; };
 		7D99F886226E861500E1AAE5 /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F885226E861500E1AAE5 /* TipTableViewCell.swift */; };
 		7D99F888226E8C2100E1AAE5 /* DetalleTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99F887226E8C2100E1AAE5 /* DetalleTipViewController.swift */; };
@@ -84,6 +85,7 @@
 		7D80AC5E2289F8E00038AF06 /* resultSerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultSerieViewController.swift; sourceTree = "<group>"; };
 		7D80AC60228B72FD0038AF06 /* biciPin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = biciPin.xib; sourceTree = "<group>"; };
 		7D80AC62228B73A30038AF06 /* Bicipin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bicipin.swift; sourceTree = "<group>"; };
+		7D810E7222C2D16A004FC03B /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		7D99F883226E76D300E1AAE5 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		7D99F885226E861500E1AAE5 /* TipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
 		7D99F887226E8C2100E1AAE5 /* DetalleTipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTipViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				7D503345225D436B00B5A0D6 /* Utils.swift */,
+				7D810E7222C2D16A004FC03B /* LoadingViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TLPhotoPicker/TLPhotoPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -561,6 +565,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TLPhotoPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -588,6 +593,7 @@
 				7D5AE3732242B48700E53FCC /* Report.swift in Sources */,
 				7DBA888A22A59B9F0093BD2D /* HelpViewController.swift in Sources */,
 				7D5AE3712242AED800E53FCC /* ReportTableViewCell.swift in Sources */,
+				7D810E7322C2D16A004FC03B /* LoadingViewController.swift in Sources */,
 				7D99F88A226F8E9100E1AAE5 /* Tip.swift in Sources */,
 				7D50334A225E5A3100B5A0D6 /* FinalReporteViewController.swift in Sources */,
 				8B3D5BC52232338B00727464 /* MenuTableViewCell.swift in Sources */,

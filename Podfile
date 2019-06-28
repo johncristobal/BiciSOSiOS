@@ -22,6 +22,7 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 pod "TLPhotoPicker"
 pod "BSImagePicker"
+pod 'SwiftGifOrigin'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
 

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FacebookCore
+import FacebookLogin
 
 var imagen = #imageLiteral(resourceName: "launcher")
 
@@ -18,7 +20,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var nameUser: UILabel!
     let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic"),#imageLiteral(resourceName: "bicie"),#imageLiteral(resourceName: "bicif")]
 
-    let opciones : [String] = [
+    var opciones : [String] = [
         "Reportes",
         "Me robaron la bici...",
         //"# serie con reporte",
@@ -52,19 +54,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         miniView.layer.cornerRadius = 50;
         miniView.layer.masksToBounds = true;
         
-        let name = UserDefaults.standard.string(forKey: "nombre")
-        if name != nil{
-            nameUser.text = name
-        }else{
-            nameUser.text = "SOS Ciclista"
-        }
-
-        let indexbici = UserDefaults.standard.integer(forKey: "bici")
-        if indexbici != -1{
-            biciUser.image = imagenes[indexbici]
-        }else{
-            biciUser.image = imagen
-        }
         let ses = UserDefaults.standard.string(forKey: "sesion")
         if ses != nil{
             sesion = ses!
@@ -73,6 +62,20 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 miniView.isUserInteractionEnabled = true
                 miniView.addGestureRecognizer(tapgesture)
+                
+                let name = UserDefaults.standard.string(forKey: "nombre")
+                if name != nil{
+                    nameUser.text = name
+                }else{
+                    nameUser.text = "SOS Ciclista"
+                }
+                
+                let indexbici = UserDefaults.standard.integer(forKey: "bici")
+                if indexbici != -1{
+                    biciUser.image = imagenes[indexbici]
+                }else{
+                    biciUser.image = imagen
+                }
             }
         }
         
@@ -80,29 +83,43 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     @objc func cambiarIcono(){
-        let indexbici = UserDefaults.standard.integer(forKey: "bici")
-        if indexbici != -1{
-            biciUser.image = imagenes[indexbici]
-        }else{
-            biciUser.image = imagen
-        }
-        let name = UserDefaults.standard.string(forKey: "nombre")
-        if name != nil{
-            nameUser.text = name
-        }else{
-            nameUser.text = "SOS Ciclista"
-        }
+        
+        let tapgesture = UITapGestureRecognizer(target: self, action: #selector(abrirPersonaliza))
+
         let ses = UserDefaults.standard.string(forKey: "sesion")
         if ses != nil{
             sesion = ses!
             if sesion == "1"{
-                let tapgesture = UITapGestureRecognizer(target: self, action: #selector(abrirPersonaliza))
                 
                 miniView.isUserInteractionEnabled = true
                 miniView.addGestureRecognizer(tapgesture)
+                
+                let indexbici = UserDefaults.standard.integer(forKey: "bici")
+                if indexbici != -1{
+                    biciUser.image = imagenes[indexbici]
+                }else{
+                    biciUser.image = imagen
+                }
+                let name = UserDefaults.standard.string(forKey: "nombre")
+                if name != nil{
+                    nameUser.text = name
+                }else{
+                    nameUser.text = "SOS Ciclista"
+                }
+                opciones[5] = "Cerrar sesión"
+                tableview.reloadData()
+            }else{
+                miniView.isUserInteractionEnabled = false
+                miniView.removeGestureRecognizer(tapgesture)
+                opciones[5] = "Iniciar sesión"
+                tableview.reloadData()
             }
+        }else{
+            miniView.isUserInteractionEnabled = false
+            miniView.removeGestureRecognizer(tapgesture)
+            opciones[5] = "Iniciar sesión"
+            tableview.reloadData()
         }
-        tableview.reloadData()
     }
 
     @objc func abrirPersonaliza(){
@@ -121,7 +138,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MenuTableViewCell
         
-        if indexPath.row == 7{
+        if indexPath.row == 5{
             if sesion == "1" {
                 cell.nameText.text = "Cerrar sesión"
                 cell.iconImage.image = iconos[indexPath.row]
@@ -139,19 +156,55 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.revealViewController()?.revealToggle(animated: true)
-        if indexPath.row == 7{
+        if indexPath.row == 5{
             if sesion == "1" {
-                print("cerrar sesion")
+                
+                let refreshAlert = UIAlertController(title: "Atención", message: "¿Deseas cerrar sesión?", preferredStyle: UIAlertController.Style.alert)
+                
+                let action = (UIAlertAction(title: "Sí", style: .default, handler: { (action: UIAlertAction!) in
+                    
+                    print("Cerrando...")
+                    let prefs = UserDefaults.standard
+                    prefs.removeObject(forKey:"sesion")
+                    prefs.removeObject(forKey: "bici")
+                    self.sesion = "0"
+                    
+                    //self.present(myAlert, animated: true, completion: nil)
+                    if AccessToken.current != nil{
+                        let loginManager = LoginManager()
+                        loginManager.logOut()
+                    }
+                    
+                    self.nameUser.text = "SOS Ciclista"
+                    self.biciUser.image = imagen
+                    self.miniView.isUserInteractionEnabled = true
+                    
+                    self.opciones[5] = "Iniciar sesión"
+                    self.tableview.reloadData()
+                   
+                    self.revealViewController()?.revealToggle(animated: true)
+                    NotificationCenter.default.post(name: self.nameNot, object: nil)
+                }))
+                
+                refreshAlert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action: UIAlertAction!) in
+                    
+                    print("Nada...")
+                    
+                }))
+                
+                refreshAlert.addAction(action)
+                present(refreshAlert, animated: true)
+                
             }else{
+                self.revealViewController()?.revealToggle(animated: true)
                 performSegue(withIdentifier: segues[indexPath.row], sender: nil)
             }
         }else{
+            self.revealViewController()?.revealToggle(animated: true)
             performSegue(withIdentifier: segues[indexPath.row], sender: nil)
         }
     }
     
-
     /*
     // MARK: - Navigation
 
