@@ -169,7 +169,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                     prefs.removeObject(forKey: "bici")
                     self.sesion = "0"
                     
-                    //self.present(myAlert, animated: true, completion: nil)
+                    //cierra sesion facebook si hay...
                     if AccessToken.current != nil{
                         let loginManager = LoginManager()
                         loginManager.logOut()

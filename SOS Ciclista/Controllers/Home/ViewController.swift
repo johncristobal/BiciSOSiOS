@@ -36,6 +36,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     fileprivate var locationMarker : GMSMarker? = GMSMarker()
     
     let name = Notification.Name("gracias")
+    let nameNot = Notification.Name("biciIcon")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,9 +48,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         flagLocation = true
         setMenu()
         setLocation()
-        //getTalleres()
-        //listenerBikers()
-        //listenerReports()
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(abrirAlerta))
         alertaAction.isUserInteractionEnabled = true
@@ -58,10 +56,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         print("viewdidload viewcontroller")
         
         NotificationCenter.default.addObserver(self, selector: #selector(showThanks), name: name, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(borrarReportesMapa), name: nameNot, object: nil)
     }
     
     @objc func showThanks(){
         self.performSegue(withIdentifier: "gracias", sender: nil)
+    }
+    
+    @objc func borrarReportesMapa(){
+        self.mapView?.clear()
+        getTalleres()
     }
     
     override func viewDidAppear(_ animated: Bool) {
