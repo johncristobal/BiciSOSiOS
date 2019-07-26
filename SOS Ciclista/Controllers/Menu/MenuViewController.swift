@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 import FacebookCore
 import FacebookLogin
 
@@ -46,6 +48,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     var sesion = "0"
     
     let nameNot = Notification.Name("biciIcon")
+    let closeSesion = Notification.Name("closeSesion")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -170,6 +173,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.sesion = "0"
                     
                     //cierra sesion facebook si hay...
+                    let firebaseAuth = Auth.auth()
+                    do {
+                        try firebaseAuth.signOut()
+                    } catch let signOutError as NSError {
+                        print ("Error signing out: %@", signOutError)
+                    }
+                    
                     if AccessToken.current != nil{
                         let loginManager = LoginManager()
                         loginManager.logOut()
@@ -183,7 +193,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.tableview.reloadData()
                    
                     self.revealViewController()?.revealToggle(animated: true)
-                    NotificationCenter.default.post(name: self.nameNot, object: nil)
+                    NotificationCenter.default.post(name: self.closeSesion, object: nil)
                 }))
                 
                 refreshAlert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action: UIAlertAction!) in

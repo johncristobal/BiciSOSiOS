@@ -36,7 +36,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     fileprivate var locationMarker : GMSMarker? = GMSMarker()
     
     let name = Notification.Name("gracias")
-    let nameNot = Notification.Name("biciIcon")
+    let nameNot = Notification.Name("closeSesion")
+    let namelog = Notification.Name("loggin")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +59,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         NotificationCenter.default.addObserver(self, selector: #selector(showThanks), name: name, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(borrarReportesMapa), name: nameNot, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateMapa), name: namelog, object: nil)
+
     }
     
     @objc func showThanks(){
@@ -67,6 +71,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @objc func borrarReportesMapa(){
         self.mapView?.clear()
         getTalleres()
+    }
+    
+    @objc func updateMapa(){
+        let reportado = UserDefaults.standard.string(forKey: "sesion")        
+        if reportado != nil{
+            if reportado == "1"{
+                //recupero reportes
+                listenerReports()
+                //recupero otros cilista
+                listenerBikers()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -291,6 +307,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 })
             })
         }) { (error) in
+            print("error bikers")
             print(error)
         }
     }
@@ -432,6 +449,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             })*/
             
         }) { (error) in
+            print("errorooooo")
             print(error)
         }
     }
@@ -762,6 +780,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 } catch {
                     NSLog("One or more of the map styles failed to load. \(error)")
                 }
+                mapView?.isMyLocationEnabled = true
                 mapView?.delegate = self
                 
                 self.mapaGoogle.addSubview(mapView!)
@@ -769,10 +788,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 initListenerBike()
                 //recuoero talleres
                 getTalleres()
-                //recupero reportes
-                listenerReports()
-                //recupero otros cilista
-                listenerBikers()
+                let reportado = UserDefaults.standard.string(forKey: "sesion")
+                
+                if reportado != nil{
+                    if reportado == "1"{
+                        //recupero reportes
+                        listenerReports()
+                        //recupero otros cilista
+                        listenerBikers()
+                    }
+                }
                 
                 mapaListo = true
             }

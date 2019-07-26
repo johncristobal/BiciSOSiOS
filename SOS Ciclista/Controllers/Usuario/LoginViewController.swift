@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var loadingFace: UIActivityIndicatorView!
     @IBOutlet weak var ingresarButton: UIButton!
     
+    let namelog = Notification.Name("loggin")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,8 @@ class LoginViewController: UIViewController {
                         print(authResult?.user.displayName!)
                         UserDefaults.standard.set(authResult?.user.displayName!, forKey: "nombre")
                     
+                    NotificationCenter.default.post(name: self.namelog, object: nil)
+
                         //self.dismiss(animated: true, completion: nil)
                         self.performSegue(withIdentifier: "personaliza", sender: nil)
                 }

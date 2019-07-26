@@ -4057,7 +4057,7 @@ y te robaron tu bici, repórtala directamente.</string>
         <image name="vallaciclista" width="320" height="74"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="biv-CZ-KJp"/>
+        <segue reference="fPl-DG-IN3"/>
         <segue reference="91z-Mt-Myz"/>
         <segue reference="O9I-pU-wnc"/>
         <segue reference="YXD-he-ZMI"/>
