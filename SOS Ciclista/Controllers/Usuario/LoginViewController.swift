@@ -30,6 +30,13 @@ class LoginViewController: UIViewController {
         }else{
              faceButton.setTitle("Continuar con facebook", for: .normal)
         }
+        
+        if flagReporteInicial{
+
+            flagReporteInicial = false
+
+            showmessage(message: "Inicia sesión antes de continuar...", controller: self)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,6 +94,12 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    
+    @IBAction func registewrAcrion(_ sender: Any) {
+        //register
+        performSegue(withIdentifier: "register", sender: nil)
     }
     
     /*

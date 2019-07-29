@@ -91,6 +91,10 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
             if Fromlogin == "login" {
                 UserDefaults.standard.set("null", forKey: "from")
                 self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+                
+            }else if Fromlogin == "register"{
+                UserDefaults.standard.set("null", forKey: "from")
+                self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
             }else{
                 dismiss(animated: true, completion: nil)
             }

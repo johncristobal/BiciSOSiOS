@@ -14,6 +14,8 @@ import FacebookLogin
 import Firebase
 import GoogleMaps
 
+var flagReporteInicial = false
+
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate,GMSMapViewDelegate,MapMarkerDelegate {
 
     @IBOutlet var mapaGoogle: UIView!
@@ -120,7 +122,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     @objc func abrirAlerta(){
-        performSegue(withIdentifier: "alertas", sender: lastlocation)
+        //cehcamos si sesion...si no que inicie sesion
+        let sesion = UserDefaults.standard.string(forKey: "sesion")
+        if sesion != nil{
+            if sesion == "1"{
+                performSegue(withIdentifier: "alertas", sender: lastlocation)
+            }
+            else{
+                alertaIniciarSesion()
+            }
+        }else{
+            alertaIniciarSesion()
+        }
+    }
+    
+    func alertaIniciarSesion(){
+
+        flagReporteInicial = true
+        performSegue(withIdentifier: "loginPush", sender: nil)
     }
     
     func setLocation(){
