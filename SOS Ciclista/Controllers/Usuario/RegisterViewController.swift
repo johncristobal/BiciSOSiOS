@@ -25,7 +25,9 @@ class RegisterViewController: UIViewController {
     @IBAction func registrarAction(_ sender: Any) {
         
         //recupèramos datos de los campos, validamos y hacemos el auth fikrebasde
-        
+        if datosCorrectos(){
+            
+        }
         print("acces firebase with enail and pass")
         UserDefaults.standard.set("1", forKey: "sesion")
         UserDefaults.standard.set("register", forKey: "from")
@@ -35,6 +37,27 @@ class RegisterViewController: UIViewController {
         
         //self.dismiss(animated: true, completion: nil)
         self.performSegue(withIdentifier: "personaliza", sender: nil)
+    }
+    
+    func datosCorrectos() -> Bool{
+        if nameText.text == ""{
+            showmessage(message: "Coloca un nombre de usuario...", controller: self)
+            return false
+        }
+        if mailText.text == ""{
+            return false
+        }
+        if passText.text == ""{
+            return false
+        }
+        if passDosText.text == ""{
+            return false
+        }
+        if passText.text != passDosText.text{
+            return false
+        }
+        
+        return true
     }
     
     @IBAction func closeWdinow(_ sender: Any) {
