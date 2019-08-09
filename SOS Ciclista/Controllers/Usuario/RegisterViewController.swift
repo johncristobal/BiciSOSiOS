@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
@@ -20,40 +21,70 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        addToolBar(textField: nameText)
+        addToolBar(textField: mailText)
+        addToolBar(textField: passText)
+        addToolBar(textField: passDosText)
     }
     
     @IBAction func registrarAction(_ sender: Any) {
         
+        loadingRegister.isHidden = false
+        buttonRegister.setTitle("", for: .normal)
+        
         //recupèramos datos de los campos, validamos y hacemos el auth fikrebasde
         if datosCorrectos(){
-            
+            Auth.auth().fetchProviders(forEmail: mailText.text!) { (providers, error) in
+                if providers == nil {
+                    // user doesn't exist
+                    Auth.auth().createUser(withEmail: self.mailText.text!, password: self.passText.text!) { (user, error) in
+                        if let e = error{
+                            //callback?(e)
+                            self.loadingRegister.isHidden = true
+                            self.buttonRegister.setTitle("Registrar", for: .normal)
+                            showmessage(message: "Error al crear usuario, intente más tarde...", controller: self)
+                            return
+                        }
+                        //callback?(nil)
+                        print("acces firebase with email and pass")
+                        UserDefaults.standard.set("1", forKey: "sesion")
+                        UserDefaults.standard.set("register", forKey: "from")
+                        UserDefaults.standard.set(self.nameText.text!, forKey: "nombre")
+                        
+                        //NotificationCenter.default.post(name: self.namelog, object: nil)
+                        
+                        //self.dismiss(animated: true, completion: nil)
+                        self.performSegue(withIdentifier: "personaliza", sender: nil)
+                    }
+                } else {
+                    self.loadingRegister.isHidden = true
+                    self.buttonRegister.setTitle("Registrar", for: .normal)
+                    // user does exist
+                    showmessage(message: "El correo ya existe, inicia sesión...", controller: self)
+                }
+            }
         }
-        print("acces firebase with enail and pass")
-        UserDefaults.standard.set("1", forKey: "sesion")
-        UserDefaults.standard.set("register", forKey: "from")
-        UserDefaults.standard.set("registro prueba", forKey: "nombre")
-        
-        //NotificationCenter.default.post(name: self.namelog, object: nil)
-        
-        //self.dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "personaliza", sender: nil)
     }
     
     func datosCorrectos() -> Bool{
         if nameText.text == ""{
-            showmessage(message: "Coloca un nombre de usuario...", controller: self)
+            showmessage(message: "Favor de colocar nombre de usuario...", controller: self)
             return false
         }
         if mailText.text == ""{
+            showmessage(message: "Favor de colocar correo...", controller: self)
             return false
         }
         if passText.text == ""{
+            showmessage(message: "Favor de colocar contraseña...", controller: self)
             return false
         }
         if passDosText.text == ""{
+            showmessage(message: "Favor de colocar contraseña...", controller: self)
             return false
         }
         if passText.text != passDosText.text{
+            showmessage(message: "Las contraseñas no coinciden...", controller: self)
             return false
         }
         

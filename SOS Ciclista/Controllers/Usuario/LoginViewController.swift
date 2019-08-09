@@ -15,7 +15,11 @@ class LoginViewController: UIViewController {
 
     @IBOutlet var faceButton: UIButton!
     @IBOutlet var loadingFace: UIActivityIndicatorView!
+    @IBOutlet var loadingIngresar: UIActivityIndicatorView!
     @IBOutlet weak var ingresarButton: UIButton!
+    
+    @IBOutlet var mailText: UITextField!
+    @IBOutlet var passText: UITextField!
     
     let namelog = Notification.Name("loggin")
     
@@ -37,6 +41,9 @@ class LoginViewController: UIViewController {
 
             showmessage(message: "Inicia sesión antes de continuar...", controller: self)
         }
+        
+        addToolBar(textField: mailText)
+        addToolBar(textField: passText)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -96,9 +103,40 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func ingresarAction(_ sender: Any) {
+       
+        if self.mailText.text! == ""{
+            showmessage(message: "Favor de colocar correo...", controller: self)
+        }else if self.passText.text! == ""{
+            showmessage(message: "Favor de colocar contraseña...", controller: self)
+        }else{        
+            loadingIngresar.isHidden = false
+            self.ingresarButton.setTitle("", for: .normal)
+            Auth.auth().signIn(withEmail: self.mailText.text!, password: self.passText.text!) { (user, error) in
+                if let e = error{
+                    //callback?(e)
+                    self.loadingIngresar.isHidden = true
+                    self.ingresarButton.setTitle("Ingresar", for: .normal)
+                    showmessage(message: "Error al iniciar sesión, intente más tarde...", controller: self)
+                    return
+                }
+                //callback?(nil)
+                print("acces firebase with email and pass")
+                UserDefaults.standard.set("1", forKey: "sesion")
+                UserDefaults.standard.set("login", forKey: "from")
+                //UserDefaults.standard.set(user?.additionalUserInfo?.username!, forKey: "nombre")
+                
+                //NotificationCenter.default.post(name: self.namelog, object: nil)
+                
+                //self.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: "personaliza", sender: nil)
+            }
+        }
+    }
     
     @IBAction func registewrAcrion(_ sender: Any) {
         //register
+        
         performSegue(withIdentifier: "register", sender: nil)
     }
     
