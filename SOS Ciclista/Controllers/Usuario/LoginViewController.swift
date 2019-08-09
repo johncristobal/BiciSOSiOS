@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         ingresarButton.borderButton()
+        faceButton.borderButton()
         
         if UserDefaults.standard.string(forKey: "sesion") == "1"{
              faceButton.setTitle("Salir", for: .normal)

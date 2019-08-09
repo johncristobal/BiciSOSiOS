@@ -1509,7 +1509,7 @@ y auxilio vial</string>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="f8L-aS-QNg" id="Adw-hv-rLa"/>
                                                 </connections>
@@ -1522,7 +1522,7 @@ y auxilio vial</string>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="f8L-aS-QNg" id="4qy-b9-mwb"/>
                                                 </connections>
@@ -2019,7 +2019,7 @@ y auxilio vial</string>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="zaO-Hw-Uv1" id="EmI-fd-98L"/>
                                                 </connections>
@@ -2032,7 +2032,7 @@ y auxilio vial</string>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="zaO-Hw-Uv1" id="kwx-0Q-541"/>
                                                 </connections>
@@ -2105,7 +2105,7 @@ y auxilio vial</string>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="zaO-Hw-Uv1" id="AkD-ZU-cTN"/>
                                                 </connections>
@@ -4209,6 +4209,14 @@ y te robaron tu bici, repórtala directamente.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g61-5r-vwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1289" y="-1803"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Cx7-7p-nqu">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="MNz-qj-exk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="la1-5f-vi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3186" y="-2720"/>
         </scene>
         <!--Thanks View Controller-->
         <scene sceneID="FC4-Dr-SNk">
