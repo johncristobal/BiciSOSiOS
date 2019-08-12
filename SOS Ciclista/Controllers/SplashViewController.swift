@@ -66,7 +66,16 @@ class SplashViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
             // Put your code which should be executed with a delay here
-            self.performSegue(withIdentifier: "reveal", sender: nil)
+            let bici = UserDefaults.standard.string(forKey: "tutorial")
+            if bici != nil{
+                if bici == "1"{
+                    self.performSegue(withIdentifier: "reveal", sender: nil)
+                }else{
+                    self.performSegue(withIdentifier: "onboarding", sender: nil)
+                }
+            }else{
+                self.performSegue(withIdentifier: "onboarding", sender: nil)
+            }
         })
     }
     

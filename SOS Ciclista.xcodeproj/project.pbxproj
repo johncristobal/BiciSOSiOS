@@ -14,6 +14,7 @@
 		7D2775B0229DE8EC005181FA /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2775AF229DE8EC005181FA /* SplashViewController.swift */; };
 		7D2775B2229DEA12005181FA /* splash.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7D2775B1229DEA12005181FA /* splash.mp4 */; };
 		7D2D5D0422FE035D000807A3 /* OnboardingPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D5D0322FE035D000807A3 /* OnboardingPagerViewController.swift */; };
+		7D2D5D062301C090000807A3 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D5D052301C090000807A3 /* TutorialViewController.swift */; };
 		7D4980D92292E89E005EA139 /* Biker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4980D82292E89E005EA139 /* Biker.swift */; };
 		7D49BB4222EF62AB0007CDCE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D49BB4122EF62AB0007CDCE /* RegisterViewController.swift */; };
 		7D503346225D436B00B5A0D6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503345225D436B00B5A0D6 /* Utils.swift */; };
@@ -79,6 +80,7 @@
 		7D2775AF229DE8EC005181FA /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7D2775B1229DEA12005181FA /* splash.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = splash.mp4; sourceTree = "<group>"; };
 		7D2D5D0322FE035D000807A3 /* OnboardingPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPagerViewController.swift; sourceTree = "<group>"; };
+		7D2D5D052301C090000807A3 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		7D4980D82292E89E005EA139 /* Biker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biker.swift; sourceTree = "<group>"; };
 		7D49BB4122EF62AB0007CDCE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7D503345225D436B00B5A0D6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -195,12 +197,13 @@
 			path = acerca;
 			sourceTree = "<group>";
 		};
-		7D2D5D0222FE032A000807A3 /* New Group */ = {
+		7D2D5D0222FE032A000807A3 /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
 				7D2D5D0322FE035D000807A3 /* OnboardingPagerViewController.swift */,
+				7D2D5D052301C090000807A3 /* TutorialViewController.swift */,
 			);
-			path = "New Group";
+			path = onboarding;
 			sourceTree = "<group>";
 		};
 		7D503347225D44EF00B5A0D6 /* Utils */ = {
@@ -366,8 +369,8 @@
 		8BB95C3C222C8D6800ABA1F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7D2D5D0222FE032A000807A3 /* New Group */,
 				7D2775AF229DE8EC005181FA /* SplashViewController.swift */,
+				7D2D5D0222FE032A000807A3 /* onboarding */,
 				7D503348225D450000B5A0D6 /* Home */,
 				7D1FD52E223B313600B0A03B /* Reportes */,
 				7D2775AB229D8B2E005181FA /* acerca */,
@@ -640,6 +643,7 @@
 				7D99F886226E861500E1AAE5 /* TipTableViewCell.swift in Sources */,
 				7D80AC63228B73A30038AF06 /* Bicipin.swift in Sources */,
 				8B085181228BC3FB008EE2FC /* Bicipinview.swift in Sources */,
+				7D2D5D062301C090000807A3 /* TutorialViewController.swift in Sources */,
 				8B97847A22B883FA004F2836 /* MapMarkerCustom.swift in Sources */,
 				8BB95C41222F6DBA00ABA1F9 /* SWRevealViewController.m in Sources */,
 				7D2775B0229DE8EC005181FA /* SplashViewController.swift in Sources */,
