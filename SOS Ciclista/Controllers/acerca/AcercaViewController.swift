@@ -10,6 +10,7 @@ import UIKit
 
 class AcercaViewController: UIViewController {
 
+    @IBOutlet var tutorialButton: UIButton!
     
     @IBOutlet var vistaAmarilla: UIView!
     
@@ -18,6 +19,8 @@ class AcercaViewController: UIViewController {
 
         vistaAmarilla.borderAmarillo()
         // Do any additional setup after loading the view.
+        
+        tutorialButton.borderButton()
     }
     
     @IBAction func closeWindow(_ sender: Any) {

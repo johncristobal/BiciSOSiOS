@@ -691,6 +691,7 @@ Versión 2019</string>
                         <viewLayoutGuide key="safeArea" id="n3g-KU-Roy"/>
                     </view>
                     <connections>
+                        <outlet property="tutorialButton" destination="wTE-h1-ePT" id="cKv-PD-VVv"/>
                         <outlet property="vistaAmarilla" destination="wnV-yY-w2X" id="1ee-2n-8ak"/>
                     </connections>
                 </viewController>
