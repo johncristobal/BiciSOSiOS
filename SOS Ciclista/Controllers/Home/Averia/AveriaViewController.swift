@@ -19,6 +19,10 @@ class AveriaViewController: UIViewController {
     
     let nameNot = Notification.Name("gracias")
 
+    @IBOutlet var backButton: UIButton!
+    @IBOutlet var sendButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(white: 0.0, alpha: 0.7)
@@ -27,6 +31,9 @@ class AveriaViewController: UIViewController {
         averiaIcon.hero.id = "averia"
         
       addToolBar(textField: detallesText)
+        
+        backButton.borderButton()
+        sendButton.borderButton()
     }
     
     @IBAction func backAction(_ sender: Any) {

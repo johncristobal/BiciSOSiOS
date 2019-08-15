@@ -156,6 +156,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView!.center = self.view.center
         mapView!.isMyLocationEnabled = true
+        mapView!.settings.myLocationButton = true
         mapView?.delegate = self
         
         do {
@@ -800,6 +801,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     NSLog("One or more of the map styles failed to load. \(error)")
                 }
                 mapView?.isMyLocationEnabled = true
+                mapView?.settings.myLocationButton = true
+                //mapView?.padding = UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 20)
                 mapView?.delegate = self
                 
                 self.mapaGoogle.addSubview(mapView!)

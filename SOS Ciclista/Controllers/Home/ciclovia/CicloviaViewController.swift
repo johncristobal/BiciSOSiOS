@@ -18,6 +18,9 @@ class CicloviaViewController: UIViewController {
     var location : CLLocation? = nil
     let nameNot = Notification.Name("gracias")
 
+    @IBOutlet var backButton: UIButton!
+    @IBOutlet var sendButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(white: 0.0, alpha: 0.7)
@@ -27,6 +30,9 @@ class CicloviaViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         addToolBar(textField: textDetails)
+        
+        backButton.borderButton()
+        sendButton.borderButton()
     }
     
     @IBAction func backAction(_ sender: Any) {

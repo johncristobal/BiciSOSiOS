@@ -11,6 +11,7 @@ import SafariServices
 
 class ContactoViewController: UIViewController {
 
+    @IBOutlet var textMessage: UITextField!
     @IBOutlet var vistaAmarilla: UIView!
     @IBOutlet var vistaContacto: UIView!
     @IBOutlet var buttonSend: UIButton!
@@ -26,6 +27,8 @@ class ContactoViewController: UIViewController {
         vistaAmarilla.borderAmarillo()
         vistaContacto.borderButton()
         buttonSend.borderButton()
+        
+        addToolBar(textField: textMessage)
         
         let gestureFace = UITapGestureRecognizer(target: self, action: #selector(showFace))
         let gestureTwit = UITapGestureRecognizer(target: self, action: #selector(showTwitter))

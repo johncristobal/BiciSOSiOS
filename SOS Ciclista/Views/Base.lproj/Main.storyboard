@@ -94,7 +94,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5T2-cr-Rhu">
                                         <rect key="frame" x="122.5" y="30" width="100" height="100"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backlogindos" translatesAutoresizingMaskIntoConstraints="NO" id="odZ-Rc-KB3">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginiconuno" translatesAutoresizingMaskIntoConstraints="NO" id="odZ-Rc-KB3">
                                                 <rect key="frame" x="5" y="5" width="90" height="90"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadious">
@@ -181,7 +181,7 @@
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headtips" translatesAutoresizingMaskIntoConstraints="NO" id="ESo-yi-uEZ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Pl1-JQ-jiH"/>
                                 </constraints>
@@ -313,7 +313,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="gP1-VW-44C">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="hAz-wo-G6G"/>
                                 </constraints>
@@ -364,7 +364,7 @@
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headtips" translatesAutoresizingMaskIntoConstraints="NO" id="Dyy-mV-HQf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="g86-8O-79u"/>
                                 </constraints>
@@ -475,7 +475,7 @@
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="rbV-zr-Wz0">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="QGx-nK-3BZ"/>
                                 </constraints>
@@ -555,7 +555,7 @@
                                 <rect key="frame" x="16" y="81" width="343" height="562"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XT-ir-ZX9">
-                                        <rect key="frame" x="83" y="50" width="177" height="243.5"/>
+                                        <rect key="frame" x="83" y="50" width="177" height="280"/>
                                         <string key="text">SOS CICLISTA APP
 Bicicletas robadas y auxilio víal
 tiene como objetivo, informar, compartir y difundir datos para evitar el robo de biclcietas, ofrecer consejos de seguridad vial y diferentes herramientas digitales para un buen tránsito, protección y cuidados a la hora de circular en la Ciudad de México.
@@ -564,12 +564,12 @@ Bicicletas robadas y auxilio vial
 no pertenece a ningún partido político o secta religiosa. No tiene apoyo de ninguna asociación, institución o dependencia del gobierno.
  
 Versión 2019</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNx-vN-ocH">
-                                        <rect key="frame" x="45" y="50" width="3" height="243.5"/>
+                                        <rect key="frame" x="45" y="50" width="3" height="280"/>
                                         <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="3" id="1Ui-Ee-1xb"/>
@@ -579,7 +579,7 @@ Versión 2019</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpK-LD-PNg">
-                                        <rect key="frame" x="295" y="50" width="3" height="243.5"/>
+                                        <rect key="frame" x="295" y="50" width="3" height="280"/>
                                         <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="3" id="0TY-OK-15o"/>
@@ -596,7 +596,7 @@ Versión 2019</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTE-h1-ePT">
-                                        <rect key="frame" x="111.5" y="314" width="120" height="40"/>
+                                        <rect key="frame" x="111.5" y="350.5" width="120" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="5Sa-ls-7kB"/>
@@ -629,7 +629,7 @@ Versión 2019</string>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headacerca" translatesAutoresizingMaskIntoConstraints="NO" id="XGm-tN-ht4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="gbf-dx-IJ4"/>
                                 </constraints>
@@ -644,7 +644,7 @@ Versión 2019</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="wKm-hn-vGl">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="fJE-48-a2I"/>
                                 </constraints>
@@ -711,7 +711,7 @@ Versión 2019</string>
                                 <rect key="frame" x="8" y="18" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headcontacto" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-Nm-qxG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="bQI-8R-LNh"/>
                                 </constraints>
@@ -720,12 +720,12 @@ Versión 2019</string>
                                 <rect key="frame" x="16" y="81" width="343" height="562"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeX-jy-IG0">
-                                        <rect key="frame" x="63" y="1" width="217" height="60"/>
+                                        <rect key="frame" x="58" y="1" width="227" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="0Al-VD-naZ"/>
                                         </constraints>
                                         <string key="text">Para cualquier información, queja, sugerencia, comentario o aportación mándanos tus comentarios o contáctanos por nuestras redes sociales</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -832,7 +832,7 @@ y auxilio vial</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="5Qo-dw-0yA" firstAttribute="top" secondItem="dDw-Il-BDs" secondAttribute="bottom" constant="20" id="5K3-3t-5tn"/>
-                                    <constraint firstItem="ggT-ta-Us1" firstAttribute="leading" secondItem="TeX-jy-IG0" secondAttribute="trailing" constant="35" id="7bJ-YO-Htp"/>
+                                    <constraint firstItem="ggT-ta-Us1" firstAttribute="leading" secondItem="TeX-jy-IG0" secondAttribute="trailing" constant="30" id="7bJ-YO-Htp"/>
                                     <constraint firstItem="5MU-Wr-d2w" firstAttribute="top" secondItem="5Qo-dw-0yA" secondAttribute="bottom" constant="10" id="D3h-xT-Jll"/>
                                     <constraint firstItem="5Qo-dw-0yA" firstAttribute="leading" secondItem="01P-1t-nJE" secondAttribute="leading" constant="16" id="FCB-OV-ulc"/>
                                     <constraint firstItem="dDw-Il-BDs" firstAttribute="top" secondItem="TeX-jy-IG0" secondAttribute="bottom" constant="16" id="HcO-nr-fn0"/>
@@ -840,7 +840,7 @@ y auxilio vial</string>
                                     <constraint firstItem="FZv-vU-IR4" firstAttribute="centerY" secondItem="TeX-jy-IG0" secondAttribute="centerY" id="JNV-3y-7kz"/>
                                     <constraint firstItem="ZGM-vg-u5q" firstAttribute="top" secondItem="5MU-Wr-d2w" secondAttribute="bottom" constant="30" id="NC5-a1-Nzl"/>
                                     <constraint firstItem="TeX-jy-IG0" firstAttribute="centerX" secondItem="01P-1t-nJE" secondAttribute="centerX" id="NjV-Tf-lBk"/>
-                                    <constraint firstItem="TeX-jy-IG0" firstAttribute="leading" secondItem="FZv-vU-IR4" secondAttribute="trailing" constant="35" id="OWi-Zj-Riw"/>
+                                    <constraint firstItem="TeX-jy-IG0" firstAttribute="leading" secondItem="FZv-vU-IR4" secondAttribute="trailing" constant="30" id="OWi-Zj-Riw"/>
                                     <constraint firstItem="Pje-4T-xRE" firstAttribute="leading" secondItem="O3j-cE-gYh" secondAttribute="trailing" constant="36" id="UUK-Q4-gUp"/>
                                     <constraint firstItem="ZGM-vg-u5q" firstAttribute="centerX" secondItem="dDw-Il-BDs" secondAttribute="centerX" id="VrR-4U-8qk"/>
                                     <constraint firstAttribute="trailing" secondItem="ggT-ta-Us1" secondAttribute="trailing" constant="25" id="W21-3r-n8v"/>
@@ -874,7 +874,7 @@ y auxilio vial</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="sAa-XT-7jH">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Drj-sJ-ToF"/>
                                 </constraints>
@@ -921,6 +921,7 @@ y auxilio vial</string>
                     <connections>
                         <outlet property="buttonSend" destination="5MU-Wr-d2w" id="RW6-Fz-DtL"/>
                         <outlet property="faceIcon" destination="KP4-xS-OKt" id="af9-TH-RTN"/>
+                        <outlet property="textMessage" destination="c2C-Er-DJ2" id="5ln-j0-YYS"/>
                         <outlet property="textoContacto" destination="c2C-Er-DJ2" id="8nx-UX-LNk"/>
                         <outlet property="twitterIcon" destination="Pje-4T-xRE" id="j0m-5b-qBc"/>
                         <outlet property="vistaAmarilla" destination="V0O-0Y-l91" id="4a9-TU-Gdq"/>
@@ -939,14 +940,15 @@ y auxilio vial</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-XF-qkS">
+                                <rect key="frame" x="8" y="22" width="359" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEs-fY-E0d">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-XF-qkS">
-                                        <rect key="frame" x="-293" y="-78" width="359" height="623"/>
-                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headReportes" translatesAutoresizingMaskIntoConstraints="NO" id="Pso-kZ-Z0h">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="Tpr-rQ-C22"/>
                                         </constraints>
@@ -1039,7 +1041,7 @@ y auxilio vial</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="oHr-G5-DLU">
-                                        <rect key="frame" x="0.0" y="446.99999999999994" width="375" height="200.00000000000017"/>
+                                        <rect key="frame" x="0.0" y="447" width="375" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="uqb-Iz-acc"/>
                                         </constraints>
@@ -1154,20 +1156,17 @@ y auxilio vial</string>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Fnh-XF-qkS" secondAttribute="bottom" constant="8" id="0Tb-0E-YDI"/>
                                     <constraint firstItem="wGC-ZL-F7t" firstAttribute="top" secondItem="Pso-kZ-Z0h" secondAttribute="bottom" constant="-25" id="5EC-1c-VNm"/>
                                     <constraint firstAttribute="trailing" secondItem="oHr-G5-DLU" secondAttribute="trailing" id="698-dc-9jl"/>
                                     <constraint firstAttribute="bottom" secondItem="oHr-G5-DLU" secondAttribute="bottom" id="8DX-ms-McK"/>
                                     <constraint firstAttribute="trailing" secondItem="Pso-kZ-Z0h" secondAttribute="trailing" id="8ie-Bl-E6f"/>
                                     <constraint firstItem="oHr-G5-DLU" firstAttribute="leading" secondItem="yEs-fY-E0d" secondAttribute="leading" id="D70-re-NZg"/>
                                     <constraint firstItem="yBR-MQ-PwS" firstAttribute="top" secondItem="wGC-ZL-F7t" secondAttribute="bottom" constant="2" id="F3k-7H-xKZ"/>
-                                    <constraint firstItem="Fnh-XF-qkS" firstAttribute="leading" secondItem="yEs-fY-E0d" secondAttribute="leading" constant="8" id="G9r-Lc-Pfs"/>
                                     <constraint firstItem="1cL-EC-ovG" firstAttribute="leading" secondItem="yEs-fY-E0d" secondAttribute="leading" constant="16" id="HSV-My-af6"/>
                                     <constraint firstAttribute="bottom" secondItem="KAC-23-lsv" secondAttribute="bottom" constant="28" id="ISy-D7-wrB"/>
                                     <constraint firstAttribute="trailing" secondItem="KAC-23-lsv" secondAttribute="trailing" constant="28" id="K6c-iA-azC"/>
-                                    <constraint firstItem="Fnh-XF-qkS" firstAttribute="top" secondItem="yEs-fY-E0d" secondAttribute="top" constant="16" id="LQF-vS-FhG"/>
                                     <constraint firstItem="R8I-ON-qzu" firstAttribute="top" secondItem="yEs-fY-E0d" secondAttribute="top" constant="16" id="OCJ-DF-1TF"/>
                                     <constraint firstAttribute="trailing" secondItem="1cL-EC-ovG" secondAttribute="trailing" constant="16" id="Oc4-7q-7qC"/>
                                     <constraint firstItem="Pso-kZ-Z0h" firstAttribute="top" secondItem="yEs-fY-E0d" secondAttribute="top" id="WlX-S7-Qfx"/>
@@ -1178,7 +1177,6 @@ y auxilio vial</string>
                                     <constraint firstItem="R8I-ON-qzu" firstAttribute="centerX" secondItem="yEs-fY-E0d" secondAttribute="centerX" id="gNt-jW-5ds"/>
                                     <constraint firstAttribute="trailing" secondItem="yBR-MQ-PwS" secondAttribute="trailing" constant="8" id="gUm-7F-qbY"/>
                                     <constraint firstItem="yBR-MQ-PwS" firstAttribute="leading" secondItem="yEs-fY-E0d" secondAttribute="leading" constant="8" id="kJY-jw-3ov"/>
-                                    <constraint firstAttribute="trailing" secondItem="Fnh-XF-qkS" secondAttribute="trailing" constant="8" id="whP-aK-X1d"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1486,10 +1484,10 @@ y auxilio vial</string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaq-Da-7ZW">
-                                                <rect key="frame" x="97.5" y="575.5" width="180" height="40"/>
+                                                <rect key="frame" x="97.5" y="575.5" width="180" height="45"/>
                                                 <color key="backgroundColor" red="0.0" green="0.24313725490196078" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="HYJ-KY-ueB"/>
+                                                    <constraint firstAttribute="height" constant="45" id="HYJ-KY-ueB"/>
                                                     <constraint firstAttribute="width" constant="180" id="eIM-0v-Kxh"/>
                                                 </constraints>
                                                 <state key="normal" title="Continuar con Facebook">
@@ -1501,7 +1499,7 @@ y auxilio vial</string>
                                                 </connections>
                                             </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dlS-47-3bx">
-                                                <rect key="frame" x="177.5" y="575.5" width="20" height="40"/>
+                                                <rect key="frame" x="177.5" y="575.5" width="20" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="GKS-kJ-hv6"/>
                                                 </constraints>
@@ -1904,7 +1902,7 @@ y auxilio vial</string>
                                         </constraints>
                                     </scrollView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headPersonaliza" translatesAutoresizingMaskIntoConstraints="NO" id="aZd-Sy-wBt">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65.000000000000057"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="cWK-5y-aSq"/>
                                         </constraints>
@@ -1930,7 +1928,7 @@ y auxilio vial</string>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="4li-hH-7X1">
-                                        <rect key="frame" x="0.0" y="446.99999999999994" width="375" height="200.00000000000017"/>
+                                        <rect key="frame" x="0.0" y="447" width="375" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="aGo-qQ-YMl"/>
                                         </constraints>
@@ -2504,13 +2502,13 @@ hagan su trabajo **</string>
                                                 <rect key="frame" x="0.0" y="85" width="375" height="250"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Si necesitas alguna refacción o ayuda mecánica, manda mensaje a la comunidad para que puedan auxiliarte." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5y-XW-AyY">
-                                                        <rect key="frame" x="50" y="8" width="275" height="75"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                        <rect key="frame" x="50" y="8" width="275" height="52.5"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Detalles particulares..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rHE-ph-x5T">
-                                                        <rect key="frame" x="20" y="91" width="335" height="60"/>
+                                                        <rect key="frame" x="20" y="68.5" width="335" height="60"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="1jT-DO-0Tt"/>
@@ -2523,7 +2521,7 @@ hagan su trabajo **</string>
                                                         </connections>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zos-gW-t2p">
-                                                        <rect key="frame" x="52.5" y="167" width="270" height="30"/>
+                                                        <rect key="frame" x="52.5" y="144.5" width="270" height="30"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvp-4J-iUS">
                                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
@@ -2618,7 +2616,9 @@ hagan su trabajo **</string>
                     </view>
                     <connections>
                         <outlet property="averiaIcon" destination="SmU-tR-c3v" id="PNE-l5-6qf"/>
+                        <outlet property="backButton" destination="yvp-4J-iUS" id="yeq-Pr-CSq"/>
                         <outlet property="detallesText" destination="rHE-ph-x5T" id="D7V-B7-gRg"/>
+                        <outlet property="sendButton" destination="hh5-K0-skP" id="aVL-x0-of9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ukx-Oe-7Qs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2649,19 +2649,14 @@ hagan su trabajo **</string>
                                                 <rect key="frame" x="0.0" y="85" width="375" height="250"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMs-VG-qlq">
-                                                        <rect key="frame" x="50" y="8" width="275" height="112"/>
-                                                        <string key="text">Aqui podrás reportar 
-todos los inconvenientes
-suscitados en cualquier
-ciclovía de tu ciudad y así
-poder prevenir accidentes 
-a la comunidad ciclista.</string>
+                                                        <rect key="frame" x="30" y="8" width="315" height="75"/>
+                                                        <string key="text">Aqui podrás reportar todos los inconvenientes suscitados en cualquier ciclovía de tu ciudad y así poder prevenir accidentes a la comunidad ciclista.</string>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Detalles particulares..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6q6-1q-RUp">
-                                                        <rect key="frame" x="20" y="128" width="335" height="60"/>
+                                                        <rect key="frame" x="20" y="91" width="335" height="60"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="t0B-oL-hNe"/>
@@ -2674,7 +2669,7 @@ a la comunidad ciclista.</string>
                                                         </connections>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kqi-87-nRU">
-                                                        <rect key="frame" x="52.5" y="204" width="270" height="30"/>
+                                                        <rect key="frame" x="52.5" y="167" width="270" height="30"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sI-EC-cIJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
@@ -2710,13 +2705,13 @@ a la comunidad ciclista.</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="yMs-VG-qlq" firstAttribute="top" secondItem="CVc-86-sGP" secondAttribute="top" constant="8" id="Bqj-xS-hvL"/>
-                                                    <constraint firstItem="yMs-VG-qlq" firstAttribute="leading" secondItem="CVc-86-sGP" secondAttribute="leading" constant="50" id="G3J-lo-ZgQ"/>
+                                                    <constraint firstItem="yMs-VG-qlq" firstAttribute="leading" secondItem="CVc-86-sGP" secondAttribute="leading" constant="30" id="G3J-lo-ZgQ"/>
                                                     <constraint firstItem="6q6-1q-RUp" firstAttribute="centerX" secondItem="CVc-86-sGP" secondAttribute="centerX" id="UZ4-4s-LLB"/>
                                                     <constraint firstAttribute="height" constant="250" id="atJ-Zo-Pv6"/>
                                                     <constraint firstItem="kqi-87-nRU" firstAttribute="top" secondItem="6q6-1q-RUp" secondAttribute="bottom" constant="16" id="dhQ-Cm-sqd"/>
                                                     <constraint firstAttribute="trailing" secondItem="6q6-1q-RUp" secondAttribute="trailing" constant="20" id="hBX-Zd-qoQ"/>
                                                     <constraint firstItem="6q6-1q-RUp" firstAttribute="top" secondItem="yMs-VG-qlq" secondAttribute="bottom" constant="8" id="lUw-VU-mdt"/>
-                                                    <constraint firstAttribute="trailing" secondItem="yMs-VG-qlq" secondAttribute="trailing" constant="50" id="qC8-xW-LTU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yMs-VG-qlq" secondAttribute="trailing" constant="30" id="qC8-xW-LTU"/>
                                                     <constraint firstItem="kqi-87-nRU" firstAttribute="centerX" secondItem="CVc-86-sGP" secondAttribute="centerX" id="uhN-ul-F47"/>
                                                     <constraint firstItem="6q6-1q-RUp" firstAttribute="leading" secondItem="CVc-86-sGP" secondAttribute="leading" constant="20" id="zOs-em-q8J"/>
                                                 </constraints>
@@ -2765,7 +2760,9 @@ a la comunidad ciclista.</string>
                         <viewLayoutGuide key="safeArea" id="vkQ-Aq-51w"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="5sI-EC-cIJ" id="5ua-l5-OfV"/>
                         <outlet property="cicloviaIcon" destination="65h-da-QUD" id="uoe-CQ-lVg"/>
+                        <outlet property="sendButton" destination="CiW-8m-9T7" id="L7U-38-ooZ"/>
                         <outlet property="textDetails" destination="6q6-1q-RUp" id="YZC-3R-yxo"/>
                     </connections>
                 </viewController>
@@ -2970,6 +2967,7 @@ redes sociales.</string>
                         <viewLayoutGuide key="safeArea" id="ILQ-q1-fVD"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="UP6-za-u5m" id="APz-8e-Pwa"/>
                         <outlet property="helpIcon" destination="WuX-Jz-mC4" id="daj-hZ-swr"/>
                     </connections>
                 </viewController>
@@ -2991,9 +2989,9 @@ redes sociales.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3K2-Fy-hCH">
                                         <rect key="frame" x="8" y="71" width="327" height="80"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvK-Wo-w9a">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Detalles..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvK-Wo-w9a">
                                                 <rect key="frame" x="8" y="8" width="311" height="64"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -3002,7 +3000,7 @@ redes sociales.</string>
                                                 </connections>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="2Sx-MO-bTR"/>
                                             <constraint firstAttribute="bottom" secondItem="YvK-Wo-w9a" secondAttribute="bottom" constant="8" id="fsG-wa-EU3"/>
@@ -3014,7 +3012,7 @@ redes sociales.</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juY-fG-CNI">
                                         <rect key="frame" x="22.5" y="8" width="298" height="47"/>
                                         <string key="text">Proporciona los siguientes datos:
-•Lugar  • Fecha •hora •Motivo</string>
+• Lugar • Fecha • Hora •  Motivo</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3076,7 +3074,9 @@ redes sociales.</string>
                         <viewLayoutGuide key="safeArea" id="031-31-09k"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="3G9-mt-sLe" id="aa3-Ig-BAi"/>
                         <outlet property="detallesApoyo" destination="YvK-Wo-w9a" id="fhh-h2-sem"/>
+                        <outlet property="sendButton" destination="Ux8-dh-FN5" id="Jy1-NY-rLx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTZ-cf-Zil" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3220,6 +3220,7 @@ para valla ciclista</string>
                     </view>
                     <connections>
                         <outlet property="apoyoIcon" destination="gWF-oO-gLU" id="s0d-aq-8su"/>
+                        <outlet property="backButton" destination="e9N-8U-aKu" id="BMe-7l-TA4"/>
                         <segue destination="uaG-3f-7Jy" kind="showDetail" identifier="detalleApoyo" id="9Pv-Zv-IM6"/>
                     </connections>
                 </viewController>
@@ -3275,9 +3276,9 @@ para valla ciclista</string>
                                                     <constraint firstAttribute="width" constant="90" id="G7G-el-FP5"/>
                                                     <constraint firstAttribute="height" constant="100" id="dBe-rQ-FIL"/>
                                                 </constraints>
-                                                <state key="normal" image="cicloviaicon"/>
+                                                <state key="normal" image="apoyoicon"/>
                                                 <connections>
-                                                    <action selector="cicloviaAction:" destination="yrC-Wf-HTn" eventType="touchUpInside" id="eSs-dR-z6V"/>
+                                                    <action selector="apoyoAction:" destination="yrC-Wf-HTn" eventType="touchUpInside" id="H69-14-2Wp"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mQ-jZ-eYn">
@@ -3308,9 +3309,9 @@ para valla ciclista</string>
                                                     <constraint firstAttribute="width" constant="90" id="ZPI-Km-SRn"/>
                                                     <constraint firstAttribute="height" constant="100" id="bbh-2V-adG"/>
                                                 </constraints>
-                                                <state key="normal" image="apoyoicon"/>
+                                                <state key="normal" backgroundImage="cicloviaicon"/>
                                                 <connections>
-                                                    <action selector="apoyoAction:" destination="yrC-Wf-HTn" eventType="touchUpInside" id="fua-Nb-qk3"/>
+                                                    <action selector="cicloviaAction:" destination="yrC-Wf-HTn" eventType="touchUpInside" id="w55-8t-guy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7a-9k-qru">
@@ -3392,10 +3393,10 @@ para valla ciclista</string>
                         <viewLayoutGuide key="safeArea" id="prU-7X-2DC"/>
                     </view>
                     <connections>
-                        <outlet property="apoyoIcon" destination="KQc-3S-OGG" id="WsK-Xc-4SD"/>
+                        <outlet property="apoyoIcon" destination="UQ4-EV-nc4" id="0IT-BV-KJP"/>
                         <outlet property="averiaIcon" destination="u7a-9k-qru" id="xxx-Wx-3KC"/>
                         <outlet property="cerrarAction" destination="Z8M-vg-RhJ" id="f3Z-jk-lyp"/>
-                        <outlet property="cicloviaIcon" destination="UQ4-EV-nc4" id="7gJ-qJ-oqu"/>
+                        <outlet property="cicloviaIcon" destination="KQc-3S-OGG" id="eQ6-YE-M7v"/>
                         <outlet property="helpAction" destination="gCE-Id-GfZ" id="iDZ-tS-OI0"/>
                         <segue destination="rWD-wZ-Eei" kind="showDetail" identifier="alertaMain" id="8pE-Uq-vrI"/>
                         <segue destination="TkK-Ew-DVe" kind="showDetail" identifier="helpShow" id="0Q0-Ht-93y"/>
@@ -3420,7 +3421,7 @@ para valla ciclista</string>
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headrobobici" translatesAutoresizingMaskIntoConstraints="NO" id="l8t-lI-GD3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="WnT-6c-8TF"/>
                                 </constraints>
@@ -3484,7 +3485,7 @@ para valla ciclista</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="UQ4-1r-Oz3">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="K7t-ez-eYJ"/>
                                 </constraints>
@@ -3754,7 +3755,7 @@ para valla ciclista</string>
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headserie" translatesAutoresizingMaskIntoConstraints="NO" id="OjH-wZ-ZY3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65.000000000000057"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Jrp-cL-rsI"/>
                                 </constraints>
@@ -3926,7 +3927,7 @@ y te robaron tu bici, repórtala directamente.</string>
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="5DE-TB-Jh4">
-                                <rect key="frame" x="0.0" y="466.99999999999994" width="375" height="200.00000000000017"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8jn-Ji-Wpu"/>
                                 </constraints>
@@ -4180,16 +4181,19 @@ y te robaron tu bici, repórtala directamente.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IgN-t3-Wpn">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ea-Jv-dto">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRO-FT-oGe">
-                                <rect key="frame" x="20" y="34" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Menu"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRO-FT-oGe">
+                                <rect key="frame" x="16" y="32" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="8Uj-Hu-2aY"/>
+                                    <constraint firstAttribute="width" constant="45" id="fKD-ew-9zw"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="menubicis"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reportar" translatesAutoresizingMaskIntoConstraints="NO" id="FEr-7C-0xQ">
                                 <rect key="frame" x="205" y="497" width="150" height="150"/>
@@ -4201,16 +4205,18 @@ y te robaron tu bici, repórtala directamente.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="5Ea-Jv-dto" secondAttribute="bottom" id="8aK-W2-iNt"/>
                             <constraint firstItem="77s-Iu-so3" firstAttribute="bottom" secondItem="FEr-7C-0xQ" secondAttribute="bottom" constant="20" id="9Cc-dG-X50"/>
                             <constraint firstItem="IgN-t3-Wpn" firstAttribute="bottom" secondItem="77s-Iu-so3" secondAttribute="bottom" id="CKi-Xq-cNG"/>
+                            <constraint firstItem="QRO-FT-oGe" firstAttribute="top" secondItem="IDj-Ik-ezO" secondAttribute="top" constant="32" id="DrE-dm-hPz"/>
+                            <constraint firstItem="IgN-t3-Wpn" firstAttribute="top" secondItem="IDj-Ik-ezO" secondAttribute="top" id="Jbx-3H-dOW"/>
+                            <constraint firstItem="5Ea-Jv-dto" firstAttribute="top" secondItem="IDj-Ik-ezO" secondAttribute="top" id="N7A-pD-rL9"/>
                             <constraint firstItem="77s-Iu-so3" firstAttribute="trailing" secondItem="5Ea-Jv-dto" secondAttribute="trailing" id="Py5-iI-stN"/>
                             <constraint firstItem="5Ea-Jv-dto" firstAttribute="leading" secondItem="77s-Iu-so3" secondAttribute="leading" id="Qrs-dY-JbD"/>
-                            <constraint firstItem="5Ea-Jv-dto" firstAttribute="top" secondItem="77s-Iu-so3" secondAttribute="top" id="Ryk-qJ-Kzx"/>
-                            <constraint firstItem="IgN-t3-Wpn" firstAttribute="top" secondItem="77s-Iu-so3" secondAttribute="top" id="hxO-fh-aQ2"/>
                             <constraint firstItem="IgN-t3-Wpn" firstAttribute="leading" secondItem="77s-Iu-so3" secondAttribute="leading" id="i7q-DX-iho"/>
                             <constraint firstItem="IgN-t3-Wpn" firstAttribute="trailing" secondItem="77s-Iu-so3" secondAttribute="trailing" id="iRW-K9-Jeg"/>
                             <constraint firstItem="77s-Iu-so3" firstAttribute="trailing" secondItem="FEr-7C-0xQ" secondAttribute="trailing" constant="20" id="kIh-Jk-Hsh"/>
+                            <constraint firstItem="5Ea-Jv-dto" firstAttribute="bottom" secondItem="77s-Iu-so3" secondAttribute="bottom" id="qYU-bX-EaT"/>
+                            <constraint firstItem="QRO-FT-oGe" firstAttribute="leading" secondItem="IDj-Ik-ezO" secondAttribute="leading" constant="16" id="u26-cO-nrL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="77s-Iu-so3"/>
                     </view>
@@ -4227,7 +4233,7 @@ y te robaron tu bici, repórtala directamente.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g61-5r-vwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1289" y="-1803"/>
+            <point key="canvasLocation" x="-1290.4000000000001" y="-1803.1484257871066"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rpf-2D-DwL">
@@ -4831,6 +4837,8 @@ También podrás convocar a realizar una valla ciclista. Todo esto será en tiem
         <image name="headtips" width="1242" height="196"/>
         <image name="helpicon" width="120" height="136"/>
         <image name="launcher" width="167" height="167"/>
+        <image name="loginiconuno" width="645" height="625"/>
+        <image name="menubicis" width="148" height="122"/>
         <image name="menuhead" width="1052" height="605"/>
         <image name="reportado" width="292" height="285"/>
         <image name="reportar" width="604" height="410"/>
@@ -4839,10 +4847,10 @@ También podrás convocar a realizar una valla ciclista. Todo esto será en tiem
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="86B-rP-Ttj"/>
-        <segue reference="fPl-DG-IN3"/>
+        <segue reference="biv-CZ-KJp"/>
         <segue reference="91z-Mt-Myz"/>
-        <segue reference="O9I-pU-wnc"/>
-        <segue reference="YXD-he-ZMI"/>
+        <segue reference="ZpG-WP-dvz"/>
+        <segue reference="9Bx-r1-g3R"/>
         <segue reference="8pE-Uq-vrI"/>
         <segue reference="gvX-x4-xms"/>
     </inferredMetricsTieBreakers>

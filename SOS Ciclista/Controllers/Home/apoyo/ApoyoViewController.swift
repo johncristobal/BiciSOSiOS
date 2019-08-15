@@ -14,6 +14,8 @@ class ApoyoViewController: UIViewController {
     @IBOutlet var apoyoIcon: UIButton!
     var location : CLLocation? = nil
 
+    @IBOutlet var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(white: 0.0, alpha: 0.7)
@@ -21,6 +23,7 @@ class ApoyoViewController: UIViewController {
         self.hero.isEnabled = true
         apoyoIcon.hero.id = "apoyo"
         // Do any additional setup after loading the view.
+        backButton.borderButton()
     }
     
     @IBAction func backAction(_ sender: Any) {

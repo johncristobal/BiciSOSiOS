@@ -12,6 +12,8 @@ import SafariServices
 class HelpViewController: UIViewController {
 
     @IBOutlet var helpIcon: UIButton!
+    @IBOutlet var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(white: 0.0, alpha: 0.7)
@@ -19,6 +21,8 @@ class HelpViewController: UIViewController {
         self.hero.isEnabled = true
         helpIcon.hero.id = "help"
         // Do any additional setup after loading the view.
+        
+        backButton.borderButton()
     }
     
     @IBAction func callAction(_ sender: Any) {
