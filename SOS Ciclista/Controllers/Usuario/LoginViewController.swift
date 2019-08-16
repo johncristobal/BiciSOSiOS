@@ -95,7 +95,7 @@ class LoginViewController: UIViewController {
                         print(authResult?.user.displayName!)
                         UserDefaults.standard.set(authResult?.user.displayName!, forKey: "nombre")
                     
-                    NotificationCenter.default.post(name: self.namelog, object: nil)
+                        NotificationCenter.default.post(name: self.namelog, object: nil)
 
                         //self.dismiss(animated: true, completion: nil)
                         self.performSegue(withIdentifier: "personaliza", sender: nil)
@@ -127,8 +127,8 @@ class LoginViewController: UIViewController {
                 UserDefaults.standard.set("login", forKey: "from")
                 //UserDefaults.standard.set(user?.additionalUserInfo?.username!, forKey: "nombre")
                 
-                //NotificationCenter.default.post(name: self.namelog, object: nil)
-                
+                NotificationCenter.default.post(name: self.namelog, object: nil)
+
                 //self.dismiss(animated: true, completion: nil)
                 self.performSegue(withIdentifier: "personaliza", sender: nil)
             }

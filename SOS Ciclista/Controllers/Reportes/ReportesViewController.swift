@@ -297,7 +297,9 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
                             fotos = datos["fotos"] as! String
                         }
                         
-                        self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos, tipo: tipo, latitude: latitud, longitude: longitude))
+                        if tipo == 1{
+                            self.reportes.append(Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos, tipo: tipo, latitude: latitud, longitude: longitude))
+                        }
                     }
                     
                     //let datos = datosTemp["-LcMv7u_I6OAJ80ZEg5a"] as! [String: Any]

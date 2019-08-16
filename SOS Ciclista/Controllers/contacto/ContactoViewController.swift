@@ -68,17 +68,20 @@ class ContactoViewController: UIViewController {
                 present(vc, animated: true)
             }
         }
-
     }
-
     
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func actionSend(_ sender: Any) {
-        
+        if textMessage.text! == ""{
+            showmessage(message: "Favor de colocar mensaje...", controller: self)
+        }else{
+            
+        }
     }
+    
     /*
     // MARK: - Navigation
 

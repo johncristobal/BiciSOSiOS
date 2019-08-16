@@ -20,7 +20,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var miniView: UIView!
     @IBOutlet weak var biciUser: UIImageView!
     @IBOutlet weak var nameUser: UILabel!
-    let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic"),#imageLiteral(resourceName: "bicie"),#imageLiteral(resourceName: "bicif")]
+    //let imagenes = [#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicic"),#imageLiteral(resourceName: "bicie"),#imageLiteral(resourceName: "bicif")]
+    let imagenes = [#imageLiteral(resourceName: "bicia"),#imageLiteral(resourceName: "bicib"),#imageLiteral(resourceName: "bicic"),#imageLiteral(resourceName: "bicid"),#imageLiteral(resourceName: "bicie"),#imageLiteral(resourceName: "bicif")]
 
     var opciones : [String] = [
         "Reportes",
@@ -126,7 +127,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     @objc func abrirPersonaliza(){
-        self.revealViewController()?.revealToggle(animated: true)
+        //self.revealViewController()?.revealToggle(animated: true)
         performSegue(withIdentifier: "personaliza", sender: nil)
     }
     
@@ -167,9 +168,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let action = (UIAlertAction(title: "Sí", style: .default, handler: { (action: UIAlertAction!) in
                     
                     print("Cerrando...")
-                    let prefs = UserDefaults.standard
-                    prefs.removeObject(forKey:"sesion")
-                    prefs.removeObject(forKey: "bici")
+                    //let prefs = UserDefaults.standard
+                    let defaults = UserDefaults.standard
+                    let dictionary = defaults.dictionaryRepresentation()
+                    dictionary.keys.forEach { key in
+                        defaults.removeObject(forKey: key)
+                    }
+                    //prefs.removeObject(forKey:"sesion")
+                    //prefs.removeObject(forKey: "bici")
                     self.sesion = "0"
                     
                     //cierra sesion facebook si hay...
