@@ -62,7 +62,7 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidAppear(_ animated: Bool) {
         
-        print("sesion")
+        /*print("sesion")
         let reportado = UserDefaults.standard.string(forKey: "reportado")
         if reportado != nil{
             if reportado == "1"{
@@ -71,7 +71,7 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
             }else{
                 print(reportado!)
             }
-        }
+        }*/
     }
     
     @IBAction func closeWindow(_ sender: Any) {
@@ -114,7 +114,51 @@ class ReportesViewController: UIViewController, UITableViewDelegate, UITableView
 
     func saveReporte(){
         tableview.isHidden = true
-        performSegue(withIdentifier: "reporte", sender: nil)
+        let reportado = UserDefaults.standard.string(forKey: "reportado")
+        
+        if reportado != nil{
+            if reportado == "1"{
+                //si es 1, entonces hay reporte - recupero id y muestro detalle
+                //mostrar leyenda de reportado
+                let key = UserDefaults.standard.string(forKey: "llavereporte")
+                let ref = Database.database().reference().child("reportes").child(key!)
+                
+                ref.observeSingleEvent(of: .value, with: { (data) in
+                    
+                    //for child in data.children {
+                        let snap = data as! DataSnapshot
+                        let datos = snap.value as! [String: Any]
+                        let id = datos["id"] as! String
+                        let date = datos["date"] as! String
+                        let description = datos["description"] as! String
+                        let estatus = datos["estatus"] as! Int
+                        let name = datos["name"] as! String
+                        let serie = datos["serie"] as! String
+                        
+                        let tipo = datos["tipo"] as! Int
+                        let latitud = datos["latitude"] as! Double
+                        let longitude = datos["longitude"] as! Double
+                        
+                        var fotos = ""
+                        if datos["fotos"] != nil{
+                            fotos = datos["fotos"] as! String
+                        }
+                        
+                        let report = Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos, tipo: tipo, latitude: latitud, longitude: longitude)
+                        
+                        UserDefaults.standard.set("1", forKey: "fromAlerta")
+                        self.performSegue(withIdentifier: "detalleReporte", sender: report)
+                    //}
+                    
+                }) { (error) in
+                    print(error)
+                }
+            }else{
+                performSegue(withIdentifier: "reporte", sender: location)
+            }
+        }else{
+            performSegue(withIdentifier: "reporte", sender: location)
+        }
     }
     
     func getDataReportes(){

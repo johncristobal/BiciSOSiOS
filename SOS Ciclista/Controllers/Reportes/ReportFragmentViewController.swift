@@ -115,6 +115,7 @@ class ReportFragmentViewController: UIViewController {
             } else {
                 print("Data saved successfully!")
                 UserDefaults.standard.set("1", forKey: "reportado")
+                UserDefaults.standard.set(thisUsersGamesRef.key, forKey: "llavereporte")
             }
         }
 
@@ -155,7 +156,7 @@ class ReportFragmentViewController: UIViewController {
         //dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func addPhotos(_ sender: Any) {
+    @IBAction func addPhotos(_ sender: Any) { 
         let fotos = UserDefaults.standard.string(forKey: "fotos")
         
         if fotos == "1"{
@@ -176,8 +177,7 @@ class ReportFragmentViewController: UIViewController {
         }else{
             let vc = BSImagePickerViewController()
             vc.maxNumberOfSelections = 4
-            bs_presentImagePickerController(vc,animated: true,
-                                            select: { (asset: PHAsset) -> Void in
+            bs_presentImagePickerController(vc,animated: true, select: { (asset: PHAsset) -> Void in
                                                 
             }, deselect: { (asset: PHAsset) -> Void in
                 // User deselected an assets.
@@ -196,6 +196,13 @@ class ReportFragmentViewController: UIViewController {
                 self.flag = true
                 
             }, completion: nil)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if flag{
+            flag = false
+            performSegue(withIdentifier: "fotosReporte", sender: selected)
         }
     }
     

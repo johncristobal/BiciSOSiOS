@@ -83,6 +83,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 listenerReports()
                 //recupero otros cilista
                 listenerBikers()
+                //muestro mi bici
+                initListenerBike()
             }
         }
     }

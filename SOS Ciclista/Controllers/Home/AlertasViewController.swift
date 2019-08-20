@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import Firebase
+import FirebaseDatabase
 
 class AlertasViewController: UIViewController {
 
@@ -57,7 +59,51 @@ class AlertasViewController: UIViewController {
     }
     
     @IBAction func alertaAction(_ sender: Any) {
-        performSegue(withIdentifier: "alertaMain", sender: location)
+        let reportado = UserDefaults.standard.string(forKey: "reportado")
+        
+        if reportado != nil{
+            if reportado == "1"{
+                //si es 1, entonces hay reporte - recupero id y muestro detalle
+                //mostrar leyenda de reportado
+                let key = UserDefaults.standard.string(forKey: "llavereporte")
+                let ref = Database.database().reference().child("reportes").child(key!)
+                
+                ref.observeSingleEvent(of: .value, with: { (data) in
+                    
+                    //for child in data.children {
+                        let snap = data as! DataSnapshot
+                        let datos = snap.value as! [String: Any]
+                        let id = datos["id"] as! String
+                        let date = datos["date"] as! String
+                        let description = datos["description"] as! String
+                        let estatus = datos["estatus"] as! Int
+                        let name = datos["name"] as! String
+                        let serie = datos["serie"] as! String
+                        
+                        let tipo = datos["tipo"] as! Int
+                        let latitud = datos["latitude"] as! Double
+                        let longitude = datos["longitude"] as! Double
+                        
+                        var fotos = ""
+                        if datos["fotos"] != nil{
+                            fotos = datos["fotos"] as! String
+                        }
+                        
+                        let report = Report(id: id, name: name, serie: serie, description: description, estatus: estatus, date: date, fotos: fotos, tipo: tipo, latitude: latitud, longitude: longitude)
+                        
+                        UserDefaults.standard.set("1", forKey: "fromAlerta")
+                        self.performSegue(withIdentifier: "detalleReporte", sender: report)
+                    //}
+                    
+                }) { (error) in
+                    print(error)
+                }
+            }else{
+                performSegue(withIdentifier: "alertaMain", sender: location)
+            }
+        }else{
+            performSegue(withIdentifier: "alertaMain", sender: location)
+        }
     }
     
     
@@ -79,6 +125,9 @@ class AlertasViewController: UIViewController {
         }else if segue.identifier == "apoyoShow"{
             let vc = segue.destination as? ApoyoViewController
             vc?.location = sender as! CLLocation
+        }else if segue.identifier == "detalleReporte"{
+            let vc = segue.destination as! DetalleReporteViewController
+            vc.report = sender as? Report
         }
     }
 }

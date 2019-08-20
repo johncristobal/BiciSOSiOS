@@ -15,6 +15,7 @@ import AlamofireImage
 
 class DetalleReporteViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    @IBOutlet var reporteDoneLabel: UILabel!
     @IBOutlet weak var nameOutlet: UILabel!
     @IBOutlet weak var fotosCollection: UICollectionView!
     @IBOutlet weak var vistaAmarilla: UIView!
@@ -58,6 +59,18 @@ class DetalleReporteViewController: UIViewController, UICollectionViewDelegate, 
         cancelButton.borderButton()
         reportarButton.borderButton()
 
+        let reportado = UserDefaults.standard.string(forKey: "fromAlerta")
+        
+        if reportado != nil{
+            if reportado == "1"{
+                UserDefaults.standard.set("0", forKey: "fromAlerta")
+                reporteDoneLabel.isHidden = false
+            }else{
+                reporteDoneLabel.isHidden = true
+            }
+        }else{
+            reporteDoneLabel.isHidden = true
+        }
     }
     
     @IBAction func cancelAction(_ sender: Any) {

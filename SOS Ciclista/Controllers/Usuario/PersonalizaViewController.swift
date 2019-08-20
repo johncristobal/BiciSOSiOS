@@ -103,8 +103,7 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
         }
     }
     
-    @IBAction func addPhotosAction(_ sender: Any) {
-
+    @IBAction func addPhotosAction(_ sender: Any) { 
         let fotos = UserDefaults.standard.string(forKey: "fotos")
         
         if fotos == "1"{
@@ -117,7 +116,7 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
                 if FileManager.default.fileExists(atPath: complete){
                     selected[index] = UIImage(contentsOfFile: complete)!
                 }else{
-                    selected[index] = UIImage(named: "bicia")!
+                    selected[index] = UIImage(named: "cameraicon")!
                 }
             }
             
@@ -125,8 +124,7 @@ class PersonalizaViewController: UIViewController, UICollectionViewDataSource, U
         }else{
             let vc = BSImagePickerViewController()
             vc.maxNumberOfSelections = 4
-            bs_presentImagePickerController(vc,animated: true,
-            select: { (asset: PHAsset) -> Void in
+            bs_presentImagePickerController(vc,animated: true, select: { (asset: PHAsset) -> Void in
                 
             }, deselect: { (asset: PHAsset) -> Void in
                 // User deselected an assets.

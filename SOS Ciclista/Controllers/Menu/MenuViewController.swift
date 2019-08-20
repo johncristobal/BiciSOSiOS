@@ -178,6 +178,22 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
                     //prefs.removeObject(forKey: "bici")
                     self.sesion = "0"
                     
+                    let bici = UserDefaults.standard.string(forKey: "keySelf")
+                    if bici != nil{
+                        if bici != "null"{
+                            
+                            UserDefaults.standard.set("null", forKey: "keySelf")
+                            UserDefaults.standard.set("null", forKey: "enviado")
+                            print("null everything")
+                            let ref = Database.database().reference()
+                            let thisUsersGamesRef = ref.child("bikers")
+                            thisUsersGamesRef.child(bici!).removeValue()
+                        }
+                    }else{
+                        print("no hay bici")
+                        //punto.title = "SOS Ciclista"
+                    }
+                    
                     //cierra sesion facebook si hay...
                     let firebaseAuth = Auth.auth()
                     do {

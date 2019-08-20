@@ -3403,6 +3403,7 @@ para valla ciclista</string>
                         <segue destination="nmL-ia-3gq" kind="showDetail" identifier="cicloviaShow" id="AMB-0c-863"/>
                         <segue destination="U2h-58-lZE" kind="showDetail" identifier="averiaShow" id="Aev-F5-NS4"/>
                         <segue destination="auu-T4-dDa" kind="showDetail" identifier="apoyoShow" id="hJg-uX-zEs"/>
+                        <segue destination="pLU-OA-b9l" kind="show" identifier="detalleReporte" id="9su-Dr-IQh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVD-d4-l2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3996,16 +3997,16 @@ y te robaron tu bici, repórtala directamente.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVO-L7-LAp">
-                                <rect key="frame" x="20" y="56" width="335" height="412"/>
+                                <rect key="frame" x="20" y="56" width="335" height="450"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-JP-GvP">
-                                        <rect key="frame" x="131.5" y="10" width="72" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <rect key="frame" x="135" y="49.5" width="65" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0n2-r2-8GR">
-                                        <rect key="frame" x="43.5" y="367" width="248" height="30"/>
+                                        <rect key="frame" x="43.5" y="405" width="248" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKB-AA-Twk">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
@@ -4039,7 +4040,7 @@ y te robaron tu bici, repórtala directamente.</string>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wn0-Rj-rk5">
-                                        <rect key="frame" x="8" y="41" width="319" height="220"/>
+                                        <rect key="frame" x="8" y="78" width="319" height="220"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Q-En-IFI">
                                                 <rect key="frame" x="8" y="8" width="303" height="204"/>
@@ -4090,32 +4091,40 @@ y te robaron tu bici, repórtala directamente.</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXu-y4-VTT">
-                                        <rect key="frame" x="148" y="277" width="39.5" height="19"/>
+                                        <rect key="frame" x="148" y="314" width="39.5" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1U-2I-KOv">
-                                        <rect key="frame" x="148" y="312" width="39.5" height="19"/>
+                                        <rect key="frame" x="148" y="349" width="39.5" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reporte realizado..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hu-KX-3oQ">
+                                        <rect key="frame" x="65.5" y="8" width="204.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="9hu-KX-3oQ" firstAttribute="top" secondItem="uVO-L7-LAp" secondAttribute="top" constant="8" id="2am-Jo-jwR"/>
                                     <constraint firstItem="p1U-2I-KOv" firstAttribute="top" secondItem="KXu-y4-VTT" secondAttribute="bottom" constant="16" id="65P-9s-kP7"/>
                                     <constraint firstItem="KXu-y4-VTT" firstAttribute="centerX" secondItem="Wn0-Rj-rk5" secondAttribute="centerX" id="7Hm-DW-6Yy"/>
                                     <constraint firstItem="KXu-y4-VTT" firstAttribute="top" secondItem="Wn0-Rj-rk5" secondAttribute="bottom" constant="16" id="7oL-4v-CJW"/>
                                     <constraint firstAttribute="trailing" secondItem="Wn0-Rj-rk5" secondAttribute="trailing" constant="8" id="S1H-6b-1mz"/>
                                     <constraint firstItem="p1U-2I-KOv" firstAttribute="centerX" secondItem="KXu-y4-VTT" secondAttribute="centerX" id="Tbv-UB-4f6"/>
                                     <constraint firstItem="Wn0-Rj-rk5" firstAttribute="leading" secondItem="uVO-L7-LAp" secondAttribute="leading" constant="8" id="URM-ur-O6L"/>
+                                    <constraint firstItem="9hu-KX-3oQ" firstAttribute="centerX" secondItem="uVO-L7-LAp" secondAttribute="centerX" id="VDu-BE-Zux"/>
                                     <constraint firstAttribute="bottom" secondItem="0n2-r2-8GR" secondAttribute="bottom" constant="15" id="jcU-Fi-dvd"/>
-                                    <constraint firstItem="7kg-JP-GvP" firstAttribute="top" secondItem="uVO-L7-LAp" secondAttribute="top" constant="10" id="svC-0a-B6b"/>
+                                    <constraint firstItem="7kg-JP-GvP" firstAttribute="top" secondItem="9hu-KX-3oQ" secondAttribute="bottom" constant="15" id="mGC-W8-lJz"/>
                                     <constraint firstItem="Wn0-Rj-rk5" firstAttribute="top" secondItem="7kg-JP-GvP" secondAttribute="bottom" constant="7.5" id="tdz-lW-wgc"/>
                                     <constraint firstItem="0n2-r2-8GR" firstAttribute="centerX" secondItem="uVO-L7-LAp" secondAttribute="centerX" id="uFM-OM-mS0"/>
                                     <constraint firstItem="7kg-JP-GvP" firstAttribute="centerX" secondItem="uVO-L7-LAp" secondAttribute="centerX" id="uMQ-aK-b4b"/>
-                                    <constraint firstAttribute="height" constant="412" id="uzD-ML-qtu"/>
+                                    <constraint firstAttribute="height" constant="450" id="uzD-ML-qtu"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -4133,6 +4142,7 @@ y te robaron tu bici, repórtala directamente.</string>
                         <outlet property="fotosCollection" destination="Q4Q-En-IFI" id="x6z-bk-7bR"/>
                         <outlet property="nameOutlet" destination="7kg-JP-GvP" id="rxP-y3-SY1"/>
                         <outlet property="reportarButton" destination="Dun-fT-XXm" id="dYg-BE-rxn"/>
+                        <outlet property="reporteDoneLabel" destination="9hu-KX-3oQ" id="lbL-nr-d5d"/>
                         <outlet property="serieOutlet" destination="KXu-y4-VTT" id="yzU-Ol-6gu"/>
                         <outlet property="vistaAmarilla" destination="Wn0-Rj-rk5" id="s9Z-Ky-2Pn"/>
                     </connections>
@@ -4847,7 +4857,7 @@ También podrás convocar a realizar una valla ciclista. Todo esto será en tiem
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="86B-rP-Ttj"/>
-        <segue reference="biv-CZ-KJp"/>
+        <segue reference="9su-Dr-IQh"/>
         <segue reference="91z-Mt-Myz"/>
         <segue reference="ZpG-WP-dvz"/>
         <segue reference="9Bx-r1-g3R"/>
