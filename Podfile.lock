@@ -119,6 +119,7 @@ PODS:
   - SwiftyJSON (4.2.0)
   - TLPhotoPicker (0.1.0)
   - Toast-Swift (4.0.1)
+  - UXCam (3.0.6)
 
 DEPENDENCIES:
   - Alamofire
@@ -140,6 +141,7 @@ DEPENDENCIES:
   - SwiftyJSON
   - TLPhotoPicker
   - Toast-Swift
+  - UXCam
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -176,6 +178,7 @@ SPEC REPOS:
     - SwiftyJSON
     - TLPhotoPicker
     - Toast-Swift
+    - UXCam
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -211,7 +214,8 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   TLPhotoPicker: 05463d0aea62633f4066acf219f3952ab8b1d488
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
+  UXCam: 9d5879520cd823e090c1651ac48ef53177de5c44
 
-PODFILE CHECKSUM: 38e6e24a011c3e559daade912bb354c70af08872
+PODFILE CHECKSUM: 330331066c4d9f5a2ec5beba5e643e1564401e4d
 
 COCOAPODS: 1.5.3
