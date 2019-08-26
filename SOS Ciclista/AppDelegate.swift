@@ -12,7 +12,7 @@ import Firebase
 import FacebookCore
 import GoogleMaps
 import GooglePlaces
-import UXCam
+//import UXCam
 
 var mapaListo = false
 var flagLocation = false
@@ -32,8 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(API_KEY)
         GMSPlacesClient.provideAPIKey(API_KEY)
         
-        UXCam.optIn()// .optIntoSchematicRecordings()
-        UXCam.start(withKey:"2vvb4zcqlxir87x")
+        //UXCam.optIn()// .optIntoSchematicRecordings()
+        //UXCam.start(withKey:"2vvb4zcqlxir87x")
         
         return true
     }

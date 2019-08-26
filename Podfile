@@ -25,6 +25,5 @@ pod "BSImagePicker"
 pod 'SwiftGifOrigin'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
-pod 'UXCam'
 
 end
