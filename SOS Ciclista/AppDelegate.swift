@@ -13,6 +13,7 @@ import FacebookCore
 import GoogleMaps
 import GooglePlaces
 //import UXCam
+//import Smartlook
 
 var mapaListo = false
 var flagLocation = false
@@ -34,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //UXCam.optIn()// .optIntoSchematicRecordings()
         //UXCam.start(withKey:"2vvb4zcqlxir87x")
+        //Smartlook.setup(key: "6e43d01ce38d76195bcfb4d489d0ffff347fba3f")
+        //Smartlook.startRecording()
         
         return true
     }

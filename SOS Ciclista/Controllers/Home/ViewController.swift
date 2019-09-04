@@ -289,7 +289,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                         case 3:bici = "bicid"; break;
                         case 4:bici = "bicie"; break;
                         case 5:bici = "bicif"; break;
-                        default: break
+                    default: bici = "bicia"; break
                     }
                     punto.pinCustomImageName = bici
                     punto.title = biker.name
