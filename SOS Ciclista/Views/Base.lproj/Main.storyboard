@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rfZ-vY-pdc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rfZ-vY-pdc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -38,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gn8-69-awV">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuhead" translatesAutoresizingMaskIntoConstraints="NO" id="Pmx-67-qbS">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="172"/>
@@ -47,7 +45,7 @@
                                         </constraints>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7oc-2T-I5e">
-                                        <rect key="frame" x="0.0" y="180" width="375" height="467"/>
+                                        <rect key="frame" x="0.0" y="180" width="375" height="487"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="80" id="Lkg-TA-qFh" customClass="MenuTableViewCell" customModule="SOS_Ciclista" customModuleProvider="target">
@@ -174,20 +172,20 @@
             <objects>
                 <viewController id="X7D-AK-awv" customClass="TipsViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oLw-td-wy8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVz-O0-O9N">
-                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                                <rect key="frame" x="8" y="8" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headtips" translatesAutoresizingMaskIntoConstraints="NO" id="ESo-yi-uEZ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Pl1-JQ-jiH"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVE-90-NON">
-                                <rect key="frame" x="16" y="93" width="343" height="550"/>
+                                <rect key="frame" x="16" y="73" width="343" height="550"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Tips de seguridad, prevención vial, recomnedaciones y mucho más. La comunidad ciclista la conformamos todos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTn-EI-FbH">
                                         <rect key="frame" x="48" y="2" width="247" height="60"/>
@@ -290,7 +288,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZY-Gj-LqB">
-                                <rect key="frame" x="16" y="48" width="45" height="45"/>
+                                <rect key="frame" x="16" y="28" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="0eK-lR-idS"/>
                                     <constraint firstAttribute="width" constant="45" id="7Wn-sS-Mdn"/>
@@ -304,7 +302,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gb9-ij-JFV">
-                                <rect key="frame" x="97.5" y="36" width="180" height="23"/>
+                                <rect key="frame" x="97.5" y="16" width="180" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="95O-Gi-shA"/>
                                 </constraints>
@@ -313,7 +311,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="gP1-VW-44C">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="447" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="hAz-wo-G6G"/>
                                 </constraints>
@@ -357,20 +355,20 @@
             <objects>
                 <viewController id="Zxe-ah-2wB" customClass="DetalleTipViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fQS-r6-XVt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dr-zF-0uc">
-                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                                <rect key="frame" x="8" y="8" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headtips" translatesAutoresizingMaskIntoConstraints="NO" id="Dyy-mV-HQf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="g86-8O-79u"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4DX-Nm-sbp">
-                                <rect key="frame" x="24" y="93" width="327" height="550"/>
+                                <rect key="frame" x="24" y="73" width="327" height="550"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvV-TD-Fu4">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="800"/>
@@ -475,13 +473,13 @@
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="rbV-zr-Wz0">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="447" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="QGx-nK-3BZ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sw-Lm-Ncf">
-                                <rect key="frame" x="97.5" y="36" width="180" height="23"/>
+                                <rect key="frame" x="97.5" y="16" width="180" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="Fww-sd-n3r"/>
                                 </constraints>
@@ -490,7 +488,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppA-A2-SdN">
-                                <rect key="frame" x="24" y="48" width="45" height="45"/>
+                                <rect key="frame" x="24" y="28" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="SOy-ag-cqK"/>
                                     <constraint firstAttribute="height" constant="45" id="iLn-P9-L6b"/>
@@ -545,14 +543,14 @@
             <objects>
                 <viewController id="5l2-QB-FHr" customClass="AcercaViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qal-53-475">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wnV-yY-w2X">
-                                <rect key="frame" x="8" y="16" width="359" height="635"/>
+                                <rect key="frame" x="8" y="16" width="359" height="615"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y2I-nq-U35">
-                                <rect key="frame" x="16" y="81" width="343" height="562"/>
+                                <rect key="frame" x="16" y="81" width="343" height="542"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XT-ir-ZX9">
                                         <rect key="frame" x="83" y="50" width="177" height="280"/>
@@ -644,7 +642,7 @@ Versión 2019</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="wKm-hn-vGl">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="447" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="fJE-48-a2I"/>
                                 </constraints>
@@ -704,11 +702,11 @@ Versión 2019</string>
             <objects>
                 <viewController id="llT-eU-dLw" customClass="ContactoViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RsK-gr-0m6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0O-0Y-l91">
-                                <rect key="frame" x="8" y="18" width="359" height="631"/>
+                                <rect key="frame" x="8" y="18" width="359" height="611"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headcontacto" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-Nm-qxG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
@@ -717,7 +715,7 @@ Versión 2019</string>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01P-1t-nJE">
-                                <rect key="frame" x="16" y="81" width="343" height="562"/>
+                                <rect key="frame" x="16" y="81" width="343" height="542"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeX-jy-IG0">
                                         <rect key="frame" x="58" y="1" width="227" height="60"/>
@@ -760,7 +758,6 @@ Versión 2019</string>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mensaje..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2C-Er-DJ2">
                                                 <rect key="frame" x="8" y="8" width="295" height="54"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -865,7 +862,7 @@ y auxilio vial</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contácto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTC-Qi-loU">
-                                <rect key="frame" x="97.5" y="22" width="180" height="22.5"/>
+                                <rect key="frame" x="97.5" y="2" width="180" height="22.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="6sk-cC-6b0"/>
                                 </constraints>
@@ -874,7 +871,7 @@ y auxilio vial</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="sAa-XT-7jH">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="447" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Drj-sJ-ToF"/>
                                 </constraints>
@@ -937,7 +934,7 @@ y auxilio vial</string>
             <objects>
                 <viewController id="2Lr-un-sLy" customClass="ReportesViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hTo-3G-eid">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-XF-qkS">
@@ -945,7 +942,7 @@ y auxilio vial</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEs-fY-E0d">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headReportes" translatesAutoresizingMaskIntoConstraints="NO" id="Pso-kZ-Z0h">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
@@ -1062,7 +1059,6 @@ y auxilio vial</string>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Escribe # de serie" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kRg-JO-uWL">
                                                         <rect key="frame" x="10" y="3" width="280" height="54"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -1210,11 +1206,11 @@ y auxilio vial</string>
             <objects>
                 <viewController storyboardIdentifier="reportFragment" id="rWD-wZ-Eei" customClass="ReportFragmentViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="91W-AB-V3e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-Cg-0Q8">
-                                <rect key="frame" x="20" y="95" width="335" height="312"/>
+                                <rect key="frame" x="20" y="75" width="335" height="312"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Reporta tu bici!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09W-Pv-mHc">
                                         <rect key="frame" x="84" y="20" width="167" height="26"/>
@@ -1228,7 +1224,6 @@ y auxilio vial</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="baR-SH-pOS"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1241,7 +1236,6 @@ y auxilio vial</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Osc-1l-Voa"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1268,7 +1262,6 @@ y auxilio vial</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="N8t-ZP-4fO"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1364,11 +1357,11 @@ y auxilio vial</string>
             <objects>
                 <viewController id="Eo8-0g-ELl" customClass="FinalReporteViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gsR-mq-0pk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITH-56-elE">
-                                <rect key="frame" x="16" y="95" width="343" height="280"/>
+                                <rect key="frame" x="16" y="75" width="343" height="280"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Reportado!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPz-Ar-Xqj">
                                         <rect key="frame" x="112.5" y="139" width="118" height="25.5"/>
@@ -1448,7 +1441,7 @@ y auxilio vial</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBn-EI-gCk">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -1474,11 +1467,11 @@ y auxilio vial</string>
             <objects>
                 <viewController id="f8L-aS-QNg" customClass="LoginViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wjH-Uz-5qd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5M-on-CUx">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAQ-L9-p09">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
@@ -1523,7 +1516,6 @@ y auxilio vial</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="KSF-2Z-ZkL"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 <connections>
@@ -1536,7 +1528,6 @@ y auxilio vial</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="wwd-cl-TAQ"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>
@@ -1684,11 +1675,11 @@ y auxilio vial</string>
             <objects>
                 <viewController id="hWB-jh-9Mf" customClass="PersonalizaViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XXI-Wk-PDl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynl-cs-9qf">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9o7-Do-uYm">
                                         <rect key="frame" x="8" y="16" width="359" height="623"/>
@@ -1770,7 +1761,6 @@ y auxilio vial</string>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="uwF-BC-KHD"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -1783,7 +1773,6 @@ y auxilio vial</string>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Jvr-Wn-7WK"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -1809,7 +1798,6 @@ y auxilio vial</string>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="ITT-yt-BDS"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -1986,11 +1974,11 @@ y auxilio vial</string>
             <objects>
                 <viewController id="zaO-Hw-Uv1" customClass="RegisterViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pz5-2T-Ngh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRU-gv-M9f">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8R-U9-cf3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
@@ -2033,7 +2021,6 @@ y auxilio vial</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="wva-kU-bIU"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 <connections>
@@ -2046,7 +2033,6 @@ y auxilio vial</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="fOI-ls-hTS"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>
@@ -2097,7 +2083,6 @@ y auxilio vial</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="ZZL-cX-03j"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -2119,7 +2104,6 @@ y auxilio vial</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="7fv-jd-vOa"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>
@@ -2211,7 +2195,7 @@ y auxilio vial</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jR-RH-d2L">
-                                <rect key="frame" x="8" y="36" width="359" height="400"/>
+                                <rect key="frame" x="8" y="16" width="359" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQI-DL-Df4">
                                         <rect key="frame" x="8" y="-24" width="28" height="60"/>
@@ -2303,7 +2287,7 @@ www.pgjdf.gob.mx
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWB-5D-s6V">
-                                <rect key="frame" x="8" y="36" width="359" height="400"/>
+                                <rect key="frame" x="8" y="16" width="359" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcS-qT-5zL">
                                         <rect key="frame" x="8" y="-24" width="28" height="60"/>
@@ -2406,7 +2390,7 @@ MARKETPLACE de facebook.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bk9-Dm-beW">
-                                <rect key="frame" x="8" y="36" width="359" height="400"/>
+                                <rect key="frame" x="8" y="16" width="359" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sud-HN-H2V">
                                         <rect key="frame" x="8" y="-24" width="28" height="60"/>
@@ -2483,20 +2467,20 @@ hagan su trabajo **</string>
             <objects>
                 <viewController storyboardIdentifier="averia" id="U2h-58-lZE" customClass="AveriaViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jR4-26-k8p">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYf-XU-o9y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backalerta" translatesAutoresizingMaskIntoConstraints="NO" id="HDQ-RS-zU3">
-                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="420"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="420" id="zbs-xm-leW"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Dn-Sw-Acd">
-                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="420"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSF-Qs-fY5">
                                                 <rect key="frame" x="0.0" y="85" width="375" height="250"/>
@@ -2513,7 +2497,6 @@ hagan su trabajo **</string>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="1jT-DO-0Tt"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -2630,20 +2613,20 @@ hagan su trabajo **</string>
             <objects>
                 <viewController id="nmL-ia-3gq" customClass="CicloviaViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rr7-jO-C5Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-8P-PoR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backalerta" translatesAutoresizingMaskIntoConstraints="NO" id="cB4-Nz-KTb">
-                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="420"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="420" id="W0w-la-aF3"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csQ-Ux-ivv">
-                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="420"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVc-86-sGP">
                                                 <rect key="frame" x="0.0" y="85" width="375" height="250"/>
@@ -2661,7 +2644,6 @@ hagan su trabajo **</string>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="t0B-oL-hNe"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -2775,20 +2757,20 @@ hagan su trabajo **</string>
             <objects>
                 <viewController id="TkK-Ew-DVe" customClass="HelpViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gXa-wc-mJl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdF-e5-Sjx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backalerta" translatesAutoresizingMaskIntoConstraints="NO" id="dZl-BE-Aa6">
-                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="420"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="420" id="thw-HW-O7m"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8K-x5-D4W">
-                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="420"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdx-lo-adH">
                                                 <rect key="frame" x="0.0" y="60" width="375" height="300"/>
@@ -2980,11 +2962,11 @@ redes sociales.</string>
             <objects>
                 <viewController id="uaG-3f-7Jy" customClass="DetalleApoyoViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OOA-y6-prq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBL-as-lXl">
-                                <rect key="frame" x="16" y="205.5" width="343" height="256"/>
+                                <rect key="frame" x="16" y="195.5" width="343" height="256"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3K2-Fy-hCH">
                                         <rect key="frame" x="8" y="71" width="327" height="80"/>
@@ -2992,7 +2974,6 @@ redes sociales.</string>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Detalles..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvK-Wo-w9a">
                                                 <rect key="frame" x="8" y="8" width="311" height="64"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -3088,20 +3069,20 @@ redes sociales.</string>
             <objects>
                 <viewController id="auu-T4-dDa" customClass="ApoyoViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7L-Nh-bx1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unT-TR-wwP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backalerta" translatesAutoresizingMaskIntoConstraints="NO" id="Ib8-3p-12U">
-                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="420"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="420" id="0eb-io-5ej"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phx-Yy-ao8">
-                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="113.5" width="375" height="420"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utb-gX-6rM">
                                                 <rect key="frame" x="0.0" y="60" width="375" height="300"/>
@@ -3237,16 +3218,16 @@ para valla ciclista</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xp-EV-jX8">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backalerta" translatesAutoresizingMaskIntoConstraints="NO" id="UFF-my-Yeu">
-                                        <rect key="frame" x="0.0" y="113.5" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="420" id="Ngu-O8-3w4"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snB-v6-13E">
-                                        <rect key="frame" x="0.0" y="113.5" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="123.5" width="375" height="420"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cerrar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8M-vg-RhJ">
                                                 <rect key="frame" x="127.5" y="-10" width="120" height="40"/>
@@ -3415,20 +3396,20 @@ para valla ciclista</string>
             <objects>
                 <viewController id="s1N-qm-cR5" customClass="RoboBiciViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PCy-DU-iAS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCF-rO-3nF">
-                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                                <rect key="frame" x="8" y="8" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headrobobici" translatesAutoresizingMaskIntoConstraints="NO" id="l8t-lI-GD3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="WnT-6c-8TF"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deZ-pc-qUg">
-                                <rect key="frame" x="24" y="93" width="327" height="550"/>
+                                <rect key="frame" x="24" y="73" width="327" height="550"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASOS A SEGUIR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdD-C6-O8F">
                                         <rect key="frame" x="94" y="1" width="139" height="20"/>
@@ -3465,7 +3446,7 @@ para valla ciclista</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXJ-43-nHI">
-                                <rect key="frame" x="24" y="48" width="45" height="45"/>
+                                <rect key="frame" x="24" y="28" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="OHG-cb-MAr"/>
                                     <constraint firstAttribute="width" constant="45" id="s1U-HH-QS6"/>
@@ -3477,7 +3458,7 @@ para valla ciclista</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me robaron mi bici..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pF-O1-plR">
-                                <rect key="frame" x="100" y="36" width="175" height="22.5"/>
+                                <rect key="frame" x="100" y="16" width="175" height="22.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="r0L-fs-SAD"/>
                                 </constraints>
@@ -3486,7 +3467,7 @@ para valla ciclista</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="UQ4-1r-Oz3">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="447" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="K7t-ez-eYJ"/>
                                 </constraints>
@@ -3538,11 +3519,11 @@ para valla ciclista</string>
             <objects>
                 <viewController id="Y0J-QO-IuJ" customClass="resultSerieViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JiZ-A2-n7d">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRX-4i-AFQ">
-                                <rect key="frame" x="16" y="205.5" width="343" height="256"/>
+                                <rect key="frame" x="16" y="195.5" width="343" height="256"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IlG-uF-bh0">
                                         <rect key="frame" x="8" y="47.5" width="327" height="80"/>
@@ -3623,11 +3604,11 @@ para valla ciclista</string>
             <objects>
                 <viewController modalPresentationStyle="currentContext" id="pGV-Yl-l4s" customClass="PhotosBiciViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="xVZ-D0-vpp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSd-4E-7zD">
-                                <rect key="frame" x="16" y="153.5" width="343" height="360"/>
+                                <rect key="frame" x="16" y="143.5" width="343" height="360"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="83R-kU-MHD">
                                         <rect key="frame" x="8" y="176" width="327" height="127"/>
@@ -3749,20 +3730,20 @@ para valla ciclista</string>
             <objects>
                 <viewController id="pqe-ZY-8UC" customClass="SerieViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g3E-vC-XK0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOf-Rq-FRG">
-                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                                <rect key="frame" x="8" y="8" width="359" height="631"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headserie" translatesAutoresizingMaskIntoConstraints="NO" id="OjH-wZ-ZY3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Jrp-cL-rsI"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Serie con reporte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0h-7z-wjG">
-                                <rect key="frame" x="106" y="36" width="163" height="23"/>
+                                <rect key="frame" x="106" y="16" width="163" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="SrX-yv-pEl"/>
                                 </constraints>
@@ -3771,7 +3752,7 @@ para valla ciclista</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIU-O7-vhf">
-                                <rect key="frame" x="16" y="93" width="343" height="550"/>
+                                <rect key="frame" x="16" y="73" width="343" height="550"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekc-Mz-Hp4">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="700"/>
@@ -3821,7 +3802,6 @@ y te robaron tu bici, repórtala directamente.</string>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Escribe # de serie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gav-S2-Cob">
                                                         <rect key="frame" x="74" y="0.0" width="253" height="80"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3928,13 +3908,13 @@ y te robaron tu bici, repórtala directamente.</string>
                                 </constraints>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biciwhitejust" translatesAutoresizingMaskIntoConstraints="NO" id="5DE-TB-Jh4">
-                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="447" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8jn-Ji-Wpu"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foi-E7-jXb">
-                                <rect key="frame" x="16" y="48" width="45" height="45"/>
+                                <rect key="frame" x="16" y="28" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="EZr-zr-5zs"/>
                                     <constraint firstAttribute="height" constant="45" id="SUa-tr-LsN"/>
@@ -3997,7 +3977,7 @@ y te robaron tu bici, repórtala directamente.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVO-L7-LAp">
-                                <rect key="frame" x="20" y="56" width="335" height="450"/>
+                                <rect key="frame" x="20" y="36" width="335" height="450"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-JP-GvP">
                                         <rect key="frame" x="135" y="49.5" width="65" height="21"/>
@@ -4160,7 +4140,7 @@ y te robaron tu bici, repórtala directamente.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-wE-BYT">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -4254,7 +4234,7 @@ y te robaron tu bici, repórtala directamente.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9I-zS-BpH">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <rect key="frame" x="16" y="16" width="343" height="635"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LO QUE PUEDES HACER..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXV-JF-eac">
                                         <rect key="frame" x="66" y="30" width="211" height="20"/>
@@ -4317,21 +4297,21 @@ y te robaron tu bici, repórtala directamente.</string>
             <objects>
                 <viewController id="Z61-ay-47M" customClass="TutorialViewController" customModule="SOS_Ciclista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0u-xS-vRw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foe-z4-17O">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <rect key="frame" x="16" y="16" width="343" height="615"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oet-IR-fBN">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <rect key="frame" x="16" y="16" width="343" height="615"/>
                                 <connections>
                                     <segue destination="MNz-qj-exk" kind="embed" id="csM-sP-i1Q"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMQ-6l-zPI">
-                                <rect key="frame" x="301" y="605" width="42" height="30"/>
+                                <rect key="frame" x="301" y="585" width="42" height="30"/>
                                 <state key="normal" title="Omitir">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -4340,7 +4320,7 @@ y te robaron tu bici, repórtala directamente.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zj6-jb-3KC">
-                                <rect key="frame" x="127.5" y="528" width="120" height="40"/>
+                                <rect key="frame" x="127.5" y="508" width="120" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="BxH-YJ-cLF"/>
@@ -4354,7 +4334,7 @@ y te robaron tu bici, repórtala directamente.</string>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="jl9-hl-6iH">
-                                <rect key="frame" x="144" y="598" width="87" height="37"/>
+                                <rect key="frame" x="144" y="578" width="87" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.60392156860000001" green="0.61960784310000006" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -4406,7 +4386,7 @@ y te robaron tu bici, repórtala directamente.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzU-u6-dU4">
-                                <rect key="frame" x="16" y="95" width="343" height="280"/>
+                                <rect key="frame" x="16" y="75" width="343" height="280"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Reportado!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGx-W7-lgJ">
                                         <rect key="frame" x="112.5" y="139" width="118" height="25.5"/>
@@ -4484,7 +4464,7 @@ y te robaron tu bici, repórtala directamente.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfY-i2-3yK">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <rect key="frame" x="16" y="16" width="343" height="635"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LO QUE PUEDES HACER..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxl-ar-ZDr">
                                         <rect key="frame" x="66" y="30" width="211" height="20"/>
@@ -4551,7 +4531,7 @@ y te robaron tu bici, repórtala directamente.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SfC-fZ-A4I">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <rect key="frame" x="16" y="16" width="343" height="635"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LO QUE PUEDES HACER..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70P-EI-GT6">
                                         <rect key="frame" x="66" y="30" width="211" height="20"/>
@@ -4619,7 +4599,7 @@ También podrás convocar a realizar una valla ciclista. Todo esto será en tiem
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbX-48-gF6">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <rect key="frame" x="16" y="16" width="343" height="635"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LO QUE PUEDES HACER..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJD-GM-Zjk">
                                         <rect key="frame" x="66" y="30" width="211" height="20"/>
@@ -4686,7 +4666,7 @@ También podrás convocar a realizar una valla ciclista. Todo esto será en tiem
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxN-ol-GXX">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <rect key="frame" x="16" y="16" width="343" height="635"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LO QUE PUEDES HACER..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X53-St-RdN">
                                         <rect key="frame" x="66" y="30" width="211" height="20"/>
@@ -4753,7 +4733,7 @@ También podrás convocar a realizar una valla ciclista. Todo esto será en tiem
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbH-sr-eTM">
-                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <rect key="frame" x="16" y="16" width="343" height="635"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Ahora estas listo!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvF-YS-6bl">
                                         <rect key="frame" x="86" y="30" width="171.5" height="24"/>
@@ -4857,10 +4837,10 @@ También podrás convocar a realizar una valla ciclista. Todo esto será en tiem
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="86B-rP-Ttj"/>
-        <segue reference="9su-Dr-IQh"/>
+        <segue reference="fPl-DG-IN3"/>
         <segue reference="91z-Mt-Myz"/>
         <segue reference="ZpG-WP-dvz"/>
-        <segue reference="9Bx-r1-g3R"/>
+        <segue reference="d81-yw-19i"/>
         <segue reference="8pE-Uq-vrI"/>
         <segue reference="gvX-x4-xms"/>
     </inferredMetricsTieBreakers>
